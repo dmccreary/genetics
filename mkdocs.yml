@@ -1,0 +1,62 @@
+site_name: Genetics
+repo_url: https://github.com/dmccreary/genetics
+site_url: https://dmccreary.github.io/genetics/
+site_description: An interactive intelligent textbook for Genetics with a focus on analysis, genomics, and modern inference.
+site_author: Dan McCreary
+
+nav:
+  - Home: index.md
+  - About This Course: about.md
+  - Course Description: course-description.md
+  - Learning Graph:
+    - Course Description Assessment: learning-graph/course-description-assessment.md
+  - License: license.md
+  - Contact: contact.md
+
+theme:
+  name: material
+  palette:
+    primary: 'teal'
+    accent: 'white'
+  include_sidebar: true
+  features:
+    - content.code.copy
+    - navigation.expand
+    - navigation.path
+    - navigation.prune
+    - navigation.indexes
+    - toc.follow
+    - navigation.top
+    - navigation.footer
+    - content.action.edit
+
+plugins:
+  - search
+  - social
+
+markdown_extensions:
+  - md_in_html
+  - attr_list
+  - admonition
+  - footnotes
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      linenums: true
+  - pymdownx.arithmatex:
+      generic: true
+
+extra_javascript:
+  - https://unpkg.com/mathjax@3/es5/tex-chtml.js
+
+watch:
+  - docs
+  - mkdocs.yml
+
+copyright: Copyright &copy; 2026 Dan McCreary. Licensed under <a href="license/">CC BY-NC-SA 4.0</a> for non-commercial use.
+
+extra:
+  generator: false
+  schema: https://dmccreary.github.io/intelligent-textbooks/ns/textbook/v1
+  textbook_name: Genetics
+  textbook_version: "1.0"
