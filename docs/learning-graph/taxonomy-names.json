@@ -1,0 +1,16 @@
+{
+  "FOUND": "Foundation Concepts",
+  "PROB": "Probabilistic Reasoning",
+  "PED": "Pedigree and Inheritance",
+  "GSTR": "Genome Structure",
+  "GVAR": "Genetic Variation",
+  "MAP": "Mapping and Linkage",
+  "QUANT": "Quantitative Genetics",
+  "POP": "Population Genetics",
+  "REG": "Gene Regulation",
+  "EXP": "Experimental Methods",
+  "BIOINFO": "Genomics and Bioinformatics",
+  "CLIN": "Human and Clinical Genetics",
+  "ETHICS": "Ethics and Society",
+  "FRONT": "Frontier Topics"
+}

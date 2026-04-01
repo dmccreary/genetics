@@ -1,5 +1,11 @@
 # About This Course
 
+## Hello from Dottie
+
+![](./img/mascot/welcome.png){ width="200px" align="left"}
+
+Hello, fellow investigators! I'm Dottie the Drosophila, and I'll be your guide through this genetics course. Let's look at the evidence! From Mendel's peas to CRISPR gene editing, genetics is a story of careful observation, clever experiments, and beautiful logic. I pop up at key checkpoints in each chapter to welcome you to new topics, share helpful tips, flag common pitfalls, and celebrate your progress. With my compound eyes I can spot patterns from many angles at once — and I love helping you see the connections between genotype and phenotype!
+
 ## Why Genetics Matters Now More Than Ever
 
 We live in an era where a patient's genome can be sequenced in hours for under a thousand dollars, where CRISPR-based therapies are entering clinical trials, and where genome-wide association studies link thousands of variants to complex diseases. Yet translating raw sequence data into biological insight — understanding *how* genotype shapes phenotype — requires the kind of analytical reasoning that goes far beyond memorizing Mendel's laws.

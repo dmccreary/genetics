@@ -1,0 +1,4845 @@
+{
+  "metadata": {
+    "title": "Genetics: Analysis, Genomics, and Modern Inference",
+    "description": "A comprehensive learning graph for an advanced genetics course covering genetic inference, genome organization, quantitative and population genetics, gene regulation, experimental methods, genomics and bioinformatics, human genetics, precision medicine, and ethical implications.",
+    "creator": "Dan McCreary",
+    "date": "2026-03-31",
+    "version": "1.0",
+    "format": "Learning Graph JSON v1.0",
+    "schema": "https://raw.githubusercontent.com/dmccreary/learning-graphs/refs/heads/main/src/schema/learning-graph-schema.json",
+    "license": "CC BY-NC-SA 4.0 DEED"
+  },
+  "groups": {
+    "FOUND": {
+      "classifierName": "Foundation Concepts",
+      "color": "LightCoral",
+      "font": {
+        "color": "white"
+      }
+    },
+    "PROB": {
+      "classifierName": "Probabilistic Reasoning",
+      "color": "PeachPuff",
+      "font": {
+        "color": "black"
+      }
+    },
+    "PED": {
+      "classifierName": "Pedigree and Inheritance",
+      "color": "LightPink",
+      "font": {
+        "color": "black"
+      }
+    },
+    "GSTR": {
+      "classifierName": "Genome Structure",
+      "color": "Thistle",
+      "font": {
+        "color": "black"
+      }
+    },
+    "GVAR": {
+      "classifierName": "Genetic Variation",
+      "color": "Plum",
+      "font": {
+        "color": "white"
+      }
+    },
+    "MAP": {
+      "classifierName": "Mapping and Linkage",
+      "color": "PowderBlue",
+      "font": {
+        "color": "black"
+      }
+    },
+    "QUANT": {
+      "classifierName": "Quantitative Genetics",
+      "color": "LightYellow",
+      "font": {
+        "color": "black"
+      }
+    },
+    "POP": {
+      "classifierName": "Population Genetics",
+      "color": "PaleGreen",
+      "font": {
+        "color": "black"
+      }
+    },
+    "REG": {
+      "classifierName": "Gene Regulation",
+      "color": "Aquamarine",
+      "font": {
+        "color": "black"
+      }
+    },
+    "EXP": {
+      "classifierName": "Experimental Methods",
+      "color": "LightSteelBlue",
+      "font": {
+        "color": "black"
+      }
+    },
+    "BIOINFO": {
+      "classifierName": "Genomics and Bioinformatics",
+      "color": "Honeydew",
+      "font": {
+        "color": "black"
+      }
+    },
+    "CLIN": {
+      "classifierName": "Human and Clinical Genetics",
+      "color": "MistyRose",
+      "font": {
+        "color": "black"
+      }
+    },
+    "ETHICS": {
+      "classifierName": "Ethics and Society",
+      "color": "Lavender",
+      "font": {
+        "color": "black"
+      }
+    },
+    "FRONT": {
+      "classifierName": "Frontier Topics",
+      "color": "PaleTurquoise",
+      "font": {
+        "color": "black"
+      }
+    }
+  },
+  "nodes": [
+    {
+      "id": 1,
+      "label": "Genetic Inference",
+      "group": "FOUND",
+      "shape": "box"
+    },
+    {
+      "id": 2,
+      "label": "Probability in Genetics",
+      "group": "PROB"
+    },
+    {
+      "id": 3,
+      "label": "Conditional Probability",
+      "group": "PROB"
+    },
+    {
+      "id": 4,
+      "label": "Bayesian Reasoning",
+      "group": "PROB"
+    },
+    {
+      "id": 5,
+      "label": "Prior Probability",
+      "group": "PROB"
+    },
+    {
+      "id": 6,
+      "label": "Posterior Probability",
+      "group": "PROB"
+    },
+    {
+      "id": 7,
+      "label": "Likelihood Ratio",
+      "group": "PROB"
+    },
+    {
+      "id": 8,
+      "label": "Pedigree Analysis",
+      "group": "PED"
+    },
+    {
+      "id": 9,
+      "label": "Autosomal Dominant Pedigree",
+      "group": "PED"
+    },
+    {
+      "id": 10,
+      "label": "Autosomal Recessive Pedigree",
+      "group": "PED"
+    },
+    {
+      "id": 11,
+      "label": "X-Linked Inheritance",
+      "group": "PED"
+    },
+    {
+      "id": 12,
+      "label": "X-Linked Recessive Pedigree",
+      "group": "PED"
+    },
+    {
+      "id": 13,
+      "label": "X-Linked Dominant Pedigree",
+      "group": "PED"
+    },
+    {
+      "id": 14,
+      "label": "Carrier Probability",
+      "group": "PED"
+    },
+    {
+      "id": 15,
+      "label": "Penetrance",
+      "group": "PED"
+    },
+    {
+      "id": 16,
+      "label": "Incomplete Penetrance",
+      "group": "PED"
+    },
+    {
+      "id": 17,
+      "label": "Expressivity",
+      "group": "PED"
+    },
+    {
+      "id": 18,
+      "label": "Variable Expressivity",
+      "group": "PED"
+    },
+    {
+      "id": 19,
+      "label": "Phenocopy",
+      "group": "PED"
+    },
+    {
+      "id": 20,
+      "label": "Genetic Heterogeneity",
+      "group": "PED"
+    },
+    {
+      "id": 21,
+      "label": "Locus Heterogeneity",
+      "group": "PED"
+    },
+    {
+      "id": 22,
+      "label": "Allelic Heterogeneity",
+      "group": "PED"
+    },
+    {
+      "id": 23,
+      "label": "Epistasis",
+      "group": "PED"
+    },
+    {
+      "id": 24,
+      "label": "Duplicate Epistasis",
+      "group": "PED"
+    },
+    {
+      "id": 25,
+      "label": "Complementary Epistasis",
+      "group": "PED"
+    },
+    {
+      "id": 26,
+      "label": "Suppressor Epistasis",
+      "group": "PED"
+    },
+    {
+      "id": 27,
+      "label": "Epistatic Pathway Analysis",
+      "group": "PED"
+    },
+    {
+      "id": 28,
+      "label": "Complementation Test",
+      "group": "PED"
+    },
+    {
+      "id": 29,
+      "label": "Complementation Group",
+      "group": "PED"
+    },
+    {
+      "id": 30,
+      "label": "Cis-Trans Test",
+      "group": "PED"
+    },
+    {
+      "id": 31,
+      "label": "Allelism",
+      "group": "PED"
+    },
+    {
+      "id": 32,
+      "label": "Functional Allelism",
+      "group": "PED"
+    },
+    {
+      "id": 33,
+      "label": "Chi-Square Test",
+      "group": "PROB"
+    },
+    {
+      "id": 34,
+      "label": "Goodness of Fit Test",
+      "group": "PROB"
+    },
+    {
+      "id": 35,
+      "label": "Test Cross",
+      "group": "PED"
+    },
+    {
+      "id": 36,
+      "label": "Reciprocal Cross",
+      "group": "PED"
+    },
+    {
+      "id": 37,
+      "label": "Null Hypothesis in Genetics",
+      "group": "PROB"
+    },
+    {
+      "id": 38,
+      "label": "P-Value Interpretation",
+      "group": "PROB"
+    },
+    {
+      "id": 39,
+      "label": "Modified Mendelian Ratios",
+      "group": "PED"
+    },
+    {
+      "id": 40,
+      "label": "Lethal Alleles",
+      "group": "PED"
+    },
+    {
+      "id": 41,
+      "label": "Pleiotropy",
+      "group": "PED"
+    },
+    {
+      "id": 42,
+      "label": "Genetic Background Effects",
+      "group": "PED"
+    },
+    {
+      "id": 43,
+      "label": "Age of Onset",
+      "group": "PED"
+    },
+    {
+      "id": 44,
+      "label": "Anticipation",
+      "group": "PED"
+    },
+    {
+      "id": 45,
+      "label": "Genomic Imprinting",
+      "group": "PED"
+    },
+    {
+      "id": 46,
+      "label": "Parent of Origin Effects",
+      "group": "PED"
+    },
+    {
+      "id": 47,
+      "label": "Uniparental Disomy",
+      "group": "PED"
+    },
+    {
+      "id": 48,
+      "label": "Mosaicism",
+      "group": "PED"
+    },
+    {
+      "id": 49,
+      "label": "Somatic Mosaicism",
+      "group": "PED"
+    },
+    {
+      "id": 50,
+      "label": "Germline Mosaicism",
+      "group": "PED"
+    },
+    {
+      "id": 51,
+      "label": "Genome Organization",
+      "group": "FOUND",
+      "shape": "box"
+    },
+    {
+      "id": 52,
+      "label": "Chromosome Structure",
+      "group": "GSTR"
+    },
+    {
+      "id": 53,
+      "label": "Euchromatin",
+      "group": "GSTR"
+    },
+    {
+      "id": 54,
+      "label": "Heterochromatin",
+      "group": "GSTR"
+    },
+    {
+      "id": 55,
+      "label": "Constitutive Heterochromatin",
+      "group": "GSTR"
+    },
+    {
+      "id": 56,
+      "label": "Facultative Heterochromatin",
+      "group": "GSTR"
+    },
+    {
+      "id": 57,
+      "label": "Centromere Structure",
+      "group": "GSTR"
+    },
+    {
+      "id": 58,
+      "label": "Telomere Structure",
+      "group": "GSTR"
+    },
+    {
+      "id": 59,
+      "label": "Chromatin",
+      "group": "GSTR"
+    },
+    {
+      "id": 60,
+      "label": "Nucleosome",
+      "group": "GSTR"
+    },
+    {
+      "id": 61,
+      "label": "Histone Proteins",
+      "group": "GSTR"
+    },
+    {
+      "id": 62,
+      "label": "Histone Modifications",
+      "group": "GSTR"
+    },
+    {
+      "id": 63,
+      "label": "Histone Acetylation",
+      "group": "GSTR"
+    },
+    {
+      "id": 64,
+      "label": "Histone Methylation",
+      "group": "GSTR"
+    },
+    {
+      "id": 65,
+      "label": "Chromatin Remodeling",
+      "group": "GSTR"
+    },
+    {
+      "id": 66,
+      "label": "Epigenetics",
+      "group": "GSTR"
+    },
+    {
+      "id": 67,
+      "label": "DNA Methylation",
+      "group": "GSTR"
+    },
+    {
+      "id": 68,
+      "label": "CpG Islands",
+      "group": "GSTR"
+    },
+    {
+      "id": 69,
+      "label": "Epigenetic Inheritance",
+      "group": "GSTR"
+    },
+    {
+      "id": 70,
+      "label": "X-Inactivation",
+      "group": "GSTR"
+    },
+    {
+      "id": 71,
+      "label": "Dosage Compensation",
+      "group": "GSTR"
+    },
+    {
+      "id": 72,
+      "label": "Barr Body",
+      "group": "GSTR"
+    },
+    {
+      "id": 73,
+      "label": "Genetic Variation",
+      "group": "GVAR"
+    },
+    {
+      "id": 74,
+      "label": "Single Nucleotide Polymorphism",
+      "group": "GVAR"
+    },
+    {
+      "id": 75,
+      "label": "Insertion Deletion Variant",
+      "group": "GVAR"
+    },
+    {
+      "id": 76,
+      "label": "Copy Number Variation",
+      "group": "GVAR"
+    },
+    {
+      "id": 77,
+      "label": "Structural Variation",
+      "group": "GVAR"
+    },
+    {
+      "id": 78,
+      "label": "Chromosomal Inversion",
+      "group": "GVAR"
+    },
+    {
+      "id": 79,
+      "label": "Chromosomal Translocation",
+      "group": "GVAR"
+    },
+    {
+      "id": 80,
+      "label": "Chromosomal Deletion",
+      "group": "GVAR"
+    },
+    {
+      "id": 81,
+      "label": "Chromosomal Duplication",
+      "group": "GVAR"
+    },
+    {
+      "id": 82,
+      "label": "Tandem Repeat",
+      "group": "GVAR"
+    },
+    {
+      "id": 83,
+      "label": "Short Tandem Repeat",
+      "group": "GVAR"
+    },
+    {
+      "id": 84,
+      "label": "Microsatellite",
+      "group": "GVAR"
+    },
+    {
+      "id": 85,
+      "label": "Minisatellite",
+      "group": "GVAR"
+    },
+    {
+      "id": 86,
+      "label": "Variable Number Tandem Repeat",
+      "group": "GVAR"
+    },
+    {
+      "id": 87,
+      "label": "Haplotype",
+      "group": "GVAR"
+    },
+    {
+      "id": 88,
+      "label": "Haplotype Block",
+      "group": "GVAR"
+    },
+    {
+      "id": 89,
+      "label": "Linkage Disequilibrium",
+      "group": "GVAR"
+    },
+    {
+      "id": 90,
+      "label": "Tag SNP",
+      "group": "GVAR"
+    },
+    {
+      "id": 91,
+      "label": "HapMap Project",
+      "group": "GVAR"
+    },
+    {
+      "id": 92,
+      "label": "Transposable Elements",
+      "group": "GVAR"
+    },
+    {
+      "id": 93,
+      "label": "DNA Transposon",
+      "group": "GVAR"
+    },
+    {
+      "id": 94,
+      "label": "Retrotransposon",
+      "group": "GVAR"
+    },
+    {
+      "id": 95,
+      "label": "LINE Element",
+      "group": "GVAR"
+    },
+    {
+      "id": 96,
+      "label": "SINE Element",
+      "group": "GVAR"
+    },
+    {
+      "id": 97,
+      "label": "Alu Element",
+      "group": "GVAR"
+    },
+    {
+      "id": 98,
+      "label": "Transposon Mutagenesis",
+      "group": "GVAR"
+    },
+    {
+      "id": 99,
+      "label": "Gene Duplication",
+      "group": "GVAR"
+    },
+    {
+      "id": 100,
+      "label": "Paralog",
+      "group": "GVAR"
+    },
+    {
+      "id": 101,
+      "label": "Ortholog",
+      "group": "GVAR"
+    },
+    {
+      "id": 102,
+      "label": "Gene Family",
+      "group": "GVAR"
+    },
+    {
+      "id": 103,
+      "label": "Pseudogene",
+      "group": "GVAR"
+    },
+    {
+      "id": 104,
+      "label": "Segmental Duplication",
+      "group": "GVAR"
+    },
+    {
+      "id": 105,
+      "label": "Polyploidy",
+      "group": "GVAR"
+    },
+    {
+      "id": 106,
+      "label": "Aneuploidy",
+      "group": "GVAR"
+    },
+    {
+      "id": 107,
+      "label": "Trisomy",
+      "group": "GVAR"
+    },
+    {
+      "id": 108,
+      "label": "Monosomy",
+      "group": "GVAR"
+    },
+    {
+      "id": 109,
+      "label": "Nondisjunction",
+      "group": "GVAR"
+    },
+    {
+      "id": 110,
+      "label": "Chromosomal Rearrangement",
+      "group": "GVAR"
+    },
+    {
+      "id": 111,
+      "label": "Linkage",
+      "group": "FOUND",
+      "shape": "box"
+    },
+    {
+      "id": 112,
+      "label": "Genetic Linkage",
+      "group": "MAP"
+    },
+    {
+      "id": 113,
+      "label": "Recombination",
+      "group": "MAP"
+    },
+    {
+      "id": 114,
+      "label": "Crossing Over",
+      "group": "MAP"
+    },
+    {
+      "id": 115,
+      "label": "Recombination Frequency",
+      "group": "MAP"
+    },
+    {
+      "id": 116,
+      "label": "Genetic Map",
+      "group": "MAP"
+    },
+    {
+      "id": 117,
+      "label": "Map Distance",
+      "group": "MAP"
+    },
+    {
+      "id": 118,
+      "label": "Centimorgan",
+      "group": "MAP"
+    },
+    {
+      "id": 119,
+      "label": "Two-Point Cross",
+      "group": "MAP"
+    },
+    {
+      "id": 120,
+      "label": "Three-Point Cross",
+      "group": "MAP"
+    },
+    {
+      "id": 121,
+      "label": "Interference",
+      "group": "MAP"
+    },
+    {
+      "id": 122,
+      "label": "Coefficient of Coincidence",
+      "group": "MAP"
+    },
+    {
+      "id": 123,
+      "label": "Gene Order Determination",
+      "group": "MAP"
+    },
+    {
+      "id": 124,
+      "label": "Genetic Markers",
+      "group": "MAP"
+    },
+    {
+      "id": 125,
+      "label": "Molecular Markers",
+      "group": "MAP"
+    },
+    {
+      "id": 126,
+      "label": "Restriction Fragment Length",
+      "group": "MAP"
+    },
+    {
+      "id": 127,
+      "label": "Microsatellite Markers",
+      "group": "MAP"
+    },
+    {
+      "id": 128,
+      "label": "SNP Markers",
+      "group": "MAP"
+    },
+    {
+      "id": 129,
+      "label": "Physical Map",
+      "group": "MAP"
+    },
+    {
+      "id": 130,
+      "label": "Cytogenetic Map",
+      "group": "MAP"
+    },
+    {
+      "id": 131,
+      "label": "Radiation Hybrid Mapping",
+      "group": "MAP"
+    },
+    {
+      "id": 132,
+      "label": "Somatic Cell Hybridization",
+      "group": "MAP"
+    },
+    {
+      "id": 133,
+      "label": "Synteny",
+      "group": "MAP"
+    },
+    {
+      "id": 134,
+      "label": "Comparative Genomics",
+      "group": "MAP"
+    },
+    {
+      "id": 135,
+      "label": "Gene Discovery Strategies",
+      "group": "MAP"
+    },
+    {
+      "id": 136,
+      "label": "Positional Cloning",
+      "group": "MAP"
+    },
+    {
+      "id": 137,
+      "label": "Candidate Gene Approach",
+      "group": "MAP"
+    },
+    {
+      "id": 138,
+      "label": "Linkage Analysis",
+      "group": "MAP"
+    },
+    {
+      "id": 139,
+      "label": "LOD Score",
+      "group": "MAP"
+    },
+    {
+      "id": 140,
+      "label": "LOD Score Threshold",
+      "group": "MAP"
+    },
+    {
+      "id": 141,
+      "label": "Parametric Linkage",
+      "group": "MAP"
+    },
+    {
+      "id": 142,
+      "label": "Nonparametric Linkage",
+      "group": "MAP"
+    },
+    {
+      "id": 143,
+      "label": "Recombination Hotspots",
+      "group": "MAP"
+    },
+    {
+      "id": 144,
+      "label": "Sex Differences in Mapping",
+      "group": "MAP"
+    },
+    {
+      "id": 145,
+      "label": "Mitotic Recombination",
+      "group": "MAP"
+    },
+    {
+      "id": 146,
+      "label": "Gene Conversion",
+      "group": "MAP"
+    },
+    {
+      "id": 147,
+      "label": "Tetrad Analysis",
+      "group": "MAP"
+    },
+    {
+      "id": 148,
+      "label": "Ordered Tetrad",
+      "group": "MAP"
+    },
+    {
+      "id": 149,
+      "label": "Unordered Tetrad",
+      "group": "MAP"
+    },
+    {
+      "id": 150,
+      "label": "Centromere Mapping",
+      "group": "MAP"
+    },
+    {
+      "id": 151,
+      "label": "Half-Tetrad Analysis",
+      "group": "MAP"
+    },
+    {
+      "id": 152,
+      "label": "Deletion Mapping",
+      "group": "MAP"
+    },
+    {
+      "id": 153,
+      "label": "Complementation Mapping",
+      "group": "MAP"
+    },
+    {
+      "id": 154,
+      "label": "Fine Structure Mapping",
+      "group": "MAP"
+    },
+    {
+      "id": 155,
+      "label": "Intragenic Recombination",
+      "group": "MAP"
+    },
+    {
+      "id": 156,
+      "label": "Quantitative Genetics",
+      "group": "FOUND",
+      "shape": "box"
+    },
+    {
+      "id": 157,
+      "label": "Quantitative Trait",
+      "group": "QUANT"
+    },
+    {
+      "id": 158,
+      "label": "Continuous Variation",
+      "group": "QUANT"
+    },
+    {
+      "id": 159,
+      "label": "Polygenic Inheritance",
+      "group": "QUANT"
+    },
+    {
+      "id": 160,
+      "label": "Multifactorial Trait",
+      "group": "QUANT"
+    },
+    {
+      "id": 161,
+      "label": "Threshold Trait",
+      "group": "QUANT"
+    },
+    {
+      "id": 162,
+      "label": "Heritability",
+      "group": "QUANT"
+    },
+    {
+      "id": 163,
+      "label": "Broad Sense Heritability",
+      "group": "QUANT"
+    },
+    {
+      "id": 164,
+      "label": "Narrow Sense Heritability",
+      "group": "QUANT"
+    },
+    {
+      "id": 165,
+      "label": "Additive Genetic Variance",
+      "group": "QUANT"
+    },
+    {
+      "id": 166,
+      "label": "Dominance Variance",
+      "group": "QUANT"
+    },
+    {
+      "id": 167,
+      "label": "Epistatic Variance",
+      "group": "QUANT"
+    },
+    {
+      "id": 168,
+      "label": "Environmental Variance",
+      "group": "QUANT"
+    },
+    {
+      "id": 169,
+      "label": "Phenotypic Variance",
+      "group": "QUANT"
+    },
+    {
+      "id": 170,
+      "label": "Twin Studies",
+      "group": "QUANT"
+    },
+    {
+      "id": 171,
+      "label": "Monozygotic Twins",
+      "group": "QUANT"
+    },
+    {
+      "id": 172,
+      "label": "Dizygotic Twins",
+      "group": "QUANT"
+    },
+    {
+      "id": 173,
+      "label": "Concordance Rate",
+      "group": "QUANT"
+    },
+    {
+      "id": 174,
+      "label": "Heritability Estimation",
+      "group": "QUANT"
+    },
+    {
+      "id": 175,
+      "label": "Quantitative Trait Locus",
+      "group": "QUANT"
+    },
+    {
+      "id": 176,
+      "label": "QTL Mapping",
+      "group": "QUANT"
+    },
+    {
+      "id": 177,
+      "label": "Interval Mapping",
+      "group": "QUANT"
+    },
+    {
+      "id": 178,
+      "label": "Marker Assisted Selection",
+      "group": "QUANT"
+    },
+    {
+      "id": 179,
+      "label": "GWAS",
+      "group": "QUANT"
+    },
+    {
+      "id": 180,
+      "label": "Manhattan Plot",
+      "group": "QUANT"
+    },
+    {
+      "id": 181,
+      "label": "Significance Threshold",
+      "group": "QUANT"
+    },
+    {
+      "id": 182,
+      "label": "Multiple Testing Correction",
+      "group": "QUANT"
+    },
+    {
+      "id": 183,
+      "label": "Bonferroni Correction",
+      "group": "QUANT"
+    },
+    {
+      "id": 184,
+      "label": "False Discovery Rate",
+      "group": "QUANT"
+    },
+    {
+      "id": 185,
+      "label": "Effect Size",
+      "group": "QUANT"
+    },
+    {
+      "id": 186,
+      "label": "Odds Ratio",
+      "group": "QUANT"
+    },
+    {
+      "id": 187,
+      "label": "Polygenic Risk Score",
+      "group": "QUANT"
+    },
+    {
+      "id": 188,
+      "label": "Missing Heritability",
+      "group": "QUANT"
+    },
+    {
+      "id": 189,
+      "label": "Population Genetics",
+      "group": "FOUND",
+      "shape": "box"
+    },
+    {
+      "id": 190,
+      "label": "Allele Frequency",
+      "group": "POP"
+    },
+    {
+      "id": 191,
+      "label": "Genotype Frequency",
+      "group": "POP"
+    },
+    {
+      "id": 192,
+      "label": "Hardy-Weinberg Equilibrium",
+      "group": "POP"
+    },
+    {
+      "id": 193,
+      "label": "Hardy-Weinberg Assumptions",
+      "group": "POP"
+    },
+    {
+      "id": 194,
+      "label": "Chi-Square HWE Test",
+      "group": "POP"
+    },
+    {
+      "id": 195,
+      "label": "Natural Selection",
+      "group": "POP"
+    },
+    {
+      "id": 196,
+      "label": "Fitness",
+      "group": "POP"
+    },
+    {
+      "id": 197,
+      "label": "Selection Coefficient",
+      "group": "POP"
+    },
+    {
+      "id": 198,
+      "label": "Directional Selection",
+      "group": "POP"
+    },
+    {
+      "id": 199,
+      "label": "Stabilizing Selection",
+      "group": "POP"
+    },
+    {
+      "id": 200,
+      "label": "Disruptive Selection",
+      "group": "POP"
+    },
+    {
+      "id": 201,
+      "label": "Balancing Selection",
+      "group": "POP"
+    },
+    {
+      "id": 202,
+      "label": "Heterozygote Advantage",
+      "group": "POP"
+    },
+    {
+      "id": 203,
+      "label": "Genetic Drift",
+      "group": "POP"
+    },
+    {
+      "id": 204,
+      "label": "Bottleneck Effect",
+      "group": "POP"
+    },
+    {
+      "id": 205,
+      "label": "Founder Effect",
+      "group": "POP"
+    },
+    {
+      "id": 206,
+      "label": "Gene Flow",
+      "group": "POP"
+    },
+    {
+      "id": 207,
+      "label": "Migration",
+      "group": "POP"
+    },
+    {
+      "id": 208,
+      "label": "Mutation Rate",
+      "group": "POP"
+    },
+    {
+      "id": 209,
+      "label": "Population Structure",
+      "group": "POP"
+    },
+    {
+      "id": 210,
+      "label": "Fixation Index",
+      "group": "POP"
+    },
+    {
+      "id": 211,
+      "label": "Gene Expression",
+      "group": "FOUND",
+      "shape": "box"
+    },
+    {
+      "id": 212,
+      "label": "Transcription Regulation",
+      "group": "REG"
+    },
+    {
+      "id": 213,
+      "label": "Promoter",
+      "group": "REG"
+    },
+    {
+      "id": 214,
+      "label": "TATA Box",
+      "group": "REG"
+    },
+    {
+      "id": 215,
+      "label": "Transcription Factor",
+      "group": "REG"
+    },
+    {
+      "id": 216,
+      "label": "General Transcription Factor",
+      "group": "REG"
+    },
+    {
+      "id": 217,
+      "label": "Specific Transcription Factor",
+      "group": "REG"
+    },
+    {
+      "id": 218,
+      "label": "Activator",
+      "group": "REG"
+    },
+    {
+      "id": 219,
+      "label": "Repressor",
+      "group": "REG"
+    },
+    {
+      "id": 220,
+      "label": "Enhancer",
+      "group": "REG"
+    },
+    {
+      "id": 221,
+      "label": "Silencer",
+      "group": "REG"
+    },
+    {
+      "id": 222,
+      "label": "Insulator",
+      "group": "REG"
+    },
+    {
+      "id": 223,
+      "label": "Cis-Regulatory Element",
+      "group": "REG"
+    },
+    {
+      "id": 224,
+      "label": "Trans-Acting Factor",
+      "group": "REG"
+    },
+    {
+      "id": 225,
+      "label": "Transcriptional Logic",
+      "group": "REG"
+    },
+    {
+      "id": 226,
+      "label": "Combinatorial Control",
+      "group": "REG"
+    },
+    {
+      "id": 227,
+      "label": "Gene Regulatory Network",
+      "group": "REG"
+    },
+    {
+      "id": 228,
+      "label": "Network Motif",
+      "group": "REG"
+    },
+    {
+      "id": 229,
+      "label": "Feedback Loop",
+      "group": "REG"
+    },
+    {
+      "id": 230,
+      "label": "Feed-Forward Loop",
+      "group": "REG"
+    },
+    {
+      "id": 231,
+      "label": "Operon Model",
+      "group": "REG"
+    },
+    {
+      "id": 232,
+      "label": "Lac Operon",
+      "group": "REG"
+    },
+    {
+      "id": 233,
+      "label": "Trp Operon",
+      "group": "REG"
+    },
+    {
+      "id": 234,
+      "label": "Positive Regulation",
+      "group": "REG"
+    },
+    {
+      "id": 235,
+      "label": "Negative Regulation",
+      "group": "REG"
+    },
+    {
+      "id": 236,
+      "label": "Post-Transcriptional Reg",
+      "group": "REG"
+    },
+    {
+      "id": 237,
+      "label": "RNA Splicing",
+      "group": "REG"
+    },
+    {
+      "id": 238,
+      "label": "Alternative Splicing",
+      "group": "REG"
+    },
+    {
+      "id": 239,
+      "label": "Exon Skipping",
+      "group": "REG"
+    },
+    {
+      "id": 240,
+      "label": "RNA Editing",
+      "group": "REG"
+    },
+    {
+      "id": 241,
+      "label": "mRNA Stability",
+      "group": "REG"
+    },
+    {
+      "id": 242,
+      "label": "RNA Interference",
+      "group": "MAP"
+    },
+    {
+      "id": 243,
+      "label": "MicroRNA",
+      "group": "REG"
+    },
+    {
+      "id": 244,
+      "label": "Small Interfering RNA",
+      "group": "REG"
+    },
+    {
+      "id": 245,
+      "label": "Long Noncoding RNA",
+      "group": "REG"
+    },
+    {
+      "id": 246,
+      "label": "Noncoding RNA",
+      "group": "REG"
+    },
+    {
+      "id": 247,
+      "label": "Riboswitch",
+      "group": "REG"
+    },
+    {
+      "id": 248,
+      "label": "Translational Regulation",
+      "group": "REG"
+    },
+    {
+      "id": 249,
+      "label": "Protein Degradation",
+      "group": "REG"
+    },
+    {
+      "id": 250,
+      "label": "Ubiquitin Pathway",
+      "group": "REG"
+    },
+    {
+      "id": 251,
+      "label": "Chromatin State",
+      "group": "REG"
+    },
+    {
+      "id": 252,
+      "label": "Open Chromatin",
+      "group": "GSTR"
+    },
+    {
+      "id": 253,
+      "label": "Closed Chromatin",
+      "group": "GSTR"
+    },
+    {
+      "id": 254,
+      "label": "Bivalent Chromatin",
+      "group": "GSTR"
+    },
+    {
+      "id": 255,
+      "label": "Poised Enhancer",
+      "group": "GSTR"
+    },
+    {
+      "id": 256,
+      "label": "Super Enhancer",
+      "group": "GSTR"
+    },
+    {
+      "id": 257,
+      "label": "Topologically Assoc Domain",
+      "group": "GSTR"
+    },
+    {
+      "id": 258,
+      "label": "Chromatin Looping",
+      "group": "GSTR"
+    },
+    {
+      "id": 259,
+      "label": "Cell Identity",
+      "group": "REG"
+    },
+    {
+      "id": 260,
+      "label": "Cell Fate Determination",
+      "group": "REG"
+    },
+    {
+      "id": 261,
+      "label": "Master Regulator Gene",
+      "group": "REG"
+    },
+    {
+      "id": 262,
+      "label": "Pioneer Factor",
+      "group": "REG"
+    },
+    {
+      "id": 263,
+      "label": "Stem Cell Gene Expression",
+      "group": "FOUND"
+    },
+    {
+      "id": 264,
+      "label": "Differentiation",
+      "group": "REG"
+    },
+    {
+      "id": 265,
+      "label": "Cellular Reprogramming",
+      "group": "REG"
+    },
+    {
+      "id": 266,
+      "label": "Forward Genetics",
+      "group": "FOUND",
+      "shape": "box"
+    },
+    {
+      "id": 267,
+      "label": "Reverse Genetics",
+      "group": "EXP"
+    },
+    {
+      "id": 268,
+      "label": "Mutagenesis Screen",
+      "group": "EXP"
+    },
+    {
+      "id": 269,
+      "label": "Chemical Mutagenesis",
+      "group": "EXP"
+    },
+    {
+      "id": 270,
+      "label": "EMS Mutagenesis",
+      "group": "EXP"
+    },
+    {
+      "id": 271,
+      "label": "Insertional Mutagenesis",
+      "group": "EXP"
+    },
+    {
+      "id": 272,
+      "label": "Saturation Mutagenesis",
+      "group": "EXP"
+    },
+    {
+      "id": 273,
+      "label": "Enhancer Trap",
+      "group": "EXP"
+    },
+    {
+      "id": 274,
+      "label": "Suppressor Screen",
+      "group": "EXP"
+    },
+    {
+      "id": 275,
+      "label": "Modifier Screen",
+      "group": "EXP"
+    },
+    {
+      "id": 276,
+      "label": "Genetic Mosaic Analysis",
+      "group": "EXP"
+    },
+    {
+      "id": 277,
+      "label": "Clonal Analysis",
+      "group": "EXP"
+    },
+    {
+      "id": 278,
+      "label": "Model Organism",
+      "group": "FOUND",
+      "shape": "box"
+    },
+    {
+      "id": 279,
+      "label": "Drosophila Genetics",
+      "group": "EXP"
+    },
+    {
+      "id": 280,
+      "label": "Yeast Genetics",
+      "group": "EXP"
+    },
+    {
+      "id": 281,
+      "label": "Mouse Genetics",
+      "group": "EXP"
+    },
+    {
+      "id": 282,
+      "label": "C. Elegans Genetics",
+      "group": "EXP"
+    },
+    {
+      "id": 283,
+      "label": "Zebrafish Genetics",
+      "group": "EXP"
+    },
+    {
+      "id": 284,
+      "label": "Arabidopsis Genetics",
+      "group": "EXP"
+    },
+    {
+      "id": 285,
+      "label": "Gene Knockout",
+      "group": "EXP"
+    },
+    {
+      "id": 286,
+      "label": "Conditional Knockout",
+      "group": "EXP"
+    },
+    {
+      "id": 287,
+      "label": "Knockdown",
+      "group": "EXP"
+    },
+    {
+      "id": 288,
+      "label": "RNA Interference Screen",
+      "group": "MAP"
+    },
+    {
+      "id": 289,
+      "label": "CRISPR-Cas9",
+      "group": "EXP"
+    },
+    {
+      "id": 290,
+      "label": "Guide RNA Design",
+      "group": "EXP"
+    },
+    {
+      "id": 291,
+      "label": "Gene Editing",
+      "group": "EXP"
+    },
+    {
+      "id": 292,
+      "label": "Homology Directed Repair",
+      "group": "EXP"
+    },
+    {
+      "id": 293,
+      "label": "NHEJ Repair",
+      "group": "EXP"
+    },
+    {
+      "id": 294,
+      "label": "Base Editing",
+      "group": "EXP"
+    },
+    {
+      "id": 295,
+      "label": "Prime Editing",
+      "group": "EXP"
+    },
+    {
+      "id": 296,
+      "label": "Gene Drive",
+      "group": "EXP"
+    },
+    {
+      "id": 297,
+      "label": "Transgenic Organism",
+      "group": "EXP"
+    },
+    {
+      "id": 298,
+      "label": "Reporter Gene",
+      "group": "EXP"
+    },
+    {
+      "id": 299,
+      "label": "GFP Reporter",
+      "group": "EXP"
+    },
+    {
+      "id": 300,
+      "label": "Cre-Lox System",
+      "group": "EXP"
+    },
+    {
+      "id": 301,
+      "label": "GAL4-UAS System",
+      "group": "EXP"
+    },
+    {
+      "id": 302,
+      "label": "Functional Genomics",
+      "group": "FOUND"
+    },
+    {
+      "id": 303,
+      "label": "Phenotype Scoring",
+      "group": "EXP"
+    },
+    {
+      "id": 304,
+      "label": "Genetic Interaction",
+      "group": "EXP"
+    },
+    {
+      "id": 305,
+      "label": "Synthetic Lethality",
+      "group": "EXP"
+    },
+    {
+      "id": 306,
+      "label": "Genomics",
+      "group": "FOUND",
+      "shape": "box"
+    },
+    {
+      "id": 307,
+      "label": "Genome Sequencing",
+      "group": "BIOINFO"
+    },
+    {
+      "id": 308,
+      "label": "Sanger Sequencing",
+      "group": "BIOINFO"
+    },
+    {
+      "id": 309,
+      "label": "Next-Gen Sequencing",
+      "group": "BIOINFO"
+    },
+    {
+      "id": 310,
+      "label": "Illumina Sequencing",
+      "group": "BIOINFO"
+    },
+    {
+      "id": 311,
+      "label": "Long-Read Sequencing",
+      "group": "BIOINFO"
+    },
+    {
+      "id": 312,
+      "label": "Whole Genome Sequencing",
+      "group": "BIOINFO"
+    },
+    {
+      "id": 313,
+      "label": "Whole Exome Sequencing",
+      "group": "BIOINFO"
+    },
+    {
+      "id": 314,
+      "label": "Targeted Sequencing",
+      "group": "BIOINFO"
+    },
+    {
+      "id": 315,
+      "label": "Sequence Alignment",
+      "group": "BIOINFO"
+    },
+    {
+      "id": 316,
+      "label": "BLAST Algorithm",
+      "group": "BIOINFO"
+    },
+    {
+      "id": 317,
+      "label": "Pairwise Alignment",
+      "group": "BIOINFO"
+    },
+    {
+      "id": 318,
+      "label": "Multiple Sequence Alignment",
+      "group": "BIOINFO"
+    },
+    {
+      "id": 319,
+      "label": "Genome Annotation",
+      "group": "BIOINFO"
+    },
+    {
+      "id": 320,
+      "label": "Gene Prediction",
+      "group": "BIOINFO"
+    },
+    {
+      "id": 321,
+      "label": "Variant Calling",
+      "group": "BIOINFO"
+    },
+    {
+      "id": 322,
+      "label": "VCF File Format",
+      "group": "BIOINFO"
+    },
+    {
+      "id": 323,
+      "label": "FASTA File Format",
+      "group": "BIOINFO"
+    },
+    {
+      "id": 324,
+      "label": "FASTQ File Format",
+      "group": "BIOINFO"
+    },
+    {
+      "id": 325,
+      "label": "BAM File Format",
+      "group": "BIOINFO"
+    },
+    {
+      "id": 326,
+      "label": "BED File Format",
+      "group": "BIOINFO"
+    },
+    {
+      "id": 327,
+      "label": "Variant Annotation",
+      "group": "BIOINFO"
+    },
+    {
+      "id": 328,
+      "label": "Variant Classification",
+      "group": "BIOINFO"
+    },
+    {
+      "id": 329,
+      "label": "Benign Variant",
+      "group": "BIOINFO"
+    },
+    {
+      "id": 330,
+      "label": "Pathogenic Variant",
+      "group": "BIOINFO"
+    },
+    {
+      "id": 331,
+      "label": "Variant of Uncertain Sig",
+      "group": "BIOINFO"
+    },
+    {
+      "id": 332,
+      "label": "Genomic Databases",
+      "group": "BIOINFO"
+    },
+    {
+      "id": 333,
+      "label": "NCBI Database",
+      "group": "BIOINFO"
+    },
+    {
+      "id": 334,
+      "label": "Ensembl Database",
+      "group": "BIOINFO"
+    },
+    {
+      "id": 335,
+      "label": "UCSC Genome Browser",
+      "group": "BIOINFO"
+    },
+    {
+      "id": 336,
+      "label": "ClinVar Database",
+      "group": "BIOINFO"
+    },
+    {
+      "id": 337,
+      "label": "dbSNP Database",
+      "group": "BIOINFO"
+    },
+    {
+      "id": 338,
+      "label": "Reproducible Workflows",
+      "group": "BIOINFO"
+    },
+    {
+      "id": 339,
+      "label": "Pipeline Automation",
+      "group": "BIOINFO"
+    },
+    {
+      "id": 340,
+      "label": "Version Control in Genomics",
+      "group": "FOUND"
+    },
+    {
+      "id": 341,
+      "label": "RNA-Seq Analysis",
+      "group": "BIOINFO"
+    },
+    {
+      "id": 342,
+      "label": "Differential Expression",
+      "group": "BIOINFO"
+    },
+    {
+      "id": 343,
+      "label": "Gene Ontology",
+      "group": "BIOINFO"
+    },
+    {
+      "id": 344,
+      "label": "Pathway Enrichment",
+      "group": "BIOINFO"
+    },
+    {
+      "id": 345,
+      "label": "Functional Annotation",
+      "group": "BIOINFO"
+    },
+    {
+      "id": 346,
+      "label": "Human Genetics",
+      "group": "FOUND",
+      "shape": "box"
+    },
+    {
+      "id": 347,
+      "label": "Mendelian Disease",
+      "group": "CLIN"
+    },
+    {
+      "id": 348,
+      "label": "Complex Disease",
+      "group": "CLIN"
+    },
+    {
+      "id": 349,
+      "label": "Genetic Counseling",
+      "group": "CLIN"
+    },
+    {
+      "id": 350,
+      "label": "Risk Assessment",
+      "group": "CLIN"
+    },
+    {
+      "id": 351,
+      "label": "Carrier Screening",
+      "group": "CLIN"
+    },
+    {
+      "id": 352,
+      "label": "Newborn Screening",
+      "group": "CLIN"
+    },
+    {
+      "id": 353,
+      "label": "Prenatal Genetic Testing",
+      "group": "CLIN"
+    },
+    {
+      "id": 354,
+      "label": "Preimplantation Diagnosis",
+      "group": "CLIN"
+    },
+    {
+      "id": 355,
+      "label": "Family History Assessment",
+      "group": "CLIN"
+    },
+    {
+      "id": 356,
+      "label": "Pedigree Construction",
+      "group": "PED"
+    },
+    {
+      "id": 357,
+      "label": "Genetic Testing Types",
+      "group": "CLIN"
+    },
+    {
+      "id": 358,
+      "label": "Diagnostic Testing",
+      "group": "CLIN"
+    },
+    {
+      "id": 359,
+      "label": "Predictive Testing",
+      "group": "CLIN"
+    },
+    {
+      "id": 360,
+      "label": "Presymptomatic Testing",
+      "group": "CLIN"
+    },
+    {
+      "id": 361,
+      "label": "Pharmacogenomics",
+      "group": "FOUND"
+    },
+    {
+      "id": 362,
+      "label": "Drug Metabolism Variation",
+      "group": "CLIN"
+    },
+    {
+      "id": 363,
+      "label": "CYP450 Polymorphisms",
+      "group": "CLIN"
+    },
+    {
+      "id": 364,
+      "label": "Dosage Optimization",
+      "group": "CLIN"
+    },
+    {
+      "id": 365,
+      "label": "Adverse Drug Reaction",
+      "group": "CLIN"
+    },
+    {
+      "id": 366,
+      "label": "Companion Diagnostics",
+      "group": "CLIN"
+    },
+    {
+      "id": 367,
+      "label": "Precision Medicine",
+      "group": "CLIN"
+    },
+    {
+      "id": 368,
+      "label": "Targeted Therapy",
+      "group": "CLIN"
+    },
+    {
+      "id": 369,
+      "label": "Biomarker Discovery",
+      "group": "CLIN"
+    },
+    {
+      "id": 370,
+      "label": "Cancer Genetics",
+      "group": "CLIN"
+    },
+    {
+      "id": 371,
+      "label": "Oncogene",
+      "group": "CLIN"
+    },
+    {
+      "id": 372,
+      "label": "Tumor Suppressor Gene",
+      "group": "CLIN"
+    },
+    {
+      "id": 373,
+      "label": "Two-Hit Hypothesis",
+      "group": "CLIN"
+    },
+    {
+      "id": 374,
+      "label": "Somatic Mutation in Cancer",
+      "group": "CLIN"
+    },
+    {
+      "id": 375,
+      "label": "Driver Mutation",
+      "group": "CLIN"
+    },
+    {
+      "id": 376,
+      "label": "Passenger Mutation",
+      "group": "CLIN"
+    },
+    {
+      "id": 377,
+      "label": "Tumor Mutational Burden",
+      "group": "CLIN"
+    },
+    {
+      "id": 378,
+      "label": "Microsatellite Instability",
+      "group": "CLIN"
+    },
+    {
+      "id": 379,
+      "label": "Lynch Syndrome",
+      "group": "CLIN"
+    },
+    {
+      "id": 380,
+      "label": "BRCA Genes",
+      "group": "CLIN"
+    },
+    {
+      "id": 381,
+      "label": "Liquid Biopsy",
+      "group": "CLIN"
+    },
+    {
+      "id": 382,
+      "label": "Circulating Tumor DNA",
+      "group": "CLIN"
+    },
+    {
+      "id": 383,
+      "label": "Hereditary Cancer Syndrome",
+      "group": "CLIN"
+    },
+    {
+      "id": 384,
+      "label": "Chromosomal Instability",
+      "group": "CLIN"
+    },
+    {
+      "id": 385,
+      "label": "Cancer Predisposition",
+      "group": "CLIN"
+    },
+    {
+      "id": 386,
+      "label": "Genetic Risk Factor",
+      "group": "CLIN"
+    },
+    {
+      "id": 387,
+      "label": "Polygenic Disease Risk",
+      "group": "CLIN"
+    },
+    {
+      "id": 388,
+      "label": "Gene Therapy",
+      "group": "CLIN"
+    },
+    {
+      "id": 389,
+      "label": "Antisense Therapy",
+      "group": "CLIN"
+    },
+    {
+      "id": 390,
+      "label": "Gene Replacement Therapy",
+      "group": "CLIN"
+    },
+    {
+      "id": 391,
+      "label": "Genetic Ethics",
+      "group": "FOUND",
+      "shape": "box"
+    },
+    {
+      "id": 392,
+      "label": "Informed Consent",
+      "group": "ETHICS"
+    },
+    {
+      "id": 393,
+      "label": "Genetic Privacy",
+      "group": "ETHICS"
+    },
+    {
+      "id": 394,
+      "label": "Genetic Discrimination",
+      "group": "ETHICS"
+    },
+    {
+      "id": 395,
+      "label": "GINA Legislation",
+      "group": "ETHICS"
+    },
+    {
+      "id": 396,
+      "label": "Data Ownership",
+      "group": "ETHICS"
+    },
+    {
+      "id": 397,
+      "label": "Biobank Ethics",
+      "group": "ETHICS"
+    },
+    {
+      "id": 398,
+      "label": "Return of Results",
+      "group": "ETHICS"
+    },
+    {
+      "id": 399,
+      "label": "Incidental Findings",
+      "group": "ETHICS"
+    },
+    {
+      "id": 400,
+      "label": "Duty to Warn",
+      "group": "ETHICS"
+    },
+    {
+      "id": 401,
+      "label": "Equity in Genomic Medicine",
+      "group": "ETHICS"
+    },
+    {
+      "id": 402,
+      "label": "Health Disparities",
+      "group": "ETHICS"
+    },
+    {
+      "id": 403,
+      "label": "Diversity in Genomics",
+      "group": "FOUND"
+    },
+    {
+      "id": 404,
+      "label": "Reference Genome Bias",
+      "group": "ETHICS"
+    },
+    {
+      "id": 405,
+      "label": "Ancestry and Identity",
+      "group": "ETHICS"
+    },
+    {
+      "id": 406,
+      "label": "Gene Editing Ethics",
+      "group": "ETHICS"
+    },
+    {
+      "id": 407,
+      "label": "Germline Editing Debate",
+      "group": "ETHICS"
+    },
+    {
+      "id": 408,
+      "label": "Somatic Gene Editing",
+      "group": "EXP"
+    },
+    {
+      "id": 409,
+      "label": "Enhancement vs Therapy",
+      "group": "ETHICS"
+    },
+    {
+      "id": 410,
+      "label": "Eugenics History",
+      "group": "ETHICS"
+    },
+    {
+      "id": 411,
+      "label": "DTC Genetic Testing",
+      "group": "ETHICS"
+    },
+    {
+      "id": 412,
+      "label": "DTC Testing Regulation",
+      "group": "ETHICS"
+    },
+    {
+      "id": 413,
+      "label": "Genetic Literacy",
+      "group": "ETHICS"
+    },
+    {
+      "id": 414,
+      "label": "Public Engagement",
+      "group": "ETHICS"
+    },
+    {
+      "id": 415,
+      "label": "Science Communication",
+      "group": "ETHICS"
+    },
+    {
+      "id": 416,
+      "label": "CRISPR Advancements",
+      "group": "FRONT"
+    },
+    {
+      "id": 417,
+      "label": "CRISPR Therapeutics",
+      "group": "FRONT"
+    },
+    {
+      "id": 418,
+      "label": "In Vivo Gene Editing",
+      "group": "FRONT"
+    },
+    {
+      "id": 419,
+      "label": "Epigenome Editing",
+      "group": "FRONT"
+    },
+    {
+      "id": 420,
+      "label": "Single-Cell Genomics",
+      "group": "FOUND"
+    },
+    {
+      "id": 421,
+      "label": "Single-Cell RNA Sequencing",
+      "group": "FRONT"
+    },
+    {
+      "id": 422,
+      "label": "Spatial Transcriptomics",
+      "group": "FRONT"
+    },
+    {
+      "id": 423,
+      "label": "Cell Atlas Projects",
+      "group": "FRONT"
+    },
+    {
+      "id": 424,
+      "label": "AI in Genomics",
+      "group": "FOUND"
+    },
+    {
+      "id": 425,
+      "label": "Machine Learning Variants",
+      "group": "FRONT"
+    },
+    {
+      "id": 426,
+      "label": "Deep Learning in Genomics",
+      "group": "FOUND"
+    },
+    {
+      "id": 427,
+      "label": "Large Language Models Bio",
+      "group": "FRONT"
+    },
+    {
+      "id": 428,
+      "label": "Protein Structure AI",
+      "group": "FRONT"
+    },
+    {
+      "id": 429,
+      "label": "Long-Read Genomics",
+      "group": "FOUND"
+    },
+    {
+      "id": 430,
+      "label": "Pangenome",
+      "group": "FRONT"
+    },
+    {
+      "id": 431,
+      "label": "Pangenome Reference",
+      "group": "FRONT"
+    },
+    {
+      "id": 432,
+      "label": "Structural Variant Calling",
+      "group": "FRONT"
+    },
+    {
+      "id": 433,
+      "label": "Telomere-to-Telomere",
+      "group": "FRONT"
+    },
+    {
+      "id": 434,
+      "label": "Metagenomics",
+      "group": "FOUND"
+    },
+    {
+      "id": 435,
+      "label": "Microbiome Genetics",
+      "group": "FRONT"
+    },
+    {
+      "id": 436,
+      "label": "Gene Regulation Atlas",
+      "group": "FRONT"
+    },
+    {
+      "id": 437,
+      "label": "4D Nucleome",
+      "group": "FRONT"
+    },
+    {
+      "id": 438,
+      "label": "Synthetic Genomics",
+      "group": "FOUND"
+    },
+    {
+      "id": 439,
+      "label": "Xenotransplantation",
+      "group": "FRONT"
+    },
+    {
+      "id": 440,
+      "label": "Emerging Research Methods",
+      "group": "FRONT"
+    },
+    {
+      "id": 441,
+      "label": "Experimental Design",
+      "group": "EXP"
+    },
+    {
+      "id": 442,
+      "label": "Hypothesis Testing",
+      "group": "EXP"
+    },
+    {
+      "id": 443,
+      "label": "Data Interpretation",
+      "group": "BIOINFO"
+    },
+    {
+      "id": 444,
+      "label": "Research Ethics",
+      "group": "ETHICS"
+    },
+    {
+      "id": 445,
+      "label": "Scientific Communication",
+      "group": "ETHICS"
+    },
+    {
+      "id": 446,
+      "label": "Computational Workflow",
+      "group": "BIOINFO"
+    },
+    {
+      "id": 447,
+      "label": "Variant Interpretation",
+      "group": "CLIN"
+    },
+    {
+      "id": 448,
+      "label": "Genotype-Phenotype Models",
+      "group": "CLIN"
+    },
+    {
+      "id": 449,
+      "label": "Systems Genetics",
+      "group": "CLIN"
+    },
+    {
+      "id": 450,
+      "label": "Capstone Genomic Project",
+      "group": "FRONT"
+    }
+  ],
+  "edges": [
+    {
+      "from": 2,
+      "to": 1
+    },
+    {
+      "from": 3,
+      "to": 2
+    },
+    {
+      "from": 4,
+      "to": 3
+    },
+    {
+      "from": 5,
+      "to": 4
+    },
+    {
+      "from": 6,
+      "to": 4
+    },
+    {
+      "from": 6,
+      "to": 5
+    },
+    {
+      "from": 7,
+      "to": 4
+    },
+    {
+      "from": 7,
+      "to": 6
+    },
+    {
+      "from": 8,
+      "to": 1
+    },
+    {
+      "from": 8,
+      "to": 2
+    },
+    {
+      "from": 9,
+      "to": 8
+    },
+    {
+      "from": 10,
+      "to": 8
+    },
+    {
+      "from": 11,
+      "to": 8
+    },
+    {
+      "from": 12,
+      "to": 11
+    },
+    {
+      "from": 13,
+      "to": 11
+    },
+    {
+      "from": 14,
+      "to": 4
+    },
+    {
+      "from": 14,
+      "to": 10
+    },
+    {
+      "from": 15,
+      "to": 8
+    },
+    {
+      "from": 15,
+      "to": 1
+    },
+    {
+      "from": 16,
+      "to": 15
+    },
+    {
+      "from": 17,
+      "to": 15
+    },
+    {
+      "from": 18,
+      "to": 17
+    },
+    {
+      "from": 19,
+      "to": 15
+    },
+    {
+      "from": 19,
+      "to": 17
+    },
+    {
+      "from": 20,
+      "to": 1
+    },
+    {
+      "from": 21,
+      "to": 20
+    },
+    {
+      "from": 22,
+      "to": 20
+    },
+    {
+      "from": 23,
+      "to": 1
+    },
+    {
+      "from": 24,
+      "to": 23
+    },
+    {
+      "from": 25,
+      "to": 23
+    },
+    {
+      "from": 26,
+      "to": 23
+    },
+    {
+      "from": 27,
+      "to": 23
+    },
+    {
+      "from": 27,
+      "to": 26
+    },
+    {
+      "from": 28,
+      "to": 1
+    },
+    {
+      "from": 28,
+      "to": 23
+    },
+    {
+      "from": 29,
+      "to": 28
+    },
+    {
+      "from": 30,
+      "to": 28
+    },
+    {
+      "from": 31,
+      "to": 28
+    },
+    {
+      "from": 31,
+      "to": 29
+    },
+    {
+      "from": 32,
+      "to": 31
+    },
+    {
+      "from": 33,
+      "to": 2
+    },
+    {
+      "from": 34,
+      "to": 33
+    },
+    {
+      "from": 35,
+      "to": 1
+    },
+    {
+      "from": 36,
+      "to": 35
+    },
+    {
+      "from": 37,
+      "to": 33
+    },
+    {
+      "from": 38,
+      "to": 37
+    },
+    {
+      "from": 39,
+      "to": 23
+    },
+    {
+      "from": 39,
+      "to": 33
+    },
+    {
+      "from": 40,
+      "to": 1
+    },
+    {
+      "from": 41,
+      "to": 1
+    },
+    {
+      "from": 42,
+      "to": 23
+    },
+    {
+      "from": 42,
+      "to": 41
+    },
+    {
+      "from": 43,
+      "to": 15
+    },
+    {
+      "from": 43,
+      "to": 16
+    },
+    {
+      "from": 44,
+      "to": 43
+    },
+    {
+      "from": 45,
+      "to": 66
+    },
+    {
+      "from": 46,
+      "to": 45
+    },
+    {
+      "from": 47,
+      "to": 45
+    },
+    {
+      "from": 47,
+      "to": 106
+    },
+    {
+      "from": 48,
+      "to": 1
+    },
+    {
+      "from": 49,
+      "to": 48
+    },
+    {
+      "from": 50,
+      "to": 48
+    },
+    {
+      "from": 52,
+      "to": 51
+    },
+    {
+      "from": 53,
+      "to": 52
+    },
+    {
+      "from": 53,
+      "to": 59
+    },
+    {
+      "from": 54,
+      "to": 52
+    },
+    {
+      "from": 54,
+      "to": 59
+    },
+    {
+      "from": 55,
+      "to": 54
+    },
+    {
+      "from": 56,
+      "to": 54
+    },
+    {
+      "from": 57,
+      "to": 52
+    },
+    {
+      "from": 58,
+      "to": 52
+    },
+    {
+      "from": 59,
+      "to": 52
+    },
+    {
+      "from": 60,
+      "to": 59
+    },
+    {
+      "from": 61,
+      "to": 60
+    },
+    {
+      "from": 62,
+      "to": 61
+    },
+    {
+      "from": 63,
+      "to": 62
+    },
+    {
+      "from": 64,
+      "to": 62
+    },
+    {
+      "from": 65,
+      "to": 62
+    },
+    {
+      "from": 65,
+      "to": 59
+    },
+    {
+      "from": 66,
+      "to": 62
+    },
+    {
+      "from": 66,
+      "to": 68
+    },
+    {
+      "from": 67,
+      "to": 66
+    },
+    {
+      "from": 68,
+      "to": 51
+    },
+    {
+      "from": 69,
+      "to": 66
+    },
+    {
+      "from": 69,
+      "to": 67
+    },
+    {
+      "from": 70,
+      "to": 56
+    },
+    {
+      "from": 70,
+      "to": 66
+    },
+    {
+      "from": 71,
+      "to": 70
+    },
+    {
+      "from": 72,
+      "to": 70
+    },
+    {
+      "from": 73,
+      "to": 51
+    },
+    {
+      "from": 74,
+      "to": 73
+    },
+    {
+      "from": 75,
+      "to": 73
+    },
+    {
+      "from": 76,
+      "to": 73
+    },
+    {
+      "from": 76,
+      "to": 77
+    },
+    {
+      "from": 77,
+      "to": 73
+    },
+    {
+      "from": 78,
+      "to": 77
+    },
+    {
+      "from": 78,
+      "to": 52
+    },
+    {
+      "from": 79,
+      "to": 77
+    },
+    {
+      "from": 79,
+      "to": 52
+    },
+    {
+      "from": 80,
+      "to": 77
+    },
+    {
+      "from": 80,
+      "to": 52
+    },
+    {
+      "from": 81,
+      "to": 77
+    },
+    {
+      "from": 81,
+      "to": 52
+    },
+    {
+      "from": 82,
+      "to": 73
+    },
+    {
+      "from": 83,
+      "to": 82
+    },
+    {
+      "from": 84,
+      "to": 83
+    },
+    {
+      "from": 85,
+      "to": 82
+    },
+    {
+      "from": 86,
+      "to": 85
+    },
+    {
+      "from": 87,
+      "to": 74
+    },
+    {
+      "from": 88,
+      "to": 87
+    },
+    {
+      "from": 88,
+      "to": 89
+    },
+    {
+      "from": 89,
+      "to": 87
+    },
+    {
+      "from": 89,
+      "to": 111
+    },
+    {
+      "from": 90,
+      "to": 88
+    },
+    {
+      "from": 90,
+      "to": 89
+    },
+    {
+      "from": 91,
+      "to": 87
+    },
+    {
+      "from": 91,
+      "to": 90
+    },
+    {
+      "from": 92,
+      "to": 51
+    },
+    {
+      "from": 92,
+      "to": 73
+    },
+    {
+      "from": 93,
+      "to": 92
+    },
+    {
+      "from": 94,
+      "to": 92
+    },
+    {
+      "from": 95,
+      "to": 94
+    },
+    {
+      "from": 96,
+      "to": 94
+    },
+    {
+      "from": 97,
+      "to": 96
+    },
+    {
+      "from": 98,
+      "to": 92
+    },
+    {
+      "from": 98,
+      "to": 268
+    },
+    {
+      "from": 99,
+      "to": 77
+    },
+    {
+      "from": 99,
+      "to": 51
+    },
+    {
+      "from": 100,
+      "to": 99
+    },
+    {
+      "from": 101,
+      "to": 99
+    },
+    {
+      "from": 101,
+      "to": 134
+    },
+    {
+      "from": 102,
+      "to": 99
+    },
+    {
+      "from": 102,
+      "to": 100
+    },
+    {
+      "from": 103,
+      "to": 99
+    },
+    {
+      "from": 104,
+      "to": 99
+    },
+    {
+      "from": 104,
+      "to": 77
+    },
+    {
+      "from": 105,
+      "to": 51
+    },
+    {
+      "from": 105,
+      "to": 106
+    },
+    {
+      "from": 106,
+      "to": 52
+    },
+    {
+      "from": 107,
+      "to": 106
+    },
+    {
+      "from": 108,
+      "to": 106
+    },
+    {
+      "from": 109,
+      "to": 106
+    },
+    {
+      "from": 110,
+      "to": 77
+    },
+    {
+      "from": 110,
+      "to": 78
+    },
+    {
+      "from": 110,
+      "to": 79
+    },
+    {
+      "from": 112,
+      "to": 111
+    },
+    {
+      "from": 112,
+      "to": 52
+    },
+    {
+      "from": 113,
+      "to": 111
+    },
+    {
+      "from": 114,
+      "to": 113
+    },
+    {
+      "from": 114,
+      "to": 52
+    },
+    {
+      "from": 115,
+      "to": 113
+    },
+    {
+      "from": 115,
+      "to": 114
+    },
+    {
+      "from": 116,
+      "to": 115
+    },
+    {
+      "from": 117,
+      "to": 116
+    },
+    {
+      "from": 118,
+      "to": 117
+    },
+    {
+      "from": 119,
+      "to": 115
+    },
+    {
+      "from": 119,
+      "to": 35
+    },
+    {
+      "from": 120,
+      "to": 119
+    },
+    {
+      "from": 121,
+      "to": 120
+    },
+    {
+      "from": 122,
+      "to": 121
+    },
+    {
+      "from": 123,
+      "to": 120
+    },
+    {
+      "from": 124,
+      "to": 73
+    },
+    {
+      "from": 124,
+      "to": 111
+    },
+    {
+      "from": 125,
+      "to": 124
+    },
+    {
+      "from": 126,
+      "to": 125
+    },
+    {
+      "from": 127,
+      "to": 84
+    },
+    {
+      "from": 127,
+      "to": 125
+    },
+    {
+      "from": 128,
+      "to": 74
+    },
+    {
+      "from": 128,
+      "to": 125
+    },
+    {
+      "from": 129,
+      "to": 116
+    },
+    {
+      "from": 129,
+      "to": 125
+    },
+    {
+      "from": 130,
+      "to": 52
+    },
+    {
+      "from": 130,
+      "to": 129
+    },
+    {
+      "from": 131,
+      "to": 129
+    },
+    {
+      "from": 132,
+      "to": 131
+    },
+    {
+      "from": 133,
+      "to": 129
+    },
+    {
+      "from": 133,
+      "to": 134
+    },
+    {
+      "from": 134,
+      "to": 306
+    },
+    {
+      "from": 134,
+      "to": 129
+    },
+    {
+      "from": 135,
+      "to": 124
+    },
+    {
+      "from": 135,
+      "to": 116
+    },
+    {
+      "from": 136,
+      "to": 135
+    },
+    {
+      "from": 136,
+      "to": 129
+    },
+    {
+      "from": 137,
+      "to": 135
+    },
+    {
+      "from": 138,
+      "to": 112
+    },
+    {
+      "from": 138,
+      "to": 124
+    },
+    {
+      "from": 139,
+      "to": 138
+    },
+    {
+      "from": 140,
+      "to": 139
+    },
+    {
+      "from": 141,
+      "to": 138
+    },
+    {
+      "from": 142,
+      "to": 138
+    },
+    {
+      "from": 143,
+      "to": 113
+    },
+    {
+      "from": 143,
+      "to": 114
+    },
+    {
+      "from": 144,
+      "to": 116
+    },
+    {
+      "from": 144,
+      "to": 143
+    },
+    {
+      "from": 145,
+      "to": 113
+    },
+    {
+      "from": 146,
+      "to": 113
+    },
+    {
+      "from": 146,
+      "to": 145
+    },
+    {
+      "from": 147,
+      "to": 113
+    },
+    {
+      "from": 148,
+      "to": 147
+    },
+    {
+      "from": 149,
+      "to": 147
+    },
+    {
+      "from": 150,
+      "to": 148
+    },
+    {
+      "from": 150,
+      "to": 57
+    },
+    {
+      "from": 151,
+      "to": 147
+    },
+    {
+      "from": 152,
+      "to": 80
+    },
+    {
+      "from": 152,
+      "to": 116
+    },
+    {
+      "from": 153,
+      "to": 28
+    },
+    {
+      "from": 153,
+      "to": 116
+    },
+    {
+      "from": 154,
+      "to": 116
+    },
+    {
+      "from": 154,
+      "to": 155
+    },
+    {
+      "from": 155,
+      "to": 113
+    },
+    {
+      "from": 157,
+      "to": 156
+    },
+    {
+      "from": 158,
+      "to": 157
+    },
+    {
+      "from": 159,
+      "to": 157
+    },
+    {
+      "from": 159,
+      "to": 158
+    },
+    {
+      "from": 160,
+      "to": 159
+    },
+    {
+      "from": 161,
+      "to": 160
+    },
+    {
+      "from": 162,
+      "to": 156
+    },
+    {
+      "from": 162,
+      "to": 169
+    },
+    {
+      "from": 163,
+      "to": 162
+    },
+    {
+      "from": 164,
+      "to": 162
+    },
+    {
+      "from": 164,
+      "to": 165
+    },
+    {
+      "from": 165,
+      "to": 169
+    },
+    {
+      "from": 166,
+      "to": 169
+    },
+    {
+      "from": 167,
+      "to": 169
+    },
+    {
+      "from": 167,
+      "to": 23
+    },
+    {
+      "from": 168,
+      "to": 169
+    },
+    {
+      "from": 169,
+      "to": 156
+    },
+    {
+      "from": 169,
+      "to": 157
+    },
+    {
+      "from": 170,
+      "to": 162
+    },
+    {
+      "from": 171,
+      "to": 170
+    },
+    {
+      "from": 172,
+      "to": 170
+    },
+    {
+      "from": 173,
+      "to": 170
+    },
+    {
+      "from": 173,
+      "to": 171
+    },
+    {
+      "from": 173,
+      "to": 172
+    },
+    {
+      "from": 174,
+      "to": 162
+    },
+    {
+      "from": 174,
+      "to": 170
+    },
+    {
+      "from": 175,
+      "to": 156
+    },
+    {
+      "from": 175,
+      "to": 124
+    },
+    {
+      "from": 176,
+      "to": 175
+    },
+    {
+      "from": 176,
+      "to": 116
+    },
+    {
+      "from": 177,
+      "to": 176
+    },
+    {
+      "from": 178,
+      "to": 176
+    },
+    {
+      "from": 178,
+      "to": 175
+    },
+    {
+      "from": 179,
+      "to": 74
+    },
+    {
+      "from": 179,
+      "to": 175
+    },
+    {
+      "from": 179,
+      "to": 189
+    },
+    {
+      "from": 180,
+      "to": 179
+    },
+    {
+      "from": 181,
+      "to": 179
+    },
+    {
+      "from": 181,
+      "to": 182
+    },
+    {
+      "from": 182,
+      "to": 179
+    },
+    {
+      "from": 183,
+      "to": 182
+    },
+    {
+      "from": 184,
+      "to": 182
+    },
+    {
+      "from": 185,
+      "to": 179
+    },
+    {
+      "from": 186,
+      "to": 185
+    },
+    {
+      "from": 187,
+      "to": 179
+    },
+    {
+      "from": 187,
+      "to": 185
+    },
+    {
+      "from": 188,
+      "to": 162
+    },
+    {
+      "from": 188,
+      "to": 179
+    },
+    {
+      "from": 190,
+      "to": 189
+    },
+    {
+      "from": 191,
+      "to": 190
+    },
+    {
+      "from": 192,
+      "to": 190
+    },
+    {
+      "from": 192,
+      "to": 191
+    },
+    {
+      "from": 193,
+      "to": 192
+    },
+    {
+      "from": 194,
+      "to": 192
+    },
+    {
+      "from": 194,
+      "to": 33
+    },
+    {
+      "from": 195,
+      "to": 189
+    },
+    {
+      "from": 196,
+      "to": 195
+    },
+    {
+      "from": 197,
+      "to": 196
+    },
+    {
+      "from": 198,
+      "to": 195
+    },
+    {
+      "from": 199,
+      "to": 195
+    },
+    {
+      "from": 200,
+      "to": 195
+    },
+    {
+      "from": 201,
+      "to": 195
+    },
+    {
+      "from": 202,
+      "to": 201
+    },
+    {
+      "from": 203,
+      "to": 189
+    },
+    {
+      "from": 204,
+      "to": 203
+    },
+    {
+      "from": 205,
+      "to": 203
+    },
+    {
+      "from": 206,
+      "to": 189
+    },
+    {
+      "from": 207,
+      "to": 206
+    },
+    {
+      "from": 208,
+      "to": 189
+    },
+    {
+      "from": 208,
+      "to": 73
+    },
+    {
+      "from": 209,
+      "to": 189
+    },
+    {
+      "from": 209,
+      "to": 210
+    },
+    {
+      "from": 210,
+      "to": 189
+    },
+    {
+      "from": 210,
+      "to": 190
+    },
+    {
+      "from": 212,
+      "to": 211
+    },
+    {
+      "from": 213,
+      "to": 212
+    },
+    {
+      "from": 214,
+      "to": 213
+    },
+    {
+      "from": 215,
+      "to": 212
+    },
+    {
+      "from": 216,
+      "to": 215
+    },
+    {
+      "from": 217,
+      "to": 215
+    },
+    {
+      "from": 218,
+      "to": 217
+    },
+    {
+      "from": 219,
+      "to": 217
+    },
+    {
+      "from": 220,
+      "to": 212
+    },
+    {
+      "from": 220,
+      "to": 217
+    },
+    {
+      "from": 221,
+      "to": 212
+    },
+    {
+      "from": 221,
+      "to": 219
+    },
+    {
+      "from": 222,
+      "to": 220
+    },
+    {
+      "from": 222,
+      "to": 221
+    },
+    {
+      "from": 223,
+      "to": 220
+    },
+    {
+      "from": 223,
+      "to": 213
+    },
+    {
+      "from": 224,
+      "to": 215
+    },
+    {
+      "from": 225,
+      "to": 220
+    },
+    {
+      "from": 225,
+      "to": 226
+    },
+    {
+      "from": 226,
+      "to": 215
+    },
+    {
+      "from": 226,
+      "to": 220
+    },
+    {
+      "from": 227,
+      "to": 211
+    },
+    {
+      "from": 227,
+      "to": 215
+    },
+    {
+      "from": 228,
+      "to": 227
+    },
+    {
+      "from": 229,
+      "to": 228
+    },
+    {
+      "from": 230,
+      "to": 228
+    },
+    {
+      "from": 231,
+      "to": 212
+    },
+    {
+      "from": 232,
+      "to": 231
+    },
+    {
+      "from": 233,
+      "to": 231
+    },
+    {
+      "from": 234,
+      "to": 218
+    },
+    {
+      "from": 234,
+      "to": 231
+    },
+    {
+      "from": 235,
+      "to": 219
+    },
+    {
+      "from": 235,
+      "to": 231
+    },
+    {
+      "from": 236,
+      "to": 211
+    },
+    {
+      "from": 237,
+      "to": 236
+    },
+    {
+      "from": 238,
+      "to": 237
+    },
+    {
+      "from": 239,
+      "to": 238
+    },
+    {
+      "from": 240,
+      "to": 236
+    },
+    {
+      "from": 241,
+      "to": 236
+    },
+    {
+      "from": 242,
+      "to": 236
+    },
+    {
+      "from": 242,
+      "to": 243
+    },
+    {
+      "from": 243,
+      "to": 246
+    },
+    {
+      "from": 244,
+      "to": 242
+    },
+    {
+      "from": 245,
+      "to": 246
+    },
+    {
+      "from": 246,
+      "to": 211
+    },
+    {
+      "from": 247,
+      "to": 246
+    },
+    {
+      "from": 248,
+      "to": 211
+    },
+    {
+      "from": 249,
+      "to": 211
+    },
+    {
+      "from": 250,
+      "to": 249
+    },
+    {
+      "from": 251,
+      "to": 59
+    },
+    {
+      "from": 251,
+      "to": 62
+    },
+    {
+      "from": 252,
+      "to": 251
+    },
+    {
+      "from": 252,
+      "to": 63
+    },
+    {
+      "from": 253,
+      "to": 251
+    },
+    {
+      "from": 253,
+      "to": 64
+    },
+    {
+      "from": 254,
+      "to": 251
+    },
+    {
+      "from": 255,
+      "to": 220
+    },
+    {
+      "from": 255,
+      "to": 254
+    },
+    {
+      "from": 256,
+      "to": 220
+    },
+    {
+      "from": 257,
+      "to": 251
+    },
+    {
+      "from": 257,
+      "to": 258
+    },
+    {
+      "from": 258,
+      "to": 251
+    },
+    {
+      "from": 259,
+      "to": 260
+    },
+    {
+      "from": 259,
+      "to": 227
+    },
+    {
+      "from": 260,
+      "to": 211
+    },
+    {
+      "from": 260,
+      "to": 227
+    },
+    {
+      "from": 261,
+      "to": 260
+    },
+    {
+      "from": 261,
+      "to": 215
+    },
+    {
+      "from": 262,
+      "to": 261
+    },
+    {
+      "from": 262,
+      "to": 251
+    },
+    {
+      "from": 263,
+      "to": 259
+    },
+    {
+      "from": 263,
+      "to": 211
+    },
+    {
+      "from": 264,
+      "to": 260
+    },
+    {
+      "from": 265,
+      "to": 264
+    },
+    {
+      "from": 265,
+      "to": 66
+    },
+    {
+      "from": 267,
+      "to": 266
+    },
+    {
+      "from": 268,
+      "to": 266
+    },
+    {
+      "from": 269,
+      "to": 268
+    },
+    {
+      "from": 270,
+      "to": 269
+    },
+    {
+      "from": 271,
+      "to": 268
+    },
+    {
+      "from": 271,
+      "to": 92
+    },
+    {
+      "from": 272,
+      "to": 268
+    },
+    {
+      "from": 273,
+      "to": 271
+    },
+    {
+      "from": 273,
+      "to": 220
+    },
+    {
+      "from": 274,
+      "to": 268
+    },
+    {
+      "from": 275,
+      "to": 268
+    },
+    {
+      "from": 275,
+      "to": 23
+    },
+    {
+      "from": 276,
+      "to": 268
+    },
+    {
+      "from": 276,
+      "to": 48
+    },
+    {
+      "from": 277,
+      "to": 276
+    },
+    {
+      "from": 279,
+      "to": 278
+    },
+    {
+      "from": 280,
+      "to": 278
+    },
+    {
+      "from": 281,
+      "to": 278
+    },
+    {
+      "from": 282,
+      "to": 278
+    },
+    {
+      "from": 283,
+      "to": 278
+    },
+    {
+      "from": 284,
+      "to": 278
+    },
+    {
+      "from": 285,
+      "to": 267
+    },
+    {
+      "from": 286,
+      "to": 285
+    },
+    {
+      "from": 287,
+      "to": 267
+    },
+    {
+      "from": 288,
+      "to": 242
+    },
+    {
+      "from": 288,
+      "to": 287
+    },
+    {
+      "from": 289,
+      "to": 267
+    },
+    {
+      "from": 290,
+      "to": 289
+    },
+    {
+      "from": 291,
+      "to": 289
+    },
+    {
+      "from": 292,
+      "to": 291
+    },
+    {
+      "from": 293,
+      "to": 291
+    },
+    {
+      "from": 294,
+      "to": 289
+    },
+    {
+      "from": 295,
+      "to": 289
+    },
+    {
+      "from": 296,
+      "to": 289
+    },
+    {
+      "from": 296,
+      "to": 195
+    },
+    {
+      "from": 297,
+      "to": 291
+    },
+    {
+      "from": 298,
+      "to": 297
+    },
+    {
+      "from": 299,
+      "to": 298
+    },
+    {
+      "from": 300,
+      "to": 286
+    },
+    {
+      "from": 300,
+      "to": 297
+    },
+    {
+      "from": 301,
+      "to": 279
+    },
+    {
+      "from": 301,
+      "to": 297
+    },
+    {
+      "from": 302,
+      "to": 306
+    },
+    {
+      "from": 302,
+      "to": 267
+    },
+    {
+      "from": 303,
+      "to": 268
+    },
+    {
+      "from": 303,
+      "to": 278
+    },
+    {
+      "from": 304,
+      "to": 23
+    },
+    {
+      "from": 304,
+      "to": 278
+    },
+    {
+      "from": 305,
+      "to": 304
+    },
+    {
+      "from": 307,
+      "to": 306
+    },
+    {
+      "from": 308,
+      "to": 307
+    },
+    {
+      "from": 309,
+      "to": 307
+    },
+    {
+      "from": 310,
+      "to": 309
+    },
+    {
+      "from": 311,
+      "to": 309
+    },
+    {
+      "from": 312,
+      "to": 309
+    },
+    {
+      "from": 313,
+      "to": 309
+    },
+    {
+      "from": 314,
+      "to": 309
+    },
+    {
+      "from": 315,
+      "to": 306
+    },
+    {
+      "from": 316,
+      "to": 315
+    },
+    {
+      "from": 317,
+      "to": 315
+    },
+    {
+      "from": 318,
+      "to": 317
+    },
+    {
+      "from": 319,
+      "to": 306
+    },
+    {
+      "from": 319,
+      "to": 315
+    },
+    {
+      "from": 320,
+      "to": 319
+    },
+    {
+      "from": 321,
+      "to": 309
+    },
+    {
+      "from": 321,
+      "to": 315
+    },
+    {
+      "from": 322,
+      "to": 321
+    },
+    {
+      "from": 323,
+      "to": 306
+    },
+    {
+      "from": 324,
+      "to": 309
+    },
+    {
+      "from": 325,
+      "to": 309
+    },
+    {
+      "from": 325,
+      "to": 315
+    },
+    {
+      "from": 326,
+      "to": 319
+    },
+    {
+      "from": 327,
+      "to": 321
+    },
+    {
+      "from": 327,
+      "to": 319
+    },
+    {
+      "from": 328,
+      "to": 327
+    },
+    {
+      "from": 329,
+      "to": 328
+    },
+    {
+      "from": 330,
+      "to": 328
+    },
+    {
+      "from": 331,
+      "to": 328
+    },
+    {
+      "from": 332,
+      "to": 306
+    },
+    {
+      "from": 333,
+      "to": 332
+    },
+    {
+      "from": 334,
+      "to": 332
+    },
+    {
+      "from": 335,
+      "to": 332
+    },
+    {
+      "from": 336,
+      "to": 332
+    },
+    {
+      "from": 336,
+      "to": 328
+    },
+    {
+      "from": 337,
+      "to": 332
+    },
+    {
+      "from": 337,
+      "to": 74
+    },
+    {
+      "from": 338,
+      "to": 306
+    },
+    {
+      "from": 339,
+      "to": 338
+    },
+    {
+      "from": 340,
+      "to": 338
+    },
+    {
+      "from": 341,
+      "to": 309
+    },
+    {
+      "from": 341,
+      "to": 211
+    },
+    {
+      "from": 342,
+      "to": 341
+    },
+    {
+      "from": 343,
+      "to": 319
+    },
+    {
+      "from": 343,
+      "to": 345
+    },
+    {
+      "from": 344,
+      "to": 342
+    },
+    {
+      "from": 344,
+      "to": 343
+    },
+    {
+      "from": 345,
+      "to": 319
+    },
+    {
+      "from": 347,
+      "to": 346
+    },
+    {
+      "from": 347,
+      "to": 8
+    },
+    {
+      "from": 348,
+      "to": 346
+    },
+    {
+      "from": 348,
+      "to": 159
+    },
+    {
+      "from": 348,
+      "to": 179
+    },
+    {
+      "from": 349,
+      "to": 346
+    },
+    {
+      "from": 349,
+      "to": 350
+    },
+    {
+      "from": 350,
+      "to": 4
+    },
+    {
+      "from": 350,
+      "to": 346
+    },
+    {
+      "from": 351,
+      "to": 349
+    },
+    {
+      "from": 351,
+      "to": 14
+    },
+    {
+      "from": 352,
+      "to": 349
+    },
+    {
+      "from": 353,
+      "to": 349
+    },
+    {
+      "from": 354,
+      "to": 353
+    },
+    {
+      "from": 355,
+      "to": 8
+    },
+    {
+      "from": 355,
+      "to": 349
+    },
+    {
+      "from": 356,
+      "to": 8
+    },
+    {
+      "from": 356,
+      "to": 355
+    },
+    {
+      "from": 357,
+      "to": 346
+    },
+    {
+      "from": 358,
+      "to": 357
+    },
+    {
+      "from": 359,
+      "to": 357
+    },
+    {
+      "from": 360,
+      "to": 359
+    },
+    {
+      "from": 361,
+      "to": 346
+    },
+    {
+      "from": 361,
+      "to": 211
+    },
+    {
+      "from": 362,
+      "to": 361
+    },
+    {
+      "from": 363,
+      "to": 362
+    },
+    {
+      "from": 363,
+      "to": 74
+    },
+    {
+      "from": 364,
+      "to": 361
+    },
+    {
+      "from": 364,
+      "to": 362
+    },
+    {
+      "from": 365,
+      "to": 362
+    },
+    {
+      "from": 366,
+      "to": 361
+    },
+    {
+      "from": 366,
+      "to": 368
+    },
+    {
+      "from": 367,
+      "to": 346
+    },
+    {
+      "from": 367,
+      "to": 361
+    },
+    {
+      "from": 368,
+      "to": 367
+    },
+    {
+      "from": 369,
+      "to": 367
+    },
+    {
+      "from": 369,
+      "to": 179
+    },
+    {
+      "from": 370,
+      "to": 346
+    },
+    {
+      "from": 371,
+      "to": 370
+    },
+    {
+      "from": 372,
+      "to": 370
+    },
+    {
+      "from": 373,
+      "to": 372
+    },
+    {
+      "from": 374,
+      "to": 370
+    },
+    {
+      "from": 374,
+      "to": 49
+    },
+    {
+      "from": 375,
+      "to": 374
+    },
+    {
+      "from": 376,
+      "to": 374
+    },
+    {
+      "from": 377,
+      "to": 374
+    },
+    {
+      "from": 377,
+      "to": 375
+    },
+    {
+      "from": 378,
+      "to": 84
+    },
+    {
+      "from": 378,
+      "to": 374
+    },
+    {
+      "from": 379,
+      "to": 378
+    },
+    {
+      "from": 379,
+      "to": 383
+    },
+    {
+      "from": 380,
+      "to": 372
+    },
+    {
+      "from": 380,
+      "to": 383
+    },
+    {
+      "from": 381,
+      "to": 370
+    },
+    {
+      "from": 382,
+      "to": 381
+    },
+    {
+      "from": 383,
+      "to": 370
+    },
+    {
+      "from": 383,
+      "to": 372
+    },
+    {
+      "from": 384,
+      "to": 370
+    },
+    {
+      "from": 384,
+      "to": 110
+    },
+    {
+      "from": 385,
+      "to": 383
+    },
+    {
+      "from": 385,
+      "to": 370
+    },
+    {
+      "from": 386,
+      "to": 179
+    },
+    {
+      "from": 386,
+      "to": 346
+    },
+    {
+      "from": 387,
+      "to": 187
+    },
+    {
+      "from": 387,
+      "to": 348
+    },
+    {
+      "from": 388,
+      "to": 291
+    },
+    {
+      "from": 388,
+      "to": 346
+    },
+    {
+      "from": 389,
+      "to": 388
+    },
+    {
+      "from": 389,
+      "to": 246
+    },
+    {
+      "from": 390,
+      "to": 388
+    },
+    {
+      "from": 392,
+      "to": 391
+    },
+    {
+      "from": 393,
+      "to": 391
+    },
+    {
+      "from": 394,
+      "to": 393
+    },
+    {
+      "from": 395,
+      "to": 394
+    },
+    {
+      "from": 396,
+      "to": 393
+    },
+    {
+      "from": 397,
+      "to": 391
+    },
+    {
+      "from": 397,
+      "to": 396
+    },
+    {
+      "from": 398,
+      "to": 392
+    },
+    {
+      "from": 398,
+      "to": 349
+    },
+    {
+      "from": 399,
+      "to": 398
+    },
+    {
+      "from": 400,
+      "to": 398
+    },
+    {
+      "from": 400,
+      "to": 394
+    },
+    {
+      "from": 401,
+      "to": 391
+    },
+    {
+      "from": 402,
+      "to": 401
+    },
+    {
+      "from": 403,
+      "to": 401
+    },
+    {
+      "from": 404,
+      "to": 403
+    },
+    {
+      "from": 404,
+      "to": 306
+    },
+    {
+      "from": 405,
+      "to": 189
+    },
+    {
+      "from": 405,
+      "to": 391
+    },
+    {
+      "from": 406,
+      "to": 291
+    },
+    {
+      "from": 406,
+      "to": 391
+    },
+    {
+      "from": 407,
+      "to": 406
+    },
+    {
+      "from": 408,
+      "to": 406
+    },
+    {
+      "from": 409,
+      "to": 406
+    },
+    {
+      "from": 410,
+      "to": 391
+    },
+    {
+      "from": 411,
+      "to": 346
+    },
+    {
+      "from": 411,
+      "to": 391
+    },
+    {
+      "from": 412,
+      "to": 411
+    },
+    {
+      "from": 413,
+      "to": 391
+    },
+    {
+      "from": 414,
+      "to": 413
+    },
+    {
+      "from": 415,
+      "to": 413
+    },
+    {
+      "from": 416,
+      "to": 289
+    },
+    {
+      "from": 417,
+      "to": 416
+    },
+    {
+      "from": 417,
+      "to": 388
+    },
+    {
+      "from": 418,
+      "to": 416
+    },
+    {
+      "from": 419,
+      "to": 416
+    },
+    {
+      "from": 419,
+      "to": 66
+    },
+    {
+      "from": 420,
+      "to": 306
+    },
+    {
+      "from": 421,
+      "to": 420
+    },
+    {
+      "from": 421,
+      "to": 341
+    },
+    {
+      "from": 422,
+      "to": 421
+    },
+    {
+      "from": 423,
+      "to": 420
+    },
+    {
+      "from": 423,
+      "to": 421
+    },
+    {
+      "from": 424,
+      "to": 306
+    },
+    {
+      "from": 425,
+      "to": 424
+    },
+    {
+      "from": 425,
+      "to": 321
+    },
+    {
+      "from": 426,
+      "to": 424
+    },
+    {
+      "from": 427,
+      "to": 426
+    },
+    {
+      "from": 428,
+      "to": 426
+    },
+    {
+      "from": 429,
+      "to": 311
+    },
+    {
+      "from": 430,
+      "to": 306
+    },
+    {
+      "from": 430,
+      "to": 73
+    },
+    {
+      "from": 431,
+      "to": 430
+    },
+    {
+      "from": 432,
+      "to": 321
+    },
+    {
+      "from": 432,
+      "to": 77
+    },
+    {
+      "from": 433,
+      "to": 58
+    },
+    {
+      "from": 433,
+      "to": 311
+    },
+    {
+      "from": 434,
+      "to": 306
+    },
+    {
+      "from": 435,
+      "to": 434
+    },
+    {
+      "from": 436,
+      "to": 227
+    },
+    {
+      "from": 436,
+      "to": 420
+    },
+    {
+      "from": 437,
+      "to": 257
+    },
+    {
+      "from": 437,
+      "to": 420
+    },
+    {
+      "from": 438,
+      "to": 306
+    },
+    {
+      "from": 438,
+      "to": 291
+    },
+    {
+      "from": 439,
+      "to": 291
+    },
+    {
+      "from": 439,
+      "to": 391
+    },
+    {
+      "from": 440,
+      "to": 306
+    },
+    {
+      "from": 441,
+      "to": 266
+    },
+    {
+      "from": 441,
+      "to": 1
+    },
+    {
+      "from": 442,
+      "to": 441
+    },
+    {
+      "from": 442,
+      "to": 37
+    },
+    {
+      "from": 443,
+      "to": 442
+    },
+    {
+      "from": 443,
+      "to": 33
+    },
+    {
+      "from": 444,
+      "to": 391
+    },
+    {
+      "from": 444,
+      "to": 441
+    },
+    {
+      "from": 445,
+      "to": 443
+    },
+    {
+      "from": 445,
+      "to": 415
+    },
+    {
+      "from": 446,
+      "to": 338
+    },
+    {
+      "from": 446,
+      "to": 339
+    },
+    {
+      "from": 447,
+      "to": 328
+    },
+    {
+      "from": 447,
+      "to": 350
+    },
+    {
+      "from": 448,
+      "to": 1
+    },
+    {
+      "from": 448,
+      "to": 211
+    },
+    {
+      "from": 448,
+      "to": 156
+    },
+    {
+      "from": 449,
+      "to": 227
+    },
+    {
+      "from": 449,
+      "to": 175
+    },
+    {
+      "from": 449,
+      "to": 189
+    },
+    {
+      "from": 450,
+      "to": 446
+    },
+    {
+      "from": 450,
+      "to": 447
+    },
+    {
+      "from": 450,
+      "to": 448
+    }
+  ]
+}

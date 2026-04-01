@@ -9,15 +9,25 @@ nav:
   - About This Course: about.md
   - Course Description: course-description.md
   - Learning Graph:
+    - Introduction: learning-graph/index.md
     - Course Description Assessment: learning-graph/course-description-assessment.md
+    - Concept List: learning-graph/concept-list.md
+    - Graph Quality Analysis: learning-graph/quality-metrics.md
+    - Concept Taxonomy: learning-graph/concept-taxonomy.md
+    - Taxonomy Distribution Report: learning-graph/taxonomy-distribution.md
+    - Mascot Style Guide: learning-graph/mascot-test.md
+  - MicroSims:
+    - Learning Graph Viewer: sims/graph-viewer/index.md
   - License: license.md
   - Contact: contact.md
 
 theme:
   name: material
   palette:
-    primary: 'teal'
-    accent: 'white'
+    primary: 'amber'
+    accent: 'deep orange'
+  logo: img/mascot/neutral.png
+  favicon: img/favicon.ico
   include_sidebar: true
   features:
     - content.code.copy
@@ -33,6 +43,10 @@ theme:
 plugins:
   - search
   - social
+  - social_override
+
+exclude_docs: |
+  img/mascot/image-prompts.md
 
 markdown_extensions:
   - md_in_html
@@ -46,7 +60,12 @@ markdown_extensions:
   - pymdownx.arithmatex:
       generic: true
 
+extra_css:
+  - css/extra.css
+  - css/mascot.css
+
 extra_javascript:
+  - js/extra.js
   - https://unpkg.com/mathjax@3/es5/tex-chtml.js
 
 watch:
@@ -60,3 +79,8 @@ extra:
   schema: https://dmccreary.github.io/intelligent-textbooks/ns/textbook/v1
   textbook_name: Genetics
   textbook_version: "1.0"
+
+  # Google Analytics ID is G-HJJLWQWVSL
+  analytics:
+    provider: google
+    property: G-HJJLWQWVSL

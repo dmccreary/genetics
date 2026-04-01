@@ -1,0 +1,72 @@
+{
+  "FOUND": {
+    "range": [0, 0],
+    "keywords": ["genetic inference", "genome organization", "linkage", "quantitative genetics", "population genetics", "gene expression", "forward genetics", "model organism", "genomics", "human genetics", "genetic ethics"],
+    "exclude": ["genetic linkage", "linkage disequilibrium", "linkage analysis", "parametric linkage", "nonparametric linkage"]
+  },
+  "PROB": {
+    "range": [2, 7],
+    "keywords": ["chi-square", "goodness of fit", "null hypothesis", "p-value", "likelihood ratio", "bayesian", "prior probability", "posterior probability", "conditional probability", "probability in"],
+    "exclude": []
+  },
+  "PED": {
+    "range": [8, 50],
+    "keywords": ["pedigree", "autosomal", "x-linked", "carrier prob", "penetrance", "incomplete penetrance", "expressivity", "variable expressivity", "phenocopy", "genetic heterogeneity", "locus heterogeneity", "allelic heterogeneity", "epistasis", "duplicate epistasis", "complementary epistasis", "suppressor epistasis", "epistatic pathway", "complementation", "cis-trans", "allelism", "functional allelism", "test cross", "reciprocal cross", "modified mendelian", "lethal allele", "pleiotropy", "genetic background", "age of onset", "anticipation", "genomic imprinting", "parent of origin", "uniparental", "mosaicism", "somatic mosaicism", "germline mosaicism"],
+    "exclude": ["mosaic analysis"]
+  },
+  "GSTR": {
+    "range": [51, 72],
+    "keywords": ["chromosome structure", "euchromatin", "heterochromatin", "constitutive hetero", "facultative hetero", "centromere struct", "telomere struct", "chromatin", "nucleosome", "histone", "chromatin remodel", "epigenetic", "dna methylation", "cpg island", "x-inactivation", "dosage compensation", "barr body", "chromatin state", "open chromatin", "closed chromatin", "bivalent chromatin", "poised enhancer", "super enhancer", "topologically", "chromatin looping"],
+    "exclude": ["chromatin state"]
+  },
+  "GVAR": {
+    "range": [73, 110],
+    "keywords": ["genetic variation", "single nucleotide poly", "insertion deletion", "copy number variation", "structural variation", "chromosomal inversion", "chromosomal translocation", "chromosomal deletion", "chromosomal duplication", "tandem repeat", "short tandem", "microsatellite", "minisatellite", "variable number", "haplotype", "linkage disequilibrium", "tag snp", "hapmap", "transposable", "dna transposon", "retrotransposon", "line element", "sine element", "alu element", "transposon mutagen", "gene duplication", "paralog", "ortholog", "gene family", "pseudogene", "segmental dup", "polyploidy", "aneuploidy", "trisomy", "monosomy", "nondisjunction", "chromosomal rearrange"],
+    "exclude": ["microsatellite marker", "microsatellite instability"]
+  },
+  "MAP": {
+    "range": [111, 155],
+    "keywords": ["genetic linkage", "recombination", "crossing over", "recombination freq", "genetic map", "map distance", "centimorgan", "two-point", "three-point", "interference", "coefficient of coincidence", "gene order", "genetic marker", "molecular marker", "restriction fragment", "microsatellite marker", "snp marker", "physical map", "cytogenetic", "radiation hybrid", "somatic cell hybrid", "synteny", "comparative genomic", "gene discovery", "positional cloning", "candidate gene", "linkage analysis", "lod score", "parametric linkage", "nonparametric linkage", "recombination hotspot", "sex difference", "mitotic recomb", "gene conversion", "tetrad", "ordered tetrad", "unordered tetrad", "centromere mapping", "half-tetrad", "deletion mapping", "complementation mapping", "fine structure", "intragenic recomb"],
+    "exclude": ["comparative genomics"]
+  },
+  "QUANT": {
+    "range": [156, 188],
+    "keywords": ["quantitative trait", "continuous variation", "polygenic inherit", "multifactorial", "threshold trait", "heritability", "broad sense", "narrow sense", "additive genetic", "dominance variance", "epistatic variance", "environmental variance", "phenotypic variance", "twin stud", "monozygotic", "dizygotic", "concordance", "heritability estim", "qtl", "interval mapping", "marker assisted", "gwas", "manhattan plot", "significance threshold", "multiple testing", "bonferroni", "false discovery", "effect size", "odds ratio", "polygenic risk", "missing heritability"],
+    "exclude": []
+  },
+  "POP": {
+    "range": [189, 210],
+    "keywords": ["allele frequency", "genotype frequency", "hardy-weinberg", "natural selection", "fitness", "selection coefficient", "directional selection", "stabilizing selection", "disruptive selection", "balancing selection", "heterozygote advantage", "genetic drift", "bottleneck", "founder effect", "gene flow", "migration", "mutation rate", "population structure", "fixation index"],
+    "exclude": ["population genetics"]
+  },
+  "REG": {
+    "range": [211, 265],
+    "keywords": ["transcription reg", "promoter", "tata box", "transcription factor", "general transcription", "specific transcription", "activator", "repressor", "enhancer", "silencer", "insulator", "cis-regulatory", "trans-acting", "transcriptional logic", "combinatorial control", "gene regulatory", "network motif", "feedback loop", "feed-forward", "operon", "lac operon", "trp operon", "positive regulation", "negative regulation", "post-transcriptional", "rna splicing", "alternative splicing", "exon skipping", "rna editing", "mrna stability", "rna interference", "microrna", "small interfering", "long noncoding", "noncoding rna", "riboswitch", "translational reg", "protein degradation", "ubiquitin", "cell identity", "cell fate", "master regulator", "pioneer factor", "stem cell gene", "differentiation", "cellular reprogramming"],
+    "exclude": ["enhancer trap", "rna interference screen", "gene regulation atlas", "poised enhancer", "super enhancer"]
+  },
+  "EXP": {
+    "range": [266, 305],
+    "keywords": ["reverse genetics", "mutagenesis screen", "chemical mutagen", "ems mutagen", "insertional mutagen", "saturation mutagen", "enhancer trap", "suppressor screen", "modifier screen", "genetic mosaic", "clonal analysis", "drosophila", "yeast genetics", "mouse genetics", "elegans", "zebrafish", "arabidopsis", "gene knockout", "conditional knockout", "knockdown", "rna interference screen", "crispr-cas9", "guide rna", "gene editing", "homology directed", "nhej", "base editing", "prime editing", "gene drive", "transgenic", "reporter gene", "gfp reporter", "cre-lox", "gal4-uas", "functional genomics", "phenotype scoring", "genetic interaction", "synthetic lethality", "experimental design", "hypothesis testing"],
+    "exclude": ["gene editing ethics", "epigenome editing", "in vivo gene editing"]
+  },
+  "BIOINFO": {
+    "range": [306, 345],
+    "keywords": ["genome sequencing", "sanger sequencing", "next-gen sequencing", "illumina", "long-read sequencing", "whole genome seq", "whole exome", "targeted sequencing", "sequence alignment", "blast algorithm", "pairwise alignment", "multiple sequence", "genome annotation", "gene prediction", "variant calling", "vcf file", "fasta file", "fastq file", "bam file", "bed file", "variant annotation", "variant classification", "benign variant", "pathogenic variant", "variant of uncertain", "genomic database", "ncbi database", "ensembl", "ucsc genome", "clinvar", "dbsnp", "reproducible workflow", "pipeline automation", "version control in genomics", "rna-seq", "differential expression", "gene ontology", "pathway enrichment", "functional annotation", "computational workflow", "data interpretation"],
+    "exclude": ["structural variant calling", "long-read genomics"]
+  },
+  "CLIN": {
+    "range": [346, 390],
+    "keywords": ["mendelian disease", "complex disease", "genetic counseling", "risk assessment", "carrier screening", "newborn screening", "prenatal genetic", "preimplantation", "family history", "pedigree construction", "genetic testing type", "diagnostic testing", "predictive testing", "presymptomatic", "pharmacogenomics", "drug metabolism", "cyp450", "dosage optimization", "adverse drug", "companion diagnostic", "precision medicine", "targeted therapy", "biomarker discovery", "cancer genetics", "oncogene", "tumor suppressor", "two-hit hypothesis", "somatic mutation in cancer", "driver mutation", "passenger mutation", "tumor mutational", "microsatellite instability", "lynch syndrome", "brca gene", "liquid biopsy", "circulating tumor", "hereditary cancer", "chromosomal instability", "cancer predisposition", "genetic risk factor", "polygenic disease", "gene therapy", "antisense therapy", "gene replacement", "variant interpretation", "genotype-phenotype model", "systems genetics"],
+    "exclude": []
+  },
+  "ETHICS": {
+    "range": [391, 415],
+    "keywords": ["informed consent", "genetic privacy", "genetic discrimination", "gina legislation", "data ownership", "biobank", "return of results", "incidental finding", "duty to warn", "equity in genomic", "health disparit", "diversity in genomics", "reference genome bias", "ancestry and identity", "gene editing ethics", "germline editing", "somatic gene editing", "enhancement vs", "eugenics", "dtc genetic", "dtc testing", "genetic literacy", "public engagement", "science communication", "research ethics"],
+    "exclude": []
+  },
+  "FRONT": {
+    "range": [416, 440],
+    "keywords": ["crispr advance", "crispr therapeut", "in vivo gene editing", "epigenome editing", "single-cell", "spatial transcriptomics", "cell atlas", "ai in genomics", "machine learning variant", "deep learning in genomics", "large language model", "protein structure ai", "long-read genomics", "pangenome", "structural variant calling", "telomere-to-telomere", "metagenomics", "microbiome", "gene regulation atlas", "4d nucleome", "synthetic genomics", "xenotransplantation", "emerging research", "capstone genomic"],
+    "exclude": []
+  }
+}
