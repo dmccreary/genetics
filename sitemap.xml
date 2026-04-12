@@ -2,54 +2,130 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://dmccreary.github.io/genetics/</loc>
-         <lastmod>2026-04-01</lastmod>
+         <lastmod>2026-04-12</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/genetics/about/</loc>
-         <lastmod>2026-04-01</lastmod>
+         <lastmod>2026-04-12</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/genetics/contact/</loc>
-         <lastmod>2026-04-01</lastmod>
+         <lastmod>2026-04-12</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/genetics/course-description/</loc>
-         <lastmod>2026-04-01</lastmod>
+         <lastmod>2026-04-12</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/genetics/license/</loc>
-         <lastmod>2026-04-01</lastmod>
+         <lastmod>2026-04-12</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/genetics/chapters/</loc>
+         <lastmod>2026-04-12</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/genetics/chapters/01-genetic-inference-probabilistic-reasoning/</loc>
+         <lastmod>2026-04-12</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/genetics/chapters/02-pedigree-analysis-inheritance-patterns/</loc>
+         <lastmod>2026-04-12</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/genetics/chapters/03-epistasis-complementation-modified-ratios/</loc>
+         <lastmod>2026-04-12</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/genetics/chapters/04-genome-structure-chromatin-organization/</loc>
+         <lastmod>2026-04-12</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/genetics/chapters/05-genetic-variation-genome-diversity/</loc>
+         <lastmod>2026-04-12</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/genetics/chapters/06-gene-duplication-rearrangements-evolution/</loc>
+         <lastmod>2026-04-12</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/genetics/chapters/07-genetic-mapping-linkage-analysis/</loc>
+         <lastmod>2026-04-12</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/genetics/chapters/08-advanced-mapping-gene-discovery/</loc>
+         <lastmod>2026-04-12</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/genetics/chapters/09-quantitative-genetics-heritability/</loc>
+         <lastmod>2026-04-12</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/genetics/chapters/10-gwas-population-genetics/</loc>
+         <lastmod>2026-04-12</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/genetics/chapters/11-gene-regulation-regulatory-networks/</loc>
+         <lastmod>2026-04-12</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/genetics/chapters/12-post-transcriptional-regulation-cell-identity/</loc>
+         <lastmod>2026-04-12</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/genetics/chapters/13-experimental-genetics-model-organisms/</loc>
+         <lastmod>2026-04-12</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/genetics/chapters/14-genomics-sequencing-bioinformatics/</loc>
+         <lastmod>2026-04-12</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/genetics/chapters/15-human-genetics-clinical-applications/</loc>
+         <lastmod>2026-04-12</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/genetics/chapters/16-cancer-genetics/</loc>
+         <lastmod>2026-04-12</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/genetics/chapters/17-ethics-society-genetic-policy/</loc>
+         <lastmod>2026-04-12</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/genetics/chapters/18-frontier-topics-emerging-technologies/</loc>
+         <lastmod>2026-04-12</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/genetics/learning-graph/</loc>
-         <lastmod>2026-04-01</lastmod>
+         <lastmod>2026-04-12</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/genetics/learning-graph/concept-list/</loc>
-         <lastmod>2026-04-01</lastmod>
+         <lastmod>2026-04-12</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/genetics/learning-graph/concept-taxonomy/</loc>
-         <lastmod>2026-04-01</lastmod>
+         <lastmod>2026-04-12</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/genetics/learning-graph/course-description-assessment/</loc>
-         <lastmod>2026-04-01</lastmod>
+         <lastmod>2026-04-12</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/genetics/learning-graph/mascot-test/</loc>
-         <lastmod>2026-04-01</lastmod>
+         <lastmod>2026-04-12</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/genetics/learning-graph/quality-metrics/</loc>
-         <lastmod>2026-04-01</lastmod>
+         <lastmod>2026-04-12</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/genetics/learning-graph/taxonomy-distribution/</loc>
-         <lastmod>2026-04-01</lastmod>
+         <lastmod>2026-04-12</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/genetics/sims/graph-viewer/</loc>
-         <lastmod>2026-04-01</lastmod>
+         <lastmod>2026-04-12</lastmod>
     </url>
 </urlset>

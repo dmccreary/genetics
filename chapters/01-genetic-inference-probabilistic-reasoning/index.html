@@ -1,0 +1,2226 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="How geneticists use probability, Bayesian reasoning, and statistical tests to connect observations to genetic mechanisms.">
+      
+      
+        <meta name="author" content="Dan McCreary">
+      
+      
+        <link rel="canonical" href="https://dmccreary.github.io/genetics/chapters/01-genetic-inference-probabilistic-reasoning/">
+      
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../02-pedigree-analysis-inheritance-patterns/">
+      
+      
+      <link rel="icon" href="../../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.43">
+    
+    
+      
+        <title>Genetic Inference and Probabilistic Reasoning - Genetics</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.0253249f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+      <link rel="stylesheet" href="../../css/mascot.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-HJJLWQWVSL"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-HJJLWQWVSL",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-HJJLWQWVSL",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+      
+        <meta  property="og:type"  content="website" >
+      
+        <meta  property="og:title"  content="Genetic Inference and Probabilistic Reasoning - Genetics" >
+      
+        <meta  property="og:description"  content="How geneticists use probability, Bayesian reasoning, and statistical tests to connect observations to genetic mechanisms." >
+      
+        <meta  property="og:image"  content="https://dmccreary.github.io/genetics/assets/images/social/chapters/01-genetic-inference-probabilistic-reasoning/index.png" >
+      
+        <meta  property="og:image:type"  content="image/png" >
+      
+        <meta  property="og:image:width"  content="1200" >
+      
+        <meta  property="og:image:height"  content="630" >
+      
+        <meta  property="og:url"  content="https://dmccreary.github.io/genetics/chapters/01-genetic-inference-probabilistic-reasoning/" >
+      
+        <meta  name="twitter:card"  content="summary_large_image" >
+      
+        <meta  name="twitter:title"  content="Genetic Inference and Probabilistic Reasoning - Genetics" >
+      
+        <meta  name="twitter:description"  content="How geneticists use probability, Bayesian reasoning, and statistical tests to connect observations to genetic mechanisms." >
+      
+        <meta  name="twitter:image"  content="https://dmccreary.github.io/genetics/assets/images/social/chapters/01-genetic-inference-probabilistic-reasoning/index.png" >
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="amber" data-md-color-accent="deep-orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#genetic-inference-and-probabilistic-reasoning" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Genetics" class="md-header__button md-logo" aria-label="Genetics" data-md-component="logo">
+      
+  <img src="../../img/mascot/neutral.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Genetics
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Genetic Inference and Probabilistic Reasoning
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/dmccreary/genetics" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Genetics" class="md-nav__button md-logo" aria-label="Genetics" data-md-component="logo">
+      
+  <img src="../../img/mascot/neutral.png" alt="logo">
+
+    </a>
+    Genetics
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/dmccreary/genetics" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About This Course
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course-description/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Course Description
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Chapters
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Chapters
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    1. Genetic Inference and Probabilistic Reasoning
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    1. Genetic Inference and Probabilistic Reasoning
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concepts-covered" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concepts Covered
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#introduction-why-genetics-requires-inference" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction: Why Genetics Requires Inference
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Introduction: Why Genetics Requires Inference">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-three-pillars-of-modern-genetics" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Three Pillars of Modern Genetics
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#probability-in-genetics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Probability in Genetics
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Probability in Genetics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-multiplication-and-addition-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Multiplication and Addition Rules
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conditional-probability" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conditional Probability
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bayesian-reasoning-in-genetics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bayesian Reasoning in Genetics
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Bayesian Reasoning in Genetics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#from-prior-to-posterior" class="md-nav__link">
+    <span class="md-ellipsis">
+      From Prior to Posterior
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-genetic-example-of-bayesian-reasoning" class="md-nav__link">
+    <span class="md-ellipsis">
+      A Genetic Example of Bayesian Reasoning
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="A Genetic Example of Bayesian Reasoning">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-bayesian-updating-of-carrier-probability" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Bayesian Updating of Carrier Probability
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hypothesis-testing-with-chi-square" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hypothesis Testing with Chi-Square
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Hypothesis Testing with Chi-Square">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-null-hypothesis-in-genetics" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Null Hypothesis in Genetics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-chi-square-test-and-goodness-of-fit" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Chi-Square Test and Goodness of Fit
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#p-value-interpretation" class="md-nav__link">
+    <span class="md-ellipsis">
+      P-Value Interpretation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="P-Value Interpretation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-chi-square-distribution-interactive" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Chi-Square Distribution Interactive
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test-crosses-and-reciprocal-crosses" class="md-nav__link">
+    <span class="md-ellipsis">
+      Test Crosses and Reciprocal Crosses
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Test Crosses and Reciprocal Crosses">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-test-cross" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Test Cross
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-reciprocal-cross" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Reciprocal Cross
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#genetic-heterogeneity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Genetic Heterogeneity
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Genetic Heterogeneity">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#locus-heterogeneity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Locus Heterogeneity
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#allelic-heterogeneity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Allelic Heterogeneity
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Allelic Heterogeneity">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-genetic-heterogeneity-concept-map" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Genetic Heterogeneity Concept Map
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#epistasis-when-genes-interact" class="md-nav__link">
+    <span class="md-ellipsis">
+      Epistasis: When Genes Interact
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lethal-alleles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lethal Alleles
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pleiotropy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pleiotropy
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mosaicism" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mosaicism
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#putting-it-all-together-an-integrated-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Putting It All Together: An Integrated Example
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Putting It All Together: An Integrated Example">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-integrated-genetics-problem-solver" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Integrated Genetics Problem Solver
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-concepts-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Concepts Summary
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-pedigree-analysis-inheritance-patterns/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2. Pedigree Analysis and Inheritance Patterns
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-epistasis-complementation-modified-ratios/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3. Epistasis, Complementation, and Modified Ratios
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-genome-structure-chromatin-organization/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4. Genome Structure and Chromatin Organization
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-genetic-variation-genome-diversity/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5. Genetic Variation and Genome Diversity
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-gene-duplication-rearrangements-evolution/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6. Gene Duplication, Rearrangements, and Evolution
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07-genetic-mapping-linkage-analysis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7. Genetic Mapping and Linkage Analysis
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08-advanced-mapping-gene-discovery/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    8. Advanced Mapping and Gene Discovery
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09-quantitative-genetics-heritability/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    9. Quantitative Genetics and Heritability
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10-gwas-population-genetics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    10. GWAS and Population Genetics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11-gene-regulation-regulatory-networks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    11. Gene Regulation and Regulatory Networks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12-post-transcriptional-regulation-cell-identity/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    12. Post-Transcriptional Regulation and Cell Identity
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../13-experimental-genetics-model-organisms/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    13. Experimental Genetics and Model Organisms
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../14-genomics-sequencing-bioinformatics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    14. Genomics, Sequencing, and Bioinformatics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../15-human-genetics-clinical-applications/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    15. Human Genetics and Clinical Applications
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../16-cancer-genetics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    16. Cancer Genetics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../17-ethics-society-genetic-policy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    17. Ethics, Society, and Genetic Policy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../18-frontier-topics-emerging-technologies/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    18. Frontier Topics and Emerging Technologies
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../learning-graph/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Learning Graph
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../sims/graph-viewer/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    MicroSims
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../license/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    License
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contact/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contact
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concepts-covered" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concepts Covered
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#introduction-why-genetics-requires-inference" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction: Why Genetics Requires Inference
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Introduction: Why Genetics Requires Inference">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-three-pillars-of-modern-genetics" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Three Pillars of Modern Genetics
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#probability-in-genetics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Probability in Genetics
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Probability in Genetics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-multiplication-and-addition-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Multiplication and Addition Rules
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conditional-probability" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conditional Probability
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bayesian-reasoning-in-genetics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bayesian Reasoning in Genetics
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Bayesian Reasoning in Genetics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#from-prior-to-posterior" class="md-nav__link">
+    <span class="md-ellipsis">
+      From Prior to Posterior
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-genetic-example-of-bayesian-reasoning" class="md-nav__link">
+    <span class="md-ellipsis">
+      A Genetic Example of Bayesian Reasoning
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="A Genetic Example of Bayesian Reasoning">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-bayesian-updating-of-carrier-probability" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Bayesian Updating of Carrier Probability
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hypothesis-testing-with-chi-square" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hypothesis Testing with Chi-Square
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Hypothesis Testing with Chi-Square">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-null-hypothesis-in-genetics" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Null Hypothesis in Genetics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-chi-square-test-and-goodness-of-fit" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Chi-Square Test and Goodness of Fit
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#p-value-interpretation" class="md-nav__link">
+    <span class="md-ellipsis">
+      P-Value Interpretation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="P-Value Interpretation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-chi-square-distribution-interactive" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Chi-Square Distribution Interactive
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test-crosses-and-reciprocal-crosses" class="md-nav__link">
+    <span class="md-ellipsis">
+      Test Crosses and Reciprocal Crosses
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Test Crosses and Reciprocal Crosses">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-test-cross" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Test Cross
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-reciprocal-cross" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Reciprocal Cross
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#genetic-heterogeneity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Genetic Heterogeneity
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Genetic Heterogeneity">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#locus-heterogeneity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Locus Heterogeneity
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#allelic-heterogeneity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Allelic Heterogeneity
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Allelic Heterogeneity">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-genetic-heterogeneity-concept-map" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Genetic Heterogeneity Concept Map
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#epistasis-when-genes-interact" class="md-nav__link">
+    <span class="md-ellipsis">
+      Epistasis: When Genes Interact
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lethal-alleles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lethal Alleles
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pleiotropy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pleiotropy
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mosaicism" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mosaicism
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#putting-it-all-together-an-integrated-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Putting It All Together: An Integrated Example
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Putting It All Together: An Integrated Example">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-integrated-genetics-problem-solver" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Integrated Genetics Problem Solver
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-concepts-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Concepts Summary
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/dmccreary/genetics/edit/master/docs/chapters/01-genetic-inference-probabilistic-reasoning/index.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="genetic-inference-and-probabilistic-reasoning">Genetic Inference and Probabilistic Reasoning</h1>
+<h2 id="summary">Summary</h2>
+<p>This chapter establishes the foundational framework for the course, introducing how geneticists use inference and probabilistic reasoning to connect observations to genetic mechanisms. Students will learn Bayesian reasoning, statistical testing with chi-square analysis, and fundamental genetic phenomena including heterogeneity, epistasis basics, and mosaicism. After completing this chapter, students will be equipped to apply probabilistic thinking to genetic problems throughout the course.</p>
+<h2 id="concepts-covered">Concepts Covered</h2>
+<p>This chapter covers the following 22 concepts from the learning graph:</p>
+<ol>
+<li>Genetic Inference</li>
+<li>Linkage</li>
+<li>Genomics</li>
+<li>Probability in Genetics</li>
+<li>Conditional Probability</li>
+<li>Bayesian Reasoning</li>
+<li>Prior Probability</li>
+<li>Posterior Probability</li>
+<li>Likelihood Ratio</li>
+<li>Chi-Square Test</li>
+<li>Goodness of Fit Test</li>
+<li>Null Hypothesis in Genetics</li>
+<li>P-Value Interpretation</li>
+<li>Genetic Heterogeneity</li>
+<li>Locus Heterogeneity</li>
+<li>Allelic Heterogeneity</li>
+<li>Epistasis</li>
+<li>Test Cross</li>
+<li>Reciprocal Cross</li>
+<li>Lethal Alleles</li>
+<li>Pleiotropy</li>
+<li>Mosaicism</li>
+</ol>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>This chapter assumes only the prerequisites listed in the <a href="../../course-description/">course description</a>.</p>
+<hr />
+<h2 id="introduction-why-genetics-requires-inference">Introduction: Why Genetics Requires Inference</h2>
+<div class="admonition mascot-welcome">
+<p class="admonition-title">Welcome, Fellow Investigators!</p>
+<p><img src="../../img/mascot/welcome.png" class="mascot-admonition-img" alt="Dottie waving welcome">
+Welcome to your first chapter! Genetics is not just about memorizing rules of inheritance — it is about reasoning from evidence. Let's look at the evidence!</p>
+</div>
+<p>Genetics is fundamentally a science of inference. Unlike chemistry, where you can directly observe a reaction in a flask, the molecules of heredity are hidden inside cells. Geneticists must observe <strong>phenotypes</strong> — visible traits like eye color, disease symptoms, or growth patterns — and work backward to deduce the underlying <strong>genotypes</strong>, the specific allele combinations responsible. This process of reasoning from observable outcomes to hidden causes is called <strong>genetic inference</strong>.</p>
+<p>The challenge is that genetic outcomes are inherently probabilistic. When two heterozygous parents produce offspring, any single child might display the dominant or recessive phenotype. Only by examining many offspring, or many families, can we detect the patterns that reveal genetic mechanisms. This is why probability and statistics are not optional extras in genetics — they are the core intellectual tools that make the science possible.</p>
+<p>In this chapter, we build the probabilistic toolkit you will use throughout the course. We begin with basic probability rules, advance to Bayesian reasoning, and then learn to test hypotheses with the chi-square statistic. Along the way, we encounter genetic phenomena — such as epistasis, lethal alleles, and mosaicism — that make real genetics far more complex and interesting than simple textbook ratios suggest.</p>
+<h3 id="the-three-pillars-of-modern-genetics">The Three Pillars of Modern Genetics</h3>
+<p>Before we dive into probability, let us frame the three foundational concepts that organize this course.</p>
+<p><strong>Genetic inference</strong> is the logical process of deducing genotypes, inheritance patterns, or gene function from observed data. Every genetics problem you solve — from a simple monohybrid cross to a genome-wide association study — is an exercise in inference.</p>
+<p><strong>Linkage</strong> refers to the tendency of genes located close together on the same chromosome to be inherited as a unit. Linkage distorts the independent assortment ratios that Mendel described, and detecting these distortions is one of the most powerful tools for mapping genes to chromosomes. We will explore linkage mapping in detail in later chapters, but the concept appears here because it shapes the probability calculations we perform.</p>
+<p><strong>Genomics</strong> is the study of entire genomes — all the DNA in an organism — rather than individual genes. Genomics uses high-throughput sequencing and computational analysis to identify genes, regulatory elements, and variation across populations. Throughout this course, we will see how genomic data has transformed classical genetic analysis.</p>
+<table>
+<thead>
+<tr>
+<th>Pillar</th>
+<th>Core Question</th>
+<th>Key Methods</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Genetic Inference</td>
+<td>What genotype explains this phenotype?</td>
+<td>Crosses, pedigrees, probability</td>
+</tr>
+<tr>
+<td>Linkage</td>
+<td>Are these genes inherited together?</td>
+<td>Recombination frequency, mapping</td>
+</tr>
+<tr>
+<td>Genomics</td>
+<td>What does the entire genome reveal?</td>
+<td>Sequencing, bioinformatics, GWAS</td>
+</tr>
+</tbody>
+</table>
+<h2 id="probability-in-genetics">Probability in Genetics</h2>
+<p>Probability quantifies uncertainty. In genetics, <strong>probability</strong> is the fraction of times a particular outcome is expected to occur over many trials. When we say "the probability of a heterozygous cross producing a homozygous recessive offspring is 1/4," we mean that across a large number of such crosses, roughly 25% of offspring will show the recessive phenotype.</p>
+<h3 id="the-multiplication-and-addition-rules">The Multiplication and Addition Rules</h3>
+<p>Two fundamental rules govern how probabilities combine.</p>
+<p>The <strong>multiplication rule</strong> (also called the "and" rule) states that the probability of two independent events both occurring equals the product of their individual probabilities. For example, if the probability of inheriting allele <em>a</em> from the father is 1/2 and from the mother is 1/2, then the probability of genotype <em>aa</em> is:</p>
+<div class="arithmatex">\[
+P(aa) = P(a \text{ from father}) \times P(a \text{ from mother}) = \frac{1}{2} \times \frac{1}{2} = \frac{1}{4}
+\]</div>
+<p>The <strong>addition rule</strong> (the "or" rule) states that the probability of either of two mutually exclusive events occurring is the sum of their probabilities. For a heterozygous cross (Aa × Aa), the probability of a heterozygous offspring is:</p>
+<div class="arithmatex">\[
+P(Aa) = P(A \text{ from father, } a \text{ from mother}) + P(a \text{ from father, } A \text{ from mother}) = \frac{1}{4} + \frac{1}{4} = \frac{1}{2}
+\]</div>
+<div class="admonition mascot-thinking">
+<p class="admonition-title">Think About It</p>
+<p><img src="../../img/mascot/thinking.png" class="mascot-admonition-img" alt="Dottie thinking">
+When you flip two coins, the probability of both landing heads is 1/2 × 1/2 = 1/4. A genetic cross works the same way — each parent independently contributes one allele. The multiplication rule is your most-used tool in genetics.</p>
+</div>
+<h3 id="conditional-probability">Conditional Probability</h3>
+<p><strong>Conditional probability</strong> is the probability of an event occurring <em>given that</em> another event has already occurred. We write this as <span class="arithmatex">\( P(A \mid B) \)</span>, read as "the probability of A given B." In genetics, conditional probability appears constantly. For example: given that an individual shows the dominant phenotype, what is the probability that they are a carrier (heterozygous)?</p>
+<p>Consider the cross Aa × Aa. The offspring genotypes are AA (1/4), Aa (2/4), and aa (1/4). If we observe a dominant phenotype, we know the individual is <em>not</em> aa. Among the remaining possibilities (AA and Aa), the probability of being a carrier is:</p>
+<div class="arithmatex">\[
+P(\text{Aa} \mid \text{dominant phenotype}) = \frac{P(\text{Aa})}{P(\text{AA}) + P(\text{Aa})} = \frac{2/4}{1/4 + 2/4} = \frac{2}{3}
+\]</div>
+<p>This result — that two-thirds of phenotypically dominant offspring from a heterozygous cross are carriers — is one of the most important results in genetic counseling.</p>
+<h2 id="bayesian-reasoning-in-genetics">Bayesian Reasoning in Genetics</h2>
+<h3 id="from-prior-to-posterior">From Prior to Posterior</h3>
+<p><strong>Bayesian reasoning</strong> is a formal method for updating beliefs as new evidence arrives. It begins with a <strong>prior probability</strong>, which represents what we believe before seeing data. As we gather observations, we use Bayes' theorem to compute a <strong>posterior probability</strong> — our updated belief after considering the evidence.</p>
+<p>Bayes' theorem states:</p>
+<div class="arithmatex">\[
+P(H \mid D) = \frac{P(D \mid H) \times P(H)}{P(D)}
+\]</div>
+<p>Here, <span class="arithmatex">\( P(H) \)</span> is the prior probability of hypothesis <span class="arithmatex">\( H \)</span>, <span class="arithmatex">\( P(D \mid H) \)</span> is the probability of observing data <span class="arithmatex">\( D \)</span> if <span class="arithmatex">\( H \)</span> is true (called the <strong>likelihood</strong>), and <span class="arithmatex">\( P(H \mid D) \)</span> is the posterior probability of <span class="arithmatex">\( H \)</span> after observing <span class="arithmatex">\( D \)</span>.</p>
+<p>The <strong>likelihood ratio</strong> compares how well two competing hypotheses explain the observed data:</p>
+<div class="arithmatex">\[
+\text{Likelihood Ratio} = \frac{P(D \mid H_1)}{P(D \mid H_2)}
+\]</div>
+<p>A likelihood ratio greater than 1 favors <span class="arithmatex">\( H_1 \)</span>; a ratio less than 1 favors <span class="arithmatex">\( H_2 \)</span>. This ratio is the engine that drives Bayesian updating.</p>
+<h3 id="a-genetic-example-of-bayesian-reasoning">A Genetic Example of Bayesian Reasoning</h3>
+<p>Suppose a woman's brother has cystic fibrosis (CF), an autosomal recessive disorder. Both parents must be carriers (Aa). What is the probability that the woman is a carrier?</p>
+<p><strong>Step 1: Establish the prior.</strong> From the cross Aa × Aa, the probabilities are: AA = 1/4, Aa = 1/2, aa = 1/4. Since the woman does not have CF, she is not aa. Her prior probability of being a carrier is 2/3 (as we calculated above).</p>
+<p><strong>Step 2: Incorporate new evidence.</strong> Now suppose the woman has three unaffected children with a known carrier partner. If she is Aa, each child has a 3/4 chance of being unaffected. If she is AA, each child has a 4/4 chance of being unaffected.</p>
+<ul>
+<li>Likelihood if she is a carrier (Aa): <span class="arithmatex">\( (3/4)^3 = 27/64 \)</span></li>
+<li>Likelihood if she is not a carrier (AA): <span class="arithmatex">\( (4/4)^3 = 1 \)</span></li>
+</ul>
+<p><strong>Step 3: Compute the posterior.</strong></p>
+<div class="arithmatex">\[
+P(\text{Aa} \mid \text{3 unaffected children}) = \frac{(27/64)(2/3)}{(27/64)(2/3) + (1)(1/3)} = \frac{18/64}{18/64 + 1/3} = \frac{18/64}{18/64 + 64/192}
+\]</div>
+<p>Simplifying with a common denominator of 192:</p>
+<div class="arithmatex">\[
+= \frac{54/192}{54/192 + 64/192} = \frac{54}{118} \approx 0.458
+\]</div>
+<p>The woman's probability of being a carrier has dropped from 2/3 (about 0.667) to approximately 0.458 after observing three unaffected children. Each unaffected child provides evidence — but not proof — against carrier status.</p>
+<h4 id="diagram-bayesian-updating-of-carrier-probability">Diagram: Bayesian Updating of Carrier Probability</h4>
+<iframe src="../../sims/bayesian-carrier-probability/main.html" width="100%" height="500px" scrolling="no"></iframe>
+<details>
+<summary>Bayesian Updating of Carrier Probability</summary>
+<p>Type: Interactive simulation
+<strong>sim-id:</strong> bayesian-carrier-probability<br/>
+<strong>Library:</strong> p5.js<br/>
+<strong>Status:</strong> Specified</p>
+<p>An interactive visualization showing how a woman's carrier probability updates as she has successive unaffected children. A slider controls the number of unaffected children (0–10). The display shows a probability bar that starts at 2/3 and decreases with each unaffected child, alongside the Bayesian calculation at each step. The prior, likelihood, and posterior are labeled clearly.</p>
+</details>
+<h2 id="hypothesis-testing-with-chi-square">Hypothesis Testing with Chi-Square</h2>
+<p>Bayesian reasoning helps us update beliefs, but sometimes we need to make a definitive decision: does our data fit a genetic model or not? This is where <strong>hypothesis testing</strong> enters the picture.</p>
+<h3 id="the-null-hypothesis-in-genetics">The Null Hypothesis in Genetics</h3>
+<p>A <strong>null hypothesis</strong> in genetics is the specific prediction that a genetic model makes about phenotypic ratios. For a monohybrid cross of two heterozygotes, the null hypothesis states that offspring will appear in a 3:1 phenotypic ratio. The null hypothesis is not what we believe — it is the prediction we are testing.</p>
+<h3 id="the-chi-square-test-and-goodness-of-fit">The Chi-Square Test and Goodness of Fit</h3>
+<p>The <strong>chi-square test</strong> measures how far observed data deviate from expected values. The <strong>goodness of fit test</strong> applies this specifically to comparing observed offspring ratios with predicted Mendelian ratios. The test statistic is:</p>
+<div class="arithmatex">\[
+\chi^2 = \sum \frac{(O_i - E_i)^2}{E_i}
+\]</div>
+<p>where <span class="arithmatex">\( O_i \)</span> is the observed count for category <span class="arithmatex">\( i \)</span> and <span class="arithmatex">\( E_i \)</span> is the expected count.</p>
+<p>Consider a dihybrid cross producing 315 round yellow, 108 round green, 101 wrinkled yellow, and 32 wrinkled green seeds (Mendel's actual data). The expected 9:3:3:1 ratio predicts, out of 556 total seeds:</p>
+<table>
+<thead>
+<tr>
+<th>Phenotype</th>
+<th style="text-align: center;">Observed (<span class="arithmatex">\(O\)</span>)</th>
+<th style="text-align: center;">Expected (<span class="arithmatex">\(E\)</span>)</th>
+<th style="text-align: center;"><span class="arithmatex">\((O - E)^2 / E\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Round, yellow</td>
+<td style="text-align: center;">315</td>
+<td style="text-align: center;">312.75</td>
+<td style="text-align: center;">0.016</td>
+</tr>
+<tr>
+<td>Round, green</td>
+<td style="text-align: center;">108</td>
+<td style="text-align: center;">104.25</td>
+<td style="text-align: center;">0.135</td>
+</tr>
+<tr>
+<td>Wrinkled, yellow</td>
+<td style="text-align: center;">101</td>
+<td style="text-align: center;">104.25</td>
+<td style="text-align: center;">0.101</td>
+</tr>
+<tr>
+<td>Wrinkled, green</td>
+<td style="text-align: center;">32</td>
+<td style="text-align: center;">34.75</td>
+<td style="text-align: center;">0.218</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td style="text-align: center;"><strong>556</strong></td>
+<td style="text-align: center;"><strong>556</strong></td>
+<td style="text-align: center;"><strong>0.470</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="p-value-interpretation">P-Value Interpretation</h3>
+<p>The <strong>p-value</strong> is the probability of obtaining a chi-square value as large as (or larger than) the calculated value, assuming the null hypothesis is true. For this example, with 3 degrees of freedom, <span class="arithmatex">\( \chi^2 = 0.470 \)</span> gives a p-value greater than 0.90. This means the data fit the expected ratio extremely well.</p>
+<p>A p-value <strong>below 0.05</strong> is traditionally considered evidence that the observed data do not fit the expected ratio — we reject the null hypothesis. A p-value <strong>above 0.05</strong> means we fail to reject the null hypothesis; the data are consistent with the predicted ratio.</p>
+<div class="admonition mascot-tip">
+<p class="admonition-title">A Common Misconception</p>
+<p><img src="../../img/mascot/tip.png" class="mascot-admonition-img" alt="Dottie offering a tip">
+A high p-value does not prove the null hypothesis is correct — it only means the data are consistent with it. Similarly, a low p-value does not prove the null hypothesis is wrong. Statistics tell us about the strength of evidence, not about absolute truth.</p>
+</div>
+<h4 id="diagram-chi-square-distribution-interactive">Diagram: Chi-Square Distribution Interactive</h4>
+<iframe src="../../sims/chi-square-distribution/main.html" width="100%" height="500px" scrolling="no"></iframe>
+<details>
+<summary>Chi-Square Distribution Interactive</summary>
+<p>Type: Interactive simulation
+<strong>sim-id:</strong> chi-square-distribution<br/>
+<strong>Library:</strong> p5.js<br/>
+<strong>Status:</strong> Specified</p>
+<p>An interactive visualization of the chi-square distribution. A slider controls degrees of freedom (1–10). The user can input observed and expected values for up to 4 categories. The calculated chi-square statistic is shown as a vertical line on the distribution curve, with the area to the right shaded to represent the p-value. Critical values at p = 0.05 and p = 0.01 are marked.</p>
+</details>
+<h2 id="test-crosses-and-reciprocal-crosses">Test Crosses and Reciprocal Crosses</h2>
+<h3 id="the-test-cross">The Test Cross</h3>
+<p>A <strong>test cross</strong> is a mating between an individual with a dominant phenotype (whose genotype may be either homozygous or heterozygous) and a homozygous recessive individual. Because the recessive parent can only contribute recessive alleles, the phenotypes of the offspring directly reveal the alleles carried by the dominant parent.</p>
+<p>For example, if a purple-flowered pea plant is crossed with a white-flowered plant (pp):</p>
+<ul>
+<li>If the purple parent is <strong>PP</strong>: all offspring are Pp (purple)</li>
+<li>If the purple parent is <strong>Pp</strong>: offspring are 1/2 Pp (purple) and 1/2 pp (white)</li>
+</ul>
+<p>The test cross is the geneticist's most fundamental diagnostic tool for resolving unknown genotypes.</p>
+<h3 id="the-reciprocal-cross">The Reciprocal Cross</h3>
+<p>A <strong>reciprocal cross</strong> reverses the sexes of the parents. If Cross A is purple female × white male, then Cross B (the reciprocal) is white female × purple male. Reciprocal crosses test whether inheritance is <strong>autosomal</strong> or <strong>sex-linked</strong>. If both crosses yield the same offspring ratios, the gene is likely autosomal. If the results differ between crosses, the gene may be X-linked, or maternal effects may be involved.</p>
+<table>
+<thead>
+<tr>
+<th>Cross Type</th>
+<th>Purpose</th>
+<th>What It Reveals</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Test cross</td>
+<td>Dominant phenotype × homozygous recessive</td>
+<td>Unknown genotype of dominant parent</td>
+</tr>
+<tr>
+<td>Reciprocal cross</td>
+<td>Swap male and female genotypes</td>
+<td>Whether a trait is sex-linked or autosomal</td>
+</tr>
+</tbody>
+</table>
+<h2 id="genetic-heterogeneity">Genetic Heterogeneity</h2>
+<p>A single phenotype — such as deafness, blindness, or a metabolic disorder — can sometimes result from mutations in different genes or different mutations within the same gene. This phenomenon is called <strong>genetic heterogeneity</strong>, and it is one of the most important reasons why genetic analysis is complex.</p>
+<h3 id="locus-heterogeneity">Locus Heterogeneity</h3>
+<p><strong>Locus heterogeneity</strong> occurs when mutations in different genes produce the same phenotype. Hereditary deafness is a classic example: mutations in over 100 different genes can cause non-syndromic hearing loss. Two deaf parents, each homozygous for recessive mutations in <em>different</em> deafness genes, can have children with normal hearing because each parent supplies a functional copy of the gene that is mutated in the other parent.</p>
+<h3 id="allelic-heterogeneity">Allelic Heterogeneity</h3>
+<p><strong>Allelic heterogeneity</strong> occurs when different mutations within the <em>same</em> gene produce the same (or similar) phenotype. Cystic fibrosis illustrates this: more than 2,000 different mutations in the CFTR gene have been identified, all causing varying degrees of the disease. The most common mutation, ΔF508, accounts for about 70% of CF chromosomes in European populations, but the remaining 30% represent hundreds of different allelic variants.</p>
+<p>Understanding the distinction between locus and allelic heterogeneity is essential for interpreting genetic test results and designing research studies.</p>
+<h4 id="diagram-genetic-heterogeneity-concept-map">Diagram: Genetic Heterogeneity Concept Map</h4>
+<iframe src="../../sims/genetic-heterogeneity-map/main.html" width="100%" height="500px" scrolling="no"></iframe>
+<details>
+<summary>Genetic Heterogeneity Concept Map</summary>
+<p>Type: Concept diagram
+<strong>sim-id:</strong> genetic-heterogeneity-map<br/>
+<strong>Library:</strong> vis-network<br/>
+<strong>Status:</strong> Specified</p>
+<p>A network diagram showing the relationship between genetic heterogeneity, locus heterogeneity, and allelic heterogeneity. The central node is "Same Phenotype." Branching from it are two paths: one showing multiple different genes (locus heterogeneity) with examples, and one showing multiple mutations in the same gene (allelic heterogeneity) with examples. Nodes are color-coded by type (phenotype, gene, mutation).</p>
+</details>
+<h2 id="epistasis-when-genes-interact">Epistasis: When Genes Interact</h2>
+<p><strong>Epistasis</strong> occurs when the phenotypic effect of one gene is modified or masked by one or more other genes. The term comes from the Greek word meaning "standing upon" — one gene "stands upon" (overrides) the effect of another. Epistasis is distinct from dominance, which describes the interaction between alleles at the <em>same</em> locus. Epistasis describes interactions <em>between</em> loci.</p>
+<p>A classic example involves coat color in Labrador retrievers. The <em>E</em> gene controls whether pigment is deposited in the fur. Dogs with genotype <em>ee</em> are yellow regardless of their genotype at the <em>B</em> locus (which determines black vs. brown pigment). The <em>E</em> gene is <strong>epistatic</strong> to the <em>B</em> gene: it can mask the expression of <em>B</em> entirely.</p>
+<p>This means a cross between two double heterozygotes (BbEe × BbEe) does not produce the standard 9:3:3:1 dihybrid ratio. Instead, the ratio is 9 black : 3 brown : 4 yellow, because the 3 B_ee and 1 bbee classes are both yellow.</p>
+<p>We will explore specific types of epistasis — duplicate, complementary, and suppressor — in much greater depth in Chapter 3.</p>
+<h2 id="lethal-alleles">Lethal Alleles</h2>
+<p><strong>Lethal alleles</strong> cause the death of an organism, usually during embryonic development. Their existence was first recognized when certain crosses consistently failed to produce one expected genotypic class.</p>
+<p>The classic example is the <em>Yellow</em> allele (<em>A^Y</em>) in mice. Yellow mice are always heterozygous (<em>A^Y/A</em>). When two yellow mice are crossed, the expected 1:2:1 ratio is modified to 2 yellow : 1 agouti (wild-type) because homozygous <em>A^Y/A^Y</em> embryos die in utero. The observed 2:1 ratio among surviving offspring is a hallmark of a recessive lethal allele.</p>
+<p>Lethal alleles remind us that Mendelian ratios assume all genotypes survive equally. When they do not, the ratios shift in predictable ways.</p>
+<div class="admonition mascot-warning">
+<p class="admonition-title">Watch for Modified Ratios</p>
+<p><img src="../../img/mascot/warning.png" class="mascot-admonition-img" alt="Dottie with a warning">
+Whenever you see a 2:1 ratio instead of the expected 3:1, think about lethal alleles. One genotypic class may be missing because it does not survive. Always account for lethality before concluding that a ratio disproves a genetic model.</p>
+</div>
+<h2 id="pleiotropy">Pleiotropy</h2>
+<p><strong>Pleiotropy</strong> occurs when a single gene affects multiple, seemingly unrelated phenotypic traits. The sickle-cell allele of the beta-globin gene (HbS) is a textbook example. This single nucleotide change produces an altered hemoglobin protein that causes red blood cells to assume a sickle shape under low-oxygen conditions. The downstream consequences include anemia, organ damage, pain crises, increased resistance to malaria, and altered bone development — all from one mutation in one gene.</p>
+<p>Pleiotropy is the rule rather than the exception in genetics. Most genes participate in multiple biochemical pathways, and disrupting any one gene typically affects several traits. Recognizing pleiotropy is important because it means that a single genetic test may have implications for multiple aspects of an individual's health.</p>
+<h2 id="mosaicism">Mosaicism</h2>
+<p><strong>Mosaicism</strong> describes a condition in which an organism contains two or more genetically distinct cell populations derived from a single fertilized egg. This can arise through somatic mutations, X-chromosome inactivation, or errors in chromosome segregation during early cell divisions.</p>
+<p>The most familiar example of mosaicism is the calico cat. Female mammals randomly inactivate one X chromosome in each cell early in development (a process called lyonization). If a female cat is heterozygous for an X-linked coat color gene, some patches of fur express one allele (orange) and others express the alternative allele (black), producing the distinctive patchwork pattern.</p>
+<p>Mosaicism has important clinical implications. An individual who carries a disease-causing mutation in only a fraction of their cells may show milder symptoms than someone who carries the mutation in every cell. Detecting mosaicism often requires testing multiple tissue types or using sensitive sequencing methods.</p>
+<h2 id="putting-it-all-together-an-integrated-example">Putting It All Together: An Integrated Example</h2>
+<p>Let us work through a problem that integrates several concepts from this chapter.</p>
+<p>A geneticist crosses two true-breeding lines of flowers: one with white petals and one with purple petals. All F1 offspring are purple. When the F1 are crossed with each other, the F2 generation shows 94 purple and 28 white flowers.</p>
+<p><strong>Step 1: State the null hypothesis.</strong> If petal color follows simple Mendelian dominance, we expect a 3:1 ratio in the F2. With 122 total plants, the expected numbers are 91.5 purple and 30.5 white.</p>
+<p><strong>Step 2: Perform the chi-square test.</strong></p>
+<div class="arithmatex">\[
+\chi^2 = \frac{(94 - 91.5)^2}{91.5} + \frac{(28 - 30.5)^2}{30.5} = \frac{6.25}{91.5} + \frac{6.25}{30.5} = 0.068 + 0.205 = 0.273
+\]</div>
+<p>With 1 degree of freedom, the critical value at p = 0.05 is 3.84. Our <span class="arithmatex">\( \chi^2 = 0.273 \)</span> is well below this threshold, so we fail to reject the null hypothesis. The data are consistent with a 3:1 ratio.</p>
+<p><strong>Step 3: Apply Bayesian reasoning.</strong> If we also consider the possibility that the trait could be controlled by two genes with a 15:1 ratio (duplicate epistasis), the expected values would be 114.375 purple and 7.625 white. The chi-square for this model would be far larger, strongly rejecting the 15:1 hypothesis. The data strongly support the single-gene model.</p>
+<p><strong>Step 4: Verify with a test cross.</strong> To confirm, we would cross an F1 purple plant with a white plant (homozygous recessive). If we observe approximately 1:1 purple to white offspring, the single-gene model is confirmed.</p>
+<h4 id="diagram-integrated-genetics-problem-solver">Diagram: Integrated Genetics Problem Solver</h4>
+<iframe src="../../sims/genetics-problem-solver/main.html" width="100%" height="500px" scrolling="no"></iframe>
+<details>
+<summary>Integrated Genetics Problem Solver</summary>
+<p>Type: Interactive simulation
+<strong>sim-id:</strong> genetics-problem-solver<br/>
+<strong>Library:</strong> p5.js<br/>
+<strong>Status:</strong> Specified</p>
+<p>A step-by-step interactive tool where students input observed phenotype counts from a genetic cross. The simulation calculates expected values for multiple genetic models (3:1, 9:3:3:1, 15:1, 9:7, etc.), performs chi-square tests for each, and ranks the models by how well they fit the data. Students can compare p-values across models to determine which genetic mechanism best explains their observations.</p>
+</details>
+<h2 id="key-concepts-summary">Key Concepts Summary</h2>
+<table>
+<thead>
+<tr>
+<th>Concept</th>
+<th>Definition</th>
+<th>Why It Matters</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Genetic inference</td>
+<td>Reasoning from phenotype to genotype</td>
+<td>Foundation of all genetic analysis</td>
+</tr>
+<tr>
+<td>Prior probability</td>
+<td>Initial belief before new evidence</td>
+<td>Starting point for Bayesian updating</td>
+</tr>
+<tr>
+<td>Posterior probability</td>
+<td>Updated belief after incorporating evidence</td>
+<td>Guides clinical and research decisions</td>
+</tr>
+<tr>
+<td>Likelihood ratio</td>
+<td>Ratio comparing how well hypotheses explain data</td>
+<td>Determines direction of belief update</td>
+</tr>
+<tr>
+<td>Chi-square test</td>
+<td>Statistical test comparing observed vs. expected</td>
+<td>Tests whether data fit a genetic model</td>
+</tr>
+<tr>
+<td>P-value</td>
+<td>Probability of data under the null hypothesis</td>
+<td>Measures strength of evidence</td>
+</tr>
+<tr>
+<td>Locus heterogeneity</td>
+<td>Same phenotype from mutations in different genes</td>
+<td>Explains unexpected inheritance patterns</td>
+</tr>
+<tr>
+<td>Allelic heterogeneity</td>
+<td>Same phenotype from different mutations in one gene</td>
+<td>Complicates genetic testing</td>
+</tr>
+<tr>
+<td>Epistasis</td>
+<td>One gene masks or modifies another gene's effect</td>
+<td>Produces modified Mendelian ratios</td>
+</tr>
+<tr>
+<td>Lethal alleles</td>
+<td>Alleles causing death of a genotypic class</td>
+<td>Shifts expected ratios (e.g., 2:1)</td>
+</tr>
+<tr>
+<td>Pleiotropy</td>
+<td>One gene affecting multiple traits</td>
+<td>One mutation, many phenotypic effects</td>
+</tr>
+<tr>
+<td>Mosaicism</td>
+<td>Genetically distinct cell populations in one organism</td>
+<td>Causes variable phenotype expression</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition mascot-celebration">
+<p class="admonition-title">Chapter Complete!</p>
+<p><img src="../../img/mascot/celebration.png" class="mascot-admonition-img" alt="Dottie celebrating">
+Excellent work, fellow investigators! You now have the probabilistic toolkit that every geneticist needs. In the next chapter, we will apply these tools to analyze family pedigrees and determine how traits are inherited across generations. Time to cross some ideas!</p>
+</div>
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Previous: List of Chapters">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                List of Chapters
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../02-pedigree-analysis-inheritance-patterns/" class="md-footer__link md-footer__link--next" aria-label="Next: 2. Pedigree Analysis and Inheritance Patterns">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                2. Pedigree Analysis and Inheritance Patterns
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 Dan McCreary. Licensed under <a href="license/">CC BY-NC-SA 4.0</a> for non-commercial use.
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "navigation.expand", "navigation.path", "navigation.prune", "navigation.indexes", "toc.follow", "navigation.top", "navigation.footer", "content.action.edit"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+        <script src="../../js/extra.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-chtml.js"></script>
+      
+    
+  </body>
+</html>

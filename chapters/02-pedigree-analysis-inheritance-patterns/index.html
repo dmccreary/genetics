@@ -1,0 +1,2346 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Systematic analysis of family pedigrees to determine inheritance patterns and calculate genetic risks.">
+      
+      
+        <meta name="author" content="Dan McCreary">
+      
+      
+        <link rel="canonical" href="https://dmccreary.github.io/genetics/chapters/02-pedigree-analysis-inheritance-patterns/">
+      
+      
+        <link rel="prev" href="../01-genetic-inference-probabilistic-reasoning/">
+      
+      
+        <link rel="next" href="../03-epistasis-complementation-modified-ratios/">
+      
+      
+      <link rel="icon" href="../../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.43">
+    
+    
+      
+        <title>Pedigree Analysis and Inheritance Patterns - Genetics</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.0253249f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+      <link rel="stylesheet" href="../../css/mascot.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-HJJLWQWVSL"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-HJJLWQWVSL",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-HJJLWQWVSL",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+      
+        <meta  property="og:type"  content="website" >
+      
+        <meta  property="og:title"  content="Pedigree Analysis and Inheritance Patterns - Genetics" >
+      
+        <meta  property="og:description"  content="Systematic analysis of family pedigrees to determine inheritance patterns and calculate genetic risks." >
+      
+        <meta  property="og:image"  content="https://dmccreary.github.io/genetics/assets/images/social/chapters/02-pedigree-analysis-inheritance-patterns/index.png" >
+      
+        <meta  property="og:image:type"  content="image/png" >
+      
+        <meta  property="og:image:width"  content="1200" >
+      
+        <meta  property="og:image:height"  content="630" >
+      
+        <meta  property="og:url"  content="https://dmccreary.github.io/genetics/chapters/02-pedigree-analysis-inheritance-patterns/" >
+      
+        <meta  name="twitter:card"  content="summary_large_image" >
+      
+        <meta  name="twitter:title"  content="Pedigree Analysis and Inheritance Patterns - Genetics" >
+      
+        <meta  name="twitter:description"  content="Systematic analysis of family pedigrees to determine inheritance patterns and calculate genetic risks." >
+      
+        <meta  name="twitter:image"  content="https://dmccreary.github.io/genetics/assets/images/social/chapters/02-pedigree-analysis-inheritance-patterns/index.png" >
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="amber" data-md-color-accent="deep-orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#pedigree-analysis-and-inheritance-patterns" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Genetics" class="md-header__button md-logo" aria-label="Genetics" data-md-component="logo">
+      
+  <img src="../../img/mascot/neutral.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Genetics
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Pedigree Analysis and Inheritance Patterns
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/dmccreary/genetics" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Genetics" class="md-nav__button md-logo" aria-label="Genetics" data-md-component="logo">
+      
+  <img src="../../img/mascot/neutral.png" alt="logo">
+
+    </a>
+    Genetics
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/dmccreary/genetics" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About This Course
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course-description/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Course Description
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Chapters
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Chapters
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-genetic-inference-probabilistic-reasoning/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1. Genetic Inference and Probabilistic Reasoning
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    2. Pedigree Analysis and Inheritance Patterns
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    2. Pedigree Analysis and Inheritance Patterns
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concepts-covered" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concepts Covered
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#introduction-reading-the-story-of-a-family" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction: Reading the Story of a Family
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Introduction: Reading the Story of a Family">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#standard-pedigree-symbols" class="md-nav__link">
+    <span class="md-ellipsis">
+      Standard Pedigree Symbols
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#autosomal-dominant-inheritance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Autosomal Dominant Inheritance
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Autosomal Dominant Inheritance">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hallmarks-of-autosomal-dominant-inheritance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hallmarks of Autosomal Dominant Inheritance
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-huntington-disease" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example: Huntington Disease
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Example: Huntington Disease">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-autosomal-dominant-pedigree-pattern" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Autosomal Dominant Pedigree Pattern
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#autosomal-recessive-inheritance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Autosomal Recessive Inheritance
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Autosomal Recessive Inheritance">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hallmarks-of-autosomal-recessive-inheritance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hallmarks of Autosomal Recessive Inheritance
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-role-of-consanguinity" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Role of Consanguinity
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#carrier-probability-calculations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Carrier Probability Calculations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#x-linked-inheritance" class="md-nav__link">
+    <span class="md-ellipsis">
+      X-Linked Inheritance
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="X-Linked Inheritance">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#x-linked-recessive-inheritance" class="md-nav__link">
+    <span class="md-ellipsis">
+      X-Linked Recessive Inheritance
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#x-linked-dominant-inheritance" class="md-nav__link">
+    <span class="md-ellipsis">
+      X-Linked Dominant Inheritance
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="X-Linked Dominant Inheritance">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-comparing-inheritance-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Comparing Inheritance Patterns
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#penetrance-and-expressivity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Penetrance and Expressivity
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Penetrance and Expressivity">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#penetrance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Penetrance
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#expressivity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Expressivity
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#factors-influencing-penetrance-and-expressivity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Factors Influencing Penetrance and Expressivity
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#phenocopies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Phenocopies
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#age-of-onset-and-anticipation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Age of Onset and Anticipation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Age of Onset and Anticipation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#age-of-onset" class="md-nav__link">
+    <span class="md-ellipsis">
+      Age of Onset
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anticipation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Anticipation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#somatic-and-germline-mosaicism" class="md-nav__link">
+    <span class="md-ellipsis">
+      Somatic and Germline Mosaicism
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Somatic and Germline Mosaicism">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#somatic-mosaicism" class="md-nav__link">
+    <span class="md-ellipsis">
+      Somatic Mosaicism
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#germline-mosaicism" class="md-nav__link">
+    <span class="md-ellipsis">
+      Germline Mosaicism
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Germline Mosaicism">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-somatic-vs-germline-mosaicism" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Somatic vs. Germline Mosaicism
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#integrating-pedigree-analysis-a-systematic-approach" class="md-nav__link">
+    <span class="md-ellipsis">
+      Integrating Pedigree Analysis: A Systematic Approach
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Integrating Pedigree Analysis: A Systematic Approach">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-pedigree-analysis-decision-tree" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Pedigree Analysis Decision Tree
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-concepts-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Concepts Summary
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-epistasis-complementation-modified-ratios/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3. Epistasis, Complementation, and Modified Ratios
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-genome-structure-chromatin-organization/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4. Genome Structure and Chromatin Organization
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-genetic-variation-genome-diversity/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5. Genetic Variation and Genome Diversity
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-gene-duplication-rearrangements-evolution/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6. Gene Duplication, Rearrangements, and Evolution
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07-genetic-mapping-linkage-analysis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7. Genetic Mapping and Linkage Analysis
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08-advanced-mapping-gene-discovery/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    8. Advanced Mapping and Gene Discovery
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09-quantitative-genetics-heritability/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    9. Quantitative Genetics and Heritability
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10-gwas-population-genetics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    10. GWAS and Population Genetics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11-gene-regulation-regulatory-networks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    11. Gene Regulation and Regulatory Networks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12-post-transcriptional-regulation-cell-identity/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    12. Post-Transcriptional Regulation and Cell Identity
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../13-experimental-genetics-model-organisms/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    13. Experimental Genetics and Model Organisms
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../14-genomics-sequencing-bioinformatics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    14. Genomics, Sequencing, and Bioinformatics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../15-human-genetics-clinical-applications/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    15. Human Genetics and Clinical Applications
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../16-cancer-genetics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    16. Cancer Genetics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../17-ethics-society-genetic-policy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    17. Ethics, Society, and Genetic Policy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../18-frontier-topics-emerging-technologies/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    18. Frontier Topics and Emerging Technologies
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../learning-graph/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Learning Graph
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../sims/graph-viewer/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    MicroSims
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../license/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    License
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contact/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contact
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concepts-covered" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concepts Covered
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#introduction-reading-the-story-of-a-family" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction: Reading the Story of a Family
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Introduction: Reading the Story of a Family">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#standard-pedigree-symbols" class="md-nav__link">
+    <span class="md-ellipsis">
+      Standard Pedigree Symbols
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#autosomal-dominant-inheritance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Autosomal Dominant Inheritance
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Autosomal Dominant Inheritance">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hallmarks-of-autosomal-dominant-inheritance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hallmarks of Autosomal Dominant Inheritance
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-huntington-disease" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example: Huntington Disease
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Example: Huntington Disease">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-autosomal-dominant-pedigree-pattern" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Autosomal Dominant Pedigree Pattern
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#autosomal-recessive-inheritance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Autosomal Recessive Inheritance
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Autosomal Recessive Inheritance">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hallmarks-of-autosomal-recessive-inheritance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hallmarks of Autosomal Recessive Inheritance
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-role-of-consanguinity" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Role of Consanguinity
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#carrier-probability-calculations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Carrier Probability Calculations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#x-linked-inheritance" class="md-nav__link">
+    <span class="md-ellipsis">
+      X-Linked Inheritance
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="X-Linked Inheritance">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#x-linked-recessive-inheritance" class="md-nav__link">
+    <span class="md-ellipsis">
+      X-Linked Recessive Inheritance
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#x-linked-dominant-inheritance" class="md-nav__link">
+    <span class="md-ellipsis">
+      X-Linked Dominant Inheritance
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="X-Linked Dominant Inheritance">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-comparing-inheritance-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Comparing Inheritance Patterns
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#penetrance-and-expressivity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Penetrance and Expressivity
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Penetrance and Expressivity">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#penetrance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Penetrance
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#expressivity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Expressivity
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#factors-influencing-penetrance-and-expressivity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Factors Influencing Penetrance and Expressivity
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#phenocopies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Phenocopies
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#age-of-onset-and-anticipation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Age of Onset and Anticipation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Age of Onset and Anticipation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#age-of-onset" class="md-nav__link">
+    <span class="md-ellipsis">
+      Age of Onset
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anticipation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Anticipation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#somatic-and-germline-mosaicism" class="md-nav__link">
+    <span class="md-ellipsis">
+      Somatic and Germline Mosaicism
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Somatic and Germline Mosaicism">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#somatic-mosaicism" class="md-nav__link">
+    <span class="md-ellipsis">
+      Somatic Mosaicism
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#germline-mosaicism" class="md-nav__link">
+    <span class="md-ellipsis">
+      Germline Mosaicism
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Germline Mosaicism">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-somatic-vs-germline-mosaicism" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Somatic vs. Germline Mosaicism
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#integrating-pedigree-analysis-a-systematic-approach" class="md-nav__link">
+    <span class="md-ellipsis">
+      Integrating Pedigree Analysis: A Systematic Approach
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Integrating Pedigree Analysis: A Systematic Approach">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-pedigree-analysis-decision-tree" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Pedigree Analysis Decision Tree
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-concepts-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Concepts Summary
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/dmccreary/genetics/edit/master/docs/chapters/02-pedigree-analysis-inheritance-patterns/index.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="pedigree-analysis-and-inheritance-patterns">Pedigree Analysis and Inheritance Patterns</h1>
+<h2 id="summary">Summary</h2>
+<p>This chapter covers the systematic analysis of family pedigrees to determine inheritance patterns and calculate genetic risks. Students explore autosomal dominant, autosomal recessive, and X-linked inheritance, along with penetrance, expressivity, and age-related genetic phenomena. After completing this chapter, students will be able to interpret pedigrees and predict inheritance outcomes in clinical and research contexts.</p>
+<h2 id="concepts-covered">Concepts Covered</h2>
+<p>This chapter covers the following 16 concepts from the learning graph:</p>
+<ol>
+<li>Pedigree Analysis</li>
+<li>Autosomal Dominant Pedigree</li>
+<li>Autosomal Recessive Pedigree</li>
+<li>X-Linked Inheritance</li>
+<li>X-Linked Recessive Pedigree</li>
+<li>X-Linked Dominant Pedigree</li>
+<li>Carrier Probability</li>
+<li>Penetrance</li>
+<li>Incomplete Penetrance</li>
+<li>Expressivity</li>
+<li>Variable Expressivity</li>
+<li>Phenocopy</li>
+<li>Age of Onset</li>
+<li>Anticipation</li>
+<li>Somatic Mosaicism</li>
+<li>Germline Mosaicism</li>
+</ol>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>This chapter builds on concepts from:</p>
+<ul>
+<li><a href="../01-genetic-inference-probabilistic-reasoning/">Chapter 1: Genetic Inference and Probabilistic Reasoning</a></li>
+</ul>
+<hr />
+<h2 id="introduction-reading-the-story-of-a-family">Introduction: Reading the Story of a Family</h2>
+<div class="admonition mascot-welcome">
+<p class="admonition-title">Welcome Back, Researchers!</p>
+<p><img src="../../img/mascot/welcome.png" class="mascot-admonition-img" alt="Dottie waving welcome">
+In Chapter 1, we built our probabilistic toolkit. Now it is time to put those tools to work on one of the oldest and most powerful methods in human genetics — pedigree analysis. Let's look at the evidence!</p>
+</div>
+<p>Long before DNA sequencing or genome-wide association studies, geneticists studied inheritance by drawing family trees. A <strong>pedigree</strong> is a diagram that traces the transmission of a trait through multiple generations of a family. <strong>Pedigree analysis</strong> is the systematic process of examining these diagrams to determine the mode of inheritance, identify carriers, and calculate the probability that future offspring will be affected.</p>
+<p>Pedigree analysis remains indispensable in clinical genetics. When a family visits a genetic counselor, the first step is always to draw a detailed pedigree. The pattern of affected and unaffected individuals across generations reveals whether a trait is dominant or recessive, autosomal or sex-linked, and sometimes whether additional complications like incomplete penetrance or variable expressivity are involved.</p>
+<h3 id="standard-pedigree-symbols">Standard Pedigree Symbols</h3>
+<p>Before analyzing pedigrees, you must know the visual language. The symbols are standardized across genetics.</p>
+<table>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Square</td>
+<td>Male</td>
+</tr>
+<tr>
+<td>Circle</td>
+<td>Female</td>
+</tr>
+<tr>
+<td>Filled shape</td>
+<td>Affected individual</td>
+</tr>
+<tr>
+<td>Open shape</td>
+<td>Unaffected individual</td>
+</tr>
+<tr>
+<td>Half-filled shape</td>
+<td>Carrier (known or inferred)</td>
+</tr>
+<tr>
+<td>Horizontal line connecting square and circle</td>
+<td>Mating</td>
+</tr>
+<tr>
+<td>Vertical line descending from mating line</td>
+<td>Offspring</td>
+</tr>
+<tr>
+<td>Diamond</td>
+<td>Sex unknown</td>
+</tr>
+<tr>
+<td>Diagonal line through symbol</td>
+<td>Deceased</td>
+</tr>
+<tr>
+<td>Double horizontal line</td>
+<td>Consanguineous mating</td>
+</tr>
+</tbody>
+</table>
+<p>A pedigree typically labels generations with Roman numerals (I, II, III) along the left margin and numbers individuals within each generation from left to right.</p>
+<h2 id="autosomal-dominant-inheritance">Autosomal Dominant Inheritance</h2>
+<p>An <strong>autosomal dominant pedigree</strong> pattern arises when a single copy of a mutant allele on an autosome (non-sex chromosome) is sufficient to produce the phenotype. Only one affected parent is needed to transmit the trait, and affected individuals appear in every generation.</p>
+<h3 id="hallmarks-of-autosomal-dominant-inheritance">Hallmarks of Autosomal Dominant Inheritance</h3>
+<p>Autosomal dominant traits display several distinctive features in pedigrees.</p>
+<ul>
+<li>Every affected individual has at least one affected parent (no skipping of generations)</li>
+<li>The trait affects both sexes equally</li>
+<li>Unaffected individuals do not transmit the trait (unless penetrance is incomplete)</li>
+<li>Approximately 50% of offspring of an affected heterozygote are affected</li>
+<li>Male-to-male transmission can occur (ruling out X-linkage)</li>
+</ul>
+<h3 id="example-huntington-disease">Example: Huntington Disease</h3>
+<p>Huntington disease (HD) is a progressive neurodegenerative disorder caused by an expansion of a CAG trinucleotide repeat in the <em>HTT</em> gene on chromosome 4. The expanded allele is dominant: one copy is sufficient to cause disease. Examining HD pedigrees reveals the classic autosomal dominant pattern — the trait never skips a generation, both sexes are affected equally, and affected individuals have an affected parent.</p>
+<p>An affected individual who is heterozygous (Hd) mated with an unaffected individual (hh) produces offspring with a 1/2 probability of inheriting the disease allele. Using the Bayesian framework from Chapter 1, we can update this probability as an at-risk individual ages without symptoms.</p>
+<h4 id="diagram-autosomal-dominant-pedigree-pattern">Diagram: Autosomal Dominant Pedigree Pattern</h4>
+<iframe src="../../sims/autosomal-dominant-pedigree/main.html" width="100%" height="500px" scrolling="no"></iframe>
+<details>
+<summary>Autosomal Dominant Pedigree Pattern</summary>
+<p>Type: Interactive pedigree diagram
+<strong>sim-id:</strong> autosomal-dominant-pedigree<br/>
+<strong>Library:</strong> p5.js<br/>
+<strong>Status:</strong> Specified</p>
+<p>An interactive three-generation pedigree showing autosomal dominant inheritance. Users can click on individuals to toggle their affected status and see how the pattern changes. The simulation highlights the key features: vertical transmission, both sexes affected, ~50% of offspring affected. A sidebar lists the diagnostic hallmarks and checks them against the displayed pedigree.</p>
+</details>
+<h2 id="autosomal-recessive-inheritance">Autosomal Recessive Inheritance</h2>
+<p>An <strong>autosomal recessive pedigree</strong> pattern appears when two copies of a mutant allele are required to produce the phenotype. Carriers (heterozygotes) are phenotypically normal but can transmit the allele to their offspring.</p>
+<h3 id="hallmarks-of-autosomal-recessive-inheritance">Hallmarks of Autosomal Recessive Inheritance</h3>
+<ul>
+<li>Affected individuals often appear in a single generation (horizontal pattern)</li>
+<li>Unaffected parents can have affected children (both parents are carriers)</li>
+<li>The trait affects both sexes equally</li>
+<li>Consanguinity (mating between relatives) increases the frequency of affected individuals</li>
+<li>Approximately 25% of offspring from two carrier parents are affected</li>
+</ul>
+<h3 id="the-role-of-consanguinity">The Role of Consanguinity</h3>
+<p>When two individuals share a recent common ancestor, they are more likely to both carry the same recessive allele inherited from that ancestor. This is why autosomal recessive disorders are more common in populations with high rates of consanguineous marriage. The probability that a child of first cousins is homozygous for a recessive allele carried by a shared grandparent can be calculated using the coefficient of inbreeding.</p>
+<div class="admonition mascot-thinking">
+<p class="admonition-title">Carrier Frequency and Population Size</p>
+<p><img src="../../img/mascot/thinking.png" class="mascot-admonition-img" alt="Dottie thinking">
+In small, isolated populations, the carrier frequency for certain recessive alleles can be surprisingly high. The founder effect — when a small group establishes a new population — can dramatically increase the frequency of rare alleles. This is why some recessive disorders are concentrated in specific communities.</p>
+</div>
+<h3 id="carrier-probability-calculations">Carrier Probability Calculations</h3>
+<p><strong>Carrier probability</strong> is the likelihood that an unaffected individual carries one copy of a recessive disease allele. For siblings of an affected individual whose parents are both carriers (Aa × Aa), the carrier probability among unaffected siblings is 2/3 — the same conditional probability calculation we performed in Chapter 1.</p>
+<p>More complex carrier probability calculations arise when we trace alleles through multi-generation pedigrees. Consider a woman whose maternal uncle has an autosomal recessive disorder. Working backward:</p>
+<ol>
+<li>Her maternal grandparents are both carriers: Aa × Aa</li>
+<li>Her mother, who is unaffected, has a 2/3 probability of being a carrier</li>
+<li>If her mother is Aa and her father is unaffected (probability of being a carrier depends on population frequency), the woman's carrier probability is:</li>
+</ol>
+<div class="arithmatex">\[
+P(\text{woman is carrier}) = P(\text{mother is Aa}) \times P(\text{inherits } a \text{ from mother}) + P(\text{father is Aa}) \times P(\text{inherits } a \text{ from father})
+\]</div>
+<p>For the maternal contribution alone:</p>
+<div class="arithmatex">\[
+P(\text{carrier via mother}) = \frac{2}{3} \times \frac{1}{2} = \frac{1}{3}
+\]</div>
+<p>Each generation of unaffected individuals reduces the carrier probability by applying conditional probability, exactly as Bayesian reasoning predicts.</p>
+<h2 id="x-linked-inheritance">X-Linked Inheritance</h2>
+<p><strong>X-linked inheritance</strong> involves genes located on the X chromosome. Because males have only one X chromosome (hemizygous), they express whatever allele they carry. Females have two X chromosomes, so they can be homozygous or heterozygous.</p>
+<h3 id="x-linked-recessive-inheritance">X-Linked Recessive Inheritance</h3>
+<p>An <strong>X-linked recessive pedigree</strong> has distinctive features that clearly separate it from autosomal patterns.</p>
+<ul>
+<li>Affected individuals are predominantly male</li>
+<li>The trait appears to skip generations (carrier mothers pass to affected sons)</li>
+<li>Affected males receive the allele from their carrier mothers</li>
+<li>No male-to-male transmission (fathers pass their Y chromosome, not X, to sons)</li>
+<li>All daughters of an affected male are carriers (they receive his only X)</li>
+</ul>
+<p>Color blindness and hemophilia A are classic examples of X-linked recessive traits. Consider a carrier woman (X^H X^h) mated with a normal man (X^H Y):</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>X^H (from father)</th>
+<th>Y (from father)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>X^H (from mother)</strong></td>
+<td>X^H X^H (normal female)</td>
+<td>X^H Y (normal male)</td>
+</tr>
+<tr>
+<td><strong>X^h (from mother)</strong></td>
+<td>X^H X^h (carrier female)</td>
+<td>X^h Y (affected male)</td>
+</tr>
+</tbody>
+</table>
+<p>Half the sons are affected, and half the daughters are carriers, but no daughters are affected.</p>
+<h3 id="x-linked-dominant-inheritance">X-Linked Dominant Inheritance</h3>
+<p>An <strong>X-linked dominant pedigree</strong> is rarer but produces a different pattern than autosomal dominant inheritance.</p>
+<ul>
+<li>Affected males pass the trait to all daughters but no sons</li>
+<li>Affected heterozygous females pass the trait to approximately half of all children</li>
+<li>The trait may be more common in females than males in a population</li>
+<li>Some X-linked dominant conditions are lethal in hemizygous males</li>
+</ul>
+<p>Rett syndrome, caused by mutations in the <em>MECP2</em> gene on the X chromosome, is a well-known example. It occurs almost exclusively in females because affected males rarely survive to birth.</p>
+<h4 id="diagram-comparing-inheritance-patterns">Diagram: Comparing Inheritance Patterns</h4>
+<iframe src="../../sims/inheritance-pattern-comparison/main.html" width="100%" height="500px" scrolling="no"></iframe>
+<details>
+<summary>Comparing Inheritance Patterns</summary>
+<p>Type: Interactive comparison tool
+<strong>sim-id:</strong> inheritance-pattern-comparison<br/>
+<strong>Library:</strong> p5.js<br/>
+<strong>Status:</strong> Specified</p>
+<p>A side-by-side display of four pedigree types: autosomal dominant, autosomal recessive, X-linked recessive, and X-linked dominant. Each pedigree shows three generations. A dropdown menu lets the user select which pattern to highlight. Below each pedigree, a checklist of diagnostic features is displayed with checkmarks indicating which features are present. Users can click a "randomize" button to generate new pedigrees and practice identification.</p>
+</details>
+<h2 id="penetrance-and-expressivity">Penetrance and Expressivity</h2>
+<p>Not all genetic traits follow clean, predictable patterns. Two phenomena — penetrance and expressivity — explain why individuals with the same genotype can have different phenotypes.</p>
+<h3 id="penetrance">Penetrance</h3>
+<p><strong>Penetrance</strong> is the proportion of individuals with a particular genotype who actually display the expected phenotype. If 80 out of 100 individuals carrying a dominant allele show the trait, the penetrance is 80%.</p>
+<p>Full penetrance (100%) means every carrier shows the trait. <strong>Incomplete penetrance</strong> means some carriers do not show the trait despite having the causative genotype. Incomplete penetrance makes pedigree analysis more challenging because the trait can appear to "skip" a generation — not because the allele was absent, but because a carrier did not express it.</p>
+<p>The BRCA1 gene provides a medically important example. Women carrying a BRCA1 mutation have a lifetime breast cancer risk of approximately 60-80%, not 100%. The penetrance is incomplete, meaning some carriers never develop breast cancer despite carrying the mutation.</p>
+<h3 id="expressivity">Expressivity</h3>
+<p>While penetrance is an all-or-nothing measure (does the trait appear or not?), <strong>expressivity</strong> describes the <em>degree</em> to which a trait is expressed. <strong>Variable expressivity</strong> means that individuals with the same genotype show different severity or manifestations of the phenotype.</p>
+<p>Neurofibromatosis type 1 (NF1) is a classic example. All individuals carrying an NF1 mutation show some signs of the disease (penetrance is essentially 100%), but the severity varies enormously. Some individuals have only a few café-au-lait spots (light brown skin patches), while others develop thousands of neurofibromas, learning disabilities, and skeletal abnormalities.</p>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Penetrance</th>
+<th>Expressivity</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Question asked</td>
+<td>Does the trait appear at all?</td>
+<td>How severe is the trait?</td>
+</tr>
+<tr>
+<td>Measurement</td>
+<td>Percentage of carriers affected</td>
+<td>Range of phenotypic severity</td>
+</tr>
+<tr>
+<td>Complete/Full</td>
+<td>100% of carriers show the trait</td>
+<td>All carriers show identical severity</td>
+</tr>
+<tr>
+<td>Reduced/Variable</td>
+<td>Some carriers show no phenotype</td>
+<td>Carriers range from mild to severe</td>
+</tr>
+<tr>
+<td>Example</td>
+<td>BRCA1 (~70% penetrance for breast cancer)</td>
+<td>NF1 (mild spots to severe tumors)</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition mascot-tip">
+<p class="admonition-title">Distinguishing Penetrance from Expressivity</p>
+<p><img src="../../img/mascot/tip.png" class="mascot-admonition-img" alt="Dottie offering a tip">
+A helpful analogy: penetrance is like a light switch (on or off), while expressivity is like a dimmer switch (how bright). A gene with incomplete penetrance sometimes stays off. A gene with variable expressivity is always on, but at different brightness levels.</p>
+</div>
+<h3 id="factors-influencing-penetrance-and-expressivity">Factors Influencing Penetrance and Expressivity</h3>
+<p>Several factors contribute to incomplete penetrance and variable expressivity.</p>
+<ul>
+<li><strong>Modifier genes</strong>: Other genes in the genome can enhance or suppress the expression of the primary gene</li>
+<li><strong>Environmental factors</strong>: Diet, temperature, toxin exposure, and other environmental variables can influence whether and how strongly a genotype is expressed</li>
+<li><strong>Epigenetic modifications</strong>: Chemical modifications to DNA or histones can alter gene expression without changing the DNA sequence</li>
+<li><strong>Stochastic (random) effects</strong>: Random fluctuations in gene expression during development can produce different outcomes even in genetically identical cells</li>
+<li><strong>Age of onset</strong>: Some conditions require time to manifest, meaning penetrance increases with age</li>
+</ul>
+<h2 id="phenocopies">Phenocopies</h2>
+<p>A <strong>phenocopy</strong> is an environmentally caused phenotype that mimics a genetic condition. The individual displays the trait but does not carry the causative allele. Phenocopies complicate pedigree analysis because they appear to be genetic cases but do not follow inheritance rules.</p>
+<p>For example, hearing loss can be caused by genetic mutations (hereditary) or by environmental factors such as loud noise exposure, infections, or ototoxic medications. A person who becomes deaf from a childhood ear infection is a phenocopy of genetic deafness. Their children will not be at increased risk of deafness (unless they independently carry deafness alleles), even though the parent's pedigree might initially suggest a genetic cause.</p>
+<p>Identifying phenocopies requires careful clinical evaluation and sometimes molecular testing to determine whether an affected individual actually carries the genetic variant.</p>
+<h2 id="age-of-onset-and-anticipation">Age of Onset and Anticipation</h2>
+<h3 id="age-of-onset">Age of Onset</h3>
+<p><strong>Age of onset</strong> refers to the age at which symptoms of a genetic disorder first appear. Many genetic conditions do not manifest at birth but develop later in life. Huntington disease typically presents between ages 30 and 50, while familial breast cancer risk increases through adulthood.</p>
+<p>Age of onset creates a special challenge for pedigree analysis and carrier probability calculation. A young, asymptomatic individual may not yet have reached the age when the disease would manifest. Their "unaffected" status provides less evidence against carrier status than would the same status in an older individual. Bayesian analysis accounts for age of onset by adjusting the likelihood calculation based on the probability of remaining unaffected at the individual's current age.</p>
+<h3 id="anticipation">Anticipation</h3>
+<p><strong>Anticipation</strong> is a phenomenon in which a genetic disorder becomes more severe or has an earlier age of onset in successive generations. Anticipation is caused by the expansion of unstable trinucleotide repeats during DNA replication. Each generation, the repeat region may grow longer, producing a more severe phenotype.</p>
+<p>Myotonic dystrophy illustrates anticipation clearly. A grandparent may have cataracts and mild muscle weakness (onset in the 50s), their child may develop significant myotonia in the 30s, and their grandchild may have severe congenital myotonic dystrophy at birth. The molecular basis is the progressive expansion of a CTG repeat in the <em>DMPK</em> gene.</p>
+<table>
+<thead>
+<tr>
+<th>Generation</th>
+<th style="text-align: center;">Repeat Length</th>
+<th>Symptoms</th>
+<th style="text-align: center;">Age of Onset</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Grandparent</td>
+<td style="text-align: center;">50–100 repeats</td>
+<td>Mild (cataracts)</td>
+<td style="text-align: center;">50s</td>
+</tr>
+<tr>
+<td>Parent</td>
+<td style="text-align: center;">100–1000 repeats</td>
+<td>Moderate (myotonia, weakness)</td>
+<td style="text-align: center;">30s</td>
+</tr>
+<tr>
+<td>Child</td>
+<td style="text-align: center;">&gt;1000 repeats</td>
+<td>Severe (congenital)</td>
+<td style="text-align: center;">Birth</td>
+</tr>
+</tbody>
+</table>
+<h2 id="somatic-and-germline-mosaicism">Somatic and Germline Mosaicism</h2>
+<p>In Chapter 1, we introduced mosaicism as a condition where an organism contains genetically distinct cell populations. Here we distinguish two forms that have very different consequences for inheritance.</p>
+<h3 id="somatic-mosaicism">Somatic Mosaicism</h3>
+<p><strong>Somatic mosaicism</strong> occurs when a mutation arises during mitotic cell division after fertilization, producing a patch of cells with a different genotype from the rest of the body. The earlier in development the mutation occurs, the larger the proportion of affected cells.</p>
+<p>Somatic mosaicism explains several puzzling clinical observations.</p>
+<ul>
+<li>A parent who does not appear affected on standard genetic testing may have a child with a "de novo" dominant disorder — but close examination reveals the parent carries the mutation in a subset of cells</li>
+<li>McCune-Albright syndrome, caused by somatic mutations in the <em>GNAS1</em> gene, produces patchy bone lesions and skin pigmentation that correspond to the distribution of mutant cells</li>
+<li>The severity of somatic mosaic conditions depends on which tissues contain the mutation and what fraction of cells are affected</li>
+</ul>
+<div class="admonition mascot-warning">
+<p class="admonition-title">Hidden Carriers</p>
+<p><img src="../../img/mascot/warning.png" class="mascot-admonition-img" alt="Dottie with a warning">
+Somatic mosaicism means that standard blood-based genetic testing can miss mutations that are present in other tissues. A negative blood test does not always rule out a genetic diagnosis. When clinical suspicion is high, testing additional tissue types (skin biopsy, saliva) or using ultra-sensitive sequencing methods may reveal low-level mosaicism.</p>
+</div>
+<h3 id="germline-mosaicism">Germline Mosaicism</h3>
+<p><strong>Germline mosaicism</strong> (also called gonadal mosaicism) occurs when a mutation is present in a subset of an individual's egg or sperm cells but not in their somatic cells. The parent appears completely unaffected on clinical examination and even on blood-based genetic testing, yet they can transmit the mutation to their offspring.</p>
+<p>Germline mosaicism explains one of the most troubling scenarios in genetic counseling: apparently "de novo" mutations that recur in siblings. If a couple has one child with a dominant disorder and neither parent is affected, the recurrence risk is usually quoted as very low (approximately 1%). However, if one parent has germline mosaicism, the actual recurrence risk can be much higher — sometimes 5-10% or more.</p>
+<p>Duchenne muscular dystrophy (DMD) provides a well-documented example. Approximately 15-20% of mothers who have a son with DMD and test negative for the mutation in their blood are germline mosaics. Their ovaries contain a mixture of eggs with and without the mutation.</p>
+<h4 id="diagram-somatic-vs-germline-mosaicism">Diagram: Somatic vs. Germline Mosaicism</h4>
+<iframe src="../../sims/mosaicism-comparison/main.html" width="100%" height="500px" scrolling="no"></iframe>
+<details>
+<summary>Somatic vs. Germline Mosaicism</summary>
+<p>Type: Interactive comparison diagram
+<strong>sim-id:</strong> mosaicism-comparison<br/>
+<strong>Library:</strong> p5.js<br/>
+<strong>Status:</strong> Specified</p>
+<p>A split-screen visualization. The left side shows somatic mosaicism: an embryo divides, and at a user-selected cell division stage, a mutation occurs in one cell. The simulation shows how the mutant clone expands, with affected tissue highlighted in a different color. The right side shows germline mosaicism: the somatic cells are all normal-colored, but a subset of germ cells in the gonad are highlighted as carrying the mutation. A slider controls when during development the mutation occurs, affecting the proportion of mutant cells. Below each diagram, text explains the inheritance implications.</p>
+</details>
+<h2 id="integrating-pedigree-analysis-a-systematic-approach">Integrating Pedigree Analysis: A Systematic Approach</h2>
+<p>When confronted with a pedigree, apply the following decision-making framework to determine the most likely mode of inheritance.</p>
+<p><strong>Step 1: Check for X-linkage.</strong> Does the trait show male-to-male transmission? If yes, the trait cannot be X-linked (fathers give Y, not X, to sons). If no male-to-male transmission is observed, X-linkage remains possible.</p>
+<p><strong>Step 2: Check for dominance vs. recessiveness.</strong> Do two unaffected parents ever have an affected child? If yes, the trait is recessive (both parents are carriers). If affected individuals always have at least one affected parent, the trait is likely dominant.</p>
+<p><strong>Step 3: Assess sex bias.</strong> Is the trait disproportionately found in males? This suggests X-linked recessive. Is it found equally in both sexes? This suggests autosomal inheritance.</p>
+<p><strong>Step 4: Look for complications.</strong> Does the trait appear to skip generations in a dominant pattern? Consider incomplete penetrance. Does severity vary widely? Consider variable expressivity. Does an "unaffected" parent have multiple affected children? Consider germline mosaicism.</p>
+<table>
+<thead>
+<tr>
+<th>Observation</th>
+<th>Most Likely Pattern</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Male-to-male transmission</td>
+<td>Autosomal (not X-linked)</td>
+</tr>
+<tr>
+<td>Two unaffected parents → affected child</td>
+<td>Autosomal recessive</td>
+</tr>
+<tr>
+<td>Trait in every generation</td>
+<td>Autosomal dominant</td>
+</tr>
+<tr>
+<td>Mostly males affected, no male-to-male</td>
+<td>X-linked recessive</td>
+</tr>
+<tr>
+<td>Affected father → all daughters affected</td>
+<td>X-linked dominant</td>
+</tr>
+<tr>
+<td>Trait skips a generation (dominant context)</td>
+<td>Incomplete penetrance</td>
+</tr>
+<tr>
+<td>Variable severity among affected relatives</td>
+<td>Variable expressivity</td>
+</tr>
+</tbody>
+</table>
+<h4 id="diagram-pedigree-analysis-decision-tree">Diagram: Pedigree Analysis Decision Tree</h4>
+<iframe src="../../sims/pedigree-decision-tree/main.html" width="100%" height="500px" scrolling="no"></iframe>
+<details>
+<summary>Pedigree Analysis Decision Tree</summary>
+<p>Type: Interactive decision tree
+<strong>sim-id:</strong> pedigree-decision-tree<br/>
+<strong>Library:</strong> p5.js<br/>
+<strong>Status:</strong> Specified</p>
+<p>An interactive flowchart that guides students through pedigree analysis. The user answers yes/no questions about features they observe in a pedigree (male-to-male transmission? unaffected parents with affected child? sex bias?). Each answer highlights the next branch of the decision tree and eventually arrives at a conclusion about the most likely inheritance pattern. A "practice" mode generates random pedigrees for the student to classify, with feedback on their answers.</p>
+</details>
+<h2 id="key-concepts-summary">Key Concepts Summary</h2>
+<table>
+<thead>
+<tr>
+<th>Concept</th>
+<th>Definition</th>
+<th>Clinical Significance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pedigree analysis</td>
+<td>Systematic study of trait transmission in families</td>
+<td>Primary tool in clinical genetics</td>
+</tr>
+<tr>
+<td>Autosomal dominant</td>
+<td>One mutant copy sufficient; appears every generation</td>
+<td>50% recurrence risk per child</td>
+</tr>
+<tr>
+<td>Autosomal recessive</td>
+<td>Two mutant copies required; carriers unaffected</td>
+<td>25% recurrence risk from carrier parents</td>
+</tr>
+<tr>
+<td>X-linked recessive</td>
+<td>Hemizygous males affected; carrier females unaffected</td>
+<td>Sons of carrier females at 50% risk</td>
+</tr>
+<tr>
+<td>X-linked dominant</td>
+<td>One mutant copy sufficient; affects both sexes</td>
+<td>May be lethal in hemizygous males</td>
+</tr>
+<tr>
+<td>Carrier probability</td>
+<td>Likelihood of carrying a recessive allele</td>
+<td>Essential for genetic counseling</td>
+</tr>
+<tr>
+<td>Penetrance</td>
+<td>Proportion of carriers who show the phenotype</td>
+<td>Explains "skipped" generations</td>
+</tr>
+<tr>
+<td>Expressivity</td>
+<td>Degree of phenotypic severity</td>
+<td>Explains clinical variability</td>
+</tr>
+<tr>
+<td>Phenocopy</td>
+<td>Environmental mimic of a genetic trait</td>
+<td>Must be excluded before genetic diagnosis</td>
+</tr>
+<tr>
+<td>Age of onset</td>
+<td>Age when symptoms first appear</td>
+<td>Complicates risk assessment in young individuals</td>
+</tr>
+<tr>
+<td>Anticipation</td>
+<td>Increasing severity across generations</td>
+<td>Caused by trinucleotide repeat expansion</td>
+</tr>
+<tr>
+<td>Somatic mosaicism</td>
+<td>Mutation in a subset of body cells</td>
+<td>Variable severity; may be missed by testing</td>
+</tr>
+<tr>
+<td>Germline mosaicism</td>
+<td>Mutation in a subset of germ cells</td>
+<td>Explains recurrence of "de novo" mutations</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition mascot-celebration">
+<p class="admonition-title">Chapter Complete!</p>
+<p><img src="../../img/mascot/celebration.png" class="mascot-admonition-img" alt="Dottie celebrating">
+Outstanding detective work, fellow investigators! You can now read the genetic stories hidden in family pedigrees and account for the complications that make real genetics so much more interesting than textbook examples. In the next chapter, we will explore how genes interact with each other to produce unexpected ratios. What does the data tell us? Let's find out!</p>
+</div>
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../01-genetic-inference-probabilistic-reasoning/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 1. Genetic Inference and Probabilistic Reasoning">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                1. Genetic Inference and Probabilistic Reasoning
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../03-epistasis-complementation-modified-ratios/" class="md-footer__link md-footer__link--next" aria-label="Next: 3. Epistasis, Complementation, and Modified Ratios">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                3. Epistasis, Complementation, and Modified Ratios
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 Dan McCreary. Licensed under <a href="license/">CC BY-NC-SA 4.0</a> for non-commercial use.
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "navigation.expand", "navigation.path", "navigation.prune", "navigation.indexes", "toc.follow", "navigation.top", "navigation.footer", "content.action.edit"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+        <script src="../../js/extra.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-chtml.js"></script>
+      
+    
+  </body>
+</html>

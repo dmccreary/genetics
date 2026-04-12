@@ -1,0 +1,2075 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Inheritance and analysis of quantitative traits including variance partitioning, heritability estimation, twin studies, and QTL mapping">
+      
+      
+        <meta name="author" content="Dan McCreary">
+      
+      
+        <link rel="canonical" href="https://dmccreary.github.io/genetics/chapters/09-quantitative-genetics-heritability/">
+      
+      
+        <link rel="prev" href="../08-advanced-mapping-gene-discovery/">
+      
+      
+        <link rel="next" href="../10-gwas-population-genetics/">
+      
+      
+      <link rel="icon" href="../../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.43">
+    
+    
+      
+        <title>Quantitative Genetics and Heritability - Genetics</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.0253249f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+      <link rel="stylesheet" href="../../css/mascot.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-HJJLWQWVSL"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-HJJLWQWVSL",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-HJJLWQWVSL",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+      
+        <meta  property="og:type"  content="website" >
+      
+        <meta  property="og:title"  content="Quantitative Genetics and Heritability - Genetics" >
+      
+        <meta  property="og:description"  content="Inheritance and analysis of quantitative traits including variance partitioning, heritability estimation, twin studies, and QTL mapping" >
+      
+        <meta  property="og:image"  content="https://dmccreary.github.io/genetics/assets/images/social/chapters/09-quantitative-genetics-heritability/index.png" >
+      
+        <meta  property="og:image:type"  content="image/png" >
+      
+        <meta  property="og:image:width"  content="1200" >
+      
+        <meta  property="og:image:height"  content="630" >
+      
+        <meta  property="og:url"  content="https://dmccreary.github.io/genetics/chapters/09-quantitative-genetics-heritability/" >
+      
+        <meta  name="twitter:card"  content="summary_large_image" >
+      
+        <meta  name="twitter:title"  content="Quantitative Genetics and Heritability - Genetics" >
+      
+        <meta  name="twitter:description"  content="Inheritance and analysis of quantitative traits including variance partitioning, heritability estimation, twin studies, and QTL mapping" >
+      
+        <meta  name="twitter:image"  content="https://dmccreary.github.io/genetics/assets/images/social/chapters/09-quantitative-genetics-heritability/index.png" >
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="amber" data-md-color-accent="deep-orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#quantitative-genetics-and-heritability" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Genetics" class="md-header__button md-logo" aria-label="Genetics" data-md-component="logo">
+      
+  <img src="../../img/mascot/neutral.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Genetics
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Quantitative Genetics and Heritability
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/dmccreary/genetics" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Genetics" class="md-nav__button md-logo" aria-label="Genetics" data-md-component="logo">
+      
+  <img src="../../img/mascot/neutral.png" alt="logo">
+
+    </a>
+    Genetics
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/dmccreary/genetics" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About This Course
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course-description/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Course Description
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Chapters
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Chapters
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-genetic-inference-probabilistic-reasoning/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1. Genetic Inference and Probabilistic Reasoning
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-pedigree-analysis-inheritance-patterns/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2. Pedigree Analysis and Inheritance Patterns
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-epistasis-complementation-modified-ratios/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3. Epistasis, Complementation, and Modified Ratios
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-genome-structure-chromatin-organization/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4. Genome Structure and Chromatin Organization
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-genetic-variation-genome-diversity/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5. Genetic Variation and Genome Diversity
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-gene-duplication-rearrangements-evolution/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6. Gene Duplication, Rearrangements, and Evolution
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07-genetic-mapping-linkage-analysis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7. Genetic Mapping and Linkage Analysis
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08-advanced-mapping-gene-discovery/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    8. Advanced Mapping and Gene Discovery
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    9. Quantitative Genetics and Heritability
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    9. Quantitative Genetics and Heritability
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concepts-covered" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concepts Covered
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-quantitative-genetics" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Is Quantitative Genetics?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quantitative-traits-and-continuous-variation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quantitative Traits and Continuous Variation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#polygenic-inheritance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Polygenic Inheritance
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Polygenic Inheritance">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-polygenic-inheritance-and-phenotype-distributions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Polygenic Inheritance and Phenotype Distributions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#multifactorial-traits-and-threshold-traits" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multifactorial Traits and Threshold Traits
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#partitioning-phenotypic-variance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Partitioning Phenotypic Variance
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#heritability" class="md-nav__link">
+    <span class="md-ellipsis">
+      Heritability
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Heritability">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#broad-sense-heritability" class="md-nav__link">
+    <span class="md-ellipsis">
+      Broad-Sense Heritability
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#narrow-sense-heritability" class="md-nav__link">
+    <span class="md-ellipsis">
+      Narrow-Sense Heritability
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#twin-studies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Twin Studies
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Twin Studies">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#concordance-rate" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concordance Rate
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#heritability-estimation-from-twin-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Heritability Estimation from Twin Data
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Heritability Estimation from Twin Data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-twin-study-heritability-calculator" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Twin Study Heritability Calculator
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quantitative-trait-loci" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quantitative Trait Loci
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#qtl-mapping" class="md-nav__link">
+    <span class="md-ellipsis">
+      QTL Mapping
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="QTL Mapping">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#interval-mapping" class="md-nav__link">
+    <span class="md-ellipsis">
+      Interval Mapping
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Interval Mapping">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-qtl-mapping-lod-profile" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: QTL Mapping LOD Profile
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#marker-assisted-selection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Marker-Assisted Selection
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Marker-Assisted Selection">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-marker-assisted-selection-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Marker-Assisted Selection Workflow
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-breeders-equation-predicting-response-to-selection" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Breeder's Equation: Predicting Response to Selection
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Takeaways
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10-gwas-population-genetics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    10. GWAS and Population Genetics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11-gene-regulation-regulatory-networks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    11. Gene Regulation and Regulatory Networks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12-post-transcriptional-regulation-cell-identity/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    12. Post-Transcriptional Regulation and Cell Identity
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../13-experimental-genetics-model-organisms/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    13. Experimental Genetics and Model Organisms
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../14-genomics-sequencing-bioinformatics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    14. Genomics, Sequencing, and Bioinformatics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../15-human-genetics-clinical-applications/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    15. Human Genetics and Clinical Applications
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../16-cancer-genetics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    16. Cancer Genetics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../17-ethics-society-genetic-policy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    17. Ethics, Society, and Genetic Policy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../18-frontier-topics-emerging-technologies/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    18. Frontier Topics and Emerging Technologies
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../learning-graph/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Learning Graph
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../sims/graph-viewer/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    MicroSims
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../license/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    License
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contact/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contact
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concepts-covered" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concepts Covered
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-quantitative-genetics" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Is Quantitative Genetics?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quantitative-traits-and-continuous-variation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quantitative Traits and Continuous Variation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#polygenic-inheritance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Polygenic Inheritance
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Polygenic Inheritance">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-polygenic-inheritance-and-phenotype-distributions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Polygenic Inheritance and Phenotype Distributions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#multifactorial-traits-and-threshold-traits" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multifactorial Traits and Threshold Traits
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#partitioning-phenotypic-variance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Partitioning Phenotypic Variance
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#heritability" class="md-nav__link">
+    <span class="md-ellipsis">
+      Heritability
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Heritability">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#broad-sense-heritability" class="md-nav__link">
+    <span class="md-ellipsis">
+      Broad-Sense Heritability
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#narrow-sense-heritability" class="md-nav__link">
+    <span class="md-ellipsis">
+      Narrow-Sense Heritability
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#twin-studies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Twin Studies
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Twin Studies">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#concordance-rate" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concordance Rate
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#heritability-estimation-from-twin-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Heritability Estimation from Twin Data
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Heritability Estimation from Twin Data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-twin-study-heritability-calculator" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Twin Study Heritability Calculator
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quantitative-trait-loci" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quantitative Trait Loci
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#qtl-mapping" class="md-nav__link">
+    <span class="md-ellipsis">
+      QTL Mapping
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="QTL Mapping">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#interval-mapping" class="md-nav__link">
+    <span class="md-ellipsis">
+      Interval Mapping
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Interval Mapping">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-qtl-mapping-lod-profile" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: QTL Mapping LOD Profile
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#marker-assisted-selection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Marker-Assisted Selection
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Marker-Assisted Selection">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-marker-assisted-selection-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Marker-Assisted Selection Workflow
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-breeders-equation-predicting-response-to-selection" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Breeder's Equation: Predicting Response to Selection
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Takeaways
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/dmccreary/genetics/edit/master/docs/chapters/09-quantitative-genetics-heritability/index.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="quantitative-genetics-and-heritability">Quantitative Genetics and Heritability</h1>
+<h2 id="summary">Summary</h2>
+<p>This chapter explores how quantitative traits are inherited and analyzed, covering variance partitioning, heritability estimation, twin studies, and QTL mapping. Students learn the distinction between broad-sense and narrow-sense heritability and how molecular markers enable the mapping of quantitative trait loci. After completing this chapter, students will be able to estimate heritability and interpret QTL mapping results.</p>
+<h2 id="concepts-covered">Concepts Covered</h2>
+<p>This chapter covers the following 23 concepts from the learning graph:</p>
+<ol>
+<li>Quantitative Genetics</li>
+<li>Quantitative Trait</li>
+<li>Continuous Variation</li>
+<li>Polygenic Inheritance</li>
+<li>Multifactorial Trait</li>
+<li>Threshold Trait</li>
+<li>Phenotypic Variance</li>
+<li>Additive Genetic Variance</li>
+<li>Dominance Variance</li>
+<li>Epistatic Variance</li>
+<li>Environmental Variance</li>
+<li>Heritability</li>
+<li>Broad Sense Heritability</li>
+<li>Narrow Sense Heritability</li>
+<li>Twin Studies</li>
+<li>Monozygotic Twins</li>
+<li>Dizygotic Twins</li>
+<li>Concordance Rate</li>
+<li>Heritability Estimation</li>
+<li>Quantitative Trait Locus</li>
+<li>QTL Mapping</li>
+<li>Interval Mapping</li>
+<li>Marker Assisted Selection</li>
+</ol>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>This chapter builds on concepts from:</p>
+<ul>
+<li><a href="../01-genetic-inference-probabilistic-reasoning/">Chapter 1: Genetic Inference and Probabilistic Reasoning</a></li>
+<li><a href="../07-genetic-mapping-linkage-analysis/">Chapter 7: Genetic Mapping and Linkage Analysis</a></li>
+</ul>
+<hr />
+<div class="admonition mascot-welcome">
+<p class="admonition-title">Beyond Simple Mendelian Ratios</p>
+<p><img src="../../img/mascot/welcome.png" class="mascot-admonition-img" alt="Dottie waving welcome">
+Welcome, fellow investigators! Most traits in nature do not sort into neat 3:1 ratios. Height, weight, blood pressure, crop yield — these vary continuously across populations. Let's look at the evidence for how genetics drives this continuous variation!</p>
+</div>
+<h2 id="what-is-quantitative-genetics">What Is Quantitative Genetics?</h2>
+<p><strong>Quantitative genetics</strong> is the branch of genetics that studies the inheritance of traits showing continuous, measurable variation in populations. Unlike Mendelian genetics, which focuses on traits controlled by single genes with discrete phenotypic classes, quantitative genetics deals with traits influenced by many genes and environmental factors simultaneously.</p>
+<p>The field has its origins in a historical tension. In the early 1900s, Mendelians argued that inheritance was governed by discrete factors, while biometricians (led by Karl Pearson and W.F.R. Weldon) emphasized the smooth, continuous distributions they measured in natural populations. Ronald Fisher resolved this conflict in his landmark 1918 paper, showing that many Mendelian factors acting together could produce the continuous distributions observed by the biometricians.</p>
+<p>Quantitative genetics provides the mathematical framework for predicting how populations respond to selection — a question central to agriculture, medicine, and evolutionary biology.</p>
+<h2 id="quantitative-traits-and-continuous-variation">Quantitative Traits and Continuous Variation</h2>
+<p>A <strong>quantitative trait</strong> is any phenotype that is measured on a continuous numerical scale rather than classified into discrete categories. Examples include height, weight, blood pressure, grain yield, milk production, and IQ scores. When you measure a quantitative trait across a large population and plot the distribution, you typically observe a bell-shaped (normal) curve — this is <strong>continuous variation</strong>.</p>
+<p>Continuous variation arises from two sources working together. First, multiple genes contribute to the trait, each adding a small increment to the phenotype. Second, environmental factors introduce additional variation. The combined effect of many small genetic and environmental influences produces the smooth, continuous distribution predicted by the central limit theorem.</p>
+<p>Not all continuously distributed traits are quantitative genetic traits, and not all genetically complex traits show continuous distributions. However, the combination of multiple genetic loci and environmental influence is the hallmark of quantitative trait inheritance.</p>
+<h2 id="polygenic-inheritance">Polygenic Inheritance</h2>
+<p><strong>Polygenic inheritance</strong> describes the situation where multiple genes (typically many) each contribute a small, additive effect to a phenotype. The classic demonstration of polygenic inheritance comes from Nilsson-Ehle's 1909 experiments with wheat kernel color. He crossed red-kerneled and white-kerneled varieties and observed F2 ratios that could be explained by two or three independently segregating loci, each with an additive effect on pigmentation.</p>
+<p>With <span class="arithmatex">\( n \)</span> loci, each having two alleles with additive effects, the number of phenotypic classes in the F2 generation is <span class="arithmatex">\( 2n + 1 \)</span>. As the number of loci increases, the discrete phenotypic classes merge into a continuous distribution:</p>
+<table>
+<thead>
+<tr>
+<th>Number of Loci</th>
+<th>Phenotypic Classes in F2</th>
+<th>Distribution Shape</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>3</td>
+<td>Discrete, 1:2:1</td>
+</tr>
+<tr>
+<td>2</td>
+<td>5</td>
+<td>Stepped</td>
+</tr>
+<tr>
+<td>3</td>
+<td>7</td>
+<td>Approaching bell curve</td>
+</tr>
+<tr>
+<td>5</td>
+<td>11</td>
+<td>Nearly continuous</td>
+</tr>
+<tr>
+<td>10</td>
+<td>21</td>
+<td>Smooth bell curve</td>
+</tr>
+<tr>
+<td>50+</td>
+<td>101+</td>
+<td>Indistinguishable from continuous</td>
+</tr>
+</tbody>
+</table>
+<h4 id="diagram-polygenic-inheritance-and-phenotype-distributions">Diagram: Polygenic Inheritance and Phenotype Distributions</h4>
+<iframe src="../../sims/polygenic-inheritance/main.html" width="100%" height="500px" scrolling="no"></iframe>
+<details>
+<summary>Polygenic Inheritance and Phenotype Distributions</summary>
+<p>Type: Interactive simulation
+<strong>sim-id:</strong> polygenic-inheritance<br/>
+<strong>Library:</strong> p5.js<br/>
+<strong>Status:</strong> Specified</p>
+<p>An interactive simulation where users adjust the number of contributing loci (1 to 20) using a slider. The display shows a histogram of phenotypic values in a simulated F2 population, demonstrating how increasing the number of loci transforms the distribution from discrete classes to a smooth bell curve. A second slider adds environmental noise to show how environment further smooths the distribution. The current number of phenotypic classes and distribution statistics are displayed.</p>
+</details>
+<h2 id="multifactorial-traits-and-threshold-traits">Multifactorial Traits and Threshold Traits</h2>
+<p>A <strong>multifactorial trait</strong> is any trait influenced by both genetic and environmental factors. All quantitative traits are multifactorial, but the term also applies to discrete traits that have complex underlying causes. Many common diseases — diabetes, heart disease, schizophrenia, asthma — are multifactorial: they result from the combined effects of multiple genes and environmental exposures.</p>
+<p>A <strong>threshold trait</strong> is a special category of multifactorial trait that appears qualitative (present or absent) despite having a continuous underlying genetic and environmental liability. The liability is a hidden, normally distributed variable that represents an individual's overall predisposition. When liability exceeds a threshold value, the trait is expressed; when it falls below the threshold, the individual appears unaffected.</p>
+<p>Examples of threshold traits include:</p>
+<ul>
+<li><strong>Cleft palate</strong> — either present or absent, but the underlying developmental liability is continuous</li>
+<li><strong>Type 2 diabetes</strong> — clinical diagnosis is binary, but glucose regulation falls on a spectrum</li>
+<li><strong>Pyloric stenosis</strong> — more common in males, suggesting the threshold differs between sexes</li>
+</ul>
+<p>The threshold model explains why multifactorial diseases can "run in families" without following Mendelian ratios. Affected individuals tend to have liability values well above the threshold, so their relatives — who share some of the same predisposing alleles — are more likely to exceed the threshold themselves.</p>
+<div class="admonition mascot-thinking">
+<p class="admonition-title">Hidden Continuity</p>
+<p><img src="../../img/mascot/thinking.png" class="mascot-admonition-img" alt="Dottie thinking">
+When you see a trait that is either present or absent, do not assume it is controlled by a single gene. Many either/or traits actually have a continuous underlying liability influenced by dozens or hundreds of genes. What does the data tell us about the genetics beneath the surface?</p>
+</div>
+<h2 id="partitioning-phenotypic-variance">Partitioning Phenotypic Variance</h2>
+<p>The fundamental equation of quantitative genetics partitions the total <strong>phenotypic variance</strong> (<span class="arithmatex">\( V_P \)</span>) of a trait into genetic and environmental components:</p>
+<div class="arithmatex">\[
+V_P = V_G + V_E
+\]</div>
+<p>where <span class="arithmatex">\( V_G \)</span> is the genetic variance and <span class="arithmatex">\( V_E \)</span> is the <strong>environmental variance</strong>. Environmental variance captures all nongenetic sources of phenotypic variation, including nutrition, temperature, developmental noise, and measurement error.</p>
+<p>The genetic variance can be further subdivided into three components:</p>
+<div class="arithmatex">\[
+V_G = V_A + V_D + V_I
+\]</div>
+<ul>
+<li>
+<p><strong>Additive genetic variance</strong> (<span class="arithmatex">\( V_A \)</span>) arises from the additive effects of individual alleles. Each allele contributes a fixed increment or decrement to the phenotype, regardless of which other alleles are present. Additive variance is the most important component for predicting response to selection because parents pass individual alleles — not genotypes — to offspring.</p>
+</li>
+<li>
+<p><strong>Dominance variance</strong> (<span class="arithmatex">\( V_D \)</span>) arises from interactions between alleles at the same locus. When heterozygotes do not have a phenotype exactly intermediate between the two homozygotes, dominance contributes to genetic variance. Dominance variance is not transmitted predictably from parent to offspring because genotype combinations are reshuffled each generation.</p>
+</li>
+<li>
+<p><strong>Epistatic variance</strong> (<span class="arithmatex">\( V_I \)</span>) arises from interactions between alleles at different loci. When the effect of an allele at one locus depends on the genotype at another locus, epistasis contributes to genetic variance. Like dominance variance, epistatic variance is difficult to predict across generations.</p>
+</li>
+</ul>
+<p>The complete variance partition is therefore:</p>
+<div class="arithmatex">\[
+V_P = V_A + V_D + V_I + V_E
+\]</div>
+<p>This partition is the foundation for defining heritability and predicting the response of populations to selection.</p>
+<h2 id="heritability">Heritability</h2>
+<p><strong>Heritability</strong> quantifies the proportion of phenotypic variation in a population that is attributable to genetic differences among individuals. It is a population-level statistic, not a property of an individual. Heritability ranges from 0 (all variation is environmental) to 1 (all variation is genetic).</p>
+<p>Two distinct measures of heritability are commonly used, each capturing different aspects of genetic influence.</p>
+<h3 id="broad-sense-heritability">Broad-Sense Heritability</h3>
+<p><strong>Broad-sense heritability</strong> (<span class="arithmatex">\( H^2 \)</span>) is the proportion of phenotypic variance due to all genetic variance:</p>
+<div class="arithmatex">\[
+H^2 = \frac{V_G}{V_P} = \frac{V_A + V_D + V_I}{V_P}
+\]</div>
+<p>Broad-sense heritability tells us how much of the phenotypic variation is genetic in origin, but it does not distinguish between additive, dominance, and epistatic effects.</p>
+<h3 id="narrow-sense-heritability">Narrow-Sense Heritability</h3>
+<p><strong>Narrow-sense heritability</strong> (<span class="arithmatex">\( h^2 \)</span>) is the proportion of phenotypic variance due to additive genetic variance alone:</p>
+<div class="arithmatex">\[
+h^2 = \frac{V_A}{V_P}
+\]</div>
+<p>Narrow-sense heritability is the more useful measure for predicting the response to selection. Because parents transmit individual alleles (not complete genotypes) to offspring, only additive genetic effects are reliably passed from generation to generation. Narrow-sense heritability determines how effectively selection can change a population's mean phenotype.</p>
+<table>
+<thead>
+<tr>
+<th>Trait</th>
+<th>Organism</th>
+<th><span class="arithmatex">\( h^2 \)</span> Estimate</th>
+<th>Interpretation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Height</td>
+<td>Humans</td>
+<td>0.80</td>
+<td>Highly heritable</td>
+</tr>
+<tr>
+<td>Milk yield</td>
+<td>Dairy cattle</td>
+<td>0.35</td>
+<td>Moderately heritable</td>
+</tr>
+<tr>
+<td>Egg production</td>
+<td>Chickens</td>
+<td>0.10</td>
+<td>Low heritability</td>
+</tr>
+<tr>
+<td>Litter size</td>
+<td>Pigs</td>
+<td>0.15</td>
+<td>Low heritability</td>
+</tr>
+<tr>
+<td>Grain yield</td>
+<td>Wheat</td>
+<td>0.25</td>
+<td>Moderately heritable</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition mascot-warning">
+<p class="admonition-title">Heritability Is Not Destiny</p>
+<p><img src="../../img/mascot/warning.png" class="mascot-admonition-img" alt="Dottie giving a warning">
+A heritability of 0.80 for height does NOT mean that 80% of your height is determined by your genes. It means that 80% of the variation in height within a specific population, at a specific time, in a specific environment, is attributable to genetic differences. Change the environment, and heritability changes too.</p>
+</div>
+<h2 id="twin-studies">Twin Studies</h2>
+<p><strong>Twin studies</strong> are one of the most powerful natural experiments for estimating heritability in humans, where controlled breeding experiments are impossible. The logic relies on comparing the similarity of two types of twins.</p>
+<p><strong>Monozygotic (MZ) twins</strong> — identical twins — develop from a single fertilized egg that splits into two embryos. They share 100% of their DNA sequence. <strong>Dizygotic (DZ) twins</strong> — fraternal twins — develop from two separately fertilized eggs. They share, on average, 50% of their segregating alleles, the same as any pair of siblings.</p>
+<p>Both MZ and DZ twins typically share the same prenatal environment and similar postnatal environments (same household, same age, same cohort). The key insight is this: if genes contribute to a trait, MZ twins should be more similar to each other than DZ twins, because MZ twins share twice the genetic relatedness.</p>
+<h3 id="concordance-rate">Concordance Rate</h3>
+<p>The <strong>concordance rate</strong> measures how often both twins in a pair share the same trait. For binary traits (affected vs. unaffected), the concordance rate is:</p>
+<div class="arithmatex">\[
+\text{Concordance rate} = \frac{\text{Number of concordant pairs}}{\text{Total twin pairs}} \times 100\%
+\]</div>
+<p>A concordant pair is one where both twins are affected; a discordant pair has one affected and one unaffected twin. Higher concordance in MZ twins compared to DZ twins suggests genetic influence.</p>
+<table>
+<thead>
+<tr>
+<th>Disease</th>
+<th>MZ Concordance</th>
+<th>DZ Concordance</th>
+<th>Genetic Influence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Schizophrenia</td>
+<td>~48%</td>
+<td>~17%</td>
+<td>Strong</td>
+</tr>
+<tr>
+<td>Type 2 diabetes</td>
+<td>~70%</td>
+<td>~25%</td>
+<td>Strong</td>
+</tr>
+<tr>
+<td>Breast cancer</td>
+<td>~27%</td>
+<td>~12%</td>
+<td>Moderate</td>
+</tr>
+<tr>
+<td>Measles</td>
+<td>~95%</td>
+<td>~87%</td>
+<td>Weak (mostly environmental)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="heritability-estimation-from-twin-data">Heritability Estimation from Twin Data</h3>
+<p><strong>Heritability estimation</strong> from twin studies uses the difference in correlation between MZ and DZ twin pairs. A common formula for estimating broad-sense heritability is:</p>
+<div class="arithmatex">\[
+H^2 \approx 2(r_{MZ} - r_{DZ})
+\]</div>
+<p>where <span class="arithmatex">\( r_{MZ} \)</span> is the correlation between MZ twin pairs and <span class="arithmatex">\( r_{DZ} \)</span> is the correlation between DZ twin pairs. This formula assumes that environmental influences are equally shared by MZ and DZ twins (the equal environments assumption).</p>
+<p>For estimating narrow-sense heritability, the Falconer formula is:</p>
+<div class="arithmatex">\[
+h^2 \approx 2(r_{MZ} - r_{DZ})
+\]</div>
+<p>This formula gives the same result because, under the assumption that MZ twins share all genetic effects and DZ twins share half the additive genetic effects, the difference in correlations reflects additive genetic variance. More sophisticated models (structural equation modeling) can separate additive genetic, shared environmental, and non-shared environmental components.</p>
+<div class="admonition mascot-tip">
+<p class="admonition-title">The Equal Environments Assumption</p>
+<p><img src="../../img/mascot/tip.png" class="mascot-admonition-img" alt="Dottie giving a tip">
+Twin studies assume that MZ and DZ twins experience equally similar environments. This assumption has been tested and generally holds for most traits, though it may be violated when MZ twins are treated more similarly because they look alike. Modern twin studies use statistical methods to test and correct for this.</p>
+</div>
+<h4 id="diagram-twin-study-heritability-calculator">Diagram: Twin Study Heritability Calculator</h4>
+<iframe src="../../sims/twin-study-calculator/main.html" width="100%" height="500px" scrolling="no"></iframe>
+<details>
+<summary>Twin Study Heritability Calculator</summary>
+<p>Type: Interactive calculator
+<strong>sim-id:</strong> twin-study-calculator<br/>
+<strong>Library:</strong> p5.js<br/>
+<strong>Status:</strong> Specified</p>
+<p>An interactive visualization where users input MZ and DZ twin correlations using sliders. The calculator displays the estimated broad-sense heritability, shared environmental component, and non-shared environmental component using Falconer's formula and an ACE model decomposition. A bar chart shows the relative proportions of genetic and environmental variance. Preset buttons load real twin study data for traits like height, BMI, and schizophrenia.</p>
+</details>
+<h2 id="quantitative-trait-loci">Quantitative Trait Loci</h2>
+<p>A <strong>quantitative trait locus</strong> (QTL) is a region of the genome that contains one or more genes affecting a quantitative trait. The concept bridges Mendelian and quantitative genetics: although the trait varies continuously, it is still controlled by discrete loci — there are simply many of them, each with a small effect.</p>
+<p>Not all QTLs contribute equally. QTL effects follow a distribution where a few loci have relatively large effects and many loci have small effects. The largest-effect QTL for a trait might explain 10–20% of the phenotypic variance, while most QTLs individually explain less than 1%.</p>
+<h2 id="qtl-mapping">QTL Mapping</h2>
+<p><strong>QTL mapping</strong> identifies the chromosomal locations of loci that influence quantitative traits. The fundamental approach combines phenotypic measurements with genotypic data at molecular markers distributed across the genome.</p>
+<p>The basic QTL mapping procedure works as follows:</p>
+<ol>
+<li><strong>Create a mapping population</strong> — cross two parental lines that differ in the quantitative trait to produce an F2 or backcross population</li>
+<li><strong>Genotype the population</strong> — determine the marker genotypes at hundreds or thousands of loci across the genome</li>
+<li><strong>Phenotype the population</strong> — measure the quantitative trait in each individual</li>
+<li><strong>Test for marker-trait associations</strong> — at each marker, compare the mean phenotype of individuals with different marker genotypes. If a marker is linked to a QTL, individuals with different marker genotypes will have significantly different mean phenotypic values</li>
+</ol>
+<p>The simplest QTL mapping approach tests one marker at a time by comparing phenotypic means between genotype classes using ANOVA or a t-test. However, this single-marker approach has limitations: it cannot distinguish between a tightly linked QTL with a large effect and a loosely linked QTL with an even larger effect.</p>
+<h3 id="interval-mapping">Interval Mapping</h3>
+<p><strong>Interval mapping</strong>, developed by Eric Lander and David Botstein in 1989, improves on single-marker analysis by testing positions between markers rather than at markers. The method uses a statistical framework (maximum likelihood or regression) to estimate the probability that a QTL exists at each position along the chromosome.</p>
+<p>The key output of interval mapping is a LOD score profile — a curve showing the strength of evidence for a QTL at every position along each chromosome. Peaks in the LOD profile indicate likely QTL locations. A LOD threshold (typically 2.5–3.0 for experimental crosses) determines which peaks are statistically significant.</p>
+<p>Interval mapping offers several advantages over single-marker analysis:</p>
+<ul>
+<li><strong>Better resolution</strong> — QTL position can be estimated between markers</li>
+<li><strong>Greater statistical power</strong> — uses information from flanking markers simultaneously</li>
+<li><strong>Accounts for missing genotype data</strong> — probabilistically imputes missing marker genotypes</li>
+<li><strong>Provides confidence intervals</strong> — the width of the LOD peak indicates precision of QTL localization</li>
+</ul>
+<h4 id="diagram-qtl-mapping-lod-profile">Diagram: QTL Mapping LOD Profile</h4>
+<iframe src="../../sims/qtl-mapping-lod/main.html" width="100%" height="500px" scrolling="no"></iframe>
+<details>
+<summary>QTL Mapping LOD Profile</summary>
+<p>Type: Interactive data visualization
+<strong>sim-id:</strong> qtl-mapping-lod<br/>
+<strong>Library:</strong> Chart.js<br/>
+<strong>Status:</strong> Specified</p>
+<p>An interactive LOD score profile across multiple chromosomes. Users see a line graph with chromosomes arranged along the x-axis (separated by vertical dividers) and LOD score on the y-axis. A dashed horizontal line marks the significance threshold. Peaks above the threshold are highlighted and labeled with estimated QTL effect size and position. Users can adjust the threshold with a slider and toggle between additive, dominance, and total LOD components.</p>
+</details>
+<h2 id="marker-assisted-selection">Marker-Assisted Selection</h2>
+<p><strong>Marker-assisted selection</strong> (MAS) applies QTL mapping results to practical breeding. Once molecular markers linked to favorable QTLs have been identified, breeders can select individuals based on their marker genotypes rather than (or in addition to) their phenotypes.</p>
+<p>MAS offers several advantages over traditional phenotypic selection:</p>
+<ul>
+<li><strong>Selection at the seedling stage</strong> — traits that are expensive or time-consuming to measure (like disease resistance that requires pathogen exposure) can be selected using DNA markers from a tiny tissue sample</li>
+<li><strong>Selection for multiple traits simultaneously</strong> — markers for different QTLs can be tested at the same time</li>
+<li><strong>Selection in early generations</strong> — breeders can identify favorable genotypes before the plants or animals are old enough to express the trait</li>
+<li><strong>Breaking linkage drag</strong> — when introgressing a favorable allele from a wild relative, markers flanking the target gene enable selection for recombinants that carry the desired allele with minimal surrounding donor chromatin</li>
+</ul>
+<p>The effectiveness of MAS depends on the proportion of genetic variance explained by the markers, the reliability of the marker-QTL association across different genetic backgrounds, and the cost of genotyping relative to phenotyping.</p>
+<table>
+<thead>
+<tr>
+<th>Selection Method</th>
+<th>Information Used</th>
+<th>Speed</th>
+<th>Best For</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Phenotypic selection</td>
+<td>Trait measurement</td>
+<td>Slow (must wait for expression)</td>
+<td>Highly heritable traits</td>
+</tr>
+<tr>
+<td>Marker-assisted selection</td>
+<td>Marker genotypes + phenotype</td>
+<td>Faster</td>
+<td>Traits hard to measure</td>
+</tr>
+<tr>
+<td>Genomic selection</td>
+<td>Genome-wide markers</td>
+<td>Fastest</td>
+<td>Low-heritability traits</td>
+</tr>
+</tbody>
+</table>
+<h4 id="diagram-marker-assisted-selection-workflow">Diagram: Marker-Assisted Selection Workflow</h4>
+<iframe src="../../sims/marker-assisted-selection/main.html" width="100%" height="450px" scrolling="no"></iframe>
+<details>
+<summary>Marker-Assisted Selection Workflow</summary>
+<p>Type: Animated workflow diagram
+<strong>sim-id:</strong> marker-assisted-selection<br/>
+<strong>Library:</strong> p5.js<br/>
+<strong>Status:</strong> Specified</p>
+<p>An animated diagram showing the MAS breeding pipeline. Starting from a cross between two parent lines, the workflow shows: F1 generation, F2 segregating population, DNA extraction, marker genotyping, selection of favorable genotypes, and advancement to the next generation. Icons represent laboratory steps (DNA extraction, PCR, gel). Selected plants/animals are highlighted green; rejected ones are grayed out. A generation counter tracks progress, and a graph shows the population mean shifting over selection cycles.</p>
+</details>
+<h2 id="the-breeders-equation-predicting-response-to-selection">The Breeder's Equation: Predicting Response to Selection</h2>
+<p>The response of a population to selection is predicted by the <strong>breeder's equation</strong>:</p>
+<div class="arithmatex">\[
+R = h^2 \times S
+\]</div>
+<p>where <span class="arithmatex">\( R \)</span> is the response to selection (the change in mean phenotype from one generation to the next), <span class="arithmatex">\( h^2 \)</span> is the narrow-sense heritability, and <span class="arithmatex">\( S \)</span> is the selection differential (the difference between the mean phenotype of selected parents and the mean of the whole population).</p>
+<p>This elegantly simple equation shows why narrow-sense heritability is so important in applied genetics. A trait with <span class="arithmatex">\( h^2 = 0.50 \)</span> will show half the selection differential as its response — if you select parents that are 10 units above the population mean, the offspring generation will average 5 units above the original mean.</p>
+<p>The breeder's equation also reveals a fundamental constraint: selection can only change a population's mean phenotype if additive genetic variance exists. When all individuals in a population are genetically identical at the relevant loci (<span class="arithmatex">\( V_A = 0 \)</span>), no amount of selection can shift the population mean.</p>
+<div class="admonition mascot-celebration">
+<p class="admonition-title">Quantitative Genetics Complete!</p>
+<p><img src="../../img/mascot/celebration.png" class="mascot-admonition-img" alt="Dottie celebrating">
+Superb work, researchers! You now understand how continuous traits arise from polygenic inheritance, how variance is partitioned into genetic and environmental components, how twin studies estimate heritability, and how QTL mapping connects molecular markers to quantitative traits. These tools are fundamental to modern agriculture, medicine, and evolutionary biology.</p>
+</div>
+<h2 id="key-takeaways">Key Takeaways</h2>
+<ul>
+<li><strong>Quantitative genetics</strong> studies traits with <strong>continuous variation</strong> arising from <strong>polygenic inheritance</strong> and environmental influences.</li>
+<li><strong>Multifactorial traits</strong> are influenced by both genes and environment; <strong>threshold traits</strong> appear binary but have continuous underlying liability.</li>
+<li><strong>Phenotypic variance</strong> is partitioned into <strong>additive genetic variance</strong>, <strong>dominance variance</strong>, <strong>epistatic variance</strong>, and <strong>environmental variance</strong>.</li>
+<li><strong>Broad-sense heritability</strong> (<span class="arithmatex">\( H^2 \)</span>) captures all genetic variance; <strong>narrow-sense heritability</strong> (<span class="arithmatex">\( h^2 \)</span>) captures only additive variance and predicts selection response.</li>
+<li><strong>Twin studies</strong> compare <strong>monozygotic</strong> and <strong>dizygotic</strong> twins using <strong>concordance rates</strong> and correlations to estimate heritability.</li>
+<li>Heritability is a population statistic that depends on the specific population and environment — it is not a fixed property of a trait.</li>
+<li><strong>QTL mapping</strong> identifies chromosomal regions affecting quantitative traits; <strong>interval mapping</strong> provides better resolution than single-marker tests.</li>
+<li><strong>Marker-assisted selection</strong> uses QTL-linked markers to accelerate breeding programs, especially for traits that are difficult or expensive to measure directly.</li>
+</ul>
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../08-advanced-mapping-gene-discovery/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 8. Advanced Mapping and Gene Discovery">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                8. Advanced Mapping and Gene Discovery
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../10-gwas-population-genetics/" class="md-footer__link md-footer__link--next" aria-label="Next: 10. GWAS and Population Genetics">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                10. GWAS and Population Genetics
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 Dan McCreary. Licensed under <a href="license/">CC BY-NC-SA 4.0</a> for non-commercial use.
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "navigation.expand", "navigation.path", "navigation.prune", "navigation.indexes", "toc.follow", "navigation.top", "navigation.footer", "content.action.edit"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+        <script src="../../js/extra.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-chtml.js"></script>
+      
+    
+  </body>
+</html>

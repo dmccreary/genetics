@@ -1,0 +1,1988 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Physical maps, comparative genomics, LOD score analysis, tetrad analysis, and gene discovery strategies including positional cloning and fine-structure mapping">
+      
+      
+        <meta name="author" content="Dan McCreary">
+      
+      
+        <link rel="canonical" href="https://dmccreary.github.io/genetics/chapters/08-advanced-mapping-gene-discovery/">
+      
+      
+        <link rel="prev" href="../07-genetic-mapping-linkage-analysis/">
+      
+      
+        <link rel="next" href="../09-quantitative-genetics-heritability/">
+      
+      
+      <link rel="icon" href="../../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.43">
+    
+    
+      
+        <title>Advanced Mapping and Gene Discovery - Genetics</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.0253249f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+      <link rel="stylesheet" href="../../css/mascot.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-HJJLWQWVSL"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-HJJLWQWVSL",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-HJJLWQWVSL",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+      
+        <meta  property="og:type"  content="website" >
+      
+        <meta  property="og:title"  content="Advanced Mapping and Gene Discovery - Genetics" >
+      
+        <meta  property="og:description"  content="Physical maps, comparative genomics, LOD score analysis, tetrad analysis, and gene discovery strategies including positional cloning and fine-structure mapping" >
+      
+        <meta  property="og:image"  content="https://dmccreary.github.io/genetics/assets/images/social/chapters/08-advanced-mapping-gene-discovery/index.png" >
+      
+        <meta  property="og:image:type"  content="image/png" >
+      
+        <meta  property="og:image:width"  content="1200" >
+      
+        <meta  property="og:image:height"  content="630" >
+      
+        <meta  property="og:url"  content="https://dmccreary.github.io/genetics/chapters/08-advanced-mapping-gene-discovery/" >
+      
+        <meta  name="twitter:card"  content="summary_large_image" >
+      
+        <meta  name="twitter:title"  content="Advanced Mapping and Gene Discovery - Genetics" >
+      
+        <meta  name="twitter:description"  content="Physical maps, comparative genomics, LOD score analysis, tetrad analysis, and gene discovery strategies including positional cloning and fine-structure mapping" >
+      
+        <meta  name="twitter:image"  content="https://dmccreary.github.io/genetics/assets/images/social/chapters/08-advanced-mapping-gene-discovery/index.png" >
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="amber" data-md-color-accent="deep-orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#advanced-mapping-and-gene-discovery" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Genetics" class="md-header__button md-logo" aria-label="Genetics" data-md-component="logo">
+      
+  <img src="../../img/mascot/neutral.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Genetics
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Advanced Mapping and Gene Discovery
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/dmccreary/genetics" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Genetics" class="md-nav__button md-logo" aria-label="Genetics" data-md-component="logo">
+      
+  <img src="../../img/mascot/neutral.png" alt="logo">
+
+    </a>
+    Genetics
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/dmccreary/genetics" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About This Course
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course-description/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Course Description
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Chapters
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Chapters
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-genetic-inference-probabilistic-reasoning/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1. Genetic Inference and Probabilistic Reasoning
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-pedigree-analysis-inheritance-patterns/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2. Pedigree Analysis and Inheritance Patterns
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-epistasis-complementation-modified-ratios/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3. Epistasis, Complementation, and Modified Ratios
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-genome-structure-chromatin-organization/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4. Genome Structure and Chromatin Organization
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-genetic-variation-genome-diversity/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5. Genetic Variation and Genome Diversity
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-gene-duplication-rearrangements-evolution/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6. Gene Duplication, Rearrangements, and Evolution
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07-genetic-mapping-linkage-analysis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7. Genetic Mapping and Linkage Analysis
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    8. Advanced Mapping and Gene Discovery
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    8. Advanced Mapping and Gene Discovery
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concepts-covered" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concepts Covered
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#from-genetic-maps-to-physical-maps" class="md-nav__link">
+    <span class="md-ellipsis">
+      From Genetic Maps to Physical Maps
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cytogenetic-maps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cytogenetic Maps
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#radiation-hybrid-mapping" class="md-nav__link">
+    <span class="md-ellipsis">
+      Radiation Hybrid Mapping
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#synteny-and-comparative-genomics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Synteny and Comparative Genomics
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Synteny and Comparative Genomics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-comparative-synteny-map" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Comparative Synteny Map
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gene-discovery-strategies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gene Discovery Strategies
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Gene Discovery Strategies">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#positional-cloning" class="md-nav__link">
+    <span class="md-ellipsis">
+      Positional Cloning
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#candidate-gene-approach" class="md-nav__link">
+    <span class="md-ellipsis">
+      Candidate Gene Approach
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#linkage-analysis-and-lod-scores" class="md-nav__link">
+    <span class="md-ellipsis">
+      Linkage Analysis and LOD Scores
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Linkage Analysis and LOD Scores">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parametric-vs-nonparametric-linkage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parametric vs. Nonparametric Linkage
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tetrad-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tetrad Analysis
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tetrad Analysis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ordered-tetrads" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ordered Tetrads
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unordered-tetrads" class="md-nav__link">
+    <span class="md-ellipsis">
+      Unordered Tetrads
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#centromere-mapping" class="md-nav__link">
+    <span class="md-ellipsis">
+      Centromere Mapping
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Centromere Mapping">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-tetrad-analysis-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Tetrad Analysis Patterns
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#half-tetrad-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Half-Tetrad Analysis
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deletion-mapping-and-complementation-mapping" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deletion Mapping and Complementation Mapping
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fine-structure-mapping" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fine Structure Mapping
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fine Structure Mapping">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-fine-structure-mapping-of-a-gene" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Fine Structure Mapping of a Gene
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#integrating-mapping-approaches-for-gene-discovery" class="md-nav__link">
+    <span class="md-ellipsis">
+      Integrating Mapping Approaches for Gene Discovery
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Integrating Mapping Approaches for Gene Discovery">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-gene-discovery-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Gene Discovery Workflow
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Takeaways
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09-quantitative-genetics-heritability/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    9. Quantitative Genetics and Heritability
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10-gwas-population-genetics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    10. GWAS and Population Genetics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11-gene-regulation-regulatory-networks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    11. Gene Regulation and Regulatory Networks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12-post-transcriptional-regulation-cell-identity/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    12. Post-Transcriptional Regulation and Cell Identity
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../13-experimental-genetics-model-organisms/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    13. Experimental Genetics and Model Organisms
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../14-genomics-sequencing-bioinformatics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    14. Genomics, Sequencing, and Bioinformatics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../15-human-genetics-clinical-applications/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    15. Human Genetics and Clinical Applications
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../16-cancer-genetics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    16. Cancer Genetics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../17-ethics-society-genetic-policy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    17. Ethics, Society, and Genetic Policy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../18-frontier-topics-emerging-technologies/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    18. Frontier Topics and Emerging Technologies
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../learning-graph/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Learning Graph
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../sims/graph-viewer/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    MicroSims
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../license/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    License
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contact/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contact
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concepts-covered" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concepts Covered
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#from-genetic-maps-to-physical-maps" class="md-nav__link">
+    <span class="md-ellipsis">
+      From Genetic Maps to Physical Maps
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cytogenetic-maps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cytogenetic Maps
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#radiation-hybrid-mapping" class="md-nav__link">
+    <span class="md-ellipsis">
+      Radiation Hybrid Mapping
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#synteny-and-comparative-genomics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Synteny and Comparative Genomics
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Synteny and Comparative Genomics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-comparative-synteny-map" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Comparative Synteny Map
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gene-discovery-strategies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gene Discovery Strategies
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Gene Discovery Strategies">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#positional-cloning" class="md-nav__link">
+    <span class="md-ellipsis">
+      Positional Cloning
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#candidate-gene-approach" class="md-nav__link">
+    <span class="md-ellipsis">
+      Candidate Gene Approach
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#linkage-analysis-and-lod-scores" class="md-nav__link">
+    <span class="md-ellipsis">
+      Linkage Analysis and LOD Scores
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Linkage Analysis and LOD Scores">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parametric-vs-nonparametric-linkage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parametric vs. Nonparametric Linkage
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tetrad-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tetrad Analysis
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tetrad Analysis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ordered-tetrads" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ordered Tetrads
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unordered-tetrads" class="md-nav__link">
+    <span class="md-ellipsis">
+      Unordered Tetrads
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#centromere-mapping" class="md-nav__link">
+    <span class="md-ellipsis">
+      Centromere Mapping
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Centromere Mapping">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-tetrad-analysis-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Tetrad Analysis Patterns
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#half-tetrad-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Half-Tetrad Analysis
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deletion-mapping-and-complementation-mapping" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deletion Mapping and Complementation Mapping
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fine-structure-mapping" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fine Structure Mapping
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fine Structure Mapping">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-fine-structure-mapping-of-a-gene" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Fine Structure Mapping of a Gene
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#integrating-mapping-approaches-for-gene-discovery" class="md-nav__link">
+    <span class="md-ellipsis">
+      Integrating Mapping Approaches for Gene Discovery
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Integrating Mapping Approaches for Gene Discovery">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-gene-discovery-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Gene Discovery Workflow
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Takeaways
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/dmccreary/genetics/edit/master/docs/chapters/08-advanced-mapping-gene-discovery/index.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="advanced-mapping-and-gene-discovery">Advanced Mapping and Gene Discovery</h1>
+<h2 id="summary">Summary</h2>
+<p>This chapter extends mapping concepts to physical maps, comparative genomics, and gene discovery strategies including positional cloning and candidate gene approaches. Students master LOD score analysis, tetrad analysis, and specialized techniques like deletion mapping and fine-structure mapping. After completing this chapter, students will understand how researchers locate and identify genes responsible for phenotypes of interest.</p>
+<h2 id="concepts-covered">Concepts Covered</h2>
+<p>This chapter covers the following 23 concepts from the learning graph:</p>
+<ol>
+<li>Physical Map</li>
+<li>Cytogenetic Map</li>
+<li>Radiation Hybrid Mapping</li>
+<li>Somatic Cell Hybridization</li>
+<li>Synteny</li>
+<li>Comparative Genomics</li>
+<li>Ortholog</li>
+<li>Gene Discovery Strategies</li>
+<li>Positional Cloning</li>
+<li>Candidate Gene Approach</li>
+<li>Linkage Analysis</li>
+<li>LOD Score</li>
+<li>LOD Score Threshold</li>
+<li>Parametric Linkage</li>
+<li>Nonparametric Linkage</li>
+<li>Tetrad Analysis</li>
+<li>Ordered Tetrad</li>
+<li>Unordered Tetrad</li>
+<li>Centromere Mapping</li>
+<li>Half-Tetrad Analysis</li>
+<li>Deletion Mapping</li>
+<li>Complementation Mapping</li>
+<li>Fine Structure Mapping</li>
+</ol>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>This chapter builds on concepts from:</p>
+<ul>
+<li><a href="../01-genetic-inference-probabilistic-reasoning/">Chapter 1: Genetic Inference and Probabilistic Reasoning</a></li>
+<li><a href="../03-epistasis-complementation-modified-ratios/">Chapter 3: Epistasis, Complementation, and Modified Ratios</a></li>
+<li><a href="../04-genome-structure-chromatin-organization/">Chapter 4: Genome Structure and Chromatin Organization</a></li>
+<li><a href="../05-genetic-variation-genome-diversity/">Chapter 5: Genetic Variation and Genome Diversity</a></li>
+<li><a href="../06-gene-duplication-rearrangements-evolution/">Chapter 6: Gene Duplication, Structural Rearrangements, and Genome Evolution</a></li>
+<li><a href="../07-genetic-mapping-linkage-analysis/">Chapter 7: Genetic Mapping and Linkage Analysis</a></li>
+</ul>
+<hr />
+<div class="admonition mascot-welcome">
+<p class="admonition-title">From Genetic Maps to Gene Discovery</p>
+<p><img src="../../img/mascot/welcome.png" class="mascot-admonition-img" alt="Dottie waving welcome">
+Welcome back, fellow investigators! Now that you know how to build genetic maps, we will learn how researchers use those maps to find the actual genes responsible for diseases and traits. Let's look at the evidence!</p>
+</div>
+<h2 id="from-genetic-maps-to-physical-maps">From Genetic Maps to Physical Maps</h2>
+<p>Chapter 7 introduced genetic maps that measure distances in centimorgans based on recombination frequencies. These maps are invaluable for ordering genes and markers, but they do not tell us the actual number of base pairs between loci. A <strong>physical map</strong> measures distances along a chromosome in base pairs (bp, kb, or Mb), providing a direct representation of the DNA molecule.</p>
+<p>Physical maps and genetic maps are complementary. Genetic maps reveal the order and relative recombination-based spacing of loci, while physical maps anchor those loci to precise chromosomal coordinates. The relationship between the two is not linear because recombination rates vary across the genome (as we discussed with recombination hotspots and coldspots).</p>
+<p>Several distinct types of physical maps exist, each with different resolution and methodology. They range from low-resolution cytogenetic maps to high-resolution sequence-based maps.</p>
+<h2 id="cytogenetic-maps">Cytogenetic Maps</h2>
+<p>A <strong>cytogenetic map</strong> is the lowest-resolution physical map, based on the banding patterns of stained chromosomes visible under a microscope. When chromosomes are treated with Giemsa stain, they display a reproducible pattern of light and dark bands. Each band is designated by the chromosome number, arm (p for short, q for long), region, and band number — for example, 7q31.2 identifies a specific band on the long arm of chromosome 7.</p>
+<p>Cytogenetic mapping assigns genes to chromosomal bands using techniques such as fluorescence in situ hybridization (FISH), which uses fluorescently labeled DNA probes to mark specific sequences on chromosome spreads. The resolution of cytogenetic maps is approximately 5–10 Mb per band, making them useful for large-scale localization but insufficient for identifying individual genes.</p>
+<table>
+<thead>
+<tr>
+<th>Map Type</th>
+<th>Units</th>
+<th>Resolution</th>
+<th>Method</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cytogenetic map</td>
+<td>Chromosome bands</td>
+<td>5–10 Mb</td>
+<td>FISH, banding</td>
+</tr>
+<tr>
+<td>Genetic map</td>
+<td>Centimorgans</td>
+<td>~1 Mb per cM</td>
+<td>Recombination analysis</td>
+</tr>
+<tr>
+<td>Radiation hybrid map</td>
+<td>centiRays</td>
+<td>200 kb–1 Mb</td>
+<td>Radiation breakage</td>
+</tr>
+<tr>
+<td>Sequence map</td>
+<td>Base pairs</td>
+<td>Single nucleotide</td>
+<td>DNA sequencing</td>
+</tr>
+</tbody>
+</table>
+<h2 id="radiation-hybrid-mapping">Radiation Hybrid Mapping</h2>
+<p><strong>Radiation hybrid (RH) mapping</strong> creates physical maps by using radiation to break chromosomes into fragments and then determining which markers are retained together on the same fragment. The closer two markers are on a chromosome, the less likely radiation will break the DNA between them, so they will tend to be retained on the same fragment.</p>
+<p>The procedure begins with <strong>somatic cell hybridization</strong>, a technique in which human cells are fused with rodent cells (typically hamster). In these hybrid cell lines, human chromosomes are progressively lost over successive divisions, so each hybrid line retains a random subset of human chromosomes. For RH mapping, human cells are first irradiated to fragment the chromosomes before fusion. Each resulting hybrid cell line retains random fragments of the human genome integrated into the rodent chromosomes.</p>
+<p>By scoring the presence or absence of many markers across a panel of radiation hybrid cell lines, researchers calculate co-retention frequencies. Statistical algorithms then order markers and estimate distances in <strong>centiRays</strong> (cR), where the radiation dose determines the scale. RH maps bridge the gap between genetic maps and complete sequence data, providing resolution of 200 kb to 1 Mb depending on the radiation dose used.</p>
+<h2 id="synteny-and-comparative-genomics">Synteny and Comparative Genomics</h2>
+<p>When two or more genes are located on the same chromosome, they are said to be <strong>syntenic</strong> (literally, "on the same thread"). <strong>Synteny</strong> is a broader concept than linkage — syntenic genes may be so far apart that they show independent assortment, yet they still reside on the same physical chromosome.</p>
+<p><strong>Comparative genomics</strong> extends the concept of synteny across species. When researchers compare the genomes of different organisms, they discover that large blocks of genes maintain the same order and orientation across millions of years of evolution. These conserved syntenic blocks reveal the ancestral chromosome organization and the rearrangements that occurred during speciation.</p>
+<p>An <strong>ortholog</strong> is a gene in two different species that descended from a single gene in their last common ancestor. Orthologs typically retain similar functions across species. Identifying orthologs is crucial for comparative genomics because it allows researchers to transfer mapping and functional information from well-studied model organisms (such as the mouse) to less-studied species (such as humans).</p>
+<div class="admonition mascot-thinking">
+<p class="admonition-title">Synteny as a Discovery Tool</p>
+<p><img src="../../img/mascot/thinking.png" class="mascot-admonition-img" alt="Dottie thinking">
+If you find that a disease gene in humans maps to a region on chromosome 7, and comparative genomics shows that region is syntenic with a well-characterized segment of mouse chromosome 5, you can use the mouse gene annotations to narrow your candidate gene list. What does the data tell us?</p>
+</div>
+<h4 id="diagram-comparative-synteny-map">Diagram: Comparative Synteny Map</h4>
+<iframe src="../../sims/comparative-synteny-map/main.html" width="100%" height="500px" scrolling="no"></iframe>
+<details>
+<summary>Comparative Synteny Map</summary>
+<p>Type: Interactive comparison diagram
+<strong>sim-id:</strong> comparative-synteny-map<br/>
+<strong>Library:</strong> p5.js<br/>
+<strong>Status:</strong> Specified</p>
+<p>An interactive visualization displaying syntenic blocks between human and mouse chromosomes. Colored bands connect homologous regions between the two species, showing conserved gene order. Users hover over blocks to see the genes contained within, and can toggle between chromosomes. Rearrangements (inversions, translocations) are highlighted with distinct visual indicators.</p>
+</details>
+<h2 id="gene-discovery-strategies">Gene Discovery Strategies</h2>
+<p>How do researchers move from observing a phenotype — a disease, a visible trait, a biochemical deficiency — to identifying the specific gene responsible? Two complementary <strong>gene discovery strategies</strong> have been used: positional cloning and the candidate gene approach.</p>
+<h3 id="positional-cloning">Positional Cloning</h3>
+<p><strong>Positional cloning</strong> (also called map-based cloning or reverse genetics) identifies a gene based solely on its chromosomal position, without any prior knowledge of the gene product or its biochemical function. The workflow proceeds through several stages:</p>
+<ol>
+<li><strong>Establish linkage</strong> — show that the trait co-segregates with genetic markers in a specific chromosomal region</li>
+<li><strong>Narrow the interval</strong> — genotype additional markers and additional families to reduce the candidate region to the smallest possible segment</li>
+<li><strong>Identify candidate genes</strong> — examine the DNA sequence within the narrowed interval for genes, using computational annotation and database searches</li>
+<li><strong>Confirm the gene</strong> — demonstrate that mutations in the candidate gene cause the phenotype, through sequencing affected individuals, functional studies, or complementation</li>
+</ol>
+<p>Positional cloning was used to identify the gene responsible for cystic fibrosis (CFTR on chromosome 7q31.2), Huntington disease (HTT on chromosome 4p16.3), and many other genetic disorders. The approach is powerful because it requires no assumptions about gene function — it lets the map lead the way.</p>
+<h3 id="candidate-gene-approach">Candidate Gene Approach</h3>
+<p>The <strong>candidate gene approach</strong> starts from the opposite direction: it begins with knowledge of biochemistry or biology and asks whether a specific gene might be responsible for the trait. Researchers select candidate genes based on their known function, expression pattern, or involvement in related pathways. They then test whether mutations in that gene correlate with the trait of interest.</p>
+<p>This approach is faster than positional cloning when a strong biological hypothesis exists. However, it is limited by existing knowledge. If the actual gene has an unexpected function or belongs to an uncharacterized pathway, the candidate gene approach may fail while positional cloning would succeed.</p>
+<p>In practice, modern gene discovery often combines both strategies. Researchers first narrow the chromosomal region through linkage analysis, then prioritize candidate genes within that region based on functional knowledge.</p>
+<h2 id="linkage-analysis-and-lod-scores">Linkage Analysis and LOD Scores</h2>
+<p><strong>Linkage analysis</strong> is a statistical method for determining whether a trait locus is genetically linked to a marker locus. In human genetics, where controlled crosses are impossible, linkage analysis relies on tracking the co-segregation of markers and traits through family pedigrees.</p>
+<p>The <strong>LOD score</strong> (logarithm of the odds) is the standard statistical measure for linkage in human genetics. It compares the likelihood that two loci are linked (at a given recombination frequency <span class="arithmatex">\(\theta\)</span>) versus the likelihood that they are unlinked (<span class="arithmatex">\(\theta = 0.5\)</span>):</p>
+<div class="arithmatex">\[
+Z(\theta) = \log_{10} \frac{L(\theta)}{L(\theta = 0.5)}
+\]</div>
+<p>where <span class="arithmatex">\( L(\theta) \)</span> is the likelihood of the observed family data given a recombination frequency of <span class="arithmatex">\(\theta\)</span>, and <span class="arithmatex">\( L(\theta = 0.5) \)</span> is the likelihood assuming no linkage.</p>
+<p>The <strong>LOD score threshold</strong> for declaring significant linkage in humans is <span class="arithmatex">\( Z \geq 3.0 \)</span>, which corresponds to 1,000:1 odds in favor of linkage. This stringent threshold accounts for the low prior probability that any two random loci are linked. A LOD score below -2.0 is taken as evidence against linkage at that recombination frequency. Scores between -2.0 and 3.0 are inconclusive.</p>
+<p>LOD scores from multiple families can be summed because logarithms convert multiplication to addition. A researcher who studies five small families, each yielding a LOD score of 0.8, obtains a combined LOD of 4.0 — exceeding the threshold.</p>
+<div class="admonition mascot-tip">
+<p class="admonition-title">Why LOD 3.0?</p>
+<p><img src="../../img/mascot/tip.png" class="mascot-admonition-img" alt="Dottie giving a tip">
+The threshold of 3.0 was chosen by Newton Morton in 1955. With thousands of possible marker-trait pairs to test, you need strong evidence to avoid false positives. A LOD of 3.0 means the data are 1,000 times more likely under linkage than under no linkage.</p>
+</div>
+<h3 id="parametric-vs-nonparametric-linkage">Parametric vs. Nonparametric Linkage</h3>
+<p><strong>Parametric linkage</strong> analysis requires specifying a genetic model: the mode of inheritance (dominant, recessive, X-linked), allele frequencies, and penetrance values. This approach is powerful for single-gene disorders with clear inheritance patterns, as it uses all the information in a pedigree.</p>
+<p><strong>Nonparametric linkage</strong> (NPL) analysis does not require a genetic model. Instead, it tests whether affected relatives share marker alleles more often than expected by chance. NPL methods are essential for complex traits where the mode of inheritance is unknown. They are less powerful than parametric methods for single-gene traits but are robust against model misspecification.</p>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Parametric Linkage</th>
+<th>Nonparametric Linkage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Requires genetic model</td>
+<td>Yes</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Best for</td>
+<td>Single-gene traits</td>
+<td>Complex traits</td>
+</tr>
+<tr>
+<td>Statistical power</td>
+<td>Higher (if model correct)</td>
+<td>Lower but robust</td>
+</tr>
+<tr>
+<td>Statistic</td>
+<td>LOD score</td>
+<td>NPL score, allele sharing</td>
+</tr>
+<tr>
+<td>Risk of misspecification</td>
+<td>Yes</td>
+<td>Minimal</td>
+</tr>
+</tbody>
+</table>
+<h2 id="tetrad-analysis">Tetrad Analysis</h2>
+<p>In most organisms, the products of a single meiosis disperse and cannot be individually recovered. However, certain fungi (such as <em>Neurospora crassa</em> and <em>Saccharomyces cerevisiae</em>) produce all four haploid products of a single meiosis in a structure that can be dissected and analyzed. This powerful technique is called <strong>tetrad analysis</strong>.</p>
+<p>Tetrad analysis provides direct observation of segregation and recombination events, eliminating the statistical inference required in organisms where only populations of meiotic products can be studied.</p>
+<h3 id="ordered-tetrads">Ordered Tetrads</h3>
+<p>In <em>Neurospora crassa</em>, the ascospores are arranged linearly within the ascus in the order they were produced by meiosis and a subsequent mitotic division, yielding eight spores (four pairs). An <strong>ordered tetrad</strong> preserves the physical relationship between the meiotic products. This spatial information allows direct detection of crossover events and, uniquely, measurement of the distance between a gene and its centromere.</p>
+<p>When a heterozygous locus (A/a) undergoes meiosis without a crossover between the gene and its centromere, the alleles segregate at the first division, producing a pattern such as AAAAaaaa (first-division segregation, or FDS). If a crossover occurs between the gene and its centromere, the alleles segregate at the second division, producing patterns such as AAaaAAaa (second-division segregation, or SDS).</p>
+<h3 id="unordered-tetrads">Unordered Tetrads</h3>
+<p>In <em>Saccharomyces cerevisiae</em> (budding yeast), the four spores are enclosed in an ascus but are not arranged in a linear order. These <strong>unordered tetrads</strong> can still be classified based on the allele combinations they contain:</p>
+<ul>
+<li><strong>Parental ditype (PD)</strong>: All four spores have parental genotypes</li>
+<li><strong>Nonparental ditype (NPD)</strong>: All four spores have recombinant genotypes</li>
+<li><strong>Tetratype (T)</strong>: Two spores are parental, two are recombinant</li>
+</ul>
+<p>By comparing the frequencies of PD, NPD, and T asci, researchers determine whether two genes are linked. If genes are unlinked, PD = NPD. If PD &gt;&gt; NPD, the genes are linked, and the recombination frequency can be calculated.</p>
+<h2 id="centromere-mapping">Centromere Mapping</h2>
+<p><strong>Centromere mapping</strong> is a technique unique to ordered tetrad analysis that determines the distance between a gene and its centromere. The principle is straightforward: a crossover between a gene and its centromere produces second-division segregation patterns.</p>
+<p>The distance from a gene to its centromere (in map units) is:</p>
+<div class="arithmatex">\[
+\text{Gene-centromere distance} = \frac{1}{2} \times \frac{\text{Number of SDS asci}}{\text{Total asci}} \times 100\%
+\]</div>
+<p>The factor of 1/2 is required because only two of the four chromatids in a tetrad are involved in any single crossover event. This means each SDS ascus represents a crossover in only half of the chromatids.</p>
+<h4 id="diagram-tetrad-analysis-patterns">Diagram: Tetrad Analysis Patterns</h4>
+<iframe src="../../sims/tetrad-analysis-patterns/main.html" width="100%" height="500px" scrolling="no"></iframe>
+<details>
+<summary>Tetrad Analysis Patterns</summary>
+<p>Type: Interactive educational diagram
+<strong>sim-id:</strong> tetrad-analysis-patterns<br/>
+<strong>Library:</strong> p5.js<br/>
+<strong>Status:</strong> Specified</p>
+<p>An interactive visualization showing ordered and unordered tetrad patterns. For ordered tetrads, the user sees a Neurospora ascus with 8 color-coded spores. Toggle buttons switch between first-division segregation and second-division segregation patterns, with an animated crossover diagram showing why each pattern arises. For unordered tetrads, the user classifies asci as PD, NPD, or T, and the simulation calculates recombination frequency and linkage status.</p>
+</details>
+<h2 id="half-tetrad-analysis">Half-Tetrad Analysis</h2>
+<p>Most organisms do not produce ordered tetrads. However, certain genetic situations allow partial tetrad analysis in diploid organisms. <strong>Half-tetrad analysis</strong> recovers two of the four products of a single meiosis. This can occur naturally (as in attached-X chromosomes in <em>Drosophila</em>) or through experimental manipulation.</p>
+<p>Half-tetrad analysis is useful for centromere mapping in organisms that do not form asci. By examining which alleles appear together in half-tetrads, researchers can determine whether a crossover occurred between a gene and its centromere, and therefore estimate gene-centromere distance.</p>
+<h2 id="deletion-mapping-and-complementation-mapping">Deletion Mapping and Complementation Mapping</h2>
+<p><strong>Deletion mapping</strong> uses chromosomal deletions to assign genes to specific chromosomal segments. If an organism is heterozygous for a deletion and a recessive allele, the recessive phenotype will be expressed when the recessive allele falls within the deleted region (because there is no second copy to provide a dominant allele). This phenomenon, called pseudodominance, narrows a gene's location to the deleted segment.</p>
+<p>By testing a recessive mutation against a series of overlapping deletions, researchers can map the gene to the overlap between the smallest deletion that uncovers the mutation and the largest deletion that does not.</p>
+<p><strong>Complementation mapping</strong> uses the complementation test to assign mutations to functional groups (genes). Two recessive mutations are placed in trans in a diploid organism. If the organism shows the wild-type phenotype, the mutations complement each other and affect different genes. If the organism shows the mutant phenotype, the mutations fail to complement and likely affect the same gene.</p>
+<div class="admonition mascot-warning">
+<p class="admonition-title">Complementation Is Not Allelism</p>
+<p><img src="../../img/mascot/warning.png" class="mascot-admonition-img" alt="Dottie giving a warning">
+Failure to complement strongly suggests two mutations are in the same gene, but there are exceptions. Intragenic complementation and dominant-negative effects can complicate results. Always confirm with additional evidence.</p>
+</div>
+<p>Complementation mapping organizes mutations into complementation groups, where each group corresponds to a gene. This approach was central to Seymour Benzer's analysis of the rII region in phage T4 and remains fundamental in forward genetic screens.</p>
+<h2 id="fine-structure-mapping">Fine Structure Mapping</h2>
+<p><strong>Fine structure mapping</strong> resolves the internal organization of a single gene by mapping mutations within it. This technique was pioneered by Benzer, who analyzed thousands of rII mutants in bacteriophage T4 to create a map with single-nucleotide resolution.</p>
+<p>The approach relies on intragenic recombination: two different mutations within the same gene can recombine at a very low frequency to produce wild-type recombinants. By measuring recombination frequencies between pairs of mutations within a gene, researchers construct a fine-structure map that reveals the relative positions of mutational sites.</p>
+<p>Fine structure mapping demonstrated several important principles:</p>
+<ul>
+<li>Genes are not indivisible units — they have internal structure</li>
+<li>The smallest unit of mutation (the muton) is a single base pair</li>
+<li>The smallest unit of recombination (the recon) is also a single base pair</li>
+<li>Mutations are not randomly distributed within genes — certain sites (hotspots) mutate more frequently</li>
+</ul>
+<h4 id="diagram-fine-structure-mapping-of-a-gene">Diagram: Fine Structure Mapping of a Gene</h4>
+<iframe src="../../sims/fine-structure-mapping/main.html" width="100%" height="450px" scrolling="no"></iframe>
+<details>
+<summary>Fine Structure Mapping of a Gene</summary>
+<p>Type: Interactive data exploration
+<strong>sim-id:</strong> fine-structure-mapping<br/>
+<strong>Library:</strong> p5.js<br/>
+<strong>Status:</strong> Specified</p>
+<p>A visualization of Benzer's rII fine-structure map. The gene is displayed as a horizontal bar with mutation sites marked as vertical lines. Clicking on pairs of mutations shows their recombination frequency and the resulting map distance. Deletion intervals are shown as horizontal brackets below the gene, demonstrating how overlapping deletions narrow mutation positions. A heatmap of mutation frequencies reveals mutational hotspots within the gene.</p>
+</details>
+<h2 id="integrating-mapping-approaches-for-gene-discovery">Integrating Mapping Approaches for Gene Discovery</h2>
+<p>Modern gene discovery integrates all of these mapping approaches into a coherent workflow. A typical gene discovery project might proceed as follows:</p>
+<ol>
+<li><strong>Observe a heritable phenotype</strong> — establish that the trait has a genetic basis through family studies or inheritance patterns</li>
+<li><strong>Perform linkage analysis</strong> — use genome-wide markers and LOD score analysis to identify the chromosomal region harboring the gene</li>
+<li><strong>Refine the interval</strong> — use additional markers, additional families, and haplotype analysis to narrow the candidate region</li>
+<li><strong>Consult physical and comparative maps</strong> — examine the genes within the candidate interval, using synteny with model organisms to prioritize candidates</li>
+<li><strong>Screen candidate genes</strong> — sequence the most promising candidates in affected and unaffected individuals</li>
+<li><strong>Validate the gene</strong> — demonstrate causation through functional studies, animal models, or identification of multiple independent mutations</li>
+</ol>
+<p>This integrative approach has identified thousands of disease genes and continues to be refined as genomic technologies improve.</p>
+<h4 id="diagram-gene-discovery-workflow">Diagram: Gene Discovery Workflow</h4>
+<iframe src="../../sims/gene-discovery-workflow/main.html" width="100%" height="500px" scrolling="no"></iframe>
+<details>
+<summary>Gene Discovery Workflow</summary>
+<p>Type: Animated flowchart
+<strong>sim-id:</strong> gene-discovery-workflow<br/>
+<strong>Library:</strong> p5.js<br/>
+<strong>Status:</strong> Specified</p>
+<p>An animated flowchart showing the complete gene discovery pipeline from phenotype observation to gene validation. Each step is a clickable node that expands to show details, example data, and the mapping technique used. A progress bar indicates the typical timeline for each approach. Users can toggle between a positional cloning pathway and a candidate gene pathway to compare strategies.</p>
+</details>
+<div class="admonition mascot-celebration">
+<p class="admonition-title">Gene Discovery Mastered!</p>
+<p><img src="../../img/mascot/celebration.png" class="mascot-admonition-img" alt="Dottie celebrating">
+Outstanding work, researchers! You now understand how physical maps, LOD scores, tetrad analysis, and deletion mapping all contribute to the ultimate goal — finding the genes that shape living organisms. Time to cross some ideas with quantitative genetics!</p>
+</div>
+<h2 id="key-takeaways">Key Takeaways</h2>
+<ul>
+<li><strong>Physical maps</strong> measure chromosomal distances in base pairs, complementing genetic maps measured in centimorgans.</li>
+<li><strong>Cytogenetic maps</strong> use chromosome banding; <strong>radiation hybrid maps</strong> use fragment co-retention to order markers at intermediate resolution.</li>
+<li><strong>Synteny</strong> and <strong>comparative genomics</strong> leverage conserved gene order across species to transfer mapping information between organisms, using <strong>orthologs</strong> as anchor points.</li>
+<li><strong>Positional cloning</strong> identifies genes by chromosomal position alone, while the <strong>candidate gene approach</strong> starts from biological knowledge.</li>
+<li><strong>LOD scores</strong> quantify evidence for linkage; a score of 3.0 or higher is the standard threshold for significance.</li>
+<li><strong>Parametric linkage</strong> requires a genetic model; <strong>nonparametric linkage</strong> is model-free and suited to complex traits.</li>
+<li><strong>Tetrad analysis</strong> in fungi directly reveals meiotic events; <strong>ordered tetrads</strong> enable <strong>centromere mapping</strong>.</li>
+<li><strong>Deletion mapping</strong> localizes genes to deleted segments; <strong>complementation mapping</strong> assigns mutations to genes; <strong>fine structure mapping</strong> resolves internal gene organization.</li>
+</ul>
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../07-genetic-mapping-linkage-analysis/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 7. Genetic Mapping and Linkage Analysis">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                7. Genetic Mapping and Linkage Analysis
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../09-quantitative-genetics-heritability/" class="md-footer__link md-footer__link--next" aria-label="Next: 9. Quantitative Genetics and Heritability">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                9. Quantitative Genetics and Heritability
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 Dan McCreary. Licensed under <a href="license/">CC BY-NC-SA 4.0</a> for non-commercial use.
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "navigation.expand", "navigation.path", "navigation.prune", "navigation.indexes", "toc.follow", "navigation.top", "navigation.footer", "content.action.edit"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+        <script src="../../js/extra.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-chtml.js"></script>
+      
+    
+  </body>
+</html>

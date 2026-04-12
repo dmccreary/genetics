@@ -1,0 +1,2054 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Transcriptional regulation from promoters and enhancers to gene regulatory networks, covering transcription factors, cis-regulatory elements, operons, network motifs, and super enhancers.">
+      
+      
+        <meta name="author" content="Dan McCreary">
+      
+      
+        <link rel="canonical" href="https://dmccreary.github.io/genetics/chapters/11-gene-regulation-regulatory-networks/">
+      
+      
+        <link rel="prev" href="../10-gwas-population-genetics/">
+      
+      
+        <link rel="next" href="../12-post-transcriptional-regulation-cell-identity/">
+      
+      
+      <link rel="icon" href="../../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.43">
+    
+    
+      
+        <title>Gene Regulation and Regulatory Networks - Genetics</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.0253249f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+      <link rel="stylesheet" href="../../css/mascot.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-HJJLWQWVSL"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-HJJLWQWVSL",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-HJJLWQWVSL",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+      
+        <meta  property="og:type"  content="website" >
+      
+        <meta  property="og:title"  content="Gene Regulation and Regulatory Networks - Genetics" >
+      
+        <meta  property="og:description"  content="Transcriptional regulation from promoters and enhancers to gene regulatory networks, covering transcription factors, cis-regulatory elements, operons, network motifs, and super enhancers." >
+      
+        <meta  property="og:image"  content="https://dmccreary.github.io/genetics/assets/images/social/chapters/11-gene-regulation-regulatory-networks/index.png" >
+      
+        <meta  property="og:image:type"  content="image/png" >
+      
+        <meta  property="og:image:width"  content="1200" >
+      
+        <meta  property="og:image:height"  content="630" >
+      
+        <meta  property="og:url"  content="https://dmccreary.github.io/genetics/chapters/11-gene-regulation-regulatory-networks/" >
+      
+        <meta  name="twitter:card"  content="summary_large_image" >
+      
+        <meta  name="twitter:title"  content="Gene Regulation and Regulatory Networks - Genetics" >
+      
+        <meta  name="twitter:description"  content="Transcriptional regulation from promoters and enhancers to gene regulatory networks, covering transcription factors, cis-regulatory elements, operons, network motifs, and super enhancers." >
+      
+        <meta  name="twitter:image"  content="https://dmccreary.github.io/genetics/assets/images/social/chapters/11-gene-regulation-regulatory-networks/index.png" >
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="amber" data-md-color-accent="deep-orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#gene-regulation-and-regulatory-networks" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Genetics" class="md-header__button md-logo" aria-label="Genetics" data-md-component="logo">
+      
+  <img src="../../img/mascot/neutral.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Genetics
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Gene Regulation and Regulatory Networks
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/dmccreary/genetics" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Genetics" class="md-nav__button md-logo" aria-label="Genetics" data-md-component="logo">
+      
+  <img src="../../img/mascot/neutral.png" alt="logo">
+
+    </a>
+    Genetics
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/dmccreary/genetics" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About This Course
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course-description/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Course Description
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Chapters
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Chapters
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-genetic-inference-probabilistic-reasoning/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1. Genetic Inference and Probabilistic Reasoning
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-pedigree-analysis-inheritance-patterns/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2. Pedigree Analysis and Inheritance Patterns
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-epistasis-complementation-modified-ratios/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3. Epistasis, Complementation, and Modified Ratios
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-genome-structure-chromatin-organization/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4. Genome Structure and Chromatin Organization
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-genetic-variation-genome-diversity/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5. Genetic Variation and Genome Diversity
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-gene-duplication-rearrangements-evolution/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6. Gene Duplication, Rearrangements, and Evolution
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07-genetic-mapping-linkage-analysis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7. Genetic Mapping and Linkage Analysis
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08-advanced-mapping-gene-discovery/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    8. Advanced Mapping and Gene Discovery
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09-quantitative-genetics-heritability/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    9. Quantitative Genetics and Heritability
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10-gwas-population-genetics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    10. GWAS and Population Genetics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    11. Gene Regulation and Regulatory Networks
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    11. Gene Regulation and Regulatory Networks
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concepts-covered" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concepts Covered
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#introduction-why-gene-regulation-matters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction: Why Gene Regulation Matters
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-1-the-molecular-components-of-transcription-regulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part 1: The Molecular Components of Transcription Regulation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part 1: The Molecular Components of Transcription Regulation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#promoters-and-the-tata-box" class="md-nav__link">
+    <span class="md-ellipsis">
+      Promoters and the TATA Box
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transcription-factors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Transcription Factors
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enhancers-silencers-and-insulators" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enhancers, Silencers, and Insulators
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Enhancers, Silencers, and Insulators">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-enhancer-promoter-looping" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Enhancer-Promoter Looping
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cis-regulatory-elements-and-trans-acting-factors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cis-Regulatory Elements and Trans-Acting Factors
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-2-transcriptional-logic-and-combinatorial-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part 2: Transcriptional Logic and Combinatorial Control
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part 2: Transcriptional Logic and Combinatorial Control">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#transcriptional-logic" class="md-nav__link">
+    <span class="md-ellipsis">
+      Transcriptional Logic
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#combinatorial-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      Combinatorial Control
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-3-gene-regulatory-networks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part 3: Gene Regulatory Networks
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part 3: Gene Regulatory Networks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-a-gene-regulatory-network" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Is a Gene Regulatory Network?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#network-motifs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Network Motifs
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Network Motifs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-network-motifs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Network Motifs
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-4-operon-regulation-in-prokaryotes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part 4: Operon Regulation in Prokaryotes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part 4: Operon Regulation in Prokaryotes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-operon-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Operon Model
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-lac-operon" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Lac Operon
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-trp-operon" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Trp Operon
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Trp Operon">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-lac-operon-regulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Lac Operon Regulation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-5-advanced-enhancer-biology" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part 5: Advanced Enhancer Biology
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part 5: Advanced Enhancer Biology">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#poised-enhancers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Poised Enhancers
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#super-enhancers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Super Enhancers
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#review-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Review Questions
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12-post-transcriptional-regulation-cell-identity/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    12. Post-Transcriptional Regulation and Cell Identity
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../13-experimental-genetics-model-organisms/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    13. Experimental Genetics and Model Organisms
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../14-genomics-sequencing-bioinformatics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    14. Genomics, Sequencing, and Bioinformatics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../15-human-genetics-clinical-applications/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    15. Human Genetics and Clinical Applications
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../16-cancer-genetics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    16. Cancer Genetics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../17-ethics-society-genetic-policy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    17. Ethics, Society, and Genetic Policy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../18-frontier-topics-emerging-technologies/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    18. Frontier Topics and Emerging Technologies
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../learning-graph/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Learning Graph
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../sims/graph-viewer/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    MicroSims
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../license/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    License
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contact/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contact
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concepts-covered" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concepts Covered
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#introduction-why-gene-regulation-matters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction: Why Gene Regulation Matters
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-1-the-molecular-components-of-transcription-regulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part 1: The Molecular Components of Transcription Regulation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part 1: The Molecular Components of Transcription Regulation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#promoters-and-the-tata-box" class="md-nav__link">
+    <span class="md-ellipsis">
+      Promoters and the TATA Box
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transcription-factors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Transcription Factors
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enhancers-silencers-and-insulators" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enhancers, Silencers, and Insulators
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Enhancers, Silencers, and Insulators">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-enhancer-promoter-looping" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Enhancer-Promoter Looping
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cis-regulatory-elements-and-trans-acting-factors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cis-Regulatory Elements and Trans-Acting Factors
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-2-transcriptional-logic-and-combinatorial-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part 2: Transcriptional Logic and Combinatorial Control
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part 2: Transcriptional Logic and Combinatorial Control">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#transcriptional-logic" class="md-nav__link">
+    <span class="md-ellipsis">
+      Transcriptional Logic
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#combinatorial-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      Combinatorial Control
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-3-gene-regulatory-networks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part 3: Gene Regulatory Networks
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part 3: Gene Regulatory Networks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-a-gene-regulatory-network" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Is a Gene Regulatory Network?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#network-motifs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Network Motifs
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Network Motifs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-network-motifs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Network Motifs
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-4-operon-regulation-in-prokaryotes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part 4: Operon Regulation in Prokaryotes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part 4: Operon Regulation in Prokaryotes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-operon-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Operon Model
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-lac-operon" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Lac Operon
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-trp-operon" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Trp Operon
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Trp Operon">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-lac-operon-regulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Lac Operon Regulation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-5-advanced-enhancer-biology" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part 5: Advanced Enhancer Biology
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part 5: Advanced Enhancer Biology">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#poised-enhancers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Poised Enhancers
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#super-enhancers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Super Enhancers
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#review-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Review Questions
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/dmccreary/genetics/edit/master/docs/chapters/11-gene-regulation-regulatory-networks/index.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="gene-regulation-and-regulatory-networks">Gene Regulation and Regulatory Networks</h1>
+<h2 id="summary">Summary</h2>
+<p>This chapter covers the mechanisms controlling gene expression at the transcriptional level, from promoters and enhancers to complex gene regulatory networks. Students explore transcription factors, cis-regulatory elements, combinatorial control, network motifs, operon regulation, and the role of super enhancers. After completing this chapter, students will understand how transcriptional logic governs gene expression patterns.</p>
+<h2 id="concepts-covered">Concepts Covered</h2>
+<p>This chapter covers the following 27 concepts from the learning graph:</p>
+<ol>
+<li>Gene Expression</li>
+<li>Transcription Regulation</li>
+<li>Promoter</li>
+<li>TATA Box</li>
+<li>Transcription Factor</li>
+<li>General Transcription Factor</li>
+<li>Specific Transcription Factor</li>
+<li>Activator</li>
+<li>Repressor</li>
+<li>Enhancer</li>
+<li>Silencer</li>
+<li>Insulator</li>
+<li>Cis-Regulatory Element</li>
+<li>Trans-Acting Factor</li>
+<li>Transcriptional Logic</li>
+<li>Combinatorial Control</li>
+<li>Gene Regulatory Network</li>
+<li>Network Motif</li>
+<li>Feedback Loop</li>
+<li>Feed-Forward Loop</li>
+<li>Operon Model</li>
+<li>Lac Operon</li>
+<li>Trp Operon</li>
+<li>Positive Regulation</li>
+<li>Negative Regulation</li>
+<li>Poised Enhancer</li>
+<li>Super Enhancer</li>
+</ol>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>This chapter builds on concepts from:</p>
+<ul>
+<li><a href="../04-genome-structure-chromatin-organization/">Chapter 4: Genome Structure and Chromatin Organization</a></li>
+</ul>
+<hr />
+<h2 id="introduction-why-gene-regulation-matters">Introduction: Why Gene Regulation Matters</h2>
+<div class="admonition mascot-welcome">
+<p class="admonition-title">Welcome, Fellow Investigators!</p>
+<p><img src="../../img/mascot/welcome.png" class="mascot-admonition-img" alt="Dottie waving welcome">
+Every cell in your body has essentially the same DNA — yet a neuron looks and acts nothing like a liver cell. How is that possible? The answer lies in gene regulation. Let's look at the evidence!</p>
+</div>
+<p><strong>Gene expression</strong> is the process by which the information stored in a gene is used to produce a functional product, typically a protein. Not all genes are expressed in every cell, and genes that are expressed vary in their levels across tissues, developmental stages, and environmental conditions. <strong>Transcription regulation</strong> — control of when, where, and how much a gene is transcribed into mRNA — is the primary mechanism governing gene expression in both prokaryotes and eukaryotes.</p>
+<p>Consider this remarkable fact: the human genome contains roughly 20,000 protein-coding genes, yet each cell type expresses only a specific subset. A red blood cell precursor expresses hemoglobin genes at extraordinarily high levels, while a skin cell silences those same genes entirely. The regulatory machinery that achieves this precision is the subject of this chapter.</p>
+<p>We will begin with the molecular components of transcriptional regulation — promoters, transcription factors, and regulatory DNA elements. We then explore how these components combine to create complex regulatory logic. Finally, we examine how individual gene circuits connect into gene regulatory networks that control cell behavior.</p>
+<h2 id="part-1-the-molecular-components-of-transcription-regulation">Part 1: The Molecular Components of Transcription Regulation</h2>
+<h3 id="promoters-and-the-tata-box">Promoters and the TATA Box</h3>
+<p>A <strong>promoter</strong> is a DNA sequence located immediately upstream of a gene that serves as the binding site for the transcription machinery. Promoters are where transcription begins. In eukaryotes, the promoter region typically spans several hundred base pairs upstream of the transcription start site and contains specific sequence elements that help position RNA polymerase.</p>
+<p>The <strong>TATA box</strong> is a conserved DNA sequence (consensus: TATAAA) found approximately 25-30 base pairs upstream of the transcription start site in many eukaryotic promoters. The TATA box is recognized by the TATA-binding protein (TBP), a subunit of the general transcription factor TFIID. Not all promoters contain TATA boxes — in fact, the majority of human gene promoters lack them and instead use other sequence elements such as CpG islands.</p>
+<p>The basic structure of a eukaryotic promoter can be summarized as follows:</p>
+<table>
+<thead>
+<tr>
+<th>Element</th>
+<th>Position (relative to start)</th>
+<th>Function</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TATA box</td>
+<td>-25 to -30</td>
+<td>Positions RNA polymerase II</td>
+</tr>
+<tr>
+<td>Initiator (Inr)</td>
+<td>-2 to +4</td>
+<td>Defines the precise start site</td>
+</tr>
+<tr>
+<td>Downstream promoter element (DPE)</td>
+<td>+28 to +32</td>
+<td>Alternative to TATA box in TATA-less promoters</td>
+</tr>
+<tr>
+<td>CpG island</td>
+<td>-500 to +500</td>
+<td>Associated with housekeeping gene promoters</td>
+</tr>
+</tbody>
+</table>
+<h3 id="transcription-factors">Transcription Factors</h3>
+<p>A <strong>transcription factor</strong> is a protein that binds to specific DNA sequences and regulates transcription. Transcription factors are the workhorses of gene regulation, and they come in two broad categories.</p>
+<p><strong>General transcription factors</strong> (GTFs) are required for the transcription of all genes transcribed by RNA polymerase II. They include TFIIA, TFIIB, TFIID (which contains TBP), TFIIE, TFIIF, and TFIIH. These proteins assemble on the promoter in an ordered sequence to form the pre-initiation complex, which is necessary before RNA polymerase can begin transcription.</p>
+<p><strong>Specific transcription factors</strong> bind to regulatory sequences associated with particular genes and modulate their transcription rates above or below the basal level. These are the factors responsible for differential gene expression between cell types and conditions.</p>
+<p>Specific transcription factors function in two opposing ways:</p>
+<ul>
+<li>An <strong>activator</strong> increases transcription by recruiting the transcription machinery or chromatin-remodeling complexes to the promoter. Activators typically bind to enhancer elements and use activation domains to stimulate transcription.</li>
+<li>A <strong>repressor</strong> decreases transcription by blocking the binding of activators, recruiting chromatin-compacting complexes, or directly interfering with the transcription machinery. Repressors bind to silencer elements or compete with activators for overlapping binding sites.</li>
+</ul>
+<div class="admonition mascot-thinking">
+<p class="admonition-title">Activators and Repressors: A Balancing Act</p>
+<p><img src="../../img/mascot/thinking.png" class="mascot-admonition-img" alt="Dottie thinking">
+Think of gene expression as a tug-of-war. Activators pull toward "ON" and repressors pull toward "OFF." The actual expression level of a gene depends on the combined strength and number of both types of factors bound at any moment. This is the essence of combinatorial control!</p>
+</div>
+<h3 id="enhancers-silencers-and-insulators">Enhancers, Silencers, and Insulators</h3>
+<p>Beyond the promoter, additional DNA sequences regulate transcription from a distance. These elements can be located thousands or even millions of base pairs away from the genes they regulate.</p>
+<p>An <strong>enhancer</strong> is a DNA sequence that increases transcription of a target gene when bound by activator proteins. Enhancers work regardless of their orientation and can function upstream, downstream, or even within introns of the target gene. They contact promoters through DNA looping, bringing bound activators into proximity with the transcription machinery.</p>
+<p>A <strong>silencer</strong> is the functional opposite of an enhancer — a DNA sequence that decreases transcription when bound by repressor proteins. Like enhancers, silencers can operate over long distances.</p>
+<p>An <strong>insulator</strong> is a DNA element that prevents regulatory signals from crossing a boundary. Insulators serve two functions: they can block enhancers from activating the wrong promoter (enhancer-blocking activity), and they can prevent the spread of repressive chromatin into active gene regions (barrier activity). The protein CTCF is the best-characterized insulator-binding protein in vertebrates.</p>
+<h4 id="diagram-enhancer-promoter-looping">Diagram: Enhancer-Promoter Looping</h4>
+<iframe src="../../sims/enhancer-promoter-loop/main.html" width="100%" height="500px" scrolling="no"></iframe>
+<details>
+<summary>Enhancer-Promoter Looping</summary>
+<p>Type: Interactive animation
+<strong>sim-id:</strong> enhancer-promoter-loop<br/>
+<strong>Library:</strong> p5.js<br/>
+<strong>Status:</strong> Specified</p>
+<p>An animated diagram showing a linear stretch of DNA with a promoter region (blue), a gene body (green), and an enhancer (orange) located 50 kb away. When the user clicks "Activate," the DNA bends to bring the enhancer into contact with the promoter via a chromatin loop. Transcription factor proteins (small colored circles) are shown binding to the enhancer and promoter. An insulator element (red) is shown between two genes; a toggle allows the user to enable/disable the insulator to see how it blocks enhancer action on the wrong gene. A Mediator complex (purple blob) bridges the enhancer-bound activators to the promoter.</p>
+</details>
+<h3 id="cis-regulatory-elements-and-trans-acting-factors">Cis-Regulatory Elements and Trans-Acting Factors</h3>
+<p>Two terms provide a useful organizing framework for understanding regulatory interactions. A <strong>cis-regulatory element</strong> is any DNA sequence that regulates the expression of a gene on the same chromosome. Promoters, enhancers, silencers, and insulators are all cis-regulatory elements. The defining feature is that they act locally — they regulate genes on the same DNA molecule.</p>
+<p>A <strong>trans-acting factor</strong> is any molecule (usually a protein, but sometimes an RNA) that regulates gene expression by binding to cis-regulatory elements. Transcription factors are the primary trans-acting factors. The "trans" designation means they are encoded elsewhere in the genome and diffuse through the cell to reach their target sequences.</p>
+<p>This distinction is fundamental: mutations in cis-regulatory elements typically affect only the linked gene, while mutations in trans-acting factors can affect all genes regulated by that factor throughout the genome.</p>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Definition</th>
+<th>Examples</th>
+<th>Mutation Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cis-regulatory element</td>
+<td>DNA sequence regulating nearby gene</td>
+<td>Promoter, enhancer, silencer, insulator</td>
+<td>Affects only the linked gene</td>
+</tr>
+<tr>
+<td>Trans-acting factor</td>
+<td>Protein or RNA binding cis-elements</td>
+<td>Transcription factors, Mediator complex</td>
+<td>Affects all target genes genome-wide</td>
+</tr>
+</tbody>
+</table>
+<h2 id="part-2-transcriptional-logic-and-combinatorial-control">Part 2: Transcriptional Logic and Combinatorial Control</h2>
+<h3 id="transcriptional-logic">Transcriptional Logic</h3>
+<p><strong>Transcriptional logic</strong> describes how the combined inputs from multiple transcription factors determine the output expression level of a gene. Individual transcription factors rarely act alone. Instead, the regulatory region of a gene integrates signals from many factors simultaneously, much like a logic circuit integrates electronic inputs.</p>
+<p>The simplest logic involves AND gates and OR gates:</p>
+<ul>
+<li><strong>AND logic</strong>: The gene is expressed only when Factor A AND Factor B are both present. This occurs when both factors are required to recruit the transcription machinery.</li>
+<li><strong>OR logic</strong>: The gene is expressed when Factor A OR Factor B is present. This occurs when either factor alone is sufficient for activation.</li>
+<li><strong>NOT logic</strong>: The gene is repressed when a specific factor is present. Repressors implement NOT functions.</li>
+</ul>
+<p>Real regulatory regions combine many such logic operations. A single enhancer may contain binding sites for 5-10 different transcription factors, and the precise combination determines whether the gene is active.</p>
+<h3 id="combinatorial-control">Combinatorial Control</h3>
+<p><strong>Combinatorial control</strong> is the principle that a limited number of transcription factors can generate a vast number of distinct expression patterns through their combinations. The human genome encodes roughly 1,600 transcription factors. If each gene's expression were controlled by a unique combination of just 5 transcription factors, the number of possible combinations would be:</p>
+<div class="arithmatex">\[
+\binom{1600}{5} \approx 8.7 \times 10^{13}
+\]</div>
+<p>This is more than enough to regulate every gene in a unique way. Combinatorial control explains how a relatively small number of transcription factors can produce the enormous diversity of gene expression patterns seen across hundreds of cell types.</p>
+<div class="admonition mascot-tip">
+<p class="admonition-title">Why Combinatorial Control Is Powerful</p>
+<p><img src="../../img/mascot/tip.png" class="mascot-admonition-img" alt="Dottie giving a tip">
+Think about language: English has only 26 letters, but their combinations produce hundreds of thousands of words. Similarly, a limited set of transcription factors, combined in different ways, produces the full diversity of gene expression patterns in an organism. This is one of the most elegant solutions in all of biology.</p>
+</div>
+<h2 id="part-3-gene-regulatory-networks">Part 3: Gene Regulatory Networks</h2>
+<h3 id="what-is-a-gene-regulatory-network">What Is a Gene Regulatory Network?</h3>
+<p>A <strong>gene regulatory network (GRN)</strong> is the complete set of regulatory interactions among genes and their products in a cell. In a GRN, transcription factors regulate target genes, and some of those target genes encode transcription factors themselves, creating interconnected circuits. GRNs describe how cells process information and make decisions — such as whether to divide, differentiate, or die.</p>
+<p>GRNs can be represented as directed graphs where nodes represent genes and edges represent regulatory interactions (activation or repression). Analyzing the structure of these networks reveals recurring patterns called network motifs.</p>
+<h3 id="network-motifs">Network Motifs</h3>
+<p>A <strong>network motif</strong> is a small, recurring circuit pattern found more frequently in real regulatory networks than expected by chance. These motifs represent fundamental information-processing units. Two of the most important motifs are feedback loops and feed-forward loops.</p>
+<p>A <strong>feedback loop</strong> occurs when the output of a regulatory circuit feeds back to influence its own input. Feedback loops come in two varieties:</p>
+<ul>
+<li><strong>Positive feedback loop</strong>: Gene A activates Gene B, and Gene B activates Gene A (or Gene A activates itself). Positive feedback creates bistable switches — the system locks into an "ON" or "OFF" state and resists switching. This is essential for cell fate commitment.</li>
+<li><strong>Negative feedback loop</strong>: Gene A activates Gene B, and Gene B represses Gene A. Negative feedback creates stable oscillations and homeostasis, keeping expression levels within a defined range.</li>
+</ul>
+<p>A <strong>feed-forward loop</strong> occurs when a regulator controls a target both directly and indirectly through an intermediate gene. The most common type is the coherent feed-forward loop, where Factor A activates Factor B, and both A and B activate Gene C. This motif acts as a noise filter: Gene C is only activated when Factor A provides a sustained signal (long enough for Factor B to accumulate), filtering out brief fluctuations.</p>
+<h4 id="diagram-network-motifs">Diagram: Network Motifs</h4>
+<iframe src="../../sims/network-motifs/main.html" width="100%" height="500px" scrolling="no"></iframe>
+<details>
+<summary>Network Motifs</summary>
+<p>Type: Interactive network diagram
+<strong>sim-id:</strong> network-motifs<br/>
+<strong>Library:</strong> vis-network<br/>
+<strong>Status:</strong> Specified</p>
+<p>An interactive display of four network motifs: positive feedback loop, negative feedback loop, coherent feed-forward loop, and incoherent feed-forward loop. Each motif is shown as a small directed graph with colored nodes (genes) and edges (activation in green with arrowheads, repression in red with blunt ends). The user selects a motif from a dropdown menu. Below the graph, an animated time-series plot shows the expression levels of each gene in the selected motif over time, demonstrating the dynamic behavior (bistability for positive feedback, oscillation for negative feedback, delay/filtering for feed-forward). A "Pulse Signal" button triggers a transient input so the user can see how each motif responds.</p>
+</details>
+<h2 id="part-4-operon-regulation-in-prokaryotes">Part 4: Operon Regulation in Prokaryotes</h2>
+<h3 id="the-operon-model">The Operon Model</h3>
+<p>Prokaryotes use a distinctive regulatory architecture called the <strong>operon model</strong>, first described by François Jacob and Jacques Monod in 1961. An operon is a cluster of functionally related genes transcribed as a single polycistronic mRNA under the control of a shared promoter and operator. The operator is a DNA sequence between the promoter and the structural genes where a repressor protein can bind.</p>
+<p>Operons illustrate both <strong>positive regulation</strong> and <strong>negative regulation</strong>:</p>
+<ul>
+<li><strong>Negative regulation</strong> occurs when a repressor protein binds the operator and blocks RNA polymerase from transcribing the genes. Removing the repressor (by an inducer molecule) allows transcription.</li>
+<li><strong>Positive regulation</strong> occurs when an activator protein helps RNA polymerase bind the promoter, increasing transcription above basal levels.</li>
+</ul>
+<h3 id="the-lac-operon">The Lac Operon</h3>
+<p>The <strong>lac operon</strong> in <em>Escherichia coli</em> is the founding example of gene regulation. It contains three structural genes (<span class="arithmatex">\( lacZ \)</span>, <span class="arithmatex">\( lacY \)</span>, and <span class="arithmatex">\( lacA \)</span>) that encode proteins for lactose metabolism. The lac operon is controlled by two regulatory mechanisms operating simultaneously:</p>
+<p><strong>Negative control by the Lac repressor</strong>: In the absence of lactose, the Lac repressor protein (encoded by <span class="arithmatex">\( lacI \)</span>) binds the operator and blocks transcription. When lactose is present, it is converted to allolactose, which binds the repressor and induces a conformational change that releases it from the operator. Transcription can then proceed.</p>
+<p><strong>Positive control by CAP-cAMP</strong>: Even when the repressor is removed, the lac operon requires a second signal for full expression. When glucose is absent, cyclic AMP (cAMP) levels rise. The catabolite activator protein (CAP) binds cAMP and then binds upstream of the lac promoter, bending the DNA and helping RNA polymerase initiate transcription.</p>
+<p>This dual control creates elegant logic: the lac operon is fully expressed only when lactose is present AND glucose is absent.</p>
+<table>
+<thead>
+<tr>
+<th>Glucose</th>
+<th>Lactose</th>
+<th>cAMP-CAP Bound?</th>
+<th>Repressor Bound?</th>
+<th>Lac Operon Expression</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Present</td>
+<td>Absent</td>
+<td>No</td>
+<td>Yes</td>
+<td>Off</td>
+</tr>
+<tr>
+<td>Present</td>
+<td>Present</td>
+<td>No</td>
+<td>No</td>
+<td>Low (basal)</td>
+</tr>
+<tr>
+<td>Absent</td>
+<td>Absent</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Off</td>
+</tr>
+<tr>
+<td>Absent</td>
+<td>Present</td>
+<td>Yes</td>
+<td>No</td>
+<td><strong>High</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="the-trp-operon">The Trp Operon</h3>
+<p>The <strong>trp operon</strong> in <em>E. coli</em> encodes five enzymes needed for tryptophan biosynthesis. Unlike the lac operon, the trp operon illustrates a biosynthetic pathway that is repressed when the end product is abundant.</p>
+<p>The trp operon uses negative regulation with a twist: the Trp repressor is inactive on its own. Only when tryptophan (the <strong>corepressor</strong>) binds to it does the repressor acquire the conformation needed to bind the operator and block transcription. When tryptophan levels drop, the repressor releases from the operator, and the biosynthetic genes are expressed.</p>
+<div class="admonition mascot-thinking">
+<p class="admonition-title">Inducible vs. Repressible Operons</p>
+<p><img src="../../img/mascot/thinking.png" class="mascot-admonition-img" alt="Dottie thinking">
+Notice the logic difference: the lac operon is <strong>inducible</strong> — it is normally off and turned on by a substrate (lactose). The trp operon is <strong>repressible</strong> — it is normally on and turned off by a product (tryptophan). Both make biological sense: make catabolic enzymes only when the substrate is present, and make biosynthetic enzymes only when the product is needed.</p>
+</div>
+<h4 id="diagram-lac-operon-regulation">Diagram: Lac Operon Regulation</h4>
+<iframe src="../../sims/lac-operon/main.html" width="100%" height="500px" scrolling="no"></iframe>
+<details>
+<summary>Lac Operon Regulation</summary>
+<p>Type: Interactive simulation
+<strong>sim-id:</strong> lac-operon<br/>
+<strong>Library:</strong> p5.js<br/>
+<strong>Status:</strong> Specified</p>
+<p>A visual simulation of the lac operon. The display shows the DNA region with the lacI gene, promoter, operator, and the three structural genes (lacZ, lacY, lacA) drawn as colored blocks. Two toggle switches allow the user to set the presence/absence of glucose and lactose independently. Based on the combination, the simulation animates: the Lac repressor binding/releasing from the operator, CAP-cAMP binding/releasing upstream, RNA polymerase attempting to transcribe, and mRNA being produced (or blocked). A readout shows the current expression level (Off, Low, High). Protein products (beta-galactosidase, permease, transacetylase) appear when expression is high.</p>
+</details>
+<h2 id="part-5-advanced-enhancer-biology">Part 5: Advanced Enhancer Biology</h2>
+<h3 id="poised-enhancers">Poised Enhancers</h3>
+<p>A <strong>poised enhancer</strong> is an enhancer that is not currently active but is prepared for rapid activation. Poised enhancers carry a distinctive chromatin signature: they are marked with histone H3 lysine 4 monomethylation (H3K4me1) but lack the active mark H3K27 acetylation (H3K27ac). Some poised enhancers also carry the repressive mark H3K27me3, creating a bivalent chromatin state.</p>
+<p>Poised enhancers are particularly important during development. They allow cells to respond rapidly to differentiation signals by activating pre-marked regulatory elements rather than establishing enhancers from scratch. When the appropriate signal arrives, the poised enhancer gains H3K27ac and loses H3K27me3, transitioning to an active state.</p>
+<table>
+<thead>
+<tr>
+<th>Enhancer State</th>
+<th>H3K4me1</th>
+<th>H3K27ac</th>
+<th>H3K27me3</th>
+<th>Transcription</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Inactive</td>
+<td>-</td>
+<td>-</td>
+<td>- or +</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Poised</td>
+<td>+</td>
+<td>-</td>
+<td>- or +</td>
+<td>None (ready)</td>
+</tr>
+<tr>
+<td>Active</td>
+<td>+</td>
+<td>+</td>
+<td>-</td>
+<td>Active</td>
+</tr>
+</tbody>
+</table>
+<h3 id="super-enhancers">Super Enhancers</h3>
+<p>A <strong>super enhancer</strong> is a large cluster of enhancers — typically spanning 10-50 kilobases — that drives exceptionally high levels of transcription. Super enhancers are densely loaded with transcription factors, Mediator complex, and active chromatin marks. They were first identified computationally as regions with unusually high concentrations of Mediator and H3K27ac signal.</p>
+<p>Super enhancers are associated with genes that define cell identity. For example:</p>
+<ul>
+<li>In embryonic stem cells, super enhancers drive the master pluripotency genes <em>Oct4</em>, <em>Sox2</em>, and <em>Nanog</em>.</li>
+<li>In T cells, super enhancers regulate T-cell receptor genes and immune signaling pathways.</li>
+<li>In cancer cells, super enhancers often drive oncogenes, making them attractive therapeutic targets.</li>
+</ul>
+<p>Super enhancers are disproportionately sensitive to perturbation. Reducing the concentration of transcription factors or Mediator components preferentially affects super enhancer-driven genes, because these large regulatory regions require a critical density of factors to maintain their activity. This property has been exploited in drug development strategies that target the transcriptional machinery to selectively shut down oncogene expression.</p>
+<div class="admonition mascot-celebration">
+<p class="admonition-title">Chapter Complete!</p>
+<p><img src="../../img/mascot/celebration.png" class="mascot-admonition-img" alt="Dottie celebrating">
+Congratulations, fellow investigators! You've journeyed from individual promoters to genome-wide regulatory networks. Understanding how transcriptional logic works — from a simple TATA box to a sprawling super enhancer — is essential for understanding how cells become what they are. Time to cross some ideas with the next chapter on post-transcriptional regulation!</p>
+</div>
+<h2 id="review-questions">Review Questions</h2>
+<ol>
+<li>Explain the difference between a cis-regulatory element and a trans-acting factor. Why do mutations in trans-acting factors tend to have more widespread effects?</li>
+<li>Draw the logic table for a gene that requires both Factor A AND Factor B for activation, but is repressed by Factor C. What type of regulatory elements might implement this logic?</li>
+<li>Compare the regulatory logic of the lac operon and the trp operon. Why does it make biological sense for one to be inducible and the other repressible?</li>
+<li>Describe how a coherent feed-forward loop acts as a noise filter. What happens to Gene C in response to a brief vs. sustained signal from Factor A?</li>
+<li>Why are super enhancers particularly sensitive to small decreases in transcription factor concentration? How might this property be exploited in cancer therapy?</li>
+</ol>
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../10-gwas-population-genetics/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 10. GWAS and Population Genetics">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                10. GWAS and Population Genetics
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../12-post-transcriptional-regulation-cell-identity/" class="md-footer__link md-footer__link--next" aria-label="Next: 12. Post-Transcriptional Regulation and Cell Identity">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                12. Post-Transcriptional Regulation and Cell Identity
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 Dan McCreary. Licensed under <a href="license/">CC BY-NC-SA 4.0</a> for non-commercial use.
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "navigation.expand", "navigation.path", "navigation.prune", "navigation.indexes", "toc.follow", "navigation.top", "navigation.footer", "content.action.edit"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+        <script src="../../js/extra.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-chtml.js"></script>
+      
+    
+  </body>
+</html>

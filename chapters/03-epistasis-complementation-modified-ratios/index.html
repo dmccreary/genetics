@@ -1,0 +1,2352 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Gene interactions that produce unexpected phenotypic ratios, complementation testing, and the concept of allelism.">
+      
+      
+        <meta name="author" content="Dan McCreary">
+      
+      
+        <link rel="canonical" href="https://dmccreary.github.io/genetics/chapters/03-epistasis-complementation-modified-ratios/">
+      
+      
+        <link rel="prev" href="../02-pedigree-analysis-inheritance-patterns/">
+      
+      
+        <link rel="next" href="../04-genome-structure-chromatin-organization/">
+      
+      
+      <link rel="icon" href="../../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.43">
+    
+    
+      
+        <title>Epistasis, Complementation, and Modified Ratios - Genetics</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.0253249f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+      <link rel="stylesheet" href="../../css/mascot.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-HJJLWQWVSL"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-HJJLWQWVSL",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-HJJLWQWVSL",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+      
+        <meta  property="og:type"  content="website" >
+      
+        <meta  property="og:title"  content="Epistasis, Complementation, and Modified Ratios - Genetics" >
+      
+        <meta  property="og:description"  content="Gene interactions that produce unexpected phenotypic ratios, complementation testing, and the concept of allelism." >
+      
+        <meta  property="og:image"  content="https://dmccreary.github.io/genetics/assets/images/social/chapters/03-epistasis-complementation-modified-ratios/index.png" >
+      
+        <meta  property="og:image:type"  content="image/png" >
+      
+        <meta  property="og:image:width"  content="1200" >
+      
+        <meta  property="og:image:height"  content="630" >
+      
+        <meta  property="og:url"  content="https://dmccreary.github.io/genetics/chapters/03-epistasis-complementation-modified-ratios/" >
+      
+        <meta  name="twitter:card"  content="summary_large_image" >
+      
+        <meta  name="twitter:title"  content="Epistasis, Complementation, and Modified Ratios - Genetics" >
+      
+        <meta  name="twitter:description"  content="Gene interactions that produce unexpected phenotypic ratios, complementation testing, and the concept of allelism." >
+      
+        <meta  name="twitter:image"  content="https://dmccreary.github.io/genetics/assets/images/social/chapters/03-epistasis-complementation-modified-ratios/index.png" >
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="amber" data-md-color-accent="deep-orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#epistasis-complementation-and-modified-ratios" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Genetics" class="md-header__button md-logo" aria-label="Genetics" data-md-component="logo">
+      
+  <img src="../../img/mascot/neutral.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Genetics
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Epistasis, Complementation, and Modified Ratios
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/dmccreary/genetics" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Genetics" class="md-nav__button md-logo" aria-label="Genetics" data-md-component="logo">
+      
+  <img src="../../img/mascot/neutral.png" alt="logo">
+
+    </a>
+    Genetics
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/dmccreary/genetics" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About This Course
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course-description/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Course Description
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Chapters
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Chapters
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-genetic-inference-probabilistic-reasoning/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1. Genetic Inference and Probabilistic Reasoning
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-pedigree-analysis-inheritance-patterns/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2. Pedigree Analysis and Inheritance Patterns
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    3. Epistasis, Complementation, and Modified Ratios
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    3. Epistasis, Complementation, and Modified Ratios
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concepts-covered" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concepts Covered
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#introduction-when-mendels-ratios-break" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction: When Mendel's Ratios Break
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Introduction: When Mendel's Ratios Break">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-standard-dihybrid-ratio-as-a-baseline" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Standard Dihybrid Ratio as a Baseline
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#types-of-epistasis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Types of Epistasis
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Types of Epistasis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#complementary-epistasis-97-ratio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Complementary Epistasis (9:7 Ratio)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#duplicate-epistasis-151-ratio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Duplicate Epistasis (15:1 Ratio)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#suppressor-epistasis-133-ratio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Suppressor Epistasis (13:3 Ratio)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#summary-of-epistatic-ratios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary of Epistatic Ratios
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Summary of Epistatic Ratios">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-epistasis-ratio-calculator" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Epistasis Ratio Calculator
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#epistatic-pathway-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Epistatic Pathway Analysis
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Epistatic Pathway Analysis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#determining-gene-order" class="md-nav__link">
+    <span class="md-ellipsis">
+      Determining Gene Order
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-worked-example-flower-pigment-pathway" class="md-nav__link">
+    <span class="md-ellipsis">
+      A Worked Example: Flower Pigment Pathway
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-complementation-test" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Complementation Test
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Complementation Test">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-logic-of-complementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Logic of Complementation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#complementation-groups" class="md-nav__link">
+    <span class="md-ellipsis">
+      Complementation Groups
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Complementation Groups">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-complementation-test-simulator" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Complementation Test Simulator
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-cis-trans-test-and-allelism" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Cis-Trans Test and Allelism
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Cis-Trans Test and Allelism">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-cis-trans-test" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Cis-Trans Test
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#allelism-and-functional-allelism" class="md-nav__link">
+    <span class="md-ellipsis">
+      Allelism and Functional Allelism
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modified-mendelian-ratios-in-practice" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modified Mendelian Ratios in Practice
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Modified Mendelian Ratios in Practice">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-diagnostic-approach-to-modified-ratios" class="md-nav__link">
+    <span class="md-ellipsis">
+      A Diagnostic Approach to Modified Ratios
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#applying-the-chi-square-test-to-modified-ratios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Applying the Chi-Square Test to Modified Ratios
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#genetic-background-effects" class="md-nav__link">
+    <span class="md-ellipsis">
+      Genetic Background Effects
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Genetic Background Effects">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-background-matters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why Background Matters
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modifier-genes-and-genetic-context" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modifier Genes and Genetic Context
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Modifier Genes and Genetic Context">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-genetic-background-effects-visualization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Genetic Background Effects Visualization
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#putting-it-all-together-from-ratios-to-pathways" class="md-nav__link">
+    <span class="md-ellipsis">
+      Putting It All Together: From Ratios to Pathways
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-concepts-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Concepts Summary
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-genome-structure-chromatin-organization/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4. Genome Structure and Chromatin Organization
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-genetic-variation-genome-diversity/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5. Genetic Variation and Genome Diversity
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-gene-duplication-rearrangements-evolution/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6. Gene Duplication, Rearrangements, and Evolution
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07-genetic-mapping-linkage-analysis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7. Genetic Mapping and Linkage Analysis
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08-advanced-mapping-gene-discovery/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    8. Advanced Mapping and Gene Discovery
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09-quantitative-genetics-heritability/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    9. Quantitative Genetics and Heritability
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10-gwas-population-genetics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    10. GWAS and Population Genetics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11-gene-regulation-regulatory-networks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    11. Gene Regulation and Regulatory Networks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12-post-transcriptional-regulation-cell-identity/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    12. Post-Transcriptional Regulation and Cell Identity
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../13-experimental-genetics-model-organisms/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    13. Experimental Genetics and Model Organisms
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../14-genomics-sequencing-bioinformatics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    14. Genomics, Sequencing, and Bioinformatics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../15-human-genetics-clinical-applications/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    15. Human Genetics and Clinical Applications
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../16-cancer-genetics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    16. Cancer Genetics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../17-ethics-society-genetic-policy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    17. Ethics, Society, and Genetic Policy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../18-frontier-topics-emerging-technologies/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    18. Frontier Topics and Emerging Technologies
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../learning-graph/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Learning Graph
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../sims/graph-viewer/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    MicroSims
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../license/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    License
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contact/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contact
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concepts-covered" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concepts Covered
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#introduction-when-mendels-ratios-break" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction: When Mendel's Ratios Break
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Introduction: When Mendel's Ratios Break">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-standard-dihybrid-ratio-as-a-baseline" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Standard Dihybrid Ratio as a Baseline
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#types-of-epistasis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Types of Epistasis
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Types of Epistasis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#complementary-epistasis-97-ratio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Complementary Epistasis (9:7 Ratio)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#duplicate-epistasis-151-ratio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Duplicate Epistasis (15:1 Ratio)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#suppressor-epistasis-133-ratio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Suppressor Epistasis (13:3 Ratio)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#summary-of-epistatic-ratios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary of Epistatic Ratios
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Summary of Epistatic Ratios">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-epistasis-ratio-calculator" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Epistasis Ratio Calculator
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#epistatic-pathway-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Epistatic Pathway Analysis
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Epistatic Pathway Analysis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#determining-gene-order" class="md-nav__link">
+    <span class="md-ellipsis">
+      Determining Gene Order
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-worked-example-flower-pigment-pathway" class="md-nav__link">
+    <span class="md-ellipsis">
+      A Worked Example: Flower Pigment Pathway
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-complementation-test" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Complementation Test
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Complementation Test">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-logic-of-complementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Logic of Complementation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#complementation-groups" class="md-nav__link">
+    <span class="md-ellipsis">
+      Complementation Groups
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Complementation Groups">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-complementation-test-simulator" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Complementation Test Simulator
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-cis-trans-test-and-allelism" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Cis-Trans Test and Allelism
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Cis-Trans Test and Allelism">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-cis-trans-test" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Cis-Trans Test
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#allelism-and-functional-allelism" class="md-nav__link">
+    <span class="md-ellipsis">
+      Allelism and Functional Allelism
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modified-mendelian-ratios-in-practice" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modified Mendelian Ratios in Practice
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Modified Mendelian Ratios in Practice">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-diagnostic-approach-to-modified-ratios" class="md-nav__link">
+    <span class="md-ellipsis">
+      A Diagnostic Approach to Modified Ratios
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#applying-the-chi-square-test-to-modified-ratios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Applying the Chi-Square Test to Modified Ratios
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#genetic-background-effects" class="md-nav__link">
+    <span class="md-ellipsis">
+      Genetic Background Effects
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Genetic Background Effects">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-background-matters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why Background Matters
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modifier-genes-and-genetic-context" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modifier Genes and Genetic Context
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Modifier Genes and Genetic Context">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-genetic-background-effects-visualization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Genetic Background Effects Visualization
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#putting-it-all-together-from-ratios-to-pathways" class="md-nav__link">
+    <span class="md-ellipsis">
+      Putting It All Together: From Ratios to Pathways
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-concepts-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Concepts Summary
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/dmccreary/genetics/edit/master/docs/chapters/03-epistasis-complementation-modified-ratios/index.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="epistasis-complementation-and-modified-ratios">Epistasis, Complementation, and Modified Ratios</h1>
+<h2 id="summary">Summary</h2>
+<p>This chapter dives deeper into gene interactions that produce unexpected phenotypic ratios, including different forms of epistasis, complementation testing, and the concept of allelism. Students learn to recognize and analyze modified Mendelian ratios and understand how genetic background influences phenotype. After completing this chapter, students will be able to design and interpret complementation tests and predict outcomes of epistatic interactions.</p>
+<h2 id="concepts-covered">Concepts Covered</h2>
+<p>This chapter covers the following 11 concepts from the learning graph:</p>
+<ol>
+<li>Duplicate Epistasis</li>
+<li>Complementary Epistasis</li>
+<li>Complementation Test</li>
+<li>Suppressor Epistasis</li>
+<li>Epistatic Pathway Analysis</li>
+<li>Complementation Group</li>
+<li>Cis-Trans Test</li>
+<li>Allelism</li>
+<li>Functional Allelism</li>
+<li>Modified Mendelian Ratios</li>
+<li>Genetic Background Effects</li>
+</ol>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>This chapter builds on concepts from:</p>
+<ul>
+<li><a href="../01-genetic-inference-probabilistic-reasoning/">Chapter 1: Genetic Inference and Probabilistic Reasoning</a></li>
+</ul>
+<hr />
+<h2 id="introduction-when-mendels-ratios-break">Introduction: When Mendel's Ratios Break</h2>
+<div class="admonition mascot-welcome">
+<p class="admonition-title">Welcome to Gene Interactions!</p>
+<p><img src="../../img/mascot/welcome.png" class="mascot-admonition-img" alt="Dottie waving welcome">
+In the first two chapters, we learned to analyze single-gene traits and trace them through pedigrees. Now we confront a fascinating reality: genes do not act alone. Let's look at the evidence!</p>
+</div>
+<p>Mendel's experiments with pea plants produced beautifully clean ratios — 3:1 for monohybrid crosses, 9:3:3:1 for dihybrid crosses — because he studied traits controlled by single genes with complete dominance and no gene interactions. Real organisms are rarely so cooperative. When two or more genes contribute to the same phenotype, the standard Mendelian ratios are modified in systematic ways that reveal how genes interact within biochemical pathways.</p>
+<p>These <strong>modified Mendelian ratios</strong> are not violations of Mendel's laws. The alleles still segregate and assort independently. What changes is how phenotypic classes are <em>grouped</em> because of interactions between gene products. Recognizing the specific modified ratio tells you what type of gene interaction is occurring — much like a diagnostic fingerprint.</p>
+<h3 id="the-standard-dihybrid-ratio-as-a-baseline">The Standard Dihybrid Ratio as a Baseline</h3>
+<p>Before examining modified ratios, recall the standard 9:3:3:1 dihybrid ratio from a cross between two double heterozygotes (AaBb × AaBb). This ratio arises when:</p>
+<ul>
+<li>Both genes show complete dominance</li>
+<li>The genes assort independently (unlinked)</li>
+<li>Each gene contributes to a distinct aspect of the phenotype</li>
+<li>All 16 genotypic combinations are equally viable</li>
+</ul>
+<p>The 16 possible gametic combinations produce four phenotypic classes in a 9:3:3:1 ratio.</p>
+<table>
+<thead>
+<tr>
+<th>Genotypic Class</th>
+<th>Phenotype (standard)</th>
+<th style="text-align: center;">Frequency</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A_B_ (9/16)</td>
+<td>Dominant at both loci</td>
+<td style="text-align: center;">9</td>
+</tr>
+<tr>
+<td>A_bb (3/16)</td>
+<td>Dominant at A, recessive at B</td>
+<td style="text-align: center;">3</td>
+</tr>
+<tr>
+<td>aaB_ (3/16)</td>
+<td>Recessive at A, dominant at B</td>
+<td style="text-align: center;">3</td>
+</tr>
+<tr>
+<td>aabb (1/16)</td>
+<td>Recessive at both loci</td>
+<td style="text-align: center;">1</td>
+</tr>
+</tbody>
+</table>
+<p>When genes interact epistatically, some of these four classes become phenotypically indistinguishable, merging categories and producing modified ratios. The specific way classes merge reveals the type of epistasis.</p>
+<h2 id="types-of-epistasis">Types of Epistasis</h2>
+<p>In Chapter 1, we introduced <strong>epistasis</strong> as one gene masking or modifying the effect of another. Now we examine three specific forms of epistasis, each producing a characteristic modified ratio.</p>
+<h3 id="complementary-epistasis-97-ratio">Complementary Epistasis (9:7 Ratio)</h3>
+<p><strong>Complementary epistasis</strong> occurs when functional alleles at <em>both</em> loci are required to produce a phenotype. If either gene is homozygous recessive, the pathway is blocked, and the organism shows the mutant phenotype. This merges the three classes that lack a dominant allele at one or both loci (A_bb, aaB_, and aabb) into a single "mutant" class.</p>
+<p>A classic example is flower color in sweet peas, studied by William Bateson and Reginald Punnett in 1906. Purple flower color requires functional enzymes encoded by two different genes. Gene A produces an enzyme that converts a colorless precursor into a colorless intermediate, and gene B produces an enzyme that converts the intermediate into purple pigment. If either enzyme is missing (homozygous recessive at either locus), no purple pigment is produced.</p>
+<p>The biochemical pathway looks like this:</p>
+<p>Colorless Precursor <strong>→</strong> <em>(Gene A enzyme)</em> <strong>→</strong> Colorless Intermediate <strong>→</strong> <em>(Gene B enzyme)</em> <strong>→</strong> Purple Pigment</p>
+<p>When both genes have at least one dominant allele (A_B_), the pathway is complete and the flower is purple. All other genotypic classes produce white flowers:</p>
+<table>
+<thead>
+<tr>
+<th>Modified Class</th>
+<th>Genotypes</th>
+<th>Phenotype</th>
+<th style="text-align: center;">Frequency</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Both functional</td>
+<td>A_B_</td>
+<td>Purple</td>
+<td style="text-align: center;">9</td>
+</tr>
+<tr>
+<td>One or both non-functional</td>
+<td>A_bb + aaB_ + aabb</td>
+<td>White</td>
+<td style="text-align: center;">3 + 3 + 1 = 7</td>
+</tr>
+</tbody>
+</table>
+<p>The resulting <strong>9:7 ratio</strong> is the hallmark of complementary epistasis.</p>
+<div class="admonition mascot-thinking">
+<p class="admonition-title">Pathway Logic</p>
+<p><img src="../../img/mascot/thinking.png" class="mascot-admonition-img" alt="Dottie thinking">
+Think of complementary epistasis as a circuit with two switches in series. Both switches must be ON (dominant allele present) for current (pigment) to flow. If either switch is OFF, no current flows — and it does not matter which switch is the problem.</p>
+</div>
+<h3 id="duplicate-epistasis-151-ratio">Duplicate Epistasis (15:1 Ratio)</h3>
+<p><strong>Duplicate epistasis</strong> occurs when either gene, acting alone, can produce the phenotype. The mutant phenotype appears <em>only</em> when both genes are homozygous recessive. This is the opposite logic of complementary epistasis: instead of both genes being required, either one is sufficient.</p>
+<p>Kernel color in wheat provides a classic example. Two unlinked genes each contribute to red pigment production. Having at least one dominant allele at <em>either</em> locus produces red kernels. Only the double homozygous recessive (aabb) produces white kernels.</p>
+<table>
+<thead>
+<tr>
+<th>Modified Class</th>
+<th>Genotypes</th>
+<th>Phenotype</th>
+<th style="text-align: center;">Frequency</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>At least one dominant allele anywhere</td>
+<td>A_B_ + A_bb + aaB_</td>
+<td>Red</td>
+<td style="text-align: center;">9 + 3 + 3 = 15</td>
+</tr>
+<tr>
+<td>Both loci homozygous recessive</td>
+<td>aabb</td>
+<td>White</td>
+<td style="text-align: center;">1</td>
+</tr>
+</tbody>
+</table>
+<p>The resulting <strong>15:1 ratio</strong> indicates duplicate epistasis, where the two genes have redundant functions.</p>
+<p>Think of this as a circuit with two switches in parallel. Either switch being ON is sufficient for current to flow. Only when both switches are OFF does the circuit fail.</p>
+<h3 id="suppressor-epistasis-133-ratio">Suppressor Epistasis (13:3 Ratio)</h3>
+<p><strong>Suppressor epistasis</strong> occurs when a dominant allele at one locus <em>suppresses</em> the phenotypic expression of a dominant allele at a second locus. The suppressor gene does not produce a phenotype on its own — it only modifies the expression of the other gene.</p>
+<p>Consider two genes where gene A produces a visible phenotype (e.g., pigment) and gene B, when dominant, suppresses the effect of gene A. The cross AaBb × AaBb yields:</p>
+<table>
+<thead>
+<tr>
+<th>Modified Class</th>
+<th>Genotypes</th>
+<th>Phenotype</th>
+<th style="text-align: center;">Frequency</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A present but suppressed by B</td>
+<td>A_B_</td>
+<td>No pigment (suppressed)</td>
+<td style="text-align: center;">9</td>
+</tr>
+<tr>
+<td>No A to produce pigment</td>
+<td>aaB_</td>
+<td>No pigment</td>
+<td style="text-align: center;">3</td>
+</tr>
+<tr>
+<td>No A, no suppressor</td>
+<td>aabb</td>
+<td>No pigment</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr>
+<td>A present, no suppressor</td>
+<td>A_bb</td>
+<td>Pigmented</td>
+<td style="text-align: center;">3</td>
+</tr>
+</tbody>
+</table>
+<p>This yields a <strong>13:3 ratio</strong> — 13 unpigmented to 3 pigmented. The only class showing pigment has a dominant A allele but lacks the suppressor (A_bb).</p>
+<p>Suppressor mutations are particularly important in genetic research because they identify genes that interact in the same pathway. If a mutation in gene A causes a defect, and a mutation in gene B restores normal function, then genes A and B are likely part of the same biological process.</p>
+<h3 id="summary-of-epistatic-ratios">Summary of Epistatic Ratios</h3>
+<p>The following table summarizes the major types of epistasis and their characteristic ratios. All are modifications of the baseline 9:3:3:1 dihybrid ratio.</p>
+<table>
+<thead>
+<tr>
+<th>Type of Epistasis</th>
+<th style="text-align: center;">Modified Ratio</th>
+<th>Logic</th>
+<th>Which Classes Merge</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Complementary</td>
+<td style="text-align: center;">9:7</td>
+<td>Both genes required</td>
+<td>3+3+1 → 7</td>
+</tr>
+<tr>
+<td>Duplicate</td>
+<td style="text-align: center;">15:1</td>
+<td>Either gene sufficient</td>
+<td>9+3+3 → 15</td>
+</tr>
+<tr>
+<td>Suppressor</td>
+<td style="text-align: center;">13:3</td>
+<td>One gene suppresses the other</td>
+<td>9+3+1 → 13</td>
+</tr>
+<tr>
+<td>Recessive epistasis</td>
+<td style="text-align: center;">9:3:4</td>
+<td>Recessive genotype at one locus masks other</td>
+<td>3+1 → 4</td>
+</tr>
+<tr>
+<td>Dominant epistasis</td>
+<td style="text-align: center;">12:3:1</td>
+<td>Dominant allele at one locus masks other</td>
+<td>9+3 → 12</td>
+</tr>
+</tbody>
+</table>
+<h4 id="diagram-epistasis-ratio-calculator">Diagram: Epistasis Ratio Calculator</h4>
+<iframe src="../../sims/epistasis-ratio-calculator/main.html" width="100%" height="500px" scrolling="no"></iframe>
+<details>
+<summary>Epistasis Ratio Calculator</summary>
+<p>Type: Interactive simulation
+<strong>sim-id:</strong> epistasis-ratio-calculator<br/>
+<strong>Library:</strong> p5.js<br/>
+<strong>Status:</strong> Specified</p>
+<p>An interactive tool where students select a type of epistasis from a dropdown menu. The simulation displays the 4×4 Punnett square for a dihybrid cross (AaBb × AaBb), color-coding the 16 cells according to which phenotypic class they belong to under the selected epistasis model. The merged classes are visually highlighted, and the resulting ratio is displayed prominently. Students can also enter observed data and perform a chi-square test against the predicted ratio.</p>
+</details>
+<h2 id="epistatic-pathway-analysis">Epistatic Pathway Analysis</h2>
+<p><strong>Epistatic pathway analysis</strong> uses the pattern of gene interactions to deduce the order of gene products in a biochemical pathway. The key insight is that a gene whose product acts earlier in a pathway is typically epistatic to a gene whose product acts later.</p>
+<h3 id="determining-gene-order">Determining Gene Order</h3>
+<p>Consider a pigment biosynthesis pathway. If mutations in gene A and gene B both prevent pigment production, we can determine which gene acts first by examining the double mutant. If the double mutant (aabb) has the same phenotype as the gene A single mutant (aaBB), then gene A is epistatic to gene B, suggesting gene A acts earlier in the pathway. The product of gene A must be present before gene B's product can have any effect.</p>
+<p>A systematic approach to pathway analysis involves the following steps:</p>
+<ol>
+<li><strong>Identify all mutant phenotypes.</strong> Cross mutant strains with wild-type and with each other to catalog the phenotypic classes.</li>
+<li><strong>Construct double mutants.</strong> Create strains that are homozygous mutant at both loci.</li>
+<li><strong>Compare the double mutant phenotype</strong> to each single mutant. The double mutant usually resembles the mutant that blocks the earlier step.</li>
+<li><strong>Order the pathway.</strong> Place gene products in sequence based on epistatic relationships.</li>
+</ol>
+<div class="admonition mascot-tip">
+<p class="admonition-title">Thinking in Pathways</p>
+<p><img src="../../img/mascot/tip.png" class="mascot-admonition-img" alt="Dottie offering a tip">
+When analyzing epistasis, always think about what each gene product <em>does</em> in the pathway. The gene that blocks the pathway earliest wins the epistatic interaction — downstream genes become irrelevant because their substrates are never produced.</p>
+</div>
+<h3 id="a-worked-example-flower-pigment-pathway">A Worked Example: Flower Pigment Pathway</h3>
+<p>Suppose three genes (A, B, and C) are involved in flower pigment production. Wild-type flowers are blue. Mutant phenotypes are:</p>
+<ul>
+<li>Gene A mutant (aa): white flowers</li>
+<li>Gene B mutant (bb): yellow flowers</li>
+<li>Gene C mutant (cc): red flowers</li>
+</ul>
+<p>Double mutant analysis reveals:</p>
+<ul>
+<li>aabb double mutant: white flowers (same as gene A mutant)</li>
+<li>aaccg double mutant: white flowers (same as gene A mutant)</li>
+<li>bbcc double mutant: yellow flowers (same as gene B mutant)</li>
+</ul>
+<p>Since the aa phenotype is epistatic to both bb and cc, gene A acts earliest. Since bb is epistatic to cc, gene B acts before gene C. The pathway order is:</p>
+<p>White Precursor <strong>→</strong> <em>(Gene A)</em> <strong>→</strong> Yellow Intermediate <strong>→</strong> <em>(Gene B)</em> <strong>→</strong> Red Intermediate <strong>→</strong> <em>(Gene C)</em> <strong>→</strong> Blue Pigment</p>
+<p>When gene A is non-functional, no yellow intermediate is produced, so neither gene B nor C can act — the flower remains white. When gene B is non-functional, the pathway stalls at the yellow intermediate regardless of gene C status.</p>
+<h2 id="the-complementation-test">The Complementation Test</h2>
+<p>While epistasis tells us about gene interactions, the <strong>complementation test</strong> answers a more fundamental question: are two mutations in the <em>same</em> gene or in <em>different</em> genes? This is one of the most important experimental tools in classical genetics.</p>
+<h3 id="the-logic-of-complementation">The Logic of Complementation</h3>
+<p>The complementation test works by crossing two organisms that each carry a recessive mutation producing similar phenotypes and examining the F1 offspring.</p>
+<p><strong>If the mutations are in different genes</strong>, each parent supplies a wild-type copy of the gene that is mutant in the other parent. The F1 offspring are heterozygous at both loci and phenotypically wild-type. We say the mutations <strong>complement</strong> each other.</p>
+<p>Consider two strains of flies, both with white eyes:</p>
+<ul>
+<li>Strain 1 genotype: aaBB (mutant at gene A, wild-type at gene B)</li>
+<li>Strain 2 genotype: AAbb (wild-type at gene A, mutant at gene B)</li>
+<li>F1 genotype: AaBb (heterozygous at both → wild-type phenotype)</li>
+</ul>
+<p><strong>If the mutations are in the same gene</strong>, neither parent can supply a wild-type copy of the mutant gene. The F1 offspring carry two defective copies (one from each parent) and show the mutant phenotype. We say the mutations <strong>fail to complement</strong>.</p>
+<ul>
+<li>Strain 1 genotype: a₁a₁ (one mutation in gene A)</li>
+<li>Strain 2 genotype: a₂a₂ (different mutation in gene A)</li>
+<li>F1 genotype: a₁a₂ (two defective copies → mutant phenotype)</li>
+</ul>
+<h3 id="complementation-groups">Complementation Groups</h3>
+<p>A <strong>complementation group</strong> is a set of mutations that all fail to complement each other. Mutations within the same complementation group are in the same gene. The number of complementation groups identified in a screen reveals the minimum number of genes involved in the process being studied.</p>
+<p>For example, if a geneticist isolates 20 independent mutations that all cause the same phenotype (say, inability to synthesize a particular amino acid), and complementation testing reveals that these mutations fall into 4 complementation groups, then at least 4 different genes are required for the biosynthetic pathway.</p>
+<table>
+<thead>
+<tr>
+<th>Mutation Pair</th>
+<th>F1 Phenotype</th>
+<th>Interpretation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>mut1 × mut2</td>
+<td>Wild-type</td>
+<td>Different genes (complement)</td>
+</tr>
+<tr>
+<td>mut1 × mut3</td>
+<td>Mutant</td>
+<td>Same gene (fail to complement)</td>
+</tr>
+<tr>
+<td>mut2 × mut3</td>
+<td>Wild-type</td>
+<td>Different genes (complement)</td>
+</tr>
+</tbody>
+</table>
+<p>In this example, mutations 1 and 3 are in the same complementation group (same gene), while mutation 2 is in a different complementation group (different gene).</p>
+<h4 id="diagram-complementation-test-simulator">Diagram: Complementation Test Simulator</h4>
+<iframe src="../../sims/complementation-test-sim/main.html" width="100%" height="500px" scrolling="no"></iframe>
+<details>
+<summary>Complementation Test Simulator</summary>
+<p>Type: Interactive simulation
+<strong>sim-id:</strong> complementation-test-sim<br/>
+<strong>Library:</strong> p5.js<br/>
+<strong>Status:</strong> Specified</p>
+<p>An interactive tool where students select pairs of mutations to cross. The simulation shows the two parental genotypes as colored gene diagrams, then animates the cross to produce F1 offspring. The F1 phenotype (wild-type or mutant) is displayed, and the student must classify whether the mutations complement or fail to complement. After testing all pairs, the simulation groups the mutations into complementation groups and displays the results as a matrix.</p>
+</details>
+<h2 id="the-cis-trans-test-and-allelism">The Cis-Trans Test and Allelism</h2>
+<h3 id="the-cis-trans-test">The Cis-Trans Test</h3>
+<p>The <strong>cis-trans test</strong> is another name for the complementation test, but the name itself reveals important logic. The test compares two configurations of mutant alleles.</p>
+<p>In the <strong>trans configuration</strong> (also called the repulsion configuration), the two mutations are on different chromosomes — one from each parent. This is the standard complementation test:</p>
+<div class="arithmatex">\[
+\text{Trans: } \frac{a_1 \quad +}{+ \quad a_2}
+\]</div>
+<p>Here, the notation shows that one chromosome carries mutation <span class="arithmatex">\( a_1 \)</span> and a wild-type copy at the second site, while the other chromosome carries a wild-type copy at the first site and mutation <span class="arithmatex">\( a_2 \)</span>. If the mutations are in different genes, this arrangement produces a wild-type phenotype.</p>
+<p>In the <strong>cis configuration</strong> (also called the coupling configuration), both mutations are on the same chromosome:</p>
+<div class="arithmatex">\[
+\text{Cis: } \frac{a_1 \quad a_2}{+ \quad +}
+\]</div>
+<p>The cis configuration always produces a wild-type phenotype (the other chromosome provides functional copies of both genes), regardless of whether the mutations are in the same or different genes.</p>
+<p>The key comparison is between cis and trans. If the trans configuration produces wild-type phenotype, the mutations complement and are in different genes (<strong>allelism</strong> is ruled out). If the trans configuration produces a mutant phenotype while the cis configuration is wild-type, the mutations fail to complement and are allelic.</p>
+<h3 id="allelism-and-functional-allelism">Allelism and Functional Allelism</h3>
+<p><strong>Allelism</strong> refers to the condition in which two mutations are in the same gene — they are alleles of each other. Mutations that fail to complement are allelic.</p>
+<p><strong>Functional allelism</strong> is a more nuanced concept that accounts for the functional domains within a gene. Two mutations in the same gene might sometimes complement each other if they affect different functional domains of the protein and if the protein functions as a multimer (multiple copies assembled together). This is called <strong>intragenic complementation</strong> and can complicate the simple interpretation of complementation tests.</p>
+<p>For example, if a protein functions as a dimer and each monomer has two functional domains (X and Y), a mutation in domain X of one copy might be compensated by a wild-type domain X in the other copy, and vice versa for domain Y. The heterodimer formed from two differently mutant monomers could retain partial function.</p>
+<div class="admonition mascot-warning">
+<p class="admonition-title">A Complementation Pitfall</p>
+<p><img src="../../img/mascot/warning.png" class="mascot-admonition-img" alt="Dottie with a warning">
+Intragenic complementation can make two alleles of the same gene appear to complement each other, falsely suggesting they are in different genes. This is rare but important to recognize. If your complementation groups do not make biological sense, consider the possibility of intragenic complementation.</p>
+</div>
+<h2 id="modified-mendelian-ratios-in-practice">Modified Mendelian Ratios in Practice</h2>
+<p>We have now seen that <strong>modified Mendelian ratios</strong> arise from epistatic interactions, lethal alleles, and other gene interactions. Recognizing the specific ratio is diagnostic for the type of interaction occurring. Here we compile the major modified ratios and their genetic interpretations.</p>
+<h3 id="a-diagnostic-approach-to-modified-ratios">A Diagnostic Approach to Modified Ratios</h3>
+<p>When you observe offspring ratios that deviate from 9:3:3:1, follow these steps:</p>
+<ol>
+<li><strong>Check the total.</strong> Do the numbers add to 16 parts? Ratios like 9:7, 15:1, 12:3:1, and 13:3 all total 16, confirming a two-gene model.</li>
+<li><strong>Identify which classes are merged.</strong> Compare to the standard 9:3:3:1 and determine which phenotypic classes have been combined.</li>
+<li><strong>Infer the biological mechanism.</strong> The pattern of merging reveals the gene interaction.</li>
+<li><strong>Test with chi-square.</strong> Use the chi-square goodness of fit test (Chapter 1) to determine whether your data statistically fit the proposed ratio.</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Observed Ratio</th>
+<th>Merged Classes</th>
+<th>Biological Interpretation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">9:3:3:1</td>
+<td>None</td>
+<td>Independent genes, complete dominance</td>
+</tr>
+<tr>
+<td style="text-align: center;">9:7</td>
+<td>3+3+1</td>
+<td>Both genes required (complementary)</td>
+</tr>
+<tr>
+<td style="text-align: center;">9:3:4</td>
+<td>3+1</td>
+<td>Recessive epistasis at one locus</td>
+</tr>
+<tr>
+<td style="text-align: center;">12:3:1</td>
+<td>9+3</td>
+<td>Dominant epistasis at one locus</td>
+</tr>
+<tr>
+<td style="text-align: center;">15:1</td>
+<td>9+3+3</td>
+<td>Either gene sufficient (duplicate)</td>
+</tr>
+<tr>
+<td style="text-align: center;">13:3</td>
+<td>9+3+1</td>
+<td>Suppressor epistasis</td>
+</tr>
+<tr>
+<td style="text-align: center;">9:6:1</td>
+<td>Two 3-classes merge</td>
+<td>Duplicate interaction with distinct double mutant</td>
+</tr>
+</tbody>
+</table>
+<h3 id="applying-the-chi-square-test-to-modified-ratios">Applying the Chi-Square Test to Modified Ratios</h3>
+<p>Suppose a dihybrid cross produces 195 purple flowers and 160 white flowers from a total of 355 plants. We want to test whether this fits a 9:7 complementary epistasis model.</p>
+<p>Expected values for 9:7 from 355 total plants:</p>
+<ul>
+<li>Purple: <span class="arithmatex">\( 355 \times 9/16 = 199.7 \)</span></li>
+<li>White: <span class="arithmatex">\( 355 \times 7/16 = 155.3 \)</span></li>
+</ul>
+<div class="arithmatex">\[
+\chi^2 = \frac{(195 - 199.7)^2}{199.7} + \frac{(160 - 155.3)^2}{155.3} = \frac{22.09}{199.7} + \frac{22.09}{155.3} = 0.111 + 0.142 = 0.253
+\]</div>
+<p>With 1 degree of freedom, the critical value at p = 0.05 is 3.84. Our calculated <span class="arithmatex">\( \chi^2 = 0.253 \)</span> is well below this, so we fail to reject the null hypothesis. The data are consistent with a 9:7 ratio, supporting complementary epistasis.</p>
+<h2 id="genetic-background-effects">Genetic Background Effects</h2>
+<p><strong>Genetic background effects</strong> describe the phenomenon in which the same mutation produces different phenotypes in different genetic backgrounds — that is, when the rest of the genome modifies the expression of a particular gene.</p>
+<h3 id="why-background-matters">Why Background Matters</h3>
+<p>Every organism carries thousands of genetic variants across its genome. These variants include polymorphisms in modifier genes, regulatory sequences, and interacting pathway components. When a specific mutation is studied in different inbred strains of mice, for example, the phenotype can range from mild to lethal depending on which strain carries the mutation.</p>
+<p>Genetic background effects have profound implications for several areas of genetics.</p>
+<ul>
+<li><strong>Reproducibility of research:</strong> A finding in one laboratory strain may not replicate in another because the strains differ in genetic background</li>
+<li><strong>Clinical genetics:</strong> The same disease-causing mutation can produce dramatically different symptoms in different families because of differences in modifier genes</li>
+<li><strong>Drug response:</strong> Pharmacogenomic variation — differences in genes that metabolize drugs — means that the same drug can be therapeutic in one patient and toxic in another</li>
+</ul>
+<h3 id="modifier-genes-and-genetic-context">Modifier Genes and Genetic Context</h3>
+<p>Modifier genes do not cause a phenotype on their own, but they alter the severity or presentation of a phenotype caused by another gene. Identifying modifier genes is challenging because their effects are typically subtle and depend on the primary mutation being present.</p>
+<p>A well-studied example involves the <em>Min</em> (multiple intestinal neoplasia) mutation in mice. Mice carrying the <em>Min</em> allele of the <em>Apc</em> gene develop intestinal polyps, but the number of polyps varies dramatically depending on the strain background. The <em>Mom1</em> (modifier of Min) locus was identified as a major modifier — mice carrying certain <em>Mom1</em> alleles develop fewer polyps, while others develop many more.</p>
+<h4 id="diagram-genetic-background-effects-visualization">Diagram: Genetic Background Effects Visualization</h4>
+<iframe src="../../sims/genetic-background-effects/main.html" width="100%" height="500px" scrolling="no"></iframe>
+<details>
+<summary>Genetic Background Effects Visualization</summary>
+<p>Type: Interactive simulation
+<strong>sim-id:</strong> genetic-background-effects<br/>
+<strong>Library:</strong> p5.js<br/>
+<strong>Status:</strong> Specified</p>
+<p>An interactive visualization showing how the same primary mutation produces different phenotypic outcomes in different genetic backgrounds. The user selects a primary mutation from a dropdown, then adjusts sliders representing 3 modifier genes (each with enhancer/neutral/suppressor settings). The resulting phenotype is displayed as a severity meter. The simulation demonstrates that identical primary mutations can range from mild to severe depending on modifier gene configuration. A "randomize backgrounds" button shows how variable the outcomes can be.</p>
+</details>
+<h2 id="putting-it-all-together-from-ratios-to-pathways">Putting It All Together: From Ratios to Pathways</h2>
+<p>The tools in this chapter form a powerful analytical pipeline for dissecting gene interactions.</p>
+<ol>
+<li><strong>Observe the phenotypic ratio</strong> from a dihybrid cross and identify which modified ratio best fits (using chi-square testing from Chapter 1)</li>
+<li><strong>Infer the type of epistasis</strong> from the modified ratio</li>
+<li><strong>Use complementation tests</strong> to determine whether different mutations are in the same or different genes</li>
+<li><strong>Apply pathway analysis</strong> to order gene products in a biochemical sequence</li>
+<li><strong>Consider genetic background effects</strong> when results vary between experimental contexts</li>
+</ol>
+<p>This pipeline represents the classical genetic approach to understanding gene function — an approach that remains powerful even in the age of genomics. Molecular tools like DNA sequencing can identify mutations, but genetic analysis through crosses, complementation tests, and epistasis studies reveals how genes work <em>together</em> to build an organism.</p>
+<h2 id="key-concepts-summary">Key Concepts Summary</h2>
+<table>
+<thead>
+<tr>
+<th>Concept</th>
+<th>Definition</th>
+<th>Diagnostic Feature</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Complementary epistasis</td>
+<td>Both genes required for phenotype</td>
+<td>9:7 ratio</td>
+</tr>
+<tr>
+<td>Duplicate epistasis</td>
+<td>Either gene sufficient for phenotype</td>
+<td>15:1 ratio</td>
+</tr>
+<tr>
+<td>Suppressor epistasis</td>
+<td>One gene suppresses the other</td>
+<td>13:3 ratio</td>
+</tr>
+<tr>
+<td>Epistatic pathway analysis</td>
+<td>Using epistasis to order genes in a pathway</td>
+<td>Double mutant resembles earlier-acting mutant</td>
+</tr>
+<tr>
+<td>Complementation test</td>
+<td>Cross to determine if mutations are in same/different genes</td>
+<td>Wild-type F1 = different genes</td>
+</tr>
+<tr>
+<td>Complementation group</td>
+<td>Set of mutations that fail to complement</td>
+<td>Equals one gene</td>
+</tr>
+<tr>
+<td>Cis-trans test</td>
+<td>Comparison of cis and trans configurations</td>
+<td>Trans mutant = same gene</td>
+</tr>
+<tr>
+<td>Allelism</td>
+<td>Two mutations in the same gene</td>
+<td>Fail to complement</td>
+</tr>
+<tr>
+<td>Functional allelism</td>
+<td>Alleles that can partially complement via intragenic complementation</td>
+<td>Rare; confounds simple complementation</td>
+</tr>
+<tr>
+<td>Modified Mendelian ratios</td>
+<td>Altered dihybrid ratios from gene interactions</td>
+<td>Reveal type of epistasis</td>
+</tr>
+<tr>
+<td>Genetic background effects</td>
+<td>Same genotype, different phenotype in different backgrounds</td>
+<td>Modifier genes, environment</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition mascot-celebration">
+<p class="admonition-title">Chapter Complete!</p>
+<p><img src="../../img/mascot/celebration.png" class="mascot-admonition-img" alt="Dottie celebrating">
+Brilliant work, researchers! You can now decode the gene interactions hidden behind modified ratios and use complementation tests to determine whether mutations are in the same gene or different genes. These classical tools remain essential even as we move into the genomic era. Time to cross some ideas — and some organisms — in the chapters ahead!</p>
+</div>
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../02-pedigree-analysis-inheritance-patterns/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 2. Pedigree Analysis and Inheritance Patterns">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                2. Pedigree Analysis and Inheritance Patterns
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../04-genome-structure-chromatin-organization/" class="md-footer__link md-footer__link--next" aria-label="Next: 4. Genome Structure and Chromatin Organization">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                4. Genome Structure and Chromatin Organization
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 Dan McCreary. Licensed under <a href="license/">CC BY-NC-SA 4.0</a> for non-commercial use.
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "navigation.expand", "navigation.path", "navigation.prune", "navigation.indexes", "toc.follow", "navigation.top", "navigation.footer", "content.action.edit"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+        <script src="../../js/extra.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-chtml.js"></script>
+      
+    
+  </body>
+</html>

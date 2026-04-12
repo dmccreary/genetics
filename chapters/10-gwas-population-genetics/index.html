@@ -1,0 +1,2275 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Population genetics fundamentals integrated with genome-wide association studies, covering Hardy-Weinberg equilibrium, selection, drift, gene flow, GWAS methodology, and polygenic risk scores.">
+      
+      
+        <meta name="author" content="Dan McCreary">
+      
+      
+        <link rel="canonical" href="https://dmccreary.github.io/genetics/chapters/10-gwas-population-genetics/">
+      
+      
+        <link rel="prev" href="../09-quantitative-genetics-heritability/">
+      
+      
+        <link rel="next" href="../11-gene-regulation-regulatory-networks/">
+      
+      
+      <link rel="icon" href="../../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.43">
+    
+    
+      
+        <title>GWAS and Population Genetics - Genetics</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.0253249f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+      <link rel="stylesheet" href="../../css/mascot.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-HJJLWQWVSL"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-HJJLWQWVSL",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-HJJLWQWVSL",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+      
+        <meta  property="og:type"  content="website" >
+      
+        <meta  property="og:title"  content="GWAS and Population Genetics - Genetics" >
+      
+        <meta  property="og:description"  content="Population genetics fundamentals integrated with genome-wide association studies, covering Hardy-Weinberg equilibrium, selection, drift, gene flow, GWAS methodology, and polygenic risk scores." >
+      
+        <meta  property="og:image"  content="https://dmccreary.github.io/genetics/assets/images/social/chapters/10-gwas-population-genetics/index.png" >
+      
+        <meta  property="og:image:type"  content="image/png" >
+      
+        <meta  property="og:image:width"  content="1200" >
+      
+        <meta  property="og:image:height"  content="630" >
+      
+        <meta  property="og:url"  content="https://dmccreary.github.io/genetics/chapters/10-gwas-population-genetics/" >
+      
+        <meta  name="twitter:card"  content="summary_large_image" >
+      
+        <meta  name="twitter:title"  content="GWAS and Population Genetics - Genetics" >
+      
+        <meta  name="twitter:description"  content="Population genetics fundamentals integrated with genome-wide association studies, covering Hardy-Weinberg equilibrium, selection, drift, gene flow, GWAS methodology, and polygenic risk scores." >
+      
+        <meta  name="twitter:image"  content="https://dmccreary.github.io/genetics/assets/images/social/chapters/10-gwas-population-genetics/index.png" >
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="amber" data-md-color-accent="deep-orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#gwas-and-population-genetics" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Genetics" class="md-header__button md-logo" aria-label="Genetics" data-md-component="logo">
+      
+  <img src="../../img/mascot/neutral.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Genetics
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              GWAS and Population Genetics
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/dmccreary/genetics" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Genetics" class="md-nav__button md-logo" aria-label="Genetics" data-md-component="logo">
+      
+  <img src="../../img/mascot/neutral.png" alt="logo">
+
+    </a>
+    Genetics
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/dmccreary/genetics" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About This Course
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course-description/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Course Description
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Chapters
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Chapters
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-genetic-inference-probabilistic-reasoning/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1. Genetic Inference and Probabilistic Reasoning
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-pedigree-analysis-inheritance-patterns/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2. Pedigree Analysis and Inheritance Patterns
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-epistasis-complementation-modified-ratios/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3. Epistasis, Complementation, and Modified Ratios
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-genome-structure-chromatin-organization/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4. Genome Structure and Chromatin Organization
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-genetic-variation-genome-diversity/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5. Genetic Variation and Genome Diversity
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-gene-duplication-rearrangements-evolution/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6. Gene Duplication, Rearrangements, and Evolution
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07-genetic-mapping-linkage-analysis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7. Genetic Mapping and Linkage Analysis
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08-advanced-mapping-gene-discovery/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    8. Advanced Mapping and Gene Discovery
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09-quantitative-genetics-heritability/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    9. Quantitative Genetics and Heritability
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    10. GWAS and Population Genetics
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    10. GWAS and Population Genetics
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concepts-covered" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concepts Covered
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#introduction-thinking-about-populations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction: Thinking About Populations
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-1-foundations-of-population-genetics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part 1: Foundations of Population Genetics
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part 1: Foundations of Population Genetics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#allele-frequency-and-genotype-frequency" class="md-nav__link">
+    <span class="md-ellipsis">
+      Allele Frequency and Genotype Frequency
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hardy-weinberg-equilibrium" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hardy-Weinberg Equilibrium
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hardy-weinberg-assumptions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hardy-Weinberg Assumptions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chi-square-hwe-test" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chi-Square HWE Test
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-2-evolutionary-forces" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part 2: Evolutionary Forces
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part 2: Evolutionary Forces">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#natural-selection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Natural Selection
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Natural Selection">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-selection-types-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Selection Types Comparison
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#balancing-selection-and-heterozygote-advantage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Balancing Selection and Heterozygote Advantage
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#genetic-drift" class="md-nav__link">
+    <span class="md-ellipsis">
+      Genetic Drift
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gene-flow-and-migration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gene Flow and Migration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mutation-rate" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mutation Rate
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#summary-of-evolutionary-forces" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary of Evolutionary Forces
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-3-population-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part 3: Population Structure
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part 3: Population Structure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-population-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Is Population Structure?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fixation-index-f_st" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fixation Index (F_ST)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-4-genome-wide-association-studies-gwas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part 4: Genome-Wide Association Studies (GWAS)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part 4: Genome-Wide Association Studies (GWAS)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-a-gwas" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Is a GWAS?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-manhattan-plot" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Manhattan Plot
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Manhattan Plot">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-interactive-manhattan-plot" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Interactive Manhattan Plot
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#significance-threshold-and-multiple-testing-correction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Significance Threshold and Multiple Testing Correction
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#effect-size-and-odds-ratio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Effect Size and Odds Ratio
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#polygenic-risk-score" class="md-nav__link">
+    <span class="md-ellipsis">
+      Polygenic Risk Score
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Polygenic Risk Score">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-polygenic-risk-score-distribution" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Polygenic Risk Score Distribution
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#missing-heritability" class="md-nav__link">
+    <span class="md-ellipsis">
+      Missing Heritability
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#connecting-the-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Connecting the Concepts
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#review-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Review Questions
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11-gene-regulation-regulatory-networks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    11. Gene Regulation and Regulatory Networks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12-post-transcriptional-regulation-cell-identity/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    12. Post-Transcriptional Regulation and Cell Identity
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../13-experimental-genetics-model-organisms/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    13. Experimental Genetics and Model Organisms
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../14-genomics-sequencing-bioinformatics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    14. Genomics, Sequencing, and Bioinformatics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../15-human-genetics-clinical-applications/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    15. Human Genetics and Clinical Applications
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../16-cancer-genetics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    16. Cancer Genetics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../17-ethics-society-genetic-policy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    17. Ethics, Society, and Genetic Policy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../18-frontier-topics-emerging-technologies/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    18. Frontier Topics and Emerging Technologies
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../learning-graph/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Learning Graph
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../sims/graph-viewer/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    MicroSims
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../license/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    License
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contact/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contact
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concepts-covered" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concepts Covered
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#introduction-thinking-about-populations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction: Thinking About Populations
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-1-foundations-of-population-genetics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part 1: Foundations of Population Genetics
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part 1: Foundations of Population Genetics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#allele-frequency-and-genotype-frequency" class="md-nav__link">
+    <span class="md-ellipsis">
+      Allele Frequency and Genotype Frequency
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hardy-weinberg-equilibrium" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hardy-Weinberg Equilibrium
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hardy-weinberg-assumptions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hardy-Weinberg Assumptions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chi-square-hwe-test" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chi-Square HWE Test
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-2-evolutionary-forces" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part 2: Evolutionary Forces
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part 2: Evolutionary Forces">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#natural-selection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Natural Selection
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Natural Selection">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-selection-types-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Selection Types Comparison
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#balancing-selection-and-heterozygote-advantage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Balancing Selection and Heterozygote Advantage
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#genetic-drift" class="md-nav__link">
+    <span class="md-ellipsis">
+      Genetic Drift
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gene-flow-and-migration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gene Flow and Migration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mutation-rate" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mutation Rate
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#summary-of-evolutionary-forces" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary of Evolutionary Forces
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-3-population-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part 3: Population Structure
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part 3: Population Structure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-population-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Is Population Structure?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fixation-index-f_st" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fixation Index (F_ST)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-4-genome-wide-association-studies-gwas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part 4: Genome-Wide Association Studies (GWAS)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part 4: Genome-Wide Association Studies (GWAS)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-a-gwas" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Is a GWAS?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-manhattan-plot" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Manhattan Plot
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Manhattan Plot">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-interactive-manhattan-plot" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Interactive Manhattan Plot
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#significance-threshold-and-multiple-testing-correction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Significance Threshold and Multiple Testing Correction
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#effect-size-and-odds-ratio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Effect Size and Odds Ratio
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#polygenic-risk-score" class="md-nav__link">
+    <span class="md-ellipsis">
+      Polygenic Risk Score
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Polygenic Risk Score">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-polygenic-risk-score-distribution" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Polygenic Risk Score Distribution
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#missing-heritability" class="md-nav__link">
+    <span class="md-ellipsis">
+      Missing Heritability
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#connecting-the-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Connecting the Concepts
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#review-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Review Questions
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/dmccreary/genetics/edit/master/docs/chapters/10-gwas-population-genetics/index.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="gwas-and-population-genetics">GWAS and Population Genetics</h1>
+<h2 id="summary">Summary</h2>
+<p>This chapter integrates population genetics fundamentals with modern genome-wide association studies. Students learn Hardy-Weinberg equilibrium, natural selection, genetic drift, gene flow, and population structure alongside GWAS methodology, statistical corrections, effect sizes, and polygenic risk scores. After completing this chapter, students will understand how population-level genetic variation connects to trait associations and disease risk.</p>
+<h2 id="concepts-covered">Concepts Covered</h2>
+<p>This chapter covers the following 32 concepts from the learning graph:</p>
+<ol>
+<li>Population Genetics</li>
+<li>Allele Frequency</li>
+<li>Genotype Frequency</li>
+<li>Hardy-Weinberg Equilibrium</li>
+<li>Hardy-Weinberg Assumptions</li>
+<li>Chi-Square HWE Test</li>
+<li>Natural Selection</li>
+<li>Fitness</li>
+<li>Selection Coefficient</li>
+<li>Directional Selection</li>
+<li>Stabilizing Selection</li>
+<li>Disruptive Selection</li>
+<li>Balancing Selection</li>
+<li>Heterozygote Advantage</li>
+<li>Genetic Drift</li>
+<li>Bottleneck Effect</li>
+<li>Founder Effect</li>
+<li>Gene Flow</li>
+<li>Migration</li>
+<li>Mutation Rate</li>
+<li>Population Structure</li>
+<li>Fixation Index</li>
+<li>GWAS</li>
+<li>Manhattan Plot</li>
+<li>Significance Threshold</li>
+<li>Multiple Testing Correction</li>
+<li>Bonferroni Correction</li>
+<li>False Discovery Rate</li>
+<li>Effect Size</li>
+<li>Odds Ratio</li>
+<li>Polygenic Risk Score</li>
+<li>Missing Heritability</li>
+</ol>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>This chapter builds on concepts from:</p>
+<ul>
+<li><a href="../01-genetic-inference-probabilistic-reasoning/">Chapter 1: Genetic Inference and Probabilistic Reasoning</a></li>
+<li><a href="../05-genetic-variation-genome-diversity/">Chapter 5: Genetic Variation and Genome Diversity</a></li>
+<li><a href="../09-quantitative-genetics-heritability/">Chapter 9: Quantitative Genetics and Heritability</a></li>
+</ul>
+<hr />
+<h2 id="introduction-thinking-about-populations">Introduction: Thinking About Populations</h2>
+<div class="admonition mascot-welcome">
+<p class="admonition-title">Welcome, Fellow Investigators!</p>
+<p><img src="../../img/mascot/welcome.png" class="mascot-admonition-img" alt="Dottie waving welcome">
+Welcome to the world of population genetics! In previous chapters we studied how genes behave in families and individuals. Now we zoom out to ask: how does genetic variation behave across entire populations? Let's look at the evidence!</p>
+</div>
+<p>Up to this point in the course, we have focused on inheritance within families, pedigrees, and controlled crosses. <strong>Population genetics</strong> shifts that lens from the family to the population, studying how allele and genotype frequencies change — or remain stable — across generations of organisms. This field provides the mathematical framework for understanding evolution and serves as the statistical foundation for modern genomic medicine.</p>
+<p>Population genetics matters for a practical reason: most human diseases and traits are influenced by many variants scattered across the genome. To find those variants, researchers scan entire populations using a method called a <strong>genome-wide association study (GWAS)</strong>. Understanding population genetics is therefore a prerequisite for interpreting GWAS results correctly.</p>
+<p>This chapter is organized in three major sections. First, we build the population genetics toolkit: allele frequencies, Hardy-Weinberg equilibrium, and the evolutionary forces that change allele frequencies. Second, we examine population structure and how genetic variation is partitioned among groups. Third, we apply all of this to GWAS methodology, statistical corrections, effect sizes, and polygenic risk scores.</p>
+<h2 id="part-1-foundations-of-population-genetics">Part 1: Foundations of Population Genetics</h2>
+<h3 id="allele-frequency-and-genotype-frequency">Allele Frequency and Genotype Frequency</h3>
+<p>A population, in genetic terms, is a group of interbreeding individuals sharing a common gene pool. The most fundamental measurement in population genetics is the <strong>allele frequency</strong> — the proportion of a specific allele among all copies of that gene in the population. If a population of 500 diploid individuals carries a gene with two alleles, <span class="arithmatex">\( A \)</span> and <span class="arithmatex">\( a \)</span>, there are 1,000 total allele copies. The allele frequency of <span class="arithmatex">\( A \)</span> is the count of <span class="arithmatex">\( A \)</span> alleles divided by 1,000.</p>
+<p>The <strong>genotype frequency</strong> is the proportion of individuals with a particular genotype. For a biallelic locus, the three possible genotypes are <span class="arithmatex">\( AA \)</span>, <span class="arithmatex">\( Aa \)</span>, and <span class="arithmatex">\( aa \)</span>. If we let <span class="arithmatex">\( p \)</span> represent the frequency of allele <span class="arithmatex">\( A \)</span> and <span class="arithmatex">\( q \)</span> represent the frequency of allele <span class="arithmatex">\( a \)</span>, then <span class="arithmatex">\( p + q = 1 \)</span>.</p>
+<p>Consider a sample population of 200 individuals:</p>
+<table>
+<thead>
+<tr>
+<th>Genotype</th>
+<th>Count</th>
+<th>Genotype Frequency</th>
+<th>Allele Contribution</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="arithmatex">\( AA \)</span></td>
+<td>90</td>
+<td>0.45</td>
+<td>180 copies of <span class="arithmatex">\( A \)</span></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\( Aa \)</span></td>
+<td>80</td>
+<td>0.40</td>
+<td>80 copies of <span class="arithmatex">\( A \)</span>, 80 copies of <span class="arithmatex">\( a \)</span></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\( aa \)</span></td>
+<td>30</td>
+<td>0.15</td>
+<td>60 copies of <span class="arithmatex">\( a \)</span></td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td><strong>200</strong></td>
+<td><strong>1.00</strong></td>
+<td><strong>260 <span class="arithmatex">\( A \)</span>, 140 <span class="arithmatex">\( a \)</span></strong></td>
+</tr>
+</tbody>
+</table>
+<p>From this table we calculate <span class="arithmatex">\( p = 260/400 = 0.65 \)</span> and <span class="arithmatex">\( q = 140/400 = 0.35 \)</span>.</p>
+<h3 id="hardy-weinberg-equilibrium">Hardy-Weinberg Equilibrium</h3>
+<p>In 1908, mathematician G. H. Hardy and physician Wilhelm Weinberg independently proved that allele frequencies in a population remain constant from generation to generation in the absence of evolutionary forces. This principle is called <strong>Hardy-Weinberg equilibrium (HWE)</strong>. Under HWE, genotype frequencies are predicted by the simple expansion of the binomial:</p>
+<div class="arithmatex">\[
+p^2 + 2pq + q^2 = 1
+\]</div>
+<p>where <span class="arithmatex">\( p^2 \)</span> is the expected frequency of <span class="arithmatex">\( AA \)</span>, <span class="arithmatex">\( 2pq \)</span> is the expected frequency of <span class="arithmatex">\( Aa \)</span>, and <span class="arithmatex">\( q^2 \)</span> is the expected frequency of <span class="arithmatex">\( aa \)</span>.</p>
+<div class="admonition mascot-thinking">
+<p class="admonition-title">Why Does HWE Matter?</p>
+<p><img src="../../img/mascot/thinking.png" class="mascot-admonition-img" alt="Dottie thinking">
+Hardy-Weinberg equilibrium is like the "null hypothesis" of population genetics. We don't expect real populations to be in perfect equilibrium — but when they deviate, that deviation tells us something interesting is happening!</p>
+</div>
+<h3 id="hardy-weinberg-assumptions">Hardy-Weinberg Assumptions</h3>
+<p>The <strong>Hardy-Weinberg assumptions</strong> define the idealized conditions under which equilibrium holds:</p>
+<ol>
+<li><strong>No mutation</strong> — alleles do not change from one form to another.</li>
+<li><strong>Random mating</strong> — individuals pair without regard to genotype.</li>
+<li><strong>No natural selection</strong> — all genotypes have equal survival and reproduction.</li>
+<li><strong>Infinite population size</strong> — no random fluctuations in allele frequency (no genetic drift).</li>
+<li><strong>No gene flow</strong> — no migration of individuals into or out of the population.</li>
+</ol>
+<p>When any of these assumptions is violated, allele frequencies may change over time — and that is evolution. Each violation corresponds to a specific evolutionary force that we will examine below.</p>
+<h3 id="chi-square-hwe-test">Chi-Square HWE Test</h3>
+<p>To determine whether a real population deviates from Hardy-Weinberg equilibrium, we use the <strong>chi-square HWE test</strong>. This goodness-of-fit test compares observed genotype counts to the counts expected under HWE.</p>
+<p>The procedure is straightforward:</p>
+<ol>
+<li>Count the observed genotypes and calculate allele frequencies.</li>
+<li>Use <span class="arithmatex">\( p^2 \)</span>, <span class="arithmatex">\( 2pq \)</span>, and <span class="arithmatex">\( q^2 \)</span> to compute expected genotype counts.</li>
+<li>Calculate the chi-square statistic:</li>
+</ol>
+<div class="arithmatex">\[
+\chi^2 = \sum \frac{(O_i - E_i)^2}{E_i}
+\]</div>
+<ol>
+<li>Compare the statistic to a chi-square distribution with 1 degree of freedom (for a biallelic locus).</li>
+</ol>
+<p>Using our example above (<span class="arithmatex">\( p = 0.65, q = 0.35, N = 200 \)</span>):</p>
+<table>
+<thead>
+<tr>
+<th>Genotype</th>
+<th>Observed</th>
+<th>Expected (<span class="arithmatex">\( N \times \text{HWE freq} \)</span>)</th>
+<th><span class="arithmatex">\( (O - E)^2 / E \)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="arithmatex">\( AA \)</span></td>
+<td>90</td>
+<td><span class="arithmatex">\( 200 \times 0.4225 = 84.5 \)</span></td>
+<td>0.358</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\( Aa \)</span></td>
+<td>80</td>
+<td><span class="arithmatex">\( 200 \times 0.455 = 91.0 \)</span></td>
+<td>1.330</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\( aa \)</span></td>
+<td>30</td>
+<td><span class="arithmatex">\( 200 \times 0.1225 = 24.5 \)</span></td>
+<td>1.235</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td><strong>200</strong></td>
+<td><strong>200</strong></td>
+<td><strong><span class="arithmatex">\( \chi^2 = 2.92 \)</span></strong></td>
+</tr>
+</tbody>
+</table>
+<p>The critical value at <span class="arithmatex">\( \alpha = 0.05 \)</span> with 1 degree of freedom is 3.84. Since 2.92 &lt; 3.84, we fail to reject the null hypothesis: this population is consistent with HWE.</p>
+<h2 id="part-2-evolutionary-forces">Part 2: Evolutionary Forces</h2>
+<h3 id="natural-selection">Natural Selection</h3>
+<p><strong>Natural selection</strong> is the differential survival and reproduction of individuals due to differences in phenotype. In population genetics, we quantify selection using the concept of <strong>fitness</strong>, denoted <span class="arithmatex">\( w \)</span>. Fitness is the relative reproductive success of a genotype compared to the most successful genotype.</p>
+<p>The <strong>selection coefficient</strong>, <span class="arithmatex">\( s \)</span>, measures the reduction in fitness relative to the fittest genotype: <span class="arithmatex">\( w = 1 - s \)</span>. A genotype with <span class="arithmatex">\( s = 0.1 \)</span> has 90% the fitness of the reference genotype.</p>
+<p>Selection operates in several distinct patterns, each producing a different effect on the distribution of phenotypes in a population:</p>
+<ul>
+<li><strong>Directional selection</strong> favors one extreme of the phenotype distribution, shifting the population mean in one direction over time. Example: antibiotic resistance increasing in a bacterial population.</li>
+<li><strong>Stabilizing selection</strong> favors intermediate phenotypes and reduces variation. Example: human birth weight, where very low and very high weights reduce survival.</li>
+<li><strong>Disruptive selection</strong> favors both extremes over intermediate phenotypes, potentially splitting the population into distinct groups. Example: beak size in seed-cracking finches when only very small and very large seeds are available.</li>
+</ul>
+<h4 id="diagram-selection-types-comparison">Diagram: Selection Types Comparison</h4>
+<iframe src="../../sims/selection-types/main.html" width="100%" height="500px" scrolling="no"></iframe>
+<details>
+<summary>Selection Types Comparison</summary>
+<p>Type: Interactive simulation
+<strong>sim-id:</strong> selection-types<br/>
+<strong>Library:</strong> p5.js<br/>
+<strong>Status:</strong> Specified</p>
+<p>An interactive simulation showing three bell curves representing a phenotype distribution. Users select one of three modes — directional, stabilizing, or disruptive — using radio buttons. After pressing "Run Selection," the simulation animates the distribution changing over 10 generations. Directional shifts the mean, stabilizing narrows the curve, and disruptive creates a bimodal distribution. A slider controls selection strength (s = 0.01 to 0.5). The x-axis shows phenotype value and the y-axis shows frequency.</p>
+</details>
+<h3 id="balancing-selection-and-heterozygote-advantage">Balancing Selection and Heterozygote Advantage</h3>
+<p><strong>Balancing selection</strong> maintains multiple alleles in a population at stable frequencies. The most studied mechanism is <strong>heterozygote advantage</strong> (also called overdominance), where heterozygotes have higher fitness than either homozygote.</p>
+<p>The classic example is sickle-cell anemia and malaria resistance. Individuals heterozygous for the sickle-cell allele (<span class="arithmatex">\( HbA/HbS \)</span>) have partial protection against malaria without the severe anemia that affects <span class="arithmatex">\( HbS/HbS \)</span> homozygotes. In malaria-endemic regions, this keeps both alleles in the population.</p>
+<table>
+<thead>
+<tr>
+<th>Genotype</th>
+<th>Phenotype</th>
+<th>Fitness in Malaria Region</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="arithmatex">\( HbA/HbA \)</span></td>
+<td>Normal hemoglobin</td>
+<td>Susceptible to malaria (<span class="arithmatex">\( w \approx 0.9 \)</span>)</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\( HbA/HbS \)</span></td>
+<td>Sickle-cell trait</td>
+<td>Malaria resistant (<span class="arithmatex">\( w = 1.0 \)</span>)</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\( HbS/HbS \)</span></td>
+<td>Sickle-cell disease</td>
+<td>Severe anemia (<span class="arithmatex">\( w \approx 0.2 \)</span>)</td>
+</tr>
+</tbody>
+</table>
+<p>Under heterozygote advantage, the equilibrium allele frequency of the deleterious allele depends on the relative fitness values. If the selection coefficient against <span class="arithmatex">\( HbA/HbA \)</span> is <span class="arithmatex">\( s_1 \)</span> and against <span class="arithmatex">\( HbS/HbS \)</span> is <span class="arithmatex">\( s_2 \)</span>, then the equilibrium frequency of <span class="arithmatex">\( HbS \)</span> is:</p>
+<div class="arithmatex">\[
+\hat{q} = \frac{s_1}{s_1 + s_2}
+\]</div>
+<h3 id="genetic-drift">Genetic Drift</h3>
+<p><strong>Genetic drift</strong> is the random change in allele frequencies that occurs because populations are finite. Unlike selection, drift is not directed by fitness differences — it is pure chance. Small populations experience stronger drift than large ones.</p>
+<p>Two special cases of drift have dramatic effects on allele frequencies:</p>
+<ul>
+<li>The <strong>bottleneck effect</strong> occurs when a population's size is sharply reduced by a catastrophic event (disease, natural disaster, habitat loss). The surviving individuals carry only a subset of the original genetic variation, and allele frequencies may shift dramatically.</li>
+<li>The <strong>founder effect</strong> occurs when a small group of individuals colonizes a new area. The new population's allele frequencies reflect the founders, not the original population. This explains the high frequency of certain genetic disorders in isolated communities, such as Ellis-van Creveld syndrome among the Old Order Amish.</li>
+</ul>
+<div class="admonition mascot-tip">
+<p class="admonition-title">Drift vs. Selection</p>
+<p><img src="../../img/mascot/tip.png" class="mascot-admonition-img" alt="Dottie giving a tip">
+A key distinction: natural selection is deterministic (predictable direction), while genetic drift is stochastic (random direction). In large populations, selection dominates. In small populations, drift can overpower even moderately strong selection.</p>
+</div>
+<h3 id="gene-flow-and-migration">Gene Flow and Migration</h3>
+<p><strong>Gene flow</strong> is the transfer of alleles between populations through <strong>migration</strong> — the movement of individuals (or their gametes) from one population to another. Gene flow tends to homogenize allele frequencies across populations, counteracting the divergence caused by drift and local selection.</p>
+<p>The effect of migration on allele frequency can be modeled simply. If a population receives migrants at rate <span class="arithmatex">\( m \)</span> per generation, and the migrant allele frequency is <span class="arithmatex">\( p_m \)</span> while the resident frequency is <span class="arithmatex">\( p_0 \)</span>, then the new allele frequency after one generation is:</p>
+<div class="arithmatex">\[
+p_1 = (1 - m) p_0 + m \cdot p_m
+\]</div>
+<h3 id="mutation-rate">Mutation Rate</h3>
+<p>The <strong>mutation rate</strong> is the probability that an allele changes to a different form per generation. Mutation is the ultimate source of all new genetic variation. However, mutation rates are typically very low (<span class="arithmatex">\( 10^{-8} \)</span> to <span class="arithmatex">\( 10^{-9} \)</span> per nucleotide per generation in humans), so mutation alone changes allele frequencies very slowly. Mutation's primary role is to supply the raw material upon which selection, drift, and gene flow act.</p>
+<h3 id="summary-of-evolutionary-forces">Summary of Evolutionary Forces</h3>
+<table>
+<thead>
+<tr>
+<th>Force</th>
+<th>Effect on Allele Frequency</th>
+<th>Directional?</th>
+<th>Depends on Population Size?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Natural Selection</td>
+<td>Increases frequency of beneficial alleles</td>
+<td>Yes</td>
+<td>No (but effectiveness does)</td>
+</tr>
+<tr>
+<td>Genetic Drift</td>
+<td>Random changes</td>
+<td>No</td>
+<td>Yes — stronger in small populations</td>
+</tr>
+<tr>
+<td>Gene Flow</td>
+<td>Homogenizes across populations</td>
+<td>Toward migrant frequency</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Mutation</td>
+<td>Introduces new alleles</td>
+<td>Weak directional pressure</td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+<h2 id="part-3-population-structure">Part 3: Population Structure</h2>
+<h3 id="what-is-population-structure">What Is Population Structure?</h3>
+<p><strong>Population structure</strong> refers to the systematic differences in allele frequencies among subpopulations. Humans do not form a single randomly mating population. Geographic barriers, cultural practices, and historical events create partially isolated subgroups with distinct allele frequency profiles.</p>
+<p>Population structure matters enormously for GWAS because it can create spurious associations. If a trait happens to be more common in one subpopulation and certain alleles are also more common in that subpopulation, a naive analysis may falsely conclude that those alleles cause the trait.</p>
+<h3 id="fixation-index-f_st">Fixation Index (F_ST)</h3>
+<p>The <strong>fixation index</strong>, or <span class="arithmatex">\( F_{ST} \)</span>, quantifies genetic differentiation between populations. It compares the variance in allele frequencies among subpopulations to the total variance expected under random mating:</p>
+<div class="arithmatex">\[
+F_{ST} = \frac{H_T - H_S}{H_T}
+\]</div>
+<p>where <span class="arithmatex">\( H_T \)</span> is the expected heterozygosity in the total population and <span class="arithmatex">\( H_S \)</span> is the average expected heterozygosity within subpopulations. Values of <span class="arithmatex">\( F_{ST} \)</span> range from 0 (no differentiation) to 1 (complete fixation of different alleles).</p>
+<p>For humans, global <span class="arithmatex">\( F_{ST} \)</span> is approximately 0.12, meaning about 12% of genetic variation is distributed among continental populations, while 88% is found within populations. This relatively low value reflects the recency of human population divergence and ongoing gene flow.</p>
+<table>
+<thead>
+<tr>
+<th><span class="arithmatex">\( F_{ST} \)</span> Range</th>
+<th>Interpretation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.00 – 0.05</td>
+<td>Little genetic differentiation</td>
+</tr>
+<tr>
+<td>0.05 – 0.15</td>
+<td>Moderate differentiation</td>
+</tr>
+<tr>
+<td>0.15 – 0.25</td>
+<td>Great differentiation</td>
+</tr>
+<tr>
+<td>&gt; 0.25</td>
+<td>Very great differentiation</td>
+</tr>
+</tbody>
+</table>
+<h2 id="part-4-genome-wide-association-studies-gwas">Part 4: Genome-Wide Association Studies (GWAS)</h2>
+<h3 id="what-is-a-gwas">What Is a GWAS?</h3>
+<p>A <strong>genome-wide association study (GWAS)</strong> tests hundreds of thousands or millions of genetic variants — typically single nucleotide polymorphisms (SNPs) — across the genome for association with a trait or disease. The core idea is simple: compare allele frequencies between a case group (individuals with the trait) and a control group (individuals without the trait). If a SNP's allele is significantly more common in cases than controls, it may be associated with the trait.</p>
+<div class="admonition mascot-thinking">
+<p class="admonition-title">From Population Genetics to GWAS</p>
+<p><img src="../../img/mascot/thinking.png" class="mascot-admonition-img" alt="Dottie thinking">
+Notice how GWAS depends on concepts we just learned! If allele frequencies differ between populations (population structure), and our cases and controls come from different populations, we could get false signals. That's why population genetics is the essential foundation for GWAS.</p>
+</div>
+<p>A typical GWAS workflow includes:</p>
+<ol>
+<li><strong>Collect samples</strong> — recruit thousands of individuals, collect DNA, and record phenotype information.</li>
+<li><strong>Genotype</strong> — use SNP arrays or whole-genome sequencing to determine genotypes at hundreds of thousands of loci.</li>
+<li><strong>Quality control</strong> — remove low-quality SNPs, check for population stratification, exclude related individuals.</li>
+<li><strong>Statistical testing</strong> — test each SNP for association with the trait using logistic regression (for binary traits) or linear regression (for quantitative traits), correcting for covariates including population structure.</li>
+<li><strong>Interpret results</strong> — identify significant associations, replicate in independent cohorts, and investigate biological mechanisms.</li>
+</ol>
+<h3 id="the-manhattan-plot">The Manhattan Plot</h3>
+<p>Results from a GWAS are typically displayed in a <strong>Manhattan plot</strong>, named for its resemblance to the New York City skyline. In this plot:</p>
+<ul>
+<li>The <strong>x-axis</strong> shows genomic position, with chromosomes arranged in order.</li>
+<li>The <strong>y-axis</strong> shows the negative log10 of the p-value for each SNP: <span class="arithmatex">\( -\log_{10}(p) \)</span>.</li>
+<li>SNPs with stronger associations appear as taller peaks.</li>
+</ul>
+<h4 id="diagram-interactive-manhattan-plot">Diagram: Interactive Manhattan Plot</h4>
+<iframe src="../../sims/manhattan-plot/main.html" width="100%" height="500px" scrolling="no"></iframe>
+<details>
+<summary>Interactive Manhattan Plot</summary>
+<p>Type: Interactive visualization
+<strong>sim-id:</strong> manhattan-plot<br/>
+<strong>Library:</strong> Chart.js or Plotly<br/>
+<strong>Status:</strong> Specified</p>
+<p>A simulated Manhattan plot showing 22 autosomes with alternating colors. Each chromosome has scattered points (simulated SNPs) with most clustered at low -log10(p) values (1-3). Three to five "peaks" rise above the genome-wide significance line (drawn at -log10(5×10^-8) = 7.3). Hovering over a peak displays a tooltip with the SNP ID, chromosome, position, p-value, and nearest gene. A slider controls the number of simulated significant loci (1-10). A checkbox toggles a suggestive significance line at -log10(1×10^-5) = 5.</p>
+</details>
+<h3 id="significance-threshold-and-multiple-testing-correction">Significance Threshold and Multiple Testing Correction</h3>
+<p>When testing hundreds of thousands of SNPs, some will appear significant by chance alone. This is the <strong>multiple testing problem</strong>. If you test 1 million SNPs at <span class="arithmatex">\( \alpha = 0.05 \)</span>, you expect 50,000 false positives — clearly unacceptable.</p>
+<p>The <strong>significance threshold</strong> for GWAS is conventionally set at <span class="arithmatex">\( p &lt; 5 \times 10^{-8} \)</span>, which accounts for approximately 1 million independent tests across the human genome. This stringent threshold is derived from the <strong>Bonferroni correction</strong>, the simplest multiple testing correction:</p>
+<div class="arithmatex">\[
+\alpha_{\text{corrected}} = \frac{\alpha}{n}
+\]</div>
+<p>where <span class="arithmatex">\( n \)</span> is the number of independent tests. For <span class="arithmatex">\( \alpha = 0.05 \)</span> and <span class="arithmatex">\( n = 1{,}000{,}000 \)</span>:</p>
+<div class="arithmatex">\[
+\alpha_{\text{corrected}} = \frac{0.05}{1{,}000{,}000} = 5 \times 10^{-8}
+\]</div>
+<p>The <strong>Bonferroni correction</strong> is conservative — it controls the probability of even one false positive (the family-wise error rate). This is appropriate for GWAS because false positives are expensive to follow up experimentally.</p>
+<p>An alternative approach is the <strong>false discovery rate (FDR)</strong>, which controls the expected proportion of false positives among all rejected hypotheses. The Benjamini-Hochberg procedure sorts p-values from smallest to largest and finds the largest p-value <span class="arithmatex">\( p_{(k)} \)</span> satisfying:</p>
+<div class="arithmatex">\[
+p_{(k)} \leq \frac{k}{m} \cdot q
+\]</div>
+<p>where <span class="arithmatex">\( m \)</span> is the total number of tests and <span class="arithmatex">\( q \)</span> is the desired FDR (typically 0.05). FDR is less conservative than Bonferroni and is used when researchers want to maximize discovery while accepting that a known fraction of results will be false positives.</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Controls</th>
+<th>Stringency</th>
+<th>Best Used When</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bonferroni</td>
+<td>Family-wise error rate</td>
+<td>Very conservative</td>
+<td>Few tests, expensive follow-up</td>
+</tr>
+<tr>
+<td>FDR (Benjamini-Hochberg)</td>
+<td>False discovery rate</td>
+<td>Moderate</td>
+<td>Many tests, prioritizing discovery</td>
+</tr>
+</tbody>
+</table>
+<h3 id="effect-size-and-odds-ratio">Effect Size and Odds Ratio</h3>
+<p>Once a significant association is identified, we need to quantify how strong it is. The <strong>effect size</strong> describes the magnitude of the association between a genetic variant and a trait.</p>
+<p>For binary traits (disease present/absent), the standard measure is the <strong>odds ratio (OR)</strong>:</p>
+<div class="arithmatex">\[
+OR = \frac{P(\text{disease} \mid \text{risk allele}) / P(\text{no disease} \mid \text{risk allele})}{P(\text{disease} \mid \text{other allele}) / P(\text{no disease} \mid \text{other allele})}
+\]</div>
+<p>An OR of 1.0 means no association. An OR greater than 1.0 indicates increased risk; less than 1.0 indicates decreased risk. Most GWAS-identified variants have modest effect sizes, with odds ratios between 1.05 and 1.50. This is a critical finding: common variants individually contribute very little to disease risk.</p>
+<div class="admonition mascot-warning">
+<p class="admonition-title">Effect Size vs. Significance</p>
+<p><img src="../../img/mascot/warning.png" class="mascot-admonition-img" alt="Dottie giving a warning">
+Don't confuse statistical significance with effect size! A variant can be highly significant (very small p-value) but have a tiny effect size. Significance tells you the association is real; effect size tells you how much it matters clinically. Always report both.</p>
+</div>
+<h3 id="polygenic-risk-score">Polygenic Risk Score</h3>
+<p>Because individual variants have small effects, researchers combine them into a <strong>polygenic risk score (PRS)</strong>. A PRS sums the effects of many variants, each weighted by its estimated effect size:</p>
+<div class="arithmatex">\[
+PRS = \sum_{i=1}^{n} \beta_i \cdot x_i
+\]</div>
+<p>where <span class="arithmatex">\( \beta_i \)</span> is the effect size (log odds ratio) for variant <span class="arithmatex">\( i \)</span> and <span class="arithmatex">\( x_i \)</span> is the number of risk alleles (0, 1, or 2) the individual carries at that variant.</p>
+<p>The steps for constructing a PRS are:</p>
+<ol>
+<li><strong>Select variants</strong> from a discovery GWAS — often thousands to millions of SNPs, not just genome-wide significant ones.</li>
+<li><strong>Assign weights</strong> using the effect sizes from the discovery study.</li>
+<li><strong>Calculate scores</strong> in an independent target sample.</li>
+<li><strong>Evaluate prediction</strong> by testing whether the PRS predicts the trait in the target sample.</li>
+</ol>
+<p>PRS distributions typically overlap substantially between cases and controls. Individuals in the top percentiles of the PRS distribution may have 2-5 times the risk compared to those in the bottom percentiles, but a high PRS does not guarantee disease, nor does a low PRS guarantee protection.</p>
+<h4 id="diagram-polygenic-risk-score-distribution">Diagram: Polygenic Risk Score Distribution</h4>
+<iframe src="../../sims/prs-distribution/main.html" width="100%" height="500px" scrolling="no"></iframe>
+<details>
+<summary>Polygenic Risk Score Distribution</summary>
+<p>Type: Interactive visualization
+<strong>sim-id:</strong> prs-distribution<br/>
+<strong>Library:</strong> Chart.js or p5.js<br/>
+<strong>Status:</strong> Specified</p>
+<p>Two overlapping bell curves representing the PRS distribution in cases (red) and controls (blue). The x-axis shows PRS value; the y-axis shows frequency. A vertical draggable threshold line allows the user to explore how different cutoffs change the proportion of cases vs. controls classified as "high risk." A readout panel shows sensitivity, specificity, and positive predictive value at the selected threshold. A slider controls the degree of separation between the two distributions (AUC from 0.55 to 0.85).</p>
+</details>
+<h3 id="missing-heritability">Missing Heritability</h3>
+<p>GWAS have been remarkably successful, identifying thousands of trait-associated variants. Yet for most traits, the variants discovered by GWAS explain only a fraction of the estimated heritability. This gap is called <strong>missing heritability</strong>.</p>
+<p>Several explanations have been proposed for missing heritability:</p>
+<ul>
+<li><strong>Rare variants</strong> with larger effects that are not captured by standard SNP arrays.</li>
+<li><strong>Gene-gene interactions</strong> (epistasis) that are not detected by single-variant tests.</li>
+<li><strong>Gene-environment interactions</strong> that vary across study populations.</li>
+<li><strong>Structural variants</strong> (deletions, duplications, inversions) that are difficult to genotype.</li>
+<li><strong>Epigenetic effects</strong> that influence gene expression without changing DNA sequence.</li>
+<li><strong>Overestimated heritability</strong> in twin studies due to shared environment assumptions.</li>
+</ul>
+<p>The search for missing heritability has driven the development of whole-genome sequencing studies, larger sample sizes (now exceeding 1 million participants for some traits), and new statistical methods that aggregate the effects of rare variants.</p>
+<h2 id="connecting-the-concepts">Connecting the Concepts</h2>
+<p>The relationship between population genetics and GWAS is not merely historical — it is structural. Every step of a GWAS depends on population genetics principles:</p>
+<ul>
+<li><strong>Study design</strong> requires understanding population structure and gene flow to match cases and controls appropriately.</li>
+<li><strong>Quality control</strong> uses Hardy-Weinberg tests to flag genotyping errors (variants far out of HWE in controls suggest technical problems).</li>
+<li><strong>Statistical analysis</strong> corrects for population stratification using principal components derived from genome-wide allele frequency patterns.</li>
+<li><strong>Interpretation</strong> requires understanding that allele frequency differences among populations reflect drift and selection, not necessarily disease risk.</li>
+</ul>
+<div class="admonition mascot-celebration">
+<p class="admonition-title">Chapter Complete!</p>
+<p><img src="../../img/mascot/celebration.png" class="mascot-admonition-img" alt="Dottie celebrating">
+Excellent work, fellow investigators! You've built a complete framework from allele frequencies through evolutionary forces to modern GWAS methodology. This foundation will serve you well as genomic studies continue to grow in size and complexity. What does the data tell us? That understanding populations is the key to understanding genomes!</p>
+</div>
+<h2 id="review-questions">Review Questions</h2>
+<ol>
+<li>A population of 1,000 individuals has genotype frequencies of 0.49 <span class="arithmatex">\( AA \)</span>, 0.42 <span class="arithmatex">\( Aa \)</span>, and 0.09 <span class="arithmatex">\( aa \)</span>. Is this population in Hardy-Weinberg equilibrium? Show your work.</li>
+<li>Explain why the Bonferroni correction is considered conservative. In what situations might FDR control be more appropriate?</li>
+<li>A GWAS identifies a SNP with <span class="arithmatex">\( p = 3 \times 10^{-12} \)</span> and an odds ratio of 1.08. Interpret these numbers in plain language.</li>
+<li>Why does genetic drift have a stronger effect in small populations than in large ones? Relate this to the bottleneck effect.</li>
+<li>A polygenic risk score explains 8% of the variance in a trait whose heritability is estimated at 50%. What might account for the remaining 42%?</li>
+</ol>
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../09-quantitative-genetics-heritability/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 9. Quantitative Genetics and Heritability">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                9. Quantitative Genetics and Heritability
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../11-gene-regulation-regulatory-networks/" class="md-footer__link md-footer__link--next" aria-label="Next: 11. Gene Regulation and Regulatory Networks">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                11. Gene Regulation and Regulatory Networks
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 Dan McCreary. Licensed under <a href="license/">CC BY-NC-SA 4.0</a> for non-commercial use.
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "navigation.expand", "navigation.path", "navigation.prune", "navigation.indexes", "toc.follow", "navigation.top", "navigation.footer", "content.action.edit"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+        <script src="../../js/extra.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-chtml.js"></script>
+      
+    
+  </body>
+</html>

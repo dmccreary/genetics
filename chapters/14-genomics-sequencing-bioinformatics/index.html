@@ -1,0 +1,2288 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Genome sequencing technologies, alignment algorithms, variant calling, file formats, genomic databases, RNA-seq analysis, and reproducible computational workflows.">
+      
+      
+        <meta name="author" content="Dan McCreary">
+      
+      
+        <link rel="canonical" href="https://dmccreary.github.io/genetics/chapters/14-genomics-sequencing-bioinformatics/">
+      
+      
+        <link rel="prev" href="../13-experimental-genetics-model-organisms/">
+      
+      
+        <link rel="next" href="../15-human-genetics-clinical-applications/">
+      
+      
+      <link rel="icon" href="../../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.43">
+    
+    
+      
+        <title>Genomics, Sequencing, and Bioinformatics - Genetics</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.0253249f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+      <link rel="stylesheet" href="../../css/mascot.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-HJJLWQWVSL"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-HJJLWQWVSL",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-HJJLWQWVSL",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+      
+        <meta  property="og:type"  content="website" >
+      
+        <meta  property="og:title"  content="Genomics, Sequencing, and Bioinformatics - Genetics" >
+      
+        <meta  property="og:description"  content="Genome sequencing technologies, alignment algorithms, variant calling, file formats, genomic databases, RNA-seq analysis, and reproducible computational workflows." >
+      
+        <meta  property="og:image"  content="https://dmccreary.github.io/genetics/assets/images/social/chapters/14-genomics-sequencing-bioinformatics/index.png" >
+      
+        <meta  property="og:image:type"  content="image/png" >
+      
+        <meta  property="og:image:width"  content="1200" >
+      
+        <meta  property="og:image:height"  content="630" >
+      
+        <meta  property="og:url"  content="https://dmccreary.github.io/genetics/chapters/14-genomics-sequencing-bioinformatics/" >
+      
+        <meta  name="twitter:card"  content="summary_large_image" >
+      
+        <meta  name="twitter:title"  content="Genomics, Sequencing, and Bioinformatics - Genetics" >
+      
+        <meta  name="twitter:description"  content="Genome sequencing technologies, alignment algorithms, variant calling, file formats, genomic databases, RNA-seq analysis, and reproducible computational workflows." >
+      
+        <meta  name="twitter:image"  content="https://dmccreary.github.io/genetics/assets/images/social/chapters/14-genomics-sequencing-bioinformatics/index.png" >
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="amber" data-md-color-accent="deep-orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#genomics-sequencing-and-bioinformatics" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Genetics" class="md-header__button md-logo" aria-label="Genetics" data-md-component="logo">
+      
+  <img src="../../img/mascot/neutral.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Genetics
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Genomics, Sequencing, and Bioinformatics
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/dmccreary/genetics" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Genetics" class="md-nav__button md-logo" aria-label="Genetics" data-md-component="logo">
+      
+  <img src="../../img/mascot/neutral.png" alt="logo">
+
+    </a>
+    Genetics
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/dmccreary/genetics" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About This Course
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course-description/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Course Description
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Chapters
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Chapters
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-genetic-inference-probabilistic-reasoning/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1. Genetic Inference and Probabilistic Reasoning
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-pedigree-analysis-inheritance-patterns/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2. Pedigree Analysis and Inheritance Patterns
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-epistasis-complementation-modified-ratios/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3. Epistasis, Complementation, and Modified Ratios
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-genome-structure-chromatin-organization/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4. Genome Structure and Chromatin Organization
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-genetic-variation-genome-diversity/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5. Genetic Variation and Genome Diversity
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-gene-duplication-rearrangements-evolution/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6. Gene Duplication, Rearrangements, and Evolution
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07-genetic-mapping-linkage-analysis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7. Genetic Mapping and Linkage Analysis
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08-advanced-mapping-gene-discovery/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    8. Advanced Mapping and Gene Discovery
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09-quantitative-genetics-heritability/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    9. Quantitative Genetics and Heritability
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10-gwas-population-genetics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    10. GWAS and Population Genetics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11-gene-regulation-regulatory-networks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    11. Gene Regulation and Regulatory Networks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12-post-transcriptional-regulation-cell-identity/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    12. Post-Transcriptional Regulation and Cell Identity
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../13-experimental-genetics-model-organisms/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    13. Experimental Genetics and Model Organisms
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    14. Genomics, Sequencing, and Bioinformatics
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    14. Genomics, Sequencing, and Bioinformatics
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concepts-covered" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concepts Covered
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#introduction-the-genomic-revolution" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction: The Genomic Revolution
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sequencing-technologies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sequencing Technologies
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sequencing Technologies">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sanger-sequencing-the-foundation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sanger Sequencing: The Foundation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#next-generation-sequencing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Next-Generation Sequencing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sequencing-strategies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sequencing Strategies
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sequence-alignment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sequence Alignment
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sequence Alignment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pairwise-and-multiple-sequence-alignment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pairwise and Multiple Sequence Alignment
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-blast-algorithm" class="md-nav__link">
+    <span class="md-ellipsis">
+      The BLAST Algorithm
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The BLAST Algorithm">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-blast-algorithm-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: BLAST Algorithm Workflow
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#genomic-file-formats" class="md-nav__link">
+    <span class="md-ellipsis">
+      Genomic File Formats
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Genomic File Formats">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sequence-formats" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sequence Formats
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alignment-and-annotation-formats" class="md-nav__link">
+    <span class="md-ellipsis">
+      Alignment and Annotation Formats
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#genome-annotation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Genome Annotation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Genome Annotation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gene-prediction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gene Prediction
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#functional-annotation-and-gene-ontology" class="md-nav__link">
+    <span class="md-ellipsis">
+      Functional Annotation and Gene Ontology
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variant-calling-and-classification" class="md-nav__link">
+    <span class="md-ellipsis">
+      Variant Calling and Classification
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Variant Calling and Classification">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-vcf-file-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      The VCF File Format
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variant-annotation-and-classification" class="md-nav__link">
+    <span class="md-ellipsis">
+      Variant Annotation and Classification
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#genomic-databases" class="md-nav__link">
+    <span class="md-ellipsis">
+      Genomic Databases
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Genomic Databases">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#major-databases" class="md-nav__link">
+    <span class="md-ellipsis">
+      Major Databases
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Major Databases">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-genomics-database-ecosystem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Genomics Database Ecosystem
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reproducible-workflows-and-pipeline-automation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reproducible Workflows and Pipeline Automation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Reproducible Workflows and Pipeline Automation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-reproducibility-matters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why Reproducibility Matters
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#computational-workflow-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Computational Workflow Management
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rna-seq-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      RNA-Seq Analysis
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="RNA-Seq Analysis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#differential-expression" class="md-nav__link">
+    <span class="md-ellipsis">
+      Differential Expression
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pathway-enrichment-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pathway Enrichment Analysis
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-interpretation-from-numbers-to-biology" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Interpretation: From Numbers to Biology
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../15-human-genetics-clinical-applications/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    15. Human Genetics and Clinical Applications
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../16-cancer-genetics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    16. Cancer Genetics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../17-ethics-society-genetic-policy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    17. Ethics, Society, and Genetic Policy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../18-frontier-topics-emerging-technologies/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    18. Frontier Topics and Emerging Technologies
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../learning-graph/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Learning Graph
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../sims/graph-viewer/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    MicroSims
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../license/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    License
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contact/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contact
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concepts-covered" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concepts Covered
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#introduction-the-genomic-revolution" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction: The Genomic Revolution
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sequencing-technologies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sequencing Technologies
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sequencing Technologies">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sanger-sequencing-the-foundation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sanger Sequencing: The Foundation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#next-generation-sequencing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Next-Generation Sequencing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sequencing-strategies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sequencing Strategies
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sequence-alignment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sequence Alignment
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sequence Alignment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pairwise-and-multiple-sequence-alignment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pairwise and Multiple Sequence Alignment
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-blast-algorithm" class="md-nav__link">
+    <span class="md-ellipsis">
+      The BLAST Algorithm
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The BLAST Algorithm">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-blast-algorithm-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: BLAST Algorithm Workflow
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#genomic-file-formats" class="md-nav__link">
+    <span class="md-ellipsis">
+      Genomic File Formats
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Genomic File Formats">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sequence-formats" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sequence Formats
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alignment-and-annotation-formats" class="md-nav__link">
+    <span class="md-ellipsis">
+      Alignment and Annotation Formats
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#genome-annotation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Genome Annotation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Genome Annotation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gene-prediction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gene Prediction
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#functional-annotation-and-gene-ontology" class="md-nav__link">
+    <span class="md-ellipsis">
+      Functional Annotation and Gene Ontology
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variant-calling-and-classification" class="md-nav__link">
+    <span class="md-ellipsis">
+      Variant Calling and Classification
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Variant Calling and Classification">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-vcf-file-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      The VCF File Format
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variant-annotation-and-classification" class="md-nav__link">
+    <span class="md-ellipsis">
+      Variant Annotation and Classification
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#genomic-databases" class="md-nav__link">
+    <span class="md-ellipsis">
+      Genomic Databases
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Genomic Databases">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#major-databases" class="md-nav__link">
+    <span class="md-ellipsis">
+      Major Databases
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Major Databases">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-genomics-database-ecosystem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Genomics Database Ecosystem
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reproducible-workflows-and-pipeline-automation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reproducible Workflows and Pipeline Automation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Reproducible Workflows and Pipeline Automation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-reproducibility-matters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why Reproducibility Matters
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#computational-workflow-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Computational Workflow Management
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rna-seq-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      RNA-Seq Analysis
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="RNA-Seq Analysis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#differential-expression" class="md-nav__link">
+    <span class="md-ellipsis">
+      Differential Expression
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pathway-enrichment-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pathway Enrichment Analysis
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-interpretation-from-numbers-to-biology" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Interpretation: From Numbers to Biology
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/dmccreary/genetics/edit/master/docs/chapters/14-genomics-sequencing-bioinformatics/index.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="genomics-sequencing-and-bioinformatics">Genomics, Sequencing, and Bioinformatics</h1>
+<h2 id="summary">Summary</h2>
+<p>This chapter covers the technologies and computational methods that power modern genomics, from sequencing platforms to bioinformatics analysis pipelines. Students learn about alignment algorithms, variant calling, file formats, genomic databases, reproducible workflows, and RNA-seq analysis. After completing this chapter, students will understand how to process, analyze, and interpret genomic data using standard bioinformatics tools.</p>
+<h2 id="concepts-covered">Concepts Covered</h2>
+<p>This chapter covers the following 41 concepts from the learning graph:</p>
+<ol>
+<li>Genome Sequencing</li>
+<li>Sanger Sequencing</li>
+<li>Next-Gen Sequencing</li>
+<li>Illumina Sequencing</li>
+<li>Long-Read Sequencing</li>
+<li>Whole Genome Sequencing</li>
+<li>Whole Exome Sequencing</li>
+<li>Targeted Sequencing</li>
+<li>Sequence Alignment</li>
+<li>BLAST Algorithm</li>
+<li>Pairwise Alignment</li>
+<li>Multiple Sequence Alignment</li>
+<li>Genome Annotation</li>
+<li>Gene Prediction</li>
+<li>Functional Annotation</li>
+<li>Gene Ontology</li>
+<li>Variant Calling</li>
+<li>VCF File Format</li>
+<li>Variant Annotation</li>
+<li>Variant Classification</li>
+<li>Benign Variant</li>
+<li>Pathogenic Variant</li>
+<li>Variant of Uncertain Sig</li>
+<li>FASTA File Format</li>
+<li>FASTQ File Format</li>
+<li>BAM File Format</li>
+<li>BED File Format</li>
+<li>Genomic Databases</li>
+<li>NCBI Database</li>
+<li>Ensembl Database</li>
+<li>UCSC Genome Browser</li>
+<li>ClinVar Database</li>
+<li>dbSNP Database</li>
+<li>Reproducible Workflows</li>
+<li>Pipeline Automation</li>
+<li>Version Control in Genomics</li>
+<li>Computational Workflow</li>
+<li>RNA-Seq Analysis</li>
+<li>Differential Expression</li>
+<li>Pathway Enrichment</li>
+<li>Data Interpretation</li>
+</ol>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>This chapter builds on concepts from:</p>
+<ul>
+<li><a href="../01-genetic-inference-probabilistic-reasoning/">Chapter 1: Genetic Inference and Probabilistic Reasoning</a></li>
+<li><a href="../05-genetic-variation-genome-diversity/">Chapter 5: Genetic Variation and Genome Diversity</a></li>
+<li><a href="../11-gene-regulation-regulatory-networks/">Chapter 11: Gene Regulation and Regulatory Networks</a></li>
+<li><a href="../13-experimental-genetics-model-organisms/">Chapter 13: Experimental Genetics and Model Organisms</a></li>
+</ul>
+<hr />
+<div class="admonition mascot-welcome">
+<p class="admonition-title">Welcome to the Digital Side of Genetics!</p>
+<p><img src="../../img/mascot/welcome.png" class="mascot-admonition-img" alt="Dottie waving welcome">
+Welcome back, fellow investigators! Today we trade the lab bench for the computer screen. Modern genetics generates enormous amounts of sequence data, and making sense of it all requires computational tools. Let's look at the evidence -- one nucleotide at a time!</p>
+</div>
+<h2 id="introduction-the-genomic-revolution">Introduction: The Genomic Revolution</h2>
+<p><strong>Genome sequencing</strong> -- the process of determining the complete DNA sequence of an organism's genome -- has transformed biology. The Human Genome Project, completed in 2003, took 13 years and roughly three billion dollars. Today, a human genome can be sequenced in hours for under a thousand dollars. This dramatic reduction in cost and time has made sequencing a routine tool in research and clinical practice.</p>
+<p>This chapter traces the path from raw DNA in a tube to biological insight on a screen. We begin with the sequencing technologies that generate data, then examine the computational methods that process and interpret that data, and finally explore the databases and workflows that make genomic analysis reproducible and shareable.</p>
+<h2 id="sequencing-technologies">Sequencing Technologies</h2>
+<h3 id="sanger-sequencing-the-foundation">Sanger Sequencing: The Foundation</h3>
+<p><strong>Sanger sequencing</strong>, developed by Frederick Sanger in 1977, was the first practical method for reading DNA sequences. The method uses dideoxynucleotides (ddNTPs) -- modified nucleotides that lack the 3' hydroxyl group needed for chain elongation. When a ddNTP is randomly incorporated during DNA synthesis, the growing chain terminates at that position.</p>
+<p>The reaction produces fragments of every possible length, each ending at a known base. Modern automated Sanger sequencers separate these fragments by capillary electrophoresis and read the sequence from fluorescently labeled terminators. A single Sanger sequencing run produces 700-1,000 bases of high-quality sequence.</p>
+<p>Sanger sequencing remains the gold standard for:</p>
+<ul>
+<li>Confirming specific mutations identified by other methods</li>
+<li>Sequencing individual PCR products</li>
+<li>Validating CRISPR edits and cloned constructs</li>
+<li>Reading short stretches with very high accuracy (99.999%)</li>
+</ul>
+<h3 id="next-generation-sequencing">Next-Generation Sequencing</h3>
+<p><strong>Next-generation sequencing (NGS)</strong> technologies perform millions of sequencing reactions simultaneously, generating gigabases of data in a single run. Unlike Sanger sequencing, which reads one fragment at a time, NGS platforms massively parallelize the process.</p>
+<p><strong>Illumina sequencing</strong> is the most widely used NGS platform. It works through sequencing by synthesis:</p>
+<ol>
+<li>DNA is fragmented and adapters are ligated to the ends</li>
+<li>Fragments are amplified in clusters on a flow cell surface</li>
+<li>Fluorescently labeled nucleotides are added one at a time</li>
+<li>After each incorporation, the machine images the entire flow cell</li>
+<li>The color at each cluster position reveals the incorporated base</li>
+<li>The process repeats for 150-300 cycles, producing reads of 150-300 bases</li>
+</ol>
+<p>Illumina sequencing generates extremely high throughput (hundreds of gigabases per run) with low per-base error rates (~0.1%), but read lengths are relatively short.</p>
+<p><strong>Long-read sequencing</strong> platforms from Pacific Biosciences (PacBio) and Oxford Nanopore Technologies produce reads of 10,000 to over 100,000 bases. PacBio uses single-molecule real-time (SMRT) sequencing, where a polymerase synthesizes DNA in a tiny well and fluorescent pulses from each incorporated nucleotide are detected in real time. Oxford Nanopore threads single DNA strands through a protein pore and measures changes in electrical current as each base passes through.</p>
+<p>Long reads are essential for:</p>
+<ul>
+<li>Assembling repetitive genomic regions</li>
+<li>Detecting structural variants</li>
+<li>Phasing haplotypes</li>
+<li>Assembling complete genomes without gaps</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Technology</th>
+<th>Read Length</th>
+<th>Throughput per Run</th>
+<th>Error Rate</th>
+<th>Cost per Gb</th>
+<th>Best For</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sanger</td>
+<td>700-1,000 bp</td>
+<td>~1 kb</td>
+<td>0.001%</td>
+<td>Very high</td>
+<td>Validation, single targets</td>
+</tr>
+<tr>
+<td>Illumina</td>
+<td>150-300 bp</td>
+<td>100-6,000 Gb</td>
+<td>0.1%</td>
+<td>Low</td>
+<td>Variant calling, RNA-seq</td>
+</tr>
+<tr>
+<td>PacBio HiFi</td>
+<td>10-25 kb</td>
+<td>30-100 Gb</td>
+<td>0.1% (HiFi)</td>
+<td>Moderate</td>
+<td>Genome assembly, structural variants</td>
+</tr>
+<tr>
+<td>Oxford Nanopore</td>
+<td>10-100+ kb</td>
+<td>50-300 Gb</td>
+<td>1-5%</td>
+<td>Moderate</td>
+<td>Real-time sequencing, field work</td>
+</tr>
+</tbody>
+</table>
+<h3 id="sequencing-strategies">Sequencing Strategies</h3>
+<p>Not every experiment requires sequencing an entire genome. Different research questions call for different sequencing strategies.</p>
+<p><strong>Whole genome sequencing (WGS)</strong> determines the complete DNA sequence of an organism. WGS captures all variation -- coding, non-coding, regulatory, and structural -- but generates large datasets and requires substantial computational resources.</p>
+<p><strong>Whole exome sequencing (WES)</strong> targets only the protein-coding regions (exons), which comprise roughly 1-2% of the human genome but harbor about 85% of disease-causing mutations. WES uses hybridization capture probes to enrich exonic DNA before sequencing, reducing both cost and data volume compared to WGS.</p>
+<p><strong>Targeted sequencing</strong> focuses on specific genomic regions of interest, such as a panel of known disease genes. Clinical gene panels for conditions like hereditary cancer or cardiac arrhythmias typically sequence 50-500 genes at very high depth, providing high sensitivity for detecting variants in those regions.</p>
+<div class="admonition mascot-thinking">
+<p class="admonition-title">Choosing a Sequencing Strategy</p>
+<p><img src="../../img/mascot/thinking.png" class="mascot-admonition-img" alt="Dottie thinking">
+What does the data tell us? The choice between WGS, WES, and targeted sequencing depends on your question. Looking for a known disease mutation? A targeted panel is fastest and cheapest. Searching for novel non-coding regulatory variants? Only WGS will find them. Always match the sequencing strategy to the biological question.</p>
+</div>
+<h2 id="sequence-alignment">Sequence Alignment</h2>
+<p>Once sequencing reads are generated, they must be mapped back to a reference genome or compared to other sequences. <strong>Sequence alignment</strong> is the computational process of determining where each read originated in the genome, or how two or more sequences correspond to each other.</p>
+<h3 id="pairwise-and-multiple-sequence-alignment">Pairwise and Multiple Sequence Alignment</h3>
+<p><strong>Pairwise alignment</strong> compares two sequences to find the best correspondence between them. Two classic algorithms accomplish this: the Needleman-Wunsch algorithm for global alignment (aligning sequences end-to-end) and the Smith-Waterman algorithm for local alignment (finding the best matching subsequence).</p>
+<p>Both algorithms use dynamic programming to fill a scoring matrix. Each cell in the matrix represents the best alignment score up to that position, considering matches, mismatches, and gaps. The optimal alignment is found by tracing back through the matrix from the highest-scoring cell.</p>
+<p>The scoring for a pairwise alignment uses a substitution matrix and gap penalties. For protein sequences, the BLOSUM62 matrix assigns positive scores to biochemically similar amino acid substitutions and negative scores to dissimilar ones. A simple scoring scheme for DNA might be:</p>
+<div class="arithmatex">\[
+S(i,j) = \begin{cases} +1 &amp; \text{if } x_i = y_j \text{ (match)} \\ -1 &amp; \text{if } x_i \neq y_j \text{ (mismatch)} \end{cases}
+\]</div>
+<p>with a gap penalty of <span class="arithmatex">\( -2 \)</span> per gap position.</p>
+<p><strong>Multiple sequence alignment (MSA)</strong> extends pairwise alignment to three or more sequences simultaneously. MSA is essential for evolutionary analysis, identifying conserved functional domains, and building phylogenetic trees. Programs like Clustal Omega, MUSCLE, and MAFFT use heuristic approaches because exact multiple alignment is computationally prohibitive for more than a few sequences.</p>
+<h3 id="the-blast-algorithm">The BLAST Algorithm</h3>
+<p>The <strong>BLAST algorithm</strong> (Basic Local Alignment Search Tool) is the most widely used bioinformatics tool in the world. BLAST searches a database of sequences to find those similar to a query sequence. Unlike Smith-Waterman, BLAST uses a heuristic approach that sacrifices some sensitivity for enormous gains in speed.</p>
+<p>BLAST works in three steps:</p>
+<ol>
+<li><strong>Seeding</strong>: The query is broken into short "words" (typically 11 nucleotides or 3 amino acids), and exact matches are found in the database</li>
+<li><strong>Extension</strong>: Each seed match is extended in both directions, keeping track of the alignment score</li>
+<li><strong>Evaluation</strong>: The statistical significance of each alignment is assessed using an E-value -- the expected number of alignments with that score or better that would occur by chance in a database of that size</li>
+</ol>
+<p>An E-value of <span class="arithmatex">\( 10^{-50} \)</span> means you would need to search <span class="arithmatex">\( 10^{50} \)</span> random databases before finding an equally good match by chance -- strong evidence of true homology. An E-value near 1 suggests the match could be coincidental.</p>
+<h4 id="diagram-blast-algorithm-workflow">Diagram: BLAST Algorithm Workflow</h4>
+<iframe src="../../sims/blast-algorithm-workflow/main.html" width="100%" height="500px" scrolling="no"></iframe>
+<details>
+<summary>BLAST Algorithm Workflow</summary>
+<p>Type: flowchart
+<strong>sim-id:</strong> blast-algorithm-workflow<br/>
+<strong>Library:</strong> Mermaid<br/>
+<strong>Status:</strong> Specified</p>
+<p>A flowchart showing the three phases of the BLAST algorithm: (1) Seeding phase -- query broken into k-mer words, exact matches found in database index; (2) Extension phase -- seed matches extended bidirectionally using dynamic programming, low-scoring extensions dropped; (3) Evaluation phase -- surviving alignments scored, E-values calculated, results ranked. Include example input (query sequence) and output (ranked hit list with E-values).</p>
+</details>
+<h2 id="genomic-file-formats">Genomic File Formats</h2>
+<p>Bioinformatics relies on standardized file formats to store and exchange data. Understanding these formats is essential for working with genomic data.</p>
+<h3 id="sequence-formats">Sequence Formats</h3>
+<p>The <strong>FASTA file format</strong> stores nucleotide or protein sequences in a simple text format. Each entry begins with a header line starting with <code>&gt;</code> followed by the sequence identifier and optional description. The sequence follows on subsequent lines:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>&gt;chr1_gene_example Human beta-globin gene
+ATGGTGCATCTGACTCCTGAGGAGAAGTCTGCCGTTACTGCCCTGTGGGGCAAGGTG
+AACGTGGATGAAGTTGGTGGTGAGGCCCTGGGCAGGTTGGTATCAAGGTTACAAGA
+</code></pre></div></td></tr></table></div>
+<p>The <strong>FASTQ file format</strong> extends FASTA by adding quality scores for each base. Each read occupies four lines: a header line (starting with <code>@</code>), the sequence, a separator line (<code>+</code>), and the quality string. Quality scores are encoded as ASCII characters, where each character represents the Phred quality score:</p>
+<div class="arithmatex">\[
+Q = -10 \cdot \log_{10}(P_{\text{error}})
+\]</div>
+<p>A Phred score of 30 (ASCII character <code>?</code>) means a 1 in 1,000 chance of error (99.9% accuracy). A score of 40 means 1 in 10,000 (99.99% accuracy).</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>@read_001
+ATGGTGCATCTGACTCCTGA
++
+IIIIIHHHHHGGGGGFFFFF
+</code></pre></div></td></tr></table></div>
+<h3 id="alignment-and-annotation-formats">Alignment and Annotation Formats</h3>
+<p>The <strong>BAM file format</strong> (Binary Alignment Map) stores the results of aligning sequencing reads to a reference genome. BAM is the compressed binary version of the SAM (Sequence Alignment Map) format. Each record in a BAM file contains the read sequence, its quality scores, the reference position where it aligned, the alignment quality (mapping quality), and a CIGAR string that describes matches, mismatches, insertions, and deletions.</p>
+<p>The <strong>BED file format</strong> (Browser Extensible Data) stores genomic coordinate ranges in a simple tab-delimited format. Each line specifies a chromosome, start position, end position, and optional additional fields like name, score, and strand. BED files are used to define genomic regions of interest, such as exons, enhancers, or ChIP-seq peaks.</p>
+<table>
+<thead>
+<tr>
+<th>Format</th>
+<th>Extension</th>
+<th>Content</th>
+<th>Text/Binary</th>
+<th>Typical Size (Human WGS)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FASTA</td>
+<td>.fa, .fasta</td>
+<td>Reference sequences</td>
+<td>Text</td>
+<td>3 GB (reference genome)</td>
+</tr>
+<tr>
+<td>FASTQ</td>
+<td>.fq, .fastq</td>
+<td>Reads + quality scores</td>
+<td>Text</td>
+<td>50-200 GB</td>
+</tr>
+<tr>
+<td>BAM</td>
+<td>.bam</td>
+<td>Aligned reads</td>
+<td>Binary</td>
+<td>30-100 GB</td>
+</tr>
+<tr>
+<td>BED</td>
+<td>.bed</td>
+<td>Genomic intervals</td>
+<td>Text</td>
+<td>KB to MB</td>
+</tr>
+<tr>
+<td>VCF</td>
+<td>.vcf</td>
+<td>Variant calls</td>
+<td>Text</td>
+<td>100 MB - 1 GB</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition mascot-tip">
+<p class="admonition-title">File Format Tip</p>
+<p><img src="../../img/mascot/tip.png" class="mascot-admonition-img" alt="Dottie giving a tip">
+Think of these file formats as stages in a pipeline. Raw reads come off the sequencer as FASTQ files. Alignment maps those reads to a reference, producing BAM files. Variant calling compares the aligned reads to the reference, producing VCF files. Each format captures a different stage of the analysis.</p>
+</div>
+<h2 id="genome-annotation">Genome Annotation</h2>
+<p><strong>Genome annotation</strong> is the process of identifying the functional elements in a genome -- genes, regulatory regions, non-coding RNAs, and other features. Annotation transforms a raw sequence of nucleotides into a meaningful biological map.</p>
+<h3 id="gene-prediction">Gene Prediction</h3>
+<p><strong>Gene prediction</strong> uses computational methods to identify protein-coding genes within a genome sequence. Two main approaches are used:</p>
+<ul>
+<li><strong>Ab initio prediction</strong> uses statistical models of gene structure (splice sites, start codons, codon usage) to identify likely genes directly from the sequence. Programs like Augustus and GenScan use hidden Markov models trained on known gene structures.</li>
+<li><strong>Homology-based prediction</strong> aligns known genes or proteins from related organisms to the target genome. If a region of the genome aligns well to a known gene, it likely encodes a similar gene. Programs like Exonerate and GeneWise perform spliced alignment of proteins to genomic DNA.</li>
+</ul>
+<p>Modern annotation pipelines combine both approaches with evidence from RNA-seq data (which directly reveals expressed transcripts) to produce comprehensive gene models.</p>
+<h3 id="functional-annotation-and-gene-ontology">Functional Annotation and Gene Ontology</h3>
+<p><strong>Functional annotation</strong> assigns biological roles to predicted genes. This involves comparing predicted protein sequences to databases of characterized proteins, identifying conserved domains, and predicting subcellular localization, enzymatic activity, and interaction partners.</p>
+<p>The <strong>Gene Ontology (GO)</strong> provides a standardized vocabulary for describing gene function across species. GO organizes functional descriptions into three hierarchical categories:</p>
+<ol>
+<li><strong>Molecular Function</strong> -- what the gene product does biochemically (e.g., "protein kinase activity")</li>
+<li><strong>Biological Process</strong> -- the larger process the gene contributes to (e.g., "signal transduction")</li>
+<li><strong>Cellular Component</strong> -- where the gene product is located (e.g., "nucleus")</li>
+</ol>
+<p>Each GO term has a unique identifier (e.g., GO:0006915 for "apoptotic process") and is connected to broader and narrower terms in a directed acyclic graph. GO annotations are supported by evidence codes that indicate how the annotation was determined -- experimentally, computationally, or by curator inference.</p>
+<h2 id="variant-calling-and-classification">Variant Calling and Classification</h2>
+<p><strong>Variant calling</strong> is the process of identifying positions where a sequenced genome differs from the reference. This is the critical step that connects sequencing data to biological and clinical meaning.</p>
+<p>The variant calling pipeline proceeds as follows:</p>
+<ol>
+<li>Align reads to the reference genome (producing a BAM file)</li>
+<li>Identify positions where the aligned reads differ from the reference</li>
+<li>Distinguish true variants from sequencing errors using statistical models</li>
+<li>Filter variants based on quality metrics (read depth, mapping quality, strand bias)</li>
+<li>Output variants in a standardized format</li>
+</ol>
+<h3 id="the-vcf-file-format">The VCF File Format</h3>
+<p>The <strong>VCF file format</strong> (Variant Call Format) is the standard for recording genomic variants. Each variant record contains the chromosome, position, reference allele, alternate allele(s), quality score, filter status, and additional annotations. The VCF header defines metadata and the INFO fields used in the file.</p>
+<p>A simplified VCF record looks like:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>#CHROM  POS     ID          REF  ALT  QUAL  FILTER  INFO
+chr7    117559593  rs113488022  A    T    99    PASS   DP=45;AF=0.5
+</code></pre></div></td></tr></table></div>
+<p>This record indicates a heterozygous A-to-T variant at position 117,559,593 on chromosome 7, supported by 45 reads, with the alternate allele present in approximately 50% of reads.</p>
+<h3 id="variant-annotation-and-classification">Variant Annotation and Classification</h3>
+<p><strong>Variant annotation</strong> adds biological context to each variant call -- determining whether it falls within a gene, what effect it has on the encoded protein, and whether it has been seen before in databases. Tools like VEP (Variant Effect Predictor), SnpEff, and ANNOVAR perform this annotation.</p>
+<p><strong>Variant classification</strong> is the process of assessing whether a variant is likely to cause disease. The American College of Medical Genetics and Genomics (ACMG) guidelines define five categories:</p>
+<ul>
+<li><strong>Pathogenic</strong> -- the variant is disease-causing, supported by strong evidence</li>
+<li><strong>Likely pathogenic</strong> -- strong evidence suggests disease causation but some uncertainty remains</li>
+<li><strong>Variant of uncertain significance (VUS)</strong> -- insufficient evidence to classify as pathogenic or benign</li>
+<li>A <strong>benign variant</strong> is one that does not cause disease</li>
+<li><strong>Likely benign</strong> -- strong evidence suggests the variant is not disease-causing</li>
+</ul>
+<p>A <strong>pathogenic variant</strong> typically has multiple lines of supporting evidence: it is rare in the population, it disrupts a known disease gene, functional studies show it impairs protein function, and it co-segregates with disease in families.</p>
+<p>The <strong>variant of uncertain significance</strong> category is particularly challenging in clinical genomics. As more population data and functional studies accumulate, many VUS will eventually be reclassified as either pathogenic or benign, but until then they cannot guide clinical decisions.</p>
+<div class="admonition mascot-warning">
+<p class="admonition-title">The VUS Challenge</p>
+<p><img src="../../img/mascot/warning.png" class="mascot-admonition-img" alt="Dottie looking cautious">
+Variants of uncertain significance are one of the most difficult challenges in clinical genomics. Reporting a VUS to a patient requires careful communication -- it does not mean the variant is harmless, and it does not mean it causes disease. As databases grow and functional assays improve, many VUS will be reclassified, but this process can take years.</p>
+</div>
+<h2 id="genomic-databases">Genomic Databases</h2>
+<p><strong>Genomic databases</strong> store, organize, and provide access to the vast amounts of sequence, annotation, and variation data generated by the genomics community. Knowing which database to query -- and how to interpret the results -- is a core bioinformatics skill.</p>
+<h3 id="major-databases">Major Databases</h3>
+<p>The <strong>NCBI database</strong> (National Center for Biotechnology Information) hosts a suite of interconnected databases including GenBank (nucleotide sequences), RefSeq (curated reference sequences), PubMed (literature), and the Sequence Read Archive (raw sequencing data). NCBI's Entrez system links records across these databases.</p>
+<p>The <strong>Ensembl database</strong>, maintained by the European Bioinformatics Institute, provides comprehensive genome annotation for vertebrate and other eukaryotic genomes. Ensembl is particularly strong for comparative genomics, regulatory annotation, and variation data.</p>
+<p>The <strong>UCSC Genome Browser</strong> is an interactive web tool for visualizing genomic data. Researchers can view gene models, conservation tracks, regulatory elements, and custom data tracks aligned to a reference genome. The UCSC browser's track hub system allows labs to share their own data as public or private tracks.</p>
+<p>For clinical genomics, two specialized databases are essential:</p>
+<ul>
+<li><strong>ClinVar database</strong> collects relationships between human genetic variants and clinical phenotypes. Each submission includes the variant, the associated condition, and the submitter's classification (pathogenic, benign, VUS, etc.).</li>
+<li><strong>dbSNP database</strong> catalogs short sequence variations (SNPs and small indels) across species. Each variant receives an rs identifier (e.g., rs113488022) that serves as a universal reference.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Database</th>
+<th>Hosted By</th>
+<th>Primary Content</th>
+<th>Key Use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>NCBI / GenBank</td>
+<td>NIH (USA)</td>
+<td>All public sequences</td>
+<td>Sequence search, BLAST</td>
+</tr>
+<tr>
+<td>Ensembl</td>
+<td>EBI (Europe)</td>
+<td>Annotated genomes</td>
+<td>Comparative genomics</td>
+</tr>
+<tr>
+<td>UCSC Genome Browser</td>
+<td>UC Santa Cruz</td>
+<td>Genome visualization</td>
+<td>Data browsing, track analysis</td>
+</tr>
+<tr>
+<td>ClinVar</td>
+<td>NIH (USA)</td>
+<td>Clinical variant interpretations</td>
+<td>Clinical variant lookup</td>
+</tr>
+<tr>
+<td>dbSNP</td>
+<td>NIH (USA)</td>
+<td>Cataloged sequence variants</td>
+<td>Variant identification</td>
+</tr>
+</tbody>
+</table>
+<h4 id="diagram-genomics-database-ecosystem">Diagram: Genomics Database Ecosystem</h4>
+<iframe src="../../sims/genomics-database-ecosystem/main.html" width="100%" height="500px" scrolling="no"></iframe>
+<details>
+<summary>Genomics Database Ecosystem</summary>
+<p>Type: network diagram
+<strong>sim-id:</strong> genomics-database-ecosystem<br/>
+<strong>Library:</strong> vis-network<br/>
+<strong>Status:</strong> Specified</p>
+<p>An interactive network diagram showing major genomic databases as nodes (NCBI, Ensembl, UCSC, ClinVar, dbSNP, Gene Ontology) with edges representing data flows and cross-references between them. Node size proportional to database scope. Color-code nodes by type: sequence databases (blue), annotation databases (green), clinical databases (red), ontology databases (purple). Include click interactions to show what each database stores.</p>
+</details>
+<h2 id="reproducible-workflows-and-pipeline-automation">Reproducible Workflows and Pipeline Automation</h2>
+<p>Modern genomics analyses involve dozens of computational steps, each with specific software, parameters, and dependencies. <strong>Reproducible workflows</strong> ensure that an analysis can be repeated exactly, by the same researcher months later or by a different lab entirely.</p>
+<h3 id="why-reproducibility-matters">Why Reproducibility Matters</h3>
+<p>A typical variant calling pipeline might include:</p>
+<ol>
+<li>Quality control of raw reads (FastQC, Trimmomatic)</li>
+<li>Alignment to the reference genome (BWA-MEM, STAR)</li>
+<li>Post-alignment processing (duplicate marking, base quality recalibration)</li>
+<li>Variant calling (GATK HaplotypeCaller, DeepVariant)</li>
+<li>Variant filtering and annotation (VEP, ClinVar lookup)</li>
+</ol>
+<p>Each step has parameters that affect the results. Changing the alignment software, the quality filters, or even the reference genome version can change which variants are called. Without careful documentation, results become irreproducible.</p>
+<h3 id="computational-workflow-management">Computational Workflow Management</h3>
+<p>A <strong>computational workflow</strong> formally defines the steps of an analysis, their inputs and outputs, and their dependencies. Workflow management systems like Snakemake, Nextflow, and WDL (Workflow Description Language) allow researchers to define pipelines as code, making them:</p>
+<ul>
+<li><strong>Reproducible</strong> -- the same workflow on the same data produces the same results</li>
+<li><strong>Portable</strong> -- workflows run on laptops, clusters, or cloud platforms</li>
+<li><strong>Scalable</strong> -- workflows automatically parallelize across available resources</li>
+<li><strong>Documentable</strong> -- the workflow definition itself is the protocol</li>
+</ul>
+<p><strong>Pipeline automation</strong> uses these systems to run multi-step analyses without manual intervention. A well-designed pipeline checks input data quality, logs every step, handles errors gracefully, and produces standardized output.</p>
+<p><strong>Version control in genomics</strong> extends the software engineering practice of tracking changes to code (using tools like Git) to the entire analysis environment -- including software versions, reference data, and configuration files. Container technologies like Docker and Singularity capture the complete computational environment, ensuring that an analysis can be reproduced even as software evolves.</p>
+<h2 id="rna-seq-analysis">RNA-Seq Analysis</h2>
+<p><strong>RNA-seq analysis</strong> uses sequencing to measure gene expression levels across the entire transcriptome. By counting how many sequencing reads map to each gene, researchers quantify which genes are active in a sample and at what level.</p>
+<p>The RNA-seq workflow involves:</p>
+<ol>
+<li>Extract RNA and convert to cDNA</li>
+<li>Fragment, add adapters, and sequence (typically Illumina)</li>
+<li>Align reads to the reference genome or transcriptome</li>
+<li>Count reads per gene</li>
+<li>Normalize counts to account for gene length and sequencing depth</li>
+<li>Compare expression between conditions</li>
+</ol>
+<h3 id="differential-expression">Differential Expression</h3>
+<p><strong>Differential expression</strong> analysis identifies genes whose expression levels differ significantly between two or more experimental conditions. Statistical tools like DESeq2 and edgeR model the count data using a negative binomial distribution and test for significant differences while controlling for multiple testing.</p>
+<p>A gene is typically considered differentially expressed if it meets two criteria: a fold change threshold (e.g., <span class="arithmatex">\(\geq 2\)</span>-fold change between conditions) and a statistical significance threshold (e.g., adjusted p-value <span class="arithmatex">\( &lt; 0.05 \)</span> after Benjamini-Hochberg correction for multiple testing).</p>
+<p>The fold change for a gene is calculated as:</p>
+<div class="arithmatex">\[
+\text{Fold Change} = \frac{\text{Expression in condition B}}{\text{Expression in condition A}}
+\]</div>
+<p>Results are often visualized as volcano plots (log fold change vs. negative log p-value) or MA plots (average expression vs. log fold change).</p>
+<h3 id="pathway-enrichment-analysis">Pathway Enrichment Analysis</h3>
+<p><strong>Pathway enrichment</strong> analysis asks whether the differentially expressed genes are enriched for particular biological functions or pathways. Rather than interpreting genes one at a time, enrichment analysis identifies coordinated changes in functional categories.</p>
+<p>The basic approach uses the Gene Ontology or pathway databases (like KEGG or Reactome) and a statistical test (typically a hypergeometric test or Fisher's exact test) to determine whether a GO term or pathway appears more often in the differentially expressed gene list than expected by chance.</p>
+<p>For example, if 50 out of 500 differentially expressed genes are annotated with the GO term "immune response," but only 200 out of 20,000 total genes carry that annotation, the enrichment is highly significant -- the immune response pathway is specifically affected in the experimental condition.</p>
+<h2 id="data-interpretation-from-numbers-to-biology">Data Interpretation: From Numbers to Biology</h2>
+<p><strong>Data interpretation</strong> is the final and most critical step in any bioinformatics analysis. Raw numbers -- read counts, p-values, variant calls -- must be translated into biological understanding.</p>
+<p>Key principles for interpreting genomic data include:</p>
+<ul>
+<li><strong>Statistical significance is not biological significance</strong> -- a gene with a tiny p-value but a 1.1-fold change may be statistically significant but biologically irrelevant</li>
+<li><strong>Context matters</strong> -- a variant in a gene with no known function requires different interpretation than a variant in a well-characterized disease gene</li>
+<li><strong>Replication is essential</strong> -- findings from one dataset should be validated in independent samples</li>
+<li><strong>Multiple testing correction is mandatory</strong> -- when testing thousands of genes or variants simultaneously, raw p-values are misleading without correction</li>
+<li><strong>Beware batch effects</strong> -- technical differences between sample processing batches can create false biological signals</li>
+</ul>
+<div class="admonition mascot-celebration">
+<p class="admonition-title">Chapter Complete!</p>
+<p><img src="../../img/mascot/celebration.png" class="mascot-admonition-img" alt="Dottie celebrating">
+Outstanding work, fellow investigators! You now have a solid foundation in the technologies and computational methods that drive modern genomics. From the sequencer to the database, you understand how raw DNA becomes actionable knowledge. In the next chapter, we will apply these tools to human genetics and clinical medicine -- where sequencing data directly impacts patient care.</p>
+</div>
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../13-experimental-genetics-model-organisms/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 13. Experimental Genetics and Model Organisms">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                13. Experimental Genetics and Model Organisms
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../15-human-genetics-clinical-applications/" class="md-footer__link md-footer__link--next" aria-label="Next: 15. Human Genetics and Clinical Applications">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                15. Human Genetics and Clinical Applications
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 Dan McCreary. Licensed under <a href="license/">CC BY-NC-SA 4.0</a> for non-commercial use.
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "navigation.expand", "navigation.path", "navigation.prune", "navigation.indexes", "toc.follow", "navigation.top", "navigation.footer", "content.action.edit"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+        <script src="../../js/extra.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-chtml.js"></script>
+      
+    
+  </body>
+</html>
