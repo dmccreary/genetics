@@ -8,6 +8,26 @@ nav:
   - Home: index.md
   - About This Course: about.md
   - Course Description: course-description.md
+  - Chapters:
+    - List of Chapters: chapters/index.md
+    - 1. Genetic Inference and Probabilistic Reasoning: chapters/01-genetic-inference-probabilistic-reasoning/index.md
+    - 2. Pedigree Analysis and Inheritance Patterns: chapters/02-pedigree-analysis-inheritance-patterns/index.md
+    - 3. Epistasis, Complementation, and Modified Ratios: chapters/03-epistasis-complementation-modified-ratios/index.md
+    - 4. Genome Structure and Chromatin Organization: chapters/04-genome-structure-chromatin-organization/index.md
+    - 5. Genetic Variation and Genome Diversity: chapters/05-genetic-variation-genome-diversity/index.md
+    - 6. Gene Duplication, Rearrangements, and Evolution: chapters/06-gene-duplication-rearrangements-evolution/index.md
+    - 7. Genetic Mapping and Linkage Analysis: chapters/07-genetic-mapping-linkage-analysis/index.md
+    - 8. Advanced Mapping and Gene Discovery: chapters/08-advanced-mapping-gene-discovery/index.md
+    - 9. Quantitative Genetics and Heritability: chapters/09-quantitative-genetics-heritability/index.md
+    - 10. GWAS and Population Genetics: chapters/10-gwas-population-genetics/index.md
+    - 11. Gene Regulation and Regulatory Networks: chapters/11-gene-regulation-regulatory-networks/index.md
+    - 12. Post-Transcriptional Regulation and Cell Identity: chapters/12-post-transcriptional-regulation-cell-identity/index.md
+    - 13. Experimental Genetics and Model Organisms: chapters/13-experimental-genetics-model-organisms/index.md
+    - 14. Genomics, Sequencing, and Bioinformatics: chapters/14-genomics-sequencing-bioinformatics/index.md
+    - 15. Human Genetics and Clinical Applications: chapters/15-human-genetics-clinical-applications/index.md
+    - 16. Cancer Genetics: chapters/16-cancer-genetics/index.md
+    - 17. Ethics, Society, and Genetic Policy: chapters/17-ethics-society-genetic-policy/index.md
+    - 18. Frontier Topics and Emerging Technologies: chapters/18-frontier-topics-emerging-technologies/index.md
   - Learning Graph:
     - Introduction: learning-graph/index.md
     - Course Description Assessment: learning-graph/course-description-assessment.md
