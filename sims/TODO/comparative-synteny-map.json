@@ -1,0 +1,14 @@
+{
+  "sim_id": "comparative-synteny-map",
+  "diagram_name": "Comparative Synteny Map",
+  "chapter_number": 8,
+  "chapter_title": "Advanced Mapping and Gene Discovery",
+  "chapter_dir": "08-advanced-mapping-gene-discovery",
+  "library": "p5.js",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-04-12",
+  "specification": "Type: Interactive comparison diagram\n**sim-id:** comparative-synteny-map<br/>\n**Library:** p5.js<br/>\n**Status:** Specified\n\nAn interactive visualization displaying syntenic blocks between human and mouse chromosomes. Colored bands connect homologous regions between the two species, showing conserved gene order. Users hover over blocks to see the genes contained within, and can toggle between chromosomes. Rearrangements (inversions, translocations) are highlighted with distinct visual indicators."
+}

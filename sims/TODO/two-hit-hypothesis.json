@@ -1,0 +1,14 @@
+{
+  "sim_id": "two-hit-hypothesis",
+  "diagram_name": "Two-Hit Hypothesis Comparison",
+  "chapter_number": 16,
+  "chapter_title": "Cancer Genetics",
+  "chapter_dir": "16-cancer-genetics",
+  "library": "p5.js",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-04-12",
+  "specification": "Type: Comparative Diagram\n**sim-id:** two-hit-hypothesis<br/>\n**Library:** p5.js<br/>\n**Status:** Specified\n\nSide-by-side comparison of hereditary vs sporadic retinoblastoma. Left panel shows a germline mutation inherited at birth (first hit present in all cells) followed by a single somatic event (second hit) leading to tumor formation. Right panel shows two independent somatic mutations required in the same cell. Include a timeline showing age of onset for each pathway: hereditary (early childhood, bilateral) vs sporadic (later, unilateral). Use color coding: green for functional RB1 alleles, red for inactivated alleles."
+}

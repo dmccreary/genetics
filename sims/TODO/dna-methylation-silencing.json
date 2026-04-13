@@ -1,0 +1,14 @@
+{
+  "sim_id": "dna-methylation-silencing",
+  "diagram_name": "DNA Methylation and Gene Silencing",
+  "chapter_number": 4,
+  "chapter_title": "Genome Structure and Chromatin Organization",
+  "chapter_dir": "04-genome-structure-chromatin-organization",
+  "library": "p5.js",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-04-12",
+  "specification": "Type: Interactive diagram\n**sim-id:** dna-methylation-silencing<br/>\n**Library:** p5.js<br/>\n**Status:** Specified\n\nAn interactive diagram showing a gene promoter region with CpG dinucleotides. Users toggle methylation on/off for individual CpG sites using checkboxes. When a CpG is unmethylated, the promoter appears open (green), transcription factors bind, and an mRNA molecule is produced. As CpGs become methylated (shown with red methyl group markers), methyl-binding proteins appear, histone deacetylases are recruited, chromatin compacts, and transcription stops. A status bar shows the expression level decreasing as methylation increases. Include labels for DNMT enzymes, MBD proteins, and HDAC complexes."
+}

@@ -1,0 +1,14 @@
+{
+  "sim_id": "synthetic-lethality",
+  "diagram_name": "Synthetic Lethality",
+  "chapter_number": 13,
+  "chapter_title": "Experimental Genetics and Model Organisms",
+  "chapter_dir": "13-experimental-genetics-model-organisms",
+  "library": "p5.js",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-04-12",
+  "specification": "Type: concept diagram\n**sim-id:** synthetic-lethality<br/>\n**Library:** p5.js<br/>\n**Status:** Specified\n\nAn interactive diagram showing the concept of synthetic lethality. Display a 2x2 grid representing combinations of wild-type and mutant alleles for Gene A and Gene B. Three quadrants (WT/WT, mut/WT, WT/mut) show viable cells (green). The fourth quadrant (mut/mut) shows cell death (red with X). Include toggles to show the parallel pathway model: when either pathway functions, the cell survives; when both are disrupted, the cell dies."
+}

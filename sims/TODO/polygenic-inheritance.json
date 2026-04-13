@@ -1,0 +1,14 @@
+{
+  "sim_id": "polygenic-inheritance",
+  "diagram_name": "Polygenic Inheritance and Phenotype Distributions",
+  "chapter_number": 9,
+  "chapter_title": "Quantitative Genetics and Heritability",
+  "chapter_dir": "09-quantitative-genetics-heritability",
+  "library": "p5.js",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-04-12",
+  "specification": "Type: Interactive simulation\n**sim-id:** polygenic-inheritance<br/>\n**Library:** p5.js<br/>\n**Status:** Specified\n\nAn interactive simulation where users adjust the number of contributing loci (1 to 20) using a slider. The display shows a histogram of phenotypic values in a simulated F2 population, demonstrating how increasing the number of loci transforms the distribution from discrete classes to a smooth bell curve. A second slider adds environmental noise to show how environment further smooths the distribution. The current number of phenotypic classes and distribution statistics are displayed."
+}

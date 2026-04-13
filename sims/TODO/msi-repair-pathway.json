@@ -1,0 +1,14 @@
+{
+  "sim_id": "msi-repair-pathway",
+  "diagram_name": "Mismatch Repair and Microsatellite Instability",
+  "chapter_number": 16,
+  "chapter_title": "Cancer Genetics",
+  "chapter_dir": "16-cancer-genetics",
+  "library": "p5.js",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-04-12",
+  "specification": "Type: Process Diagram\n**sim-id:** msi-repair-pathway<br/>\n**Library:** p5.js<br/>\n**Status:** Specified\n\nAnimated diagram showing two parallel pathways. Left pathway: Normal mismatch repair — DNA replication introduces a slippage error in a microsatellite repeat, MMR proteins (MLH1, MSH2) detect and correct the error, microsatellite length remains stable. Right pathway: Defective mismatch repair — same replication error occurs but MMR proteins are absent or nonfunctional, error persists, microsatellite length changes with each replication cycle. Bottom panel shows accumulating mutations over successive cell divisions, with a counter tracking total mutations. Color coding: correct bases in blue, mismatched bases in red, MMR proteins in green."
+}

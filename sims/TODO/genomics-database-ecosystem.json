@@ -1,0 +1,14 @@
+{
+  "sim_id": "genomics-database-ecosystem",
+  "diagram_name": "Genomics Database Ecosystem",
+  "chapter_number": 14,
+  "chapter_title": "Genomics, Sequencing, and Bioinformatics",
+  "chapter_dir": "14-genomics-sequencing-bioinformatics",
+  "library": "vis-network",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-04-12",
+  "specification": "Type: network diagram\n**sim-id:** genomics-database-ecosystem<br/>\n**Library:** vis-network<br/>\n**Status:** Specified\n\nAn interactive network diagram showing major genomic databases as nodes (NCBI, Ensembl, UCSC, ClinVar, dbSNP, Gene Ontology) with edges representing data flows and cross-references between them. Node size proportional to database scope. Color-code nodes by type: sequence databases (blue), annotation databases (green), clinical databases (red), ontology databases (purple). Include click interactions to show what each database stores."
+}

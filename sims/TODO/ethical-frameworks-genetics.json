@@ -1,0 +1,14 @@
+{
+  "sim_id": "ethical-frameworks-genetics",
+  "diagram_name": "Ethical Framework Comparison",
+  "chapter_number": 17,
+  "chapter_title": "Ethics, Society, and Genetic Policy",
+  "chapter_dir": "17-ethics-society-genetic-policy",
+  "library": "p5.js",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-04-12",
+  "specification": "Type: Interactive Case Study Tool\n**sim-id:** ethical-frameworks-genetics<br/>\n**Library:** p5.js<br/>\n**Status:** Specified\n\nInteractive tool presenting three genetic ethics scenarios (e.g., returning incidental findings, sharing biobank data with law enforcement, germline editing for disease prevention). For each scenario, users select one of four ethical frameworks (Principlism, Consequentialism, Deontological, Virtue Ethics) and see how that framework would analyze the case — identifying the key considerations, potential conclusions, and tensions. Each framework analysis includes 2-3 bullet points. Users can compare frameworks side by side. Use distinct colors for each framework column. Include a summary panel that highlights where frameworks agree and where they diverge."
+}

@@ -1,0 +1,14 @@
+{
+  "sim_id": "multistep-carcinogenesis",
+  "diagram_name": "Multi-Step Colorectal Carcinogenesis",
+  "chapter_number": 16,
+  "chapter_title": "Cancer Genetics",
+  "chapter_dir": "16-cancer-genetics",
+  "library": "p5.js",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-04-12",
+  "specification": "Type: Animated Pathway Diagram\n**sim-id:** multistep-carcinogenesis<br/>\n**Library:** p5.js<br/>\n**Status:** Specified\n\nAnimated left-to-right progression showing the stages of colorectal cancer development. Begin with normal colon epithelium, then show each genetic event (APC loss, KRAS activation, SMAD4 loss, TP53 loss) as a labeled step that triggers a visual transformation of the tissue. At each stage, display: (1) the tissue morphology changing from normal to hyperplastic to adenoma to carcinoma, (2) the gene affected and whether it is an oncogene activation or tumor suppressor loss, (3) a running count of accumulated driver mutations. Include a timeline bar at the bottom showing approximate years elapsed. Users can click \"Play\" to watch the animation or step through manually."
+}

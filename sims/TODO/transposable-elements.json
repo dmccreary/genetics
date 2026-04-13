@@ -1,0 +1,14 @@
+{
+  "sim_id": "transposable-elements",
+  "diagram_name": "Transposable Element Mechanisms",
+  "chapter_number": 5,
+  "chapter_title": "Genetic Variation and Genome Diversity",
+  "chapter_dir": "05-genetic-variation-genome-diversity",
+  "library": "p5.js",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-04-12",
+  "specification": "Type: Interactive animation\n**sim-id:** transposable-elements<br/>\n**Library:** p5.js<br/>\n**Status:** Specified\n\nAn animated diagram showing the two major transposition mechanisms side by side. On the left, a DNA transposon (shown as a colored block with TIR arrows at each end) is excised by transposase (animated scissors), creating a gap at the donor site, and inserted at a target site. On the right, a retrotransposon is first transcribed to RNA (animated arrow from DNA to wavy RNA), then reverse-transcribed to cDNA (animated arrow from RNA to DNA), and the cDNA is inserted at a new target site while the original copy remains. A counter at the bottom tracks total TE copy number, incrementing only for the retrotransposon side. Users can click \"Transpose\" to animate each step. A toggle switches between LINE (autonomous, showing encoded reverse transcriptase) and SINE/Alu (non-autonomous, borrowing LINE machinery shown as a dotted arrow)."
+}

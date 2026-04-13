@@ -1,0 +1,14 @@
+{
+  "sim_id": "rnai-pathway",
+  "diagram_name": "RNA Interference Pathway",
+  "chapter_number": 12,
+  "chapter_title": "Post-Transcriptional Regulation and Cell Identity",
+  "chapter_dir": "12-post-transcriptional-regulation-cell-identity",
+  "library": "p5.js",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-04-12",
+  "specification": "Type: Interactive animation\n**sim-id:** rnai-pathway<br/>\n**Library:** p5.js<br/>\n**Status:** Specified\n\nAn animated pathway diagram showing the parallel processing of miRNA and siRNA. The left side shows the miRNA pathway: pri-miRNA in the nucleus, Drosha cleavage, export by Exportin-5, Dicer processing, and RISC loading. The right side shows the siRNA pathway: long dsRNA, Dicer processing, and RISC loading. Both converge on RISC-mediated target recognition. A toggle switch allows the user to select \"miRNA mode\" (partial complementarity, translational repression shown as a stalled ribosome) or \"siRNA mode\" (perfect complementarity, mRNA cleavage shown as the mRNA breaking apart). Molecules are animated moving through each step when the user clicks \"Play.\""
+}

@@ -1,0 +1,14 @@
+{
+  "sim_id": "chi-square-distribution",
+  "diagram_name": "Chi-Square Distribution Interactive",
+  "chapter_number": 1,
+  "chapter_title": "Genetic Inference and Probabilistic Reasoning",
+  "chapter_dir": "01-genetic-inference-probabilistic-reasoning",
+  "library": "p5.js",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-04-12",
+  "specification": "Type: Interactive simulation\n**sim-id:** chi-square-distribution<br/>\n**Library:** p5.js<br/>\n**Status:** Specified\n\nAn interactive visualization of the chi-square distribution. A slider controls degrees of freedom (1–10). The user can input observed and expected values for up to 4 categories. The calculated chi-square statistic is shown as a vertical line on the distribution curve, with the area to the right shaded to represent the p-value. Critical values at p = 0.05 and p = 0.01 are marked."
+}

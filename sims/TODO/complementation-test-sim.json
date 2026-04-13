@@ -1,0 +1,14 @@
+{
+  "sim_id": "complementation-test-sim",
+  "diagram_name": "Complementation Test Simulator",
+  "chapter_number": 3,
+  "chapter_title": "Epistasis, Complementation, and Modified Ratios",
+  "chapter_dir": "03-epistasis-complementation-modified-ratios",
+  "library": "p5.js",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-04-12",
+  "specification": "Type: Interactive simulation\n**sim-id:** complementation-test-sim<br/>\n**Library:** p5.js<br/>\n**Status:** Specified\n\nAn interactive tool where students select pairs of mutations to cross. The simulation shows the two parental genotypes as colored gene diagrams, then animates the cross to produce F1 offspring. The F1 phenotype (wild-type or mutant) is displayed, and the student must classify whether the mutations complement or fail to complement. After testing all pairs, the simulation groups the mutations into complementation groups and displays the results as a matrix."
+}

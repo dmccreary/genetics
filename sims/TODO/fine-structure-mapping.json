@@ -1,0 +1,14 @@
+{
+  "sim_id": "fine-structure-mapping",
+  "diagram_name": "Fine Structure Mapping of a Gene",
+  "chapter_number": 8,
+  "chapter_title": "Advanced Mapping and Gene Discovery",
+  "chapter_dir": "08-advanced-mapping-gene-discovery",
+  "library": "p5.js",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-04-12",
+  "specification": "Type: Interactive data exploration\n**sim-id:** fine-structure-mapping<br/>\n**Library:** p5.js<br/>\n**Status:** Specified\n\nA visualization of Benzer's rII fine-structure map. The gene is displayed as a horizontal bar with mutation sites marked as vertical lines. Clicking on pairs of mutations shows their recombination frequency and the resulting map distance. Deletion intervals are shown as horizontal brackets below the gene, demonstrating how overlapping deletions narrow mutation positions. A heatmap of mutation frequencies reveals mutational hotspots within the gene."
+}

@@ -1,0 +1,14 @@
+{
+  "sim_id": "pangenome-graph-comparison",
+  "diagram_name": "Linear Reference vs. Pangenome Graph",
+  "chapter_number": 18,
+  "chapter_title": "Frontier Topics and Emerging Technologies",
+  "chapter_dir": "18-frontier-topics-emerging-technologies",
+  "library": "p5.js",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-04-12",
+  "specification": "Type: Interactive Comparison\n**sim-id:** pangenome-graph-comparison<br/>\n**Library:** p5.js<br/>\n**Status:** Specified\n\nSide-by-side interactive visualization. Left panel: Traditional linear reference genome shown as a single horizontal bar with a region highlighted where a structural variant exists — reads from individuals with the variant align poorly (shown with gaps and mismatches). Right panel: Pangenome graph shown as a network with branching paths at the variant site — reads from all individuals align cleanly to their respective paths. Users can toggle between individuals of different ancestries to see how their reads align to each reference type. Include a variant detection accuracy counter showing improved detection rates with the pangenome approach. Color code paths by population origin."
+}

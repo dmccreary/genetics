@@ -1,0 +1,14 @@
+{
+  "sim_id": "marker-assisted-selection",
+  "diagram_name": "Marker-Assisted Selection Workflow",
+  "chapter_number": 9,
+  "chapter_title": "Quantitative Genetics and Heritability",
+  "chapter_dir": "09-quantitative-genetics-heritability",
+  "library": "p5.js",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-04-12",
+  "specification": "Type: Animated workflow diagram\n**sim-id:** marker-assisted-selection<br/>\n**Library:** p5.js<br/>\n**Status:** Specified\n\nAn animated diagram showing the MAS breeding pipeline. Starting from a cross between two parent lines, the workflow shows: F1 generation, F2 segregating population, DNA extraction, marker genotyping, selection of favorable genotypes, and advancement to the next generation. Icons represent laboratory steps (DNA extraction, PCR, gel). Selected plants/animals are highlighted green; rejected ones are grayed out. A generation counter tracks progress, and a graph shows the population mean shifting over selection cycles."
+}

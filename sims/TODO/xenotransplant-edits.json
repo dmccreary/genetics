@@ -1,0 +1,14 @@
+{
+  "sim_id": "xenotransplant-edits",
+  "diagram_name": "Genetic Modifications for Xenotransplantation",
+  "chapter_number": 18,
+  "chapter_title": "Frontier Topics and Emerging Technologies",
+  "chapter_dir": "18-frontier-topics-emerging-technologies",
+  "library": "p5.js",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-04-12",
+  "specification": "Type: Interactive Diagram\n**sim-id:** xenotransplant-edits<br/>\n**Library:** p5.js<br/>\n**Status:** Specified\n\nInteractive diagram showing a pig organ cell with three categories of genetic modifications needed for xenotransplantation. Category 1 (Knockout): Red X marks on pig genes encoding rejection-causing surface antigens (GGTA1, CMAH, B4GALNT2). Category 2 (Knock-in): Green plus marks for human immune regulatory genes added (CD46, CD55, thrombomodulin). Category 3 (Safety): Blue shield marks for inactivated porcine endogenous retroviruses. Users can click each modification category to expand a panel explaining why the modification is necessary and what happens without it. Include a \"compatibility meter\" that fills up as modifications are applied, illustrating how each edit reduces the risk of rejection."
+}

@@ -1,0 +1,14 @@
+{
+  "sim_id": "gina-coverage-gaps",
+  "diagram_name": "GINA Coverage and Gaps",
+  "chapter_number": 17,
+  "chapter_title": "Ethics, Society, and Genetic Policy",
+  "chapter_dir": "17-ethics-society-genetic-policy",
+  "library": "p5.js",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-04-12",
+  "specification": "Type: Interactive Infographic\n**sim-id:** gina-coverage-gaps<br/>\n**Library:** p5.js<br/>\n**Status:** Specified\n\nInteractive two-column visualization showing what GINA covers (health insurance, employment) versus what it does not cover (life insurance, disability insurance, long-term care, military, small employers, education, housing). Each category is a clickable card that expands to show a brief explanation and a real-world scenario illustrating the coverage or gap. Use green for covered areas and amber/orange for uncovered areas. Include a summary bar at the bottom showing the proportion of discrimination contexts covered vs. not covered by GINA."
+}

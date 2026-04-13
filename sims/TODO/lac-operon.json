@@ -1,0 +1,14 @@
+{
+  "sim_id": "lac-operon",
+  "diagram_name": "Lac Operon Regulation",
+  "chapter_number": 11,
+  "chapter_title": "Gene Regulation and Regulatory Networks",
+  "chapter_dir": "11-gene-regulation-regulatory-networks",
+  "library": "p5.js",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-04-12",
+  "specification": "Type: Interactive simulation\n**sim-id:** lac-operon<br/>\n**Library:** p5.js<br/>\n**Status:** Specified\n\nA visual simulation of the lac operon. The display shows the DNA region with the lacI gene, promoter, operator, and the three structural genes (lacZ, lacY, lacA) drawn as colored blocks. Two toggle switches allow the user to set the presence/absence of glucose and lactose independently. Based on the combination, the simulation animates: the Lac repressor binding/releasing from the operator, CAP-cAMP binding/releasing upstream, RNA polymerase attempting to transcribe, and mRNA being produced (or blocked). A readout shows the current expression level (Off, Low, High). Protein products (beta-galactosidase, permease, transacetylase) appear when expression is high."
+}

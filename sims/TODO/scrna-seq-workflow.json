@@ -1,0 +1,14 @@
+{
+  "sim_id": "scrna-seq-workflow",
+  "diagram_name": "Single-Cell RNA Sequencing Workflow",
+  "chapter_number": 18,
+  "chapter_title": "Frontier Topics and Emerging Technologies",
+  "chapter_dir": "18-frontier-topics-emerging-technologies",
+  "library": "p5.js",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-04-12",
+  "specification": "Type: Animated Pipeline Diagram\n**sim-id:** scrna-seq-workflow<br/>\n**Library:** p5.js<br/>\n**Status:** Specified\n\nAnimated left-to-right pipeline showing the five steps of scRNA-seq: (1) tissue dissociation into individual cells (show a tissue chunk breaking into separate colored circles), (2) cell capture in droplets (show cells entering small compartments), (3) barcoding (show a unique color-coded tag attaching to RNA molecules inside each droplet), (4) pooled sequencing (show barcoded molecules flowing through a sequencer), (5) computational clustering (show a UMAP-style scatter plot forming with colored clusters). Each step highlights with an animation when the user clicks \"Next Step\" or plays automatically. Include labels and brief descriptions for each stage."
+}

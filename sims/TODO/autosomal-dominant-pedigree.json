@@ -1,0 +1,14 @@
+{
+  "sim_id": "autosomal-dominant-pedigree",
+  "diagram_name": "Autosomal Dominant Pedigree Pattern",
+  "chapter_number": 2,
+  "chapter_title": "Pedigree Analysis and Inheritance Patterns",
+  "chapter_dir": "02-pedigree-analysis-inheritance-patterns",
+  "library": "p5.js",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-04-12",
+  "specification": "Type: Interactive pedigree diagram\n**sim-id:** autosomal-dominant-pedigree<br/>\n**Library:** p5.js<br/>\n**Status:** Specified\n\nAn interactive three-generation pedigree showing autosomal dominant inheritance. Users can click on individuals to toggle their affected status and see how the pattern changes. The simulation highlights the key features: vertical transmission, both sexes affected, ~50% of offspring affected. A sidebar lists the diagnostic hallmarks and checks them against the displayed pedigree."
+}

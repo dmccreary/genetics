@@ -1,0 +1,14 @@
+{
+  "sim_id": "enhancer-promoter-loop",
+  "diagram_name": "Enhancer-Promoter Looping",
+  "chapter_number": 11,
+  "chapter_title": "Gene Regulation and Regulatory Networks",
+  "chapter_dir": "11-gene-regulation-regulatory-networks",
+  "library": "p5.js",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-04-12",
+  "specification": "Type: Interactive animation\n**sim-id:** enhancer-promoter-loop<br/>\n**Library:** p5.js<br/>\n**Status:** Specified\n\nAn animated diagram showing a linear stretch of DNA with a promoter region (blue), a gene body (green), and an enhancer (orange) located 50 kb away. When the user clicks \"Activate,\" the DNA bends to bring the enhancer into contact with the promoter via a chromatin loop. Transcription factor proteins (small colored circles) are shown binding to the enhancer and promoter. An insulator element (red) is shown between two genes; a toggle allows the user to enable/disable the insulator to see how it blocks enhancer action on the wrong gene. A Mediator complex (purple blob) bridges the enhancer-bound activators to the promoter."
+}

@@ -1,0 +1,14 @@
+{
+  "sim_id": "three-point-cross",
+  "diagram_name": "Three-Point Cross Analysis",
+  "chapter_number": 7,
+  "chapter_title": "Genetic Mapping and Linkage Analysis",
+  "chapter_dir": "07-genetic-mapping-linkage-analysis",
+  "library": "p5.js",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-04-12",
+  "specification": "Type: Interactive educational diagram\n**sim-id:** three-point-cross<br/>\n**Library:** p5.js<br/>\n**Status:** Specified\n\nAn interactive diagram showing a three-point cross with three linked genes. The user can toggle crossover events in region I and region II to see how different crossover combinations produce the eight offspring classes. Color-coded chromatids show parental vs. recombinant segments. A data table updates dynamically to show expected offspring counts and how map distances are calculated from the results."
+}
