@@ -36,4 +36,4 @@ Use the navigation menu to explore:
 
 ## Getting Started
 
-Start with [Chapter 1: Genetic Inference and Probabilistic Reasoning](chapters/01/index.md) to begin your learning journey.
+Start with [Chapter 1: Genetic Inference and Probabilistic Reasoning](chapters/01-genetic-inference-probabilistic-reasoning/index.md) to begin your learning journey.
