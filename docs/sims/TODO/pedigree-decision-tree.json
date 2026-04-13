@@ -1,0 +1,14 @@
+{
+  "sim_id": "pedigree-decision-tree",
+  "diagram_name": "Pedigree Analysis Decision Tree",
+  "chapter_number": 2,
+  "chapter_title": "Pedigree Analysis and Inheritance Patterns",
+  "chapter_dir": "02-pedigree-analysis-inheritance-patterns",
+  "library": "p5.js",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-04-12",
+  "specification": "Type: Interactive decision tree\n**sim-id:** pedigree-decision-tree<br/>\n**Library:** p5.js<br/>\n**Status:** Specified\n\nAn interactive flowchart that guides students through pedigree analysis. The user answers yes/no questions about features they observe in a pedigree (male-to-male transmission? unaffected parents with affected child? sex bias?). Each answer highlights the next branch of the decision tree and eventually arrives at a conclusion about the most likely inheritance pattern. A \"practice\" mode generates random pedigrees for the student to classify, with feedback on their answers."
+}

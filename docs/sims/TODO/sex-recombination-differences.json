@@ -1,0 +1,14 @@
+{
+  "sim_id": "sex-recombination-differences",
+  "diagram_name": "Sex Differences in Recombination",
+  "chapter_number": 7,
+  "chapter_title": "Genetic Mapping and Linkage Analysis",
+  "chapter_dir": "07-genetic-mapping-linkage-analysis",
+  "library": "Chart.js",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-04-12",
+  "specification": "Type: Comparative visualization\n**sim-id:** sex-recombination-differences<br/>\n**Library:** Chart.js<br/>\n**Status:** Specified\n\nA side-by-side bar chart comparing genetic map distances (in cM) along a human chromosome for males and females. Each bar pair represents a chromosomal interval. A toggle allows users to switch between chromosomes. The total map length is displayed for each sex, highlighting the consistent female-greater-than-male pattern."
+}

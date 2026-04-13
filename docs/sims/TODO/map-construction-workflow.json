@@ -1,0 +1,14 @@
+{
+  "sim_id": "map-construction-workflow",
+  "diagram_name": "Genetic Map Construction Workflow",
+  "chapter_number": 7,
+  "chapter_title": "Genetic Mapping and Linkage Analysis",
+  "chapter_dir": "07-genetic-mapping-linkage-analysis",
+  "library": "p5.js",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-04-12",
+  "specification": "Type: Interactive flowchart with calculation\n**sim-id:** map-construction-workflow<br/>\n**Library:** p5.js<br/>\n**Status:** Specified\n\nA step-by-step interactive diagram where users input recombination data for three loci (A, B, C). The visualization walks through calculating pairwise RF values, determining gene order, correcting for double crossovers, applying mapping functions, and displaying the final genetic map. Sliders allow users to adjust offspring counts and see how the map changes in real time."
+}

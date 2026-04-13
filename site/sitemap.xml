@@ -2,54 +2,358 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://dmccreary.github.io/genetics/</loc>
-         <lastmod>2026-04-01</lastmod>
+         <lastmod>2026-04-13</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/genetics/about/</loc>
-         <lastmod>2026-04-01</lastmod>
+         <lastmod>2026-04-13</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/genetics/contact/</loc>
-         <lastmod>2026-04-01</lastmod>
+         <lastmod>2026-04-13</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/genetics/course-description/</loc>
-         <lastmod>2026-04-01</lastmod>
+         <lastmod>2026-04-13</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/genetics/license/</loc>
-         <lastmod>2026-04-01</lastmod>
+         <lastmod>2026-04-13</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/genetics/chapters/</loc>
+         <lastmod>2026-04-13</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/genetics/chapters/01-genetic-inference-probabilistic-reasoning/</loc>
+         <lastmod>2026-04-13</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/genetics/chapters/02-pedigree-analysis-inheritance-patterns/</loc>
+         <lastmod>2026-04-13</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/genetics/chapters/03-epistasis-complementation-modified-ratios/</loc>
+         <lastmod>2026-04-13</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/genetics/chapters/04-genome-structure-chromatin-organization/</loc>
+         <lastmod>2026-04-13</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/genetics/chapters/05-genetic-variation-genome-diversity/</loc>
+         <lastmod>2026-04-13</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/genetics/chapters/06-gene-duplication-rearrangements-evolution/</loc>
+         <lastmod>2026-04-13</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/genetics/chapters/07-genetic-mapping-linkage-analysis/</loc>
+         <lastmod>2026-04-13</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/genetics/chapters/08-advanced-mapping-gene-discovery/</loc>
+         <lastmod>2026-04-13</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/genetics/chapters/09-quantitative-genetics-heritability/</loc>
+         <lastmod>2026-04-13</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/genetics/chapters/10-gwas-population-genetics/</loc>
+         <lastmod>2026-04-13</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/genetics/chapters/11-gene-regulation-regulatory-networks/</loc>
+         <lastmod>2026-04-13</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/genetics/chapters/12-post-transcriptional-regulation-cell-identity/</loc>
+         <lastmod>2026-04-13</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/genetics/chapters/13-experimental-genetics-model-organisms/</loc>
+         <lastmod>2026-04-13</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/genetics/chapters/14-genomics-sequencing-bioinformatics/</loc>
+         <lastmod>2026-04-13</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/genetics/chapters/15-human-genetics-clinical-applications/</loc>
+         <lastmod>2026-04-13</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/genetics/chapters/16-cancer-genetics/</loc>
+         <lastmod>2026-04-13</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/genetics/chapters/17-ethics-society-genetic-policy/</loc>
+         <lastmod>2026-04-13</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/genetics/chapters/18-frontier-topics-emerging-technologies/</loc>
+         <lastmod>2026-04-13</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/genetics/learning-graph/</loc>
-         <lastmod>2026-04-01</lastmod>
+         <lastmod>2026-04-13</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/genetics/learning-graph/concept-list/</loc>
-         <lastmod>2026-04-01</lastmod>
+         <lastmod>2026-04-13</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/genetics/learning-graph/concept-taxonomy/</loc>
-         <lastmod>2026-04-01</lastmod>
+         <lastmod>2026-04-13</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/genetics/learning-graph/course-description-assessment/</loc>
-         <lastmod>2026-04-01</lastmod>
+         <lastmod>2026-04-13</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/genetics/learning-graph/mascot-test/</loc>
-         <lastmod>2026-04-01</lastmod>
+         <lastmod>2026-04-13</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/genetics/learning-graph/quality-metrics/</loc>
-         <lastmod>2026-04-01</lastmod>
+         <lastmod>2026-04-13</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/genetics/learning-graph/taxonomy-distribution/</loc>
-         <lastmod>2026-04-01</lastmod>
+         <lastmod>2026-04-13</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/genetics/sims/autosomal-dominant-pedigree/</loc>
+         <lastmod>2026-04-13</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/genetics/sims/bayesian-carrier-probability/</loc>
+         <lastmod>2026-04-13</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/genetics/sims/blast-algorithm-workflow/</loc>
+         <lastmod>2026-04-13</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/genetics/sims/capstone-integration-map/</loc>
+         <lastmod>2026-04-13</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/genetics/sims/chi-square-distribution/</loc>
+         <lastmod>2026-04-13</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/genetics/sims/chromatin-looping-tads/</loc>
+         <lastmod>2026-04-13</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/genetics/sims/chromosomal-instability/</loc>
+         <lastmod>2026-04-13</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/genetics/sims/comparative-synteny-map/</loc>
+         <lastmod>2026-04-13</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/genetics/sims/complementation-test-sim/</loc>
+         <lastmod>2026-04-13</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/genetics/sims/crispr-repair-pathways/</loc>
+         <lastmod>2026-04-13</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/genetics/sims/crossover-types-scale/</loc>
+         <lastmod>2026-04-13</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/genetics/sims/dna-methylation-silencing/</loc>
+         <lastmod>2026-04-13</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/genetics/sims/dtc-testing-decision-flow/</loc>
+         <lastmod>2026-04-13</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/genetics/sims/enhancer-promoter-loop/</loc>
+         <lastmod>2026-04-13</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/genetics/sims/epistasis-ratio-calculator/</loc>
+         <lastmod>2026-04-13</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/genetics/sims/ethical-frameworks-genetics/</loc>
+         <lastmod>2026-04-13</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/genetics/sims/fine-structure-mapping/</loc>
+         <lastmod>2026-04-13</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/genetics/sims/gene-discovery-workflow/</loc>
+         <lastmod>2026-04-13</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/genetics/sims/gene-duplication-fates/</loc>
+         <lastmod>2026-04-13</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/genetics/sims/genetic-background-effects/</loc>
+         <lastmod>2026-04-13</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/genetics/sims/genetic-heterogeneity-map/</loc>
+         <lastmod>2026-04-13</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/genetics/sims/genetics-problem-solver/</loc>
+         <lastmod>2026-04-13</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/genetics/sims/genomic-imprinting-15q/</loc>
+         <lastmod>2026-04-13</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/genetics/sims/genomics-database-ecosystem/</loc>
+         <lastmod>2026-04-13</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/genetics/sims/gina-coverage-gaps/</loc>
+         <lastmod>2026-04-13</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/genetics/sims/graph-viewer/</loc>
-         <lastmod>2026-04-01</lastmod>
+         <lastmod>2026-04-13</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/genetics/sims/haplotype-blocks-ld/</loc>
+         <lastmod>2026-04-13</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/genetics/sims/inheritance-pattern-comparison/</loc>
+         <lastmod>2026-04-13</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/genetics/sims/lac-operon/</loc>
+         <lastmod>2026-04-13</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/genetics/sims/manhattan-plot/</loc>
+         <lastmod>2026-04-13</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/genetics/sims/map-construction-workflow/</loc>
+         <lastmod>2026-04-13</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/genetics/sims/marker-assisted-selection/</loc>
+         <lastmod>2026-04-13</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/genetics/sims/mosaicism-comparison/</loc>
+         <lastmod>2026-04-13</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/genetics/sims/msi-repair-pathway/</loc>
+         <lastmod>2026-04-13</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/genetics/sims/multistep-carcinogenesis/</loc>
+         <lastmod>2026-04-13</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/genetics/sims/network-motifs/</loc>
+         <lastmod>2026-04-13</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/genetics/sims/nucleosome-packaging/</loc>
+         <lastmod>2026-04-13</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/genetics/sims/pangenome-graph-comparison/</loc>
+         <lastmod>2026-04-13</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/genetics/sims/pedigree-decision-tree/</loc>
+         <lastmod>2026-04-13</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/genetics/sims/pharmacogenomic-metabolizers/</loc>
+         <lastmod>2026-04-13</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/genetics/sims/polygenic-inheritance/</loc>
+         <lastmod>2026-04-13</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/genetics/sims/prs-distribution/</loc>
+         <lastmod>2026-04-13</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/genetics/sims/qtl-mapping-lod/</loc>
+         <lastmod>2026-04-13</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/genetics/sims/rnai-pathway/</loc>
+         <lastmod>2026-04-13</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/genetics/sims/scrna-seq-workflow/</loc>
+         <lastmod>2026-04-13</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/genetics/sims/selection-types/</loc>
+         <lastmod>2026-04-13</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/genetics/sims/sex-recombination-differences/</loc>
+         <lastmod>2026-04-13</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/genetics/sims/structural-variation-types/</loc>
+         <lastmod>2026-04-13</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/genetics/sims/synthetic-lethality/</loc>
+         <lastmod>2026-04-13</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/genetics/sims/systems-genetics-framework/</loc>
+         <lastmod>2026-04-13</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/genetics/sims/tetrad-analysis-patterns/</loc>
+         <lastmod>2026-04-13</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/genetics/sims/three-point-cross/</loc>
+         <lastmod>2026-04-13</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/genetics/sims/transposable-elements/</loc>
+         <lastmod>2026-04-13</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/genetics/sims/twin-study-calculator/</loc>
+         <lastmod>2026-04-13</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/genetics/sims/two-hit-hypothesis/</loc>
+         <lastmod>2026-04-13</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/genetics/sims/ubiquitin-pathway/</loc>
+         <lastmod>2026-04-13</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/genetics/sims/waddington-landscape/</loc>
+         <lastmod>2026-04-13</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/genetics/sims/xenotransplant-edits/</loc>
+         <lastmod>2026-04-13</lastmod>
     </url>
 </urlset>

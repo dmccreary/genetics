@@ -1,0 +1,14 @@
+{
+  "sim_id": "structural-variation-types",
+  "diagram_name": "Types of Structural Variation",
+  "chapter_number": 5,
+  "chapter_title": "Genetic Variation and Genome Diversity",
+  "chapter_dir": "05-genetic-variation-genome-diversity",
+  "library": "p5.js",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-04-12",
+  "specification": "Type: Interactive diagram\n**sim-id:** structural-variation-types<br/>\n**Library:** p5.js<br/>\n**Status:** Specified\n\nAn interactive diagram showing a reference chromosome segment with lettered blocks (A-B-C-D-E-F). Dropdown menu lets users select a structural variant type (deletion, duplication, inversion, translocation, CNV). The diagram animates the rearrangement: deletion removes a block, duplication adds a copy, inversion reverses a block's orientation (shown with reversed colors/arrows), translocation moves a block to a second chromosome shown below, and CNV shows variable copy counts with a slider from 0 to 4 copies. Each variant type displays a brief description of its mechanism and a clinical example."
+}

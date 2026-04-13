@@ -1,0 +1,14 @@
+{
+  "sim_id": "gene-discovery-workflow",
+  "diagram_name": "Gene Discovery Workflow",
+  "chapter_number": 8,
+  "chapter_title": "Advanced Mapping and Gene Discovery",
+  "chapter_dir": "08-advanced-mapping-gene-discovery",
+  "library": "p5.js",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-04-12",
+  "specification": "Type: Animated flowchart\n**sim-id:** gene-discovery-workflow<br/>\n**Library:** p5.js<br/>\n**Status:** Specified\n\nAn animated flowchart showing the complete gene discovery pipeline from phenotype observation to gene validation. Each step is a clickable node that expands to show details, example data, and the mapping technique used. A progress bar indicates the typical timeline for each approach. Users can toggle between a positional cloning pathway and a candidate gene pathway to compare strategies."
+}

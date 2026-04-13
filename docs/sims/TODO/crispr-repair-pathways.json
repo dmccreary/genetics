@@ -1,0 +1,14 @@
+{
+  "sim_id": "crispr-repair-pathways",
+  "diagram_name": "CRISPR-Cas9 Repair Pathways",
+  "chapter_number": 13,
+  "chapter_title": "Experimental Genetics and Model Organisms",
+  "chapter_dir": "13-experimental-genetics-model-organisms",
+  "library": "Mermaid",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-04-12",
+  "specification": "Type: flowchart\n**sim-id:** crispr-repair-pathways<br/>\n**Library:** Mermaid<br/>\n**Status:** Specified\n\nA flowchart showing the two repair pathways after CRISPR-Cas9 creates a double-strand break. Left branch: NHEJ pathway leading to random indels and gene disruption. Right branch: HDR pathway using a donor template leading to precise edits (point mutations, insertions, or gene replacements). Include decision point about whether a repair template is provided."
+}

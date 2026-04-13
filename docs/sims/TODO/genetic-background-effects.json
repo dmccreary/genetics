@@ -1,0 +1,14 @@
+{
+  "sim_id": "genetic-background-effects",
+  "diagram_name": "Genetic Background Effects Visualization",
+  "chapter_number": 3,
+  "chapter_title": "Epistasis, Complementation, and Modified Ratios",
+  "chapter_dir": "03-epistasis-complementation-modified-ratios",
+  "library": "p5.js",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-04-12",
+  "specification": "Type: Interactive simulation\n**sim-id:** genetic-background-effects<br/>\n**Library:** p5.js<br/>\n**Status:** Specified\n\nAn interactive visualization showing how the same primary mutation produces different phenotypic outcomes in different genetic backgrounds. The user selects a primary mutation from a dropdown, then adjusts sliders representing 3 modifier genes (each with enhancer/neutral/suppressor settings). The resulting phenotype is displayed as a severity meter. The simulation demonstrates that identical primary mutations can range from mild to severe depending on modifier gene configuration. A \"randomize backgrounds\" button shows how variable the outcomes can be."
+}

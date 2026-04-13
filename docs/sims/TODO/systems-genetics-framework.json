@@ -1,0 +1,14 @@
+{
+  "sim_id": "systems-genetics-framework",
+  "diagram_name": "Systems Genetics Framework",
+  "chapter_number": 15,
+  "chapter_title": "Human Genetics and Clinical Applications",
+  "chapter_dir": "15-human-genetics-clinical-applications",
+  "library": "vis-network",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-04-12",
+  "specification": "Type: layered network diagram\n**sim-id:** systems-genetics-framework<br/>\n**Library:** vis-network<br/>\n**Status:** Specified\n\nA multi-layered interactive diagram showing the systems genetics framework. Top layer: DNA variants (SNPs). Second layer: gene expression changes (eQTLs). Third layer: protein/metabolite changes. Bottom layer: clinical phenotype. Arrows connect layers showing how genetic variants propagate through molecular networks to influence disease phenotype. Include clickable nodes that display information about each data type and how it is measured."
+}

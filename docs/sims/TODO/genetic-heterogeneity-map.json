@@ -1,0 +1,14 @@
+{
+  "sim_id": "genetic-heterogeneity-map",
+  "diagram_name": "Genetic Heterogeneity Concept Map",
+  "chapter_number": 1,
+  "chapter_title": "Genetic Inference and Probabilistic Reasoning",
+  "chapter_dir": "01-genetic-inference-probabilistic-reasoning",
+  "library": "vis-network",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-04-12",
+  "specification": "Type: Concept diagram\n**sim-id:** genetic-heterogeneity-map<br/>\n**Library:** vis-network<br/>\n**Status:** Specified\n\nA network diagram showing the relationship between genetic heterogeneity, locus heterogeneity, and allelic heterogeneity. The central node is \"Same Phenotype.\" Branching from it are two paths: one showing multiple different genes (locus heterogeneity) with examples, and one showing multiple mutations in the same gene (allelic heterogeneity) with examples. Nodes are color-coded by type (phenotype, gene, mutation)."
+}

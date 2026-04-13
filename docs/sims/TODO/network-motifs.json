@@ -1,0 +1,14 @@
+{
+  "sim_id": "network-motifs",
+  "diagram_name": "Network Motifs",
+  "chapter_number": 11,
+  "chapter_title": "Gene Regulation and Regulatory Networks",
+  "chapter_dir": "11-gene-regulation-regulatory-networks",
+  "library": "vis-network",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-04-12",
+  "specification": "Type: Interactive network diagram\n**sim-id:** network-motifs<br/>\n**Library:** vis-network<br/>\n**Status:** Specified\n\nAn interactive display of four network motifs: positive feedback loop, negative feedback loop, coherent feed-forward loop, and incoherent feed-forward loop. Each motif is shown as a small directed graph with colored nodes (genes) and edges (activation in green with arrowheads, repression in red with blunt ends). The user selects a motif from a dropdown menu. Below the graph, an animated time-series plot shows the expression levels of each gene in the selected motif over time, demonstrating the dynamic behavior (bistability for positive feedback, oscillation for negative feedback, delay/filtering for feed-forward). A \"Pulse Signal\" button triggers a transient input so the user can see how each motif responds."
+}

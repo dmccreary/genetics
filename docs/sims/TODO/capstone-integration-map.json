@@ -1,0 +1,14 @@
+{
+  "sim_id": "capstone-integration-map",
+  "diagram_name": "Capstone Project Integration Map",
+  "chapter_number": 18,
+  "chapter_title": "Frontier Topics and Emerging Technologies",
+  "chapter_dir": "18-frontier-topics-emerging-technologies",
+  "library": "vis-network",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-04-12",
+  "specification": "Type: Interactive Network Diagram\n**sim-id:** capstone-integration-map<br/>\n**Library:** vis-network<br/>\n**Status:** Specified\n\nInteractive network diagram showing how the four capstone project options connect to concepts from across the course. Central node: \"Capstone Project\" connected to four option nodes (A, B, C, D). Each option node connects to the chapters and specific concepts it draws upon, with edges labeled by the type of skill applied. Users can click any node to highlight its connections. The network demonstrates how each project option integrates knowledge from multiple chapters. Use the course color scheme for chapter nodes. Slight y-offset on horizontal edges to ensure label rendering. Layout: hierarchical with capstone at center."
+}

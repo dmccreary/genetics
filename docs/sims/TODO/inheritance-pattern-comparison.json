@@ -1,0 +1,14 @@
+{
+  "sim_id": "inheritance-pattern-comparison",
+  "diagram_name": "Comparing Inheritance Patterns",
+  "chapter_number": 2,
+  "chapter_title": "Pedigree Analysis and Inheritance Patterns",
+  "chapter_dir": "02-pedigree-analysis-inheritance-patterns",
+  "library": "p5.js",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-04-12",
+  "specification": "Type: Interactive comparison tool\n**sim-id:** inheritance-pattern-comparison<br/>\n**Library:** p5.js<br/>\n**Status:** Specified\n\nA side-by-side display of four pedigree types: autosomal dominant, autosomal recessive, X-linked recessive, and X-linked dominant. Each pedigree shows three generations. A dropdown menu lets the user select which pattern to highlight. Below each pedigree, a checklist of diagnostic features is displayed with checkmarks indicating which features are present. Users can click a \"randomize\" button to generate new pedigrees and practice identification."
+}

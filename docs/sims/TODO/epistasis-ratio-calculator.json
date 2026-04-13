@@ -1,0 +1,14 @@
+{
+  "sim_id": "epistasis-ratio-calculator",
+  "diagram_name": "Epistasis Ratio Calculator",
+  "chapter_number": 3,
+  "chapter_title": "Epistasis, Complementation, and Modified Ratios",
+  "chapter_dir": "03-epistasis-complementation-modified-ratios",
+  "library": "p5.js",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-04-12",
+  "specification": "Type: Interactive simulation\n**sim-id:** epistasis-ratio-calculator<br/>\n**Library:** p5.js<br/>\n**Status:** Specified\n\nAn interactive tool where students select a type of epistasis from a dropdown menu. The simulation displays the 4×4 Punnett square for a dihybrid cross (AaBb × AaBb), color-coding the 16 cells according to which phenotypic class they belong to under the selected epistasis model. The merged classes are visually highlighted, and the resulting ratio is displayed prominently. Students can also enter observed data and perform a chi-square test against the predicted ratio."
+}

@@ -1,0 +1,14 @@
+{
+  "sim_id": "tetrad-analysis-patterns",
+  "diagram_name": "Tetrad Analysis Patterns",
+  "chapter_number": 8,
+  "chapter_title": "Advanced Mapping and Gene Discovery",
+  "chapter_dir": "08-advanced-mapping-gene-discovery",
+  "library": "p5.js",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-04-12",
+  "specification": "Type: Interactive educational diagram\n**sim-id:** tetrad-analysis-patterns<br/>\n**Library:** p5.js<br/>\n**Status:** Specified\n\nAn interactive visualization showing ordered and unordered tetrad patterns. For ordered tetrads, the user sees a Neurospora ascus with 8 color-coded spores. Toggle buttons switch between first-division segregation and second-division segregation patterns, with an animated crossover diagram showing why each pattern arises. For unordered tetrads, the user classifies asci as PD, NPD, or T, and the simulation calculates recombination frequency and linkage status."
+}

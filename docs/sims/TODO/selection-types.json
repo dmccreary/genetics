@@ -1,0 +1,14 @@
+{
+  "sim_id": "selection-types",
+  "diagram_name": "Selection Types Comparison",
+  "chapter_number": 10,
+  "chapter_title": "GWAS and Population Genetics",
+  "chapter_dir": "10-gwas-population-genetics",
+  "library": "p5.js",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-04-12",
+  "specification": "Type: Interactive simulation\n**sim-id:** selection-types<br/>\n**Library:** p5.js<br/>\n**Status:** Specified\n\nAn interactive simulation showing three bell curves representing a phenotype distribution. Users select one of three modes — directional, stabilizing, or disruptive — using radio buttons. After pressing \"Run Selection,\" the simulation animates the distribution changing over 10 generations. Directional shifts the mean, stabilizing narrows the curve, and disruptive creates a bimodal distribution. A slider controls selection strength (s = 0.01 to 0.5). The x-axis shows phenotype value and the y-axis shows frequency."
+}

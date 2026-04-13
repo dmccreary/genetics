@@ -1,0 +1,14 @@
+{
+  "sim_id": "twin-study-calculator",
+  "diagram_name": "Twin Study Heritability Calculator",
+  "chapter_number": 9,
+  "chapter_title": "Quantitative Genetics and Heritability",
+  "chapter_dir": "09-quantitative-genetics-heritability",
+  "library": "p5.js",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-04-12",
+  "specification": "Type: Interactive calculator\n**sim-id:** twin-study-calculator<br/>\n**Library:** p5.js<br/>\n**Status:** Specified\n\nAn interactive visualization where users input MZ and DZ twin correlations using sliders. The calculator displays the estimated broad-sense heritability, shared environmental component, and non-shared environmental component using Falconer's formula and an ACE model decomposition. A bar chart shows the relative proportions of genetic and environmental variance. Preset buttons load real twin study data for traits like height, BMI, and schizophrenia."
+}

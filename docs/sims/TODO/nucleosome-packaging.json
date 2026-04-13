@@ -1,0 +1,14 @@
+{
+  "sim_id": "nucleosome-packaging",
+  "diagram_name": "Nucleosome Structure and DNA Packaging Levels",
+  "chapter_number": 4,
+  "chapter_title": "Genome Structure and Chromatin Organization",
+  "chapter_dir": "04-genome-structure-chromatin-organization",
+  "library": "p5.js",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-04-12",
+  "specification": "Type: Interactive diagram\n**sim-id:** nucleosome-packaging<br/>\n**Library:** p5.js<br/>\n**Status:** Specified\n\nAn interactive diagram showing the hierarchical levels of DNA packaging: bare DNA double helix (2nm) wrapping around the histone octamer to form a nucleosome (11nm), the \"beads on a string\" arrangement, the 30nm chromatin fiber, looped domains (300nm), and metaphase chromosome (1400nm). Users can click through each level to see a zoomed view. Labels indicate compaction ratios at each level. The histone octamer should show H2A, H2B, H3, and H4 subunits in distinct colors, with H1 linker histone visible between nucleosomes."
+}

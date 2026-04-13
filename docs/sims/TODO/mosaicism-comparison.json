@@ -1,0 +1,14 @@
+{
+  "sim_id": "mosaicism-comparison",
+  "diagram_name": "Somatic vs. Germline Mosaicism",
+  "chapter_number": 2,
+  "chapter_title": "Pedigree Analysis and Inheritance Patterns",
+  "chapter_dir": "02-pedigree-analysis-inheritance-patterns",
+  "library": "p5.js",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-04-12",
+  "specification": "Type: Interactive comparison diagram\n**sim-id:** mosaicism-comparison<br/>\n**Library:** p5.js<br/>\n**Status:** Specified\n\nA split-screen visualization. The left side shows somatic mosaicism: an embryo divides, and at a user-selected cell division stage, a mutation occurs in one cell. The simulation shows how the mutant clone expands, with affected tissue highlighted in a different color. The right side shows germline mosaicism: the somatic cells are all normal-colored, but a subset of germ cells in the gonad are highlighted as carrying the mutation. A slider controls when during development the mutation occurs, affecting the proportion of mutant cells. Below each diagram, text explains the inheritance implications."
+}

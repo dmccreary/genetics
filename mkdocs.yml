@@ -38,6 +38,63 @@ nav:
     - Mascot Style Guide: learning-graph/mascot-test.md
   - MicroSims:
     - Learning Graph Viewer: sims/graph-viewer/index.md
+    - Bayesian Updating of Carrier Probability: sims/bayesian-carrier-probability/index.md
+    - Chi-Square Distribution Interactive: sims/chi-square-distribution/index.md
+    - Genetic Heterogeneity Concept Map: sims/genetic-heterogeneity-map/index.md
+    - Integrated Genetics Problem Solver: sims/genetics-problem-solver/index.md
+    - Autosomal Dominant Pedigree Pattern: sims/autosomal-dominant-pedigree/index.md
+    - Comparing Inheritance Patterns: sims/inheritance-pattern-comparison/index.md
+    - Somatic vs. Germline Mosaicism: sims/mosaicism-comparison/index.md
+    - Pedigree Analysis Decision Tree: sims/pedigree-decision-tree/index.md
+    - Complementation Test Simulator: sims/complementation-test-sim/index.md
+    - Epistasis Ratio Calculator: sims/epistasis-ratio-calculator/index.md
+    - Genetic Background Effects Visualization: sims/genetic-background-effects/index.md
+    - Chromatin Looping and TAD Organization: sims/chromatin-looping-tads/index.md
+    - DNA Methylation and Gene Silencing: sims/dna-methylation-silencing/index.md
+    - Nucleosome Structure and DNA Packaging Levels: sims/nucleosome-packaging/index.md
+    - Haplotype Blocks and Linkage Disequilibrium: sims/haplotype-blocks-ld/index.md
+    - Types of Structural Variation: sims/structural-variation-types/index.md
+    - Transposable Element Mechanisms: sims/transposable-elements/index.md
+    - Fates of Duplicated Genes: sims/gene-duplication-fates/index.md
+    - Genomic Imprinting at the 15q11-q13 Locus: sims/genomic-imprinting-15q/index.md
+    - Crossover Types and Scale: sims/crossover-types-scale/index.md
+    - Genetic Map Construction Workflow: sims/map-construction-workflow/index.md
+    - Sex Differences in Recombination: sims/sex-recombination-differences/index.md
+    - Three-Point Cross Analysis: sims/three-point-cross/index.md
+    - Comparative Synteny Map: sims/comparative-synteny-map/index.md
+    - Fine Structure Mapping of a Gene: sims/fine-structure-mapping/index.md
+    - Gene Discovery Workflow: sims/gene-discovery-workflow/index.md
+    - Tetrad Analysis Patterns: sims/tetrad-analysis-patterns/index.md
+    - Marker-Assisted Selection Workflow: sims/marker-assisted-selection/index.md
+    - Polygenic Inheritance and Phenotype Distributions: sims/polygenic-inheritance/index.md
+    - QTL Mapping LOD Profile: sims/qtl-mapping-lod/index.md
+    - Twin Study Heritability Calculator: sims/twin-study-calculator/index.md
+    - Interactive Manhattan Plot: sims/manhattan-plot/index.md
+    - Polygenic Risk Score Distribution: sims/prs-distribution/index.md
+    - Selection Types Comparison: sims/selection-types/index.md
+    - Enhancer-Promoter Looping: sims/enhancer-promoter-loop/index.md
+    - Lac Operon Regulation: sims/lac-operon/index.md
+    - Network Motifs: sims/network-motifs/index.md
+    - RNA Interference Pathway: sims/rnai-pathway/index.md
+    - Ubiquitin-Proteasome Pathway: sims/ubiquitin-pathway/index.md
+    - Waddington Landscape of Cell Differentiation: sims/waddington-landscape/index.md
+    - CRISPR-Cas9 Repair Pathways: sims/crispr-repair-pathways/index.md
+    - Synthetic Lethality: sims/synthetic-lethality/index.md
+    - BLAST Algorithm Workflow: sims/blast-algorithm-workflow/index.md
+    - Genomics Database Ecosystem: sims/genomics-database-ecosystem/index.md
+    - Pharmacogenomic Metabolizer Types: sims/pharmacogenomic-metabolizers/index.md
+    - Systems Genetics Framework: sims/systems-genetics-framework/index.md
+    - Chromosomal Instability Mechanisms: sims/chromosomal-instability/index.md
+    - Mismatch Repair and Microsatellite Instability: sims/msi-repair-pathway/index.md
+    - Multi-Step Colorectal Carcinogenesis: sims/multistep-carcinogenesis/index.md
+    - Two-Hit Hypothesis Comparison: sims/two-hit-hypothesis/index.md
+    - DTC Genetic Testing Decision Flow: sims/dtc-testing-decision-flow/index.md
+    - Ethical Framework Comparison: sims/ethical-frameworks-genetics/index.md
+    - GINA Coverage and Gaps: sims/gina-coverage-gaps/index.md
+    - Capstone Project Integration Map: sims/capstone-integration-map/index.md
+    - Linear Reference vs. Pangenome Graph: sims/pangenome-graph-comparison/index.md
+    - Single-Cell RNA Sequencing Workflow: sims/scrna-seq-workflow/index.md
+    - Genetic Modifications for Xenotransplantation: sims/xenotransplant-edits/index.md
   - License: license.md
   - Contact: contact.md
 

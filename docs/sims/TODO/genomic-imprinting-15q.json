@@ -1,0 +1,14 @@
+{
+  "sim_id": "genomic-imprinting-15q",
+  "diagram_name": "Genomic Imprinting at the 15q11-q13 Locus",
+  "chapter_number": 6,
+  "chapter_title": "Gene Duplication, Structural Rearrangements, and Genome Evolution",
+  "chapter_dir": "06-gene-duplication-rearrangements-evolution",
+  "library": "p5.js",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-04-12",
+  "specification": "Type: Interactive diagram\n**sim-id:** genomic-imprinting-15q<br/>\n**Library:** p5.js<br/>\n**Status:** Specified\n\nAn interactive diagram showing the 15q11-q13 region with genes arranged linearly on two parallel bars representing the paternal (blue) and maternal (pink) chromosomes. Paternally expressed genes (SNRPN, NDN, MKRN3) are shown active (bright, with arrow) on the paternal chromosome and silenced (dimmed, with lock icon and methylation marks) on the maternal chromosome. The maternally expressed UBE3A gene is active on the maternal chromosome and silenced on the paternal. Users click buttons for three scenarios: (1) Normal (both chromosomes present), (2) Paternal deletion (paternal chromosome grays out, revealing Prader-Willi phenotype description), (3) Maternal deletion (maternal chromosome grays out, revealing Angelman phenotype description). A fourth button shows maternal UPD (both chromosomes turn pink), resulting in Prader-Willi because paternally expressed genes are absent."
+}

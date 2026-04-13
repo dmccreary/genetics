@@ -1,0 +1,14 @@
+{
+  "sim_id": "pharmacogenomic-metabolizers",
+  "diagram_name": "Pharmacogenomic Metabolizer Types",
+  "chapter_number": 15,
+  "chapter_title": "Human Genetics and Clinical Applications",
+  "chapter_dir": "15-human-genetics-clinical-applications",
+  "library": "p5.js",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-04-12",
+  "specification": "Type: interactive diagram\n**sim-id:** pharmacogenomic-metabolizers<br/>\n**Library:** p5.js<br/>\n**Status:** Specified\n\nAn interactive diagram showing four metabolizer phenotypes (poor, intermediate, normal, ultra-rapid) for CYP2D6. For each type, display: the genotype (number of functional alleles), relative enzyme activity level (as a bar graph), drug concentration curve over time, and clinical implication (dose adjustment needed). Include a slider to change the administered dose and watch how drug levels change for each metabolizer type."
+}

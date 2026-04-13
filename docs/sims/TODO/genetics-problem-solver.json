@@ -1,0 +1,14 @@
+{
+  "sim_id": "genetics-problem-solver",
+  "diagram_name": "Integrated Genetics Problem Solver",
+  "chapter_number": 1,
+  "chapter_title": "Genetic Inference and Probabilistic Reasoning",
+  "chapter_dir": "01-genetic-inference-probabilistic-reasoning",
+  "library": "p5.js",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-04-12",
+  "specification": "Type: Interactive simulation\n**sim-id:** genetics-problem-solver<br/>\n**Library:** p5.js<br/>\n**Status:** Specified\n\nA step-by-step interactive tool where students input observed phenotype counts from a genetic cross. The simulation calculates expected values for multiple genetic models (3:1, 9:3:3:1, 15:1, 9:7, etc.), performs chi-square tests for each, and ranks the models by how well they fit the data. Students can compare p-values across models to determine which genetic mechanism best explains their observations."
+}

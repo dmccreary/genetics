@@ -1,0 +1,14 @@
+{
+  "sim_id": "chromosomal-instability",
+  "diagram_name": "Chromosomal Instability Mechanisms",
+  "chapter_number": 16,
+  "chapter_title": "Cancer Genetics",
+  "chapter_dir": "16-cancer-genetics",
+  "library": "p5.js",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-04-12",
+  "specification": "Type: Interactive Diagram\n**sim-id:** chromosomal-instability<br/>\n**Library:** p5.js<br/>\n**Status:** Specified\n\nInteractive visualization showing three mechanisms of chromosomal instability. Panel 1: Normal mitosis with proper spindle attachment and equal chromosome segregation. Panel 2: Mitotic checkpoint failure — chromosomes missegregate, producing one daughter cell with an extra chromosome (trisomy) and one missing a chromosome (monosomy). Panel 3: Centrosome amplification with multipolar spindle producing uneven distribution. Users can click buttons to toggle between mechanisms. Each mechanism shows before and after chromosome counts with a karyotype summary bar at the bottom."
+}

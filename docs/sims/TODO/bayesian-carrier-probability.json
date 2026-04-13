@@ -1,0 +1,14 @@
+{
+  "sim_id": "bayesian-carrier-probability",
+  "diagram_name": "Bayesian Updating of Carrier Probability",
+  "chapter_number": 1,
+  "chapter_title": "Genetic Inference and Probabilistic Reasoning",
+  "chapter_dir": "01-genetic-inference-probabilistic-reasoning",
+  "library": "p5.js",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-04-12",
+  "specification": "Type: Interactive simulation\n**sim-id:** bayesian-carrier-probability<br/>\n**Library:** p5.js<br/>\n**Status:** Specified\n\nAn interactive visualization showing how a woman's carrier probability updates as she has successive unaffected children. A slider controls the number of unaffected children (0–10). The display shows a probability bar that starts at 2/3 and decreases with each unaffected child, alongside the Bayesian calculation at each step. The prior, likelihood, and posterior are labeled clearly."
+}

@@ -1,0 +1,14 @@
+{
+  "sim_id": "chromatin-looping-tads",
+  "diagram_name": "Chromatin Looping and TAD Organization",
+  "chapter_number": 4,
+  "chapter_title": "Genome Structure and Chromatin Organization",
+  "chapter_dir": "04-genome-structure-chromatin-organization",
+  "library": "p5.js",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-04-12",
+  "specification": "Type: Interactive diagram\n**sim-id:** chromatin-looping-tads<br/>\n**Library:** p5.js<br/>\n**Status:** Specified\n\nAn interactive visualization of a genomic region showing two adjacent TADs separated by a CTCF-marked boundary. Within each TAD, colored arcs represent chromatin loops connecting enhancers to promoters. Users can click on a CTCF boundary element to \"delete\" it, at which point the two TADs merge and an enhancer from the left TAD incorrectly activates a gene in the right TAD (shown by a new arc appearing in red, representing enhancer hijacking). A toggle allows users to switch between a linear genome view and a 3D-style circular contact map view. Include labels for cohesin rings, CTCF proteins, enhancers, and promoters."
+}

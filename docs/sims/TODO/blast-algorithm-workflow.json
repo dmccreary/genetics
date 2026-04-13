@@ -1,0 +1,14 @@
+{
+  "sim_id": "blast-algorithm-workflow",
+  "diagram_name": "BLAST Algorithm Workflow",
+  "chapter_number": 14,
+  "chapter_title": "Genomics, Sequencing, and Bioinformatics",
+  "chapter_dir": "14-genomics-sequencing-bioinformatics",
+  "library": "Mermaid",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-04-12",
+  "specification": "Type: flowchart\n**sim-id:** blast-algorithm-workflow<br/>\n**Library:** Mermaid<br/>\n**Status:** Specified\n\nA flowchart showing the three phases of the BLAST algorithm: (1) Seeding phase -- query broken into k-mer words, exact matches found in database index; (2) Extension phase -- seed matches extended bidirectionally using dynamic programming, low-scoring extensions dropped; (3) Evaluation phase -- surviving alignments scored, E-values calculated, results ranked. Include example input (query sequence) and output (ranked hit list with E-values)."
+}
