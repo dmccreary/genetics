@@ -3,40 +3,119 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="schema" content="https://dmccreary.github.io/intelligent-textbooks/ns/microsim/v1">
     <title>CRISPR-Cas9 Repair Pathways</title>
-    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
-    <style>
-        body {
-            margin: 0;
-            padding: 20px;
-            font-family: Arial, Helvetica, sans-serif;
-            background-color: #f0f0f0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        .mermaid {
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        h3 {
-            text-align: center;
-            margin: 10px 0;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
 </head>
 <body>
-    <h3>CRISPR-Cas9 Repair Pathways</h3>
-    <div class="mermaid">
-        graph TD
-            A[Start] --> B[Step 1]
-            B --> C[Step 2]
-            C --> D[End]
+    <div class="container">
+        <div class="diagram-panel">
+            <div class="mermaid">
+flowchart TD
+    A["CRISPR-Cas9 Targets Gene"]:::cas9
+    B["Double-Strand Break (DSB)"]:::dsb
+    C{"Repair Template\nProvided?"}:::decision
+    D["NHEJ Pathway\n(Non-Homologous End Joining)"]:::nhej
+    E["HDR Pathway\n(Homology-Directed Repair)"]:::hdr
+    F["Random Nucleotide\nInsertions or Deletions"]:::nhejStep
+    G["Donor Template Aligns\nwith Break Site"]:::hdrStep
+    H["Frameshift Mutations"]:::nhejStep
+    I["Precise Sequence\nIncorporation"]:::hdrStep
+    J["Gene Disruption\n(Knockout)"]:::nhejResult
+    K["Point Mutations"]:::hdrResult
+    L["Gene Insertions\n(Knock-in)"]:::hdrResult
+    M["Gene Replacements"]:::hdrResult
+
+    A --> B
+    B --> C
+    C -- "No" --> D
+    C -- "Yes" --> E
+    D --> F
+    F --> H
+    H --> J
+    E --> G
+    G --> I
+    I --> K
+    I --> L
+    I --> M
+
+    classDef cas9 fill:#5B8FF9,stroke:#3366CC,color:#fff,font-weight:bold
+    classDef dsb fill:#FF6B6B,stroke:#CC3333,color:#fff,font-weight:bold
+    classDef decision fill:#FFC857,stroke:#CC9900,color:#333,font-weight:bold
+    classDef nhej fill:#FF8C42,stroke:#CC6600,color:#fff,font-weight:bold
+    classDef nhejStep fill:#FFB074,stroke:#CC8855,color:#333,font-weight:bold
+    classDef nhejResult fill:#FF6B6B,stroke:#CC4444,color:#fff,font-weight:bold
+    classDef hdr fill:#36B37E,stroke:#228855,color:#fff,font-weight:bold
+    classDef hdrStep fill:#79D9A4,stroke:#55AA77,color:#333,font-weight:bold
+    classDef hdrResult fill:#00B8D9,stroke:#0088AA,color:#fff,font-weight:bold
+            </div>
+        </div>
+        <div class="info-panel">
+            <h2>CRISPR-Cas9 Repair Pathways</h2>
+            <div id="info-content">
+                <p>Hover over any node in the diagram to learn more about that step in the CRISPR-Cas9 gene editing process.</p>
+                <p>After Cas9 creates a double-strand break, the cell repairs the DNA through one of two pathways depending on whether a repair template is provided.</p>
+            </div>
+        </div>
     </div>
+
     <script>
-        mermaid.initialize({ startOnLoad: true, theme: 'default' });
+    const nodeInfo = {
+        "A": {
+            title: "CRISPR-Cas9 Targets Gene",
+            description: "The Cas9 nuclease, guided by a synthetic guide RNA (sgRNA), binds to a specific complementary DNA sequence in the genome. The sgRNA is designed to match the target gene, directing Cas9 to the precise location for editing."
+        },
+        "B": {
+            title: "Double-Strand Break (DSB)",
+            description: "Cas9 cuts both strands of the DNA helix at the target site, creating a double-strand break. This activates the cell's natural DNA repair machinery, which will attempt to fix the break through one of two major pathways."
+        },
+        "C": {
+            title: "Repair Template Provided?",
+            description: "This is the key decision point. If researchers supply a donor DNA template along with the CRISPR components, the cell can use Homology-Directed Repair (HDR) for precise editing. Without a template, the cell defaults to the error-prone NHEJ pathway."
+        },
+        "D": {
+            title: "NHEJ Pathway",
+            description: "Non-Homologous End Joining (NHEJ) is the cell's default repair mechanism. It works in all phases of the cell cycle and does not require a template. NHEJ directly ligates the broken DNA ends back together, but this process is error-prone."
+        },
+        "E": {
+            title: "HDR Pathway",
+            description: "Homology-Directed Repair (HDR) uses a provided donor DNA template with sequences homologous to the regions flanking the break. This pathway is active primarily during the S and G2 phases of the cell cycle, making it less efficient but far more precise than NHEJ."
+        },
+        "F": {
+            title: "Random Insertions or Deletions",
+            description: "During NHEJ, the repair machinery may insert or delete small numbers of nucleotides (called 'indels') at the break site. These changes are essentially random and unpredictable, varying from one repaired cell to another."
+        },
+        "G": {
+            title: "Donor Template Alignment",
+            description: "The donor DNA template, which contains the desired edit flanked by homology arms, aligns with the sequences on either side of the double-strand break. The cell's recombination machinery then uses this template to accurately repair the break."
+        },
+        "H": {
+            title: "Frameshift Mutations",
+            description: "When indels are not multiples of three nucleotides, they shift the reading frame of the gene. This scrambles all downstream codons, typically producing a premature stop codon and a nonfunctional truncated protein."
+        },
+        "I": {
+            title: "Precise Sequence Incorporation",
+            description: "Using the donor template as a blueprint, the cell's HDR machinery copies the desired sequence into the genome at the break site. This allows researchers to introduce specific, predetermined changes with single-nucleotide accuracy."
+        },
+        "J": {
+            title: "Gene Disruption (Knockout)",
+            description: "The frameshift mutations from NHEJ effectively destroy gene function, creating a gene knockout. This is the most common application of CRISPR — disabling a gene to study its function or to eliminate a disease-causing variant."
+        },
+        "K": {
+            title: "Point Mutations",
+            description: "HDR can introduce single-nucleotide changes to correct disease-causing mutations or to study the effect of specific variants. For example, changing a single base pair to model or correct sickle cell disease."
+        },
+        "L": {
+            title: "Gene Insertions (Knock-in)",
+            description: "HDR can insert entirely new sequences — such as fluorescent reporter genes, epitope tags, or therapeutic genes — at a precise genomic location. The inserted sequence is flanked by homology arms in the donor template."
+        },
+        "M": {
+            title: "Gene Replacements",
+            description: "HDR can replace an entire gene or large gene segment with a new version. This enables swapping a mutant allele for a wild-type copy, or replacing a gene with an engineered variant for research or therapeutic purposes."
+        }
+    };
     </script>
+    <script src="script.js"></script>
 </body>
 </html>

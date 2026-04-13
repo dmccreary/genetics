@@ -3,40 +3,140 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="schema" content="https://dmccreary.github.io/intelligent-textbooks/ns/microsim/v1">
     <title>BLAST Algorithm Workflow</title>
-    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
-    <style>
-        body {
-            margin: 0;
-            padding: 20px;
-            font-family: Arial, Helvetica, sans-serif;
-            background-color: #f0f0f0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        .mermaid {
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        h3 {
-            text-align: center;
-            margin: 10px 0;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
 </head>
 <body>
-    <h3>BLAST Algorithm Workflow</h3>
-    <div class="mermaid">
-        graph TD
-            A[Start] --> B[Step 1]
-            B --> C[Step 2]
-            C --> D[End]
+    <div class="container">
+        <div class="diagram-panel">
+            <div class="mermaid">
+flowchart TD
+    A["🔬 Input Query Sequence"] --> B["Break Query into K-mer Words"]
+    B --> C["Search Database for Exact K-mer Matches"]
+    C --> D{"Seed Hits Found?"}
+    D -- "No" --> E["No Significant Matches"]
+    D -- "Yes" --> F["Extend Seed Match Left"]
+    F --> G["Extend Seed Match Right"]
+    G --> H{"Score Above\nDropoff Threshold?"}
+    H -- "No" --> I["Discard Low-Scoring Extension"]
+    H -- "Yes" --> J["Generate High-Scoring\nSegment Pair (HSP)"]
+    J --> K["Calculate E-value\nfor Each HSP"]
+    K --> L{"E-value Below\nSignificance Cutoff?"}
+    L -- "No" --> M["Filter Out\nNon-Significant Hits"]
+    L -- "Yes" --> N["Rank Results\nby E-value"]
+    N --> O["🧬 Return BLAST Results"]
+
+    classDef seeding fill:#4FC3F7,stroke:#0277BD,color:#01579B,stroke-width:2px
+    classDef extension fill:#AED581,stroke:#33691E,color:#1B5E20,stroke-width:2px
+    classDef evaluation fill:#FFB74D,stroke:#E65100,color:#BF360C,stroke-width:2px
+    classDef decision fill:#CE93D8,stroke:#6A1B9A,color:#4A148C,stroke-width:2px
+    classDef discard fill:#EF9A9A,stroke:#B71C1C,color:#B71C1C,stroke-width:2px
+    classDef result fill:#80CBC4,stroke:#004D40,color:#004D40,stroke-width:2px
+
+    class A,B,C seeding
+    class F,G,J extension
+    class K,N evaluation
+    class D,H,L decision
+    class E,I,M discard
+    class O result
+            </div>
+        </div>
+        <div class="info-panel">
+            <h2>BLAST Algorithm Workflow</h2>
+            <div id="info-title" class="info-title">Hover over a node</div>
+            <div id="info-description" class="info-description">
+                Move your mouse over any node in the flowchart to learn more about that step in the BLAST algorithm.
+            </div>
+            <div class="legend">
+                <h3>Phases</h3>
+                <div class="legend-item">
+                    <span class="legend-color" style="background:#4FC3F7;"></span> Phase 1: Seeding
+                </div>
+                <div class="legend-item">
+                    <span class="legend-color" style="background:#AED581;"></span> Phase 2: Extension
+                </div>
+                <div class="legend-item">
+                    <span class="legend-color" style="background:#FFB74D;"></span> Phase 3: Evaluation
+                </div>
+                <div class="legend-item">
+                    <span class="legend-color" style="background:#CE93D8;"></span> Decision Points
+                </div>
+                <div class="legend-item">
+                    <span class="legend-color" style="background:#EF9A9A;"></span> Filtered Out
+                </div>
+                <div class="legend-item">
+                    <span class="legend-color" style="background:#80CBC4;"></span> Final Results
+                </div>
+            </div>
+        </div>
     </div>
+
     <script>
-        mermaid.initialize({ startOnLoad: true, theme: 'default' });
+        const nodeInfo = {
+            "A": {
+                title: "Input Query Sequence",
+                description: "The user submits a nucleotide or protein sequence to search against a database. This is the starting point of every BLAST search."
+            },
+            "B": {
+                title: "Break Query into K-mer Words",
+                description: "Phase 1 — Seeding: The query sequence is divided into short overlapping subsequences called k-mers (typically 11 nucleotides for blastn or 3 amino acids for blastp). A neighborhood of similar words is also generated based on a scoring matrix."
+            },
+            "C": {
+                title: "Search Database for Exact K-mer Matches",
+                description: "Phase 1 — Seeding: Each k-mer word (and its high-scoring neighbors) is looked up in a pre-indexed database. This lookup is extremely fast because it uses a hash table, avoiding the need to compare the full query against every database sequence."
+            },
+            "D": {
+                title: "Seed Hits Found?",
+                description: "Decision: Were any exact matches (seed hits) found in the database? If no seeds are found, the query has no detectable similarity to any database sequence."
+            },
+            "E": {
+                title: "No Significant Matches",
+                description: "Dead end: The query did not produce any seed hits in the database. The search terminates with no results for this path."
+            },
+            "F": {
+                title: "Extend Seed Match Left",
+                description: "Phase 2 — Extension: Starting from each seed hit, BLAST extends the alignment to the left (upstream), adding one residue at a time. The cumulative alignment score is tracked as the extension proceeds."
+            },
+            "G": {
+                title: "Extend Seed Match Right",
+                description: "Phase 2 — Extension: The alignment is also extended to the right (downstream) from the seed hit. Extension continues in both directions until the score drops below a dropoff threshold from the best score seen so far."
+            },
+            "H": {
+                title: "Score Above Dropoff Threshold?",
+                description: "Decision: BLAST checks whether the extended alignment's score remains above the X-dropoff threshold. This threshold prevents wasting time on alignments that are diverging from a good match."
+            },
+            "I": {
+                title: "Discard Low-Scoring Extension",
+                description: "Filtered: Extensions whose scores fall below the dropoff threshold are discarded. This aggressive pruning is what makes BLAST so much faster than a full Smith-Waterman alignment."
+            },
+            "J": {
+                title: "Generate High-Scoring Segment Pair (HSP)",
+                description: "Phase 2 — Extension: Extensions that survive the dropoff filter become High-Scoring Segment Pairs (HSPs) — ungapped local alignments between the query and a database sequence that score above the threshold."
+            },
+            "K": {
+                title: "Calculate E-value for Each HSP",
+                description: "Phase 3 — Evaluation: The E-value (Expect value) is calculated for each HSP using the Karlin-Altschul statistics. It represents the number of alignments with that score expected by chance given the database size. Lower E-values indicate more significant matches."
+            },
+            "L": {
+                title: "E-value Below Significance Cutoff?",
+                description: "Decision: The E-value is compared against the user-defined significance threshold (commonly 0.05 or 10). Only HSPs with E-values below this cutoff are considered statistically significant."
+            },
+            "M": {
+                title: "Filter Out Non-Significant Hits",
+                description: "Filtered: Alignments with E-values above the significance cutoff are removed. These represent matches that could easily occur by chance and are not biologically meaningful."
+            },
+            "N": {
+                title: "Rank Results by E-value",
+                description: "Phase 3 — Evaluation: The surviving significant HSPs are sorted by E-value (lowest first). This ranking places the most statistically significant — and likely most biologically relevant — matches at the top of the results."
+            },
+            "O": {
+                title: "Return BLAST Results",
+                description: "The final ranked list of significant alignments is returned to the user, including alignment details, percent identity, query coverage, E-values, and bit scores for each hit."
+            }
+        };
     </script>
+    <script src="script.js"></script>
 </body>
 </html>
