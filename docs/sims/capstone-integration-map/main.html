@@ -3,36 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="schema" content="https://dmccreary.github.io/intelligent-textbooks/ns/microsim/v1">
     <title>Capstone Project Integration Map</title>
     <script src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            background-color: #f0f0f0;
-        }
-        #network {
-            width: 100%;
-            height: 500px;
-            border: 1px solid #ccc;
-            background-color: white;
-        }
-        .controls {
-            padding: 10px;
-            text-align: center;
-        }
-        h3 {
-            text-align: center;
-            margin: 10px 0;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h3>Capstone Project Integration Map</h3>
+    <div id="title-overlay">Capstone Project Integration Map</div>
+    <div id="legend">
+        <div class="legend-title">Legend</div>
+        <div class="legend-item"><span class="legend-dot" style="background:#6A1B9A;"></span> Capstone</div>
+        <div class="legend-item"><span class="legend-dot" style="background:#E65100;"></span> Option A: Variant</div>
+        <div class="legend-item"><span class="legend-dot" style="background:#1565C0;"></span> Option B: GWAS</div>
+        <div class="legend-item"><span class="legend-dot" style="background:#2E7D32;"></span> Option C: Expression</div>
+        <div class="legend-item"><span class="legend-dot" style="background:#C62828;"></span> Option D: Ethics</div>
+        <div class="legend-item"><span class="legend-dot" style="background:#999;"></span> Chapter Concept</div>
+    </div>
     <div id="network"></div>
     <div class="controls">
-        <p>MicroSim under development</p>
+        <button id="resetBtn" onclick="resetHighlight()">Reset View</button>
+        <span id="info-text">Click any node to highlight its connections</span>
     </div>
     <script src="script.js"></script>
 </body>

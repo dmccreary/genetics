@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f8f9fa;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+
+.diagram-panel {
+    width: 66.67%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    overflow: hidden;
+}
+
+.mermaid {
+    width: 100%;
+    font-size: 16pt;
+}
+
+.mermaid svg {
+    width: 100%;
+    height: auto;
+    max-height: 95vh;
+}
+
+.info-panel {
+    width: 33.33%;
+    height: 100%;
+    background: #ffffff;
+    border-left: 3px solid #5B8FF9;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+.info-panel h2 {
+    font-size: 20px;
+    color: #2c3e50;
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+#info-content {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #444;
+}
+
+#info-content p {
+    margin-bottom: 12px;
+}
+
+#info-content .info-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 8px;
+}
+
+#info-content .info-description {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.7;
+}
+
+.node rect,
+.node polygon,
+.node circle {
+    cursor: pointer;
+    transition: filter 0.2s ease;
+}
+
+.node:hover rect,
+.node:hover polygon,
+.node:hover circle {
+    filter: brightness(1.15) drop-shadow(0 0 6px rgba(0,0,0,0.3));
+}
