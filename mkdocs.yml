@@ -37,6 +37,7 @@ nav:
     - Taxonomy Distribution Report: learning-graph/taxonomy-distribution.md
     - Mascot Style Guide: learning-graph/mascot-test.md
   - MicroSims:
+    - List of MicroSims: sims/index.md
     - Learning Graph Viewer: sims/graph-viewer/index.md
     - Bayesian Updating of Carrier Probability: sims/bayesian-carrier-probability/index.md
     - Chi-Square Distribution Interactive: sims/chi-square-distribution/index.md
