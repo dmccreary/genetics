@@ -95,6 +95,8 @@ nav:
     - Linear Reference vs. Pangenome Graph: sims/pangenome-graph-comparison/index.md
     - Single-Cell RNA Sequencing Workflow: sims/scrna-seq-workflow/index.md
     - Genetic Modifications for Xenotransplantation: sims/xenotransplant-edits/index.md
+  - Glossary: glossary.md
+  - Feature Checklist: feature-checklist.md
   - License: license.md
   - Contact: contact.md
 
