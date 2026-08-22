@@ -58,7 +58,7 @@ Genetics is full of wonder — from the elegance of a complementation test revea
 
 ## Background
 
-This textbook was produced with Claude Code using Skills, with an emphasis on interactive MicroSims, probabilistic reasoning, and alignment to Bloom's Taxonomy learning objectives at all six cognitive levels. You can customize this textbook and create your own version using a tool such as Claude Code Pro ($20). See the [Claude Skills Textbook](https://dmccreary.github.io/claude-skills/) for a detailed tutorial on how to create your own textbook.
+This textbook was produced with Claude Code using Skills, with an emphasis on interactive MicroSims, probabilistic reasoning, and alignment to Bloom's Taxonomy learning objectives at all six cognitive levels. You can customize this textbook and create your own version using a tool such as Claude Code Pro ($20). See the [Claude Skills Textbook](https://dmccreary.github.io/ibook-skills/) for a detailed tutorial on how to create your own textbook.
 
 ## About Dan McCreary
 
